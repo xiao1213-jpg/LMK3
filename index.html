@@ -1,0 +1,958 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>リトル・ミュー診断｜あなたはどの猫？</title>
+<meta name="description" content="15の問いから、あなたにいちばん近いリトル・ミューの猫を見つける診断です。">
+<meta name="lmk-build" content="2026-10-09-v6">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Little Mew Kingdom">
+<meta property="og:title" content="リトル・ミュー診断｜あなたはどの猫？">
+<meta property="og:description" content="15の問いから、あなたにいちばん近いリトル・ミューの猫を見つけよう。">
+<meta property="og:url" content="https://xiao1213-jpg.github.io/LMK3/">
+<meta property="og:image" content="https://xiao1213-jpg.github.io/LMK3/assets/share-preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><style>
+*{box-sizing:border-box}
+html{scroll-behavior:auto}
+body{margin:0;background:linear-gradient(160deg,#fffaf2,#f1e3d2);color:#392f2b;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Mincho ProN","Yu Mincho",serif;min-height:100vh}
+main{width:min(720px,100%);margin:auto;padding:20px 12px 40px}
+.brand{text-align:center;color:#9d7a47;font-size:11px;letter-spacing:.18em;margin:3px 0 24px}
+.page{display:none} .page:first-of-type{display:block} .page:target{display:block}
+body:has(.page:target) .page:first-of-type{display:none}
+body:has(#start_page:target) .page:first-of-type{display:block}
+.card{background:#fffdf8;border:1px solid #e5d7c3;border-radius:26px;box-shadow:0 18px 55px rgba(63,45,34,.12);padding:32px 24px;min-height:540px}
+.cat{text-align:center;font-size:48px} .kicker{text-align:center;color:#9d7a47;font-size:11px;letter-spacing:.15em}
+.title{text-align:center;font-size:30px;line-height:1.5;margin:10px 0} .intro{text-align:center;color:#756963;line-height:1.9}
+.progress{font-size:11px;color:#9d7a47;letter-spacing:.1em;margin-bottom:12px} .axis{font-size:12px;color:#9d7a47;letter-spacing:.08em;margin-bottom:18px}
+.q{font-size:22px;line-height:1.65;margin:12px 0 25px}
+.btn{display:flex;gap:12px;align-items:flex-start;text-decoration:none;color:#392f2b;border:1px solid #e0d1bd;background:#fff;border-radius:17px;padding:16px 17px;margin:11px 0;line-height:1.65}
+.btn:active{background:#faf1e7} .letter{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:27px;height:27px;border-radius:50%;background:#f5eadf;color:#8a693f;font-size:12px;margin-top:1px}
+.start{display:flex;align-items:center;justify-content:center;text-decoration:none;background:#463733;color:#fff!important;text-align:center;border-radius:999px;margin:28px auto 0;max-width:360px;min-height:58px;padding:16px 24px;font-size:17px;font-weight:700;letter-spacing:.03em;box-shadow:0 8px 18px rgba(70,55,51,.16)}
+.note{text-align:center;color:#8b7d74;font-size:12px;margin-top:12px} .pill{display:inline-block;background:#f5eadf;border:1px solid #ead9c8;border-radius:999px;padding:7px 10px;font-size:12px;margin:3px}
+.desc{max-width:560px;margin:24px auto;text-align:left;font-size:15px;line-height:2.05} .desc b{font-weight:700;color:#4d3b34}
+.goods{border-top:1px solid #e5d7c3;border-bottom:1px solid #e5d7c3;padding:16px;text-align:center;margin:22px 0}
+.small{text-align:center;color:#8b7d74;font-size:12px;line-height:1.7}
+.result-page .card{position:relative;overflow:hidden;isolation:isolate;border-width:1px}
+.result-page .card::before{content:"";position:absolute;inset:0 0 auto 0;height:285px;background-image:linear-gradient(to bottom,rgba(255,253,248,.20) 0%,rgba(255,253,248,.54) 58%,#fffdf8 100%),var(--motif-image);background-size:cover;background-position:center 43%;opacity:.34;filter:saturate(.78) contrast(.96);z-index:-2}
+.result-page .card::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:25px;box-shadow:inset 0 0 0 1px var(--theme-line);z-index:-1}
+.result-page .kicker,.result-page .small{color:var(--theme-accent)} .result-page .title{color:var(--theme-deep)}
+.result-page .pill{background:var(--theme-soft);border-color:var(--theme-line);color:var(--theme-deep)}
+.result-page .goods{border-color:var(--theme-line);background:linear-gradient(90deg,transparent,var(--theme-soft),transparent)}
+.result-page .start{background:var(--theme-deep)!important}
+.category-mark{width:max-content;max-width:100%;margin:10px auto 18px;padding:8px 14px;border:1px solid var(--theme-line);border-radius:999px;background:rgba(255,253,248,.76);text-align:center;line-height:1.15}
+.category-mark span{display:block;color:var(--theme-deep);font-size:11px;letter-spacing:.12em}
+.category-mark em{display:block;margin-top:5px;font-style:normal;font-size:10px;letter-spacing:.12em;color:var(--theme-accent)}
+.theme-rebel{--theme-deep:#315d5c;--theme-accent:#6d8d8b;--theme-soft:#edf4f2;--theme-line:#c7d9d6;--motif-image:url("assets/rebel.webp")}
+.theme-lady{--theme-deep:#9b6573;--theme-accent:#b78994;--theme-soft:#fbf0f2;--theme-line:#ead4d9;--motif-image:url("assets/lady.webp")}
+.theme-salon{--theme-deep:#344873;--theme-accent:#7180a4;--theme-soft:#eef0f7;--theme-line:#d2d8e8;--motif-image:url("assets/salon.webp")}
+.theme-blood{--theme-deep:#762a31;--theme-accent:#a27443;--theme-soft:#f8eeee;--theme-line:#e5c9c7;--motif-image:url("assets/blood.webp")}
+
+.portrait-card{position:relative;margin:0 0 14px;padding:22px 20px 20px;border:1px solid var(--theme-line);border-radius:22px;background:linear-gradient(150deg,rgba(255,255,255,.96),var(--theme-soft));overflow:hidden}
+.portrait-card::after{content:"";position:absolute;width:90px;height:90px;right:-34px;top:-36px;border:1px solid var(--theme-line);border-radius:50%;opacity:.65}
+.portrait-mark{display:grid;place-items:center;width:31px;height:31px;margin:0 auto 10px;border-radius:50%;background:#fff;color:var(--theme-accent);border:1px solid var(--theme-line);font-size:13px}
+.portrait-line{margin:0;text-align:center;color:var(--theme-deep);font-size:17px;font-weight:700;line-height:1.75}
+.portrait-text{margin:13px 0 0;color:#665a54;font-size:13px;line-height:1.95}
+.logic-path{display:grid;gap:9px;margin:14px 0}
+.path-step{display:grid;grid-template-columns:31px 1fr;gap:11px;align-items:start;padding:14px 15px;border:1px solid var(--theme-line);border-radius:17px;background:rgba(255,255,255,.78)}
+.path-step>span{display:grid;place-items:center;width:29px;height:29px;border-radius:50%;background:var(--theme-soft);color:var(--theme-deep);font:700 12px Georgia,serif}
+.path-step b{display:block;color:var(--theme-deep);font-size:14.5px;line-height:1.55}
+.path-step p{margin:5px 0 0;color:#746861;font-size:13.5px;line-height:1.75}
+.score-panel{margin-top:12px;padding:18px;border:1px solid var(--theme-line);border-radius:20px;background:rgba(255,255,255,.78)}
+.score-unavailable p{margin:0;color:#756861;font-size:13.5px;line-height:1.85}
+.primary-scores{display:grid;gap:9px}
+.score-row-head{display:flex;justify-content:space-between;gap:12px;margin-bottom:5px;color:#81746d;font-size:13px}
+.score-row-head b{color:var(--theme-accent);font-variant-numeric:tabular-nums}
+.score-row.is-selected .score-row-head span,.score-row.is-selected .score-row-head b{color:var(--theme-deep);font-weight:700}
+.score-track{height:7px;border-radius:999px;background:#eee8e0;overflow:hidden}
+.score-track span{display:block;height:100%;border-radius:inherit;background:var(--theme-line)}
+.score-row.is-selected .score-track span{background:linear-gradient(90deg,var(--theme-accent),var(--theme-deep))}
+.score-note{margin:11px 0 13px;color:#766a63;font-size:12.5px;line-height:1.7}
+.balance-list{display:grid;gap:8px;padding-top:12px;border-top:1px dashed var(--theme-line)}
+.balance-row{display:grid;grid-template-columns:110px 1fr;gap:10px;align-items:start}
+.balance-name{color:#786c65;font-size:12.5px;line-height:1.55}
+.balance-values{display:flex;flex-wrap:wrap;gap:5px;color:#6f635d;font-size:13px;line-height:1.55}
+.balance-values b{color:var(--theme-deep)}
+.neighbors{display:block}
+.neighbor-intro{margin-bottom:13px}
+.neighbor-list{display:grid;gap:8px}
+.neighbor-item{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start;padding:11px 12px;border-radius:14px;background:rgba(255,255,255,.75);border:1px solid var(--theme-line)}
+.neighbor-paw{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--theme-soft);font-size:14px}
+.neighbor-item b{display:block;color:var(--theme-deep);font-size:14px;line-height:1.5}
+.neighbor-item span:last-child{display:block;margin-top:3px;color:#6f625b;font-size:12.5px;line-height:1.7}
+.neighbor-more{margin-top:9px}
+.neighbor-more summary{cursor:pointer;list-style:none;text-align:center;color:var(--theme-accent);font-size:13px;font-weight:700;padding:11px;border-radius:999px;background:rgba(255,255,255,.62)}
+.neighbor-more summary::-webkit-details-marker{display:none}
+.neighbor-more[open] summary{margin-bottom:8px}
+
+
+.scope-note{max-width:500px;margin:15px auto 0;padding-top:14px;border-top:1px solid #eadfce;text-align:center;color:#756a63;font-size:13px;line-height:1.8}
+.result-thesis{max-width:560px;margin:24px auto 16px;text-align:center;color:var(--theme-deep);font-size:19px;font-weight:700;line-height:1.75;letter-spacing:.015em}
+.result-page .desc{max-width:560px;margin:0 auto 28px;text-align:left}
+.result-page .desc p{margin:0 0 16px;color:#574e49;font-size:15.5px;line-height:1.95}
+.result-page .desc p:last-child{margin-bottom:0;color:var(--theme-deep);font-weight:600}
+
+@media(max-width:520px){main{padding:12px 10px 30px} .card{padding:27px 19px;min-height:520px} .title{font-size:29px} .q{font-size:20px} .result-page .card::before{height:245px;opacity:.29}}
+
+.btn{box-sizing:border-box;width:100%;font:inherit;text-align:left;cursor:pointer}
+button.btn{appearance:none;-webkit-appearance:none}
+body.has-route .page:first-of-type{display:none}
+body.start-route #start_page{display:block!important}
+
+/* --- 2026 refined experience --- */
+:root{--page-pad:clamp(10px,3vw,20px)}
+body{background:
+  radial-gradient(circle at 10% 0%,rgba(255,255,255,.92),transparent 34%),
+  radial-gradient(circle at 90% 12%,rgba(223,196,163,.24),transparent 30%),
+  linear-gradient(160deg,#fffaf2,#f1e3d2);-webkit-text-size-adjust:100%}
+main{padding-left:var(--page-pad);padding-right:var(--page-pad)}
+.brand{margin-bottom:18px;font-weight:700}
+.card{min-height:0;padding:clamp(24px,6vw,38px) clamp(18px,5vw,30px);border-radius:28px}
+.start{transition:transform .16s ease,box-shadow .16s ease,opacity .16s ease}
+.start:active{transform:translateY(1px);box-shadow:0 4px 10px rgba(70,55,51,.14)}
+.btn:focus-visible,.start:focus-visible,.quiet-action:focus-visible{outline:3px solid rgba(157,122,71,.35);outline-offset:3px}
+
+.quiz-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+.progress{margin:0;font-variant-numeric:tabular-nums}
+.back-button{appearance:none;border:0;background:transparent;color:#816f64;font:inherit;font-size:12px;padding:8px 4px;cursor:pointer;min-height:36px}
+.back-button[hidden]{visibility:hidden;display:block}
+.progress-track{height:5px;background:#eee2d3;border-radius:999px;overflow:hidden;margin-bottom:22px}
+.progress-fill{display:block;width:0;height:100%;border-radius:inherit;background:linear-gradient(90deg,#b89462,#715546);transition:width .22s ease}
+#quiz_card .axis{margin-bottom:12px}
+#quiz_card .q{margin-top:8px}
+#quiz_answers .btn{min-height:62px;background:rgba(255,255,255,.88);box-shadow:0 3px 12px rgba(76,54,38,.035)}
+
+.result-page .card{padding-bottom:28px}
+.result-page .desc{margin-bottom:28px}
+.guide-cat{max-width:520px;margin:-5px auto 24px;padding:17px 18px 16px;text-align:center;border:1px solid var(--theme-line);border-radius:20px;background:linear-gradient(145deg,rgba(255,255,255,.92),var(--theme-soft));box-shadow:0 8px 22px rgba(70,48,35,.045)}
+.guide-cat-label{display:block;margin-bottom:7px;color:#786c65;font-size:12px;line-height:1.6;letter-spacing:.06em}
+.guide-cat-name{display:block;color:var(--theme-deep);font-size:18px;line-height:1.55;letter-spacing:.02em}
+.guide-cat-number{display:inline-block;margin-right:8px;color:var(--theme-accent);font-size:11px;font-weight:700;letter-spacing:.08em;vertical-align:2px}
+
+.result-analysis{max-width:590px;margin:8px auto 26px}
+.analysis-heading{margin:0 0 7px;text-align:center;color:var(--theme-deep);font-size:21px;line-height:1.55;letter-spacing:.02em}
+.analysis-lead{margin:0 auto 20px;max-width:520px;text-align:center;color:#746861;font-size:13.5px;line-height:1.85}
+.axis-list{display:grid;gap:10px}
+.axis-card{display:grid;grid-template-columns:42px minmax(0,1fr) auto;align-items:center;gap:12px;padding:14px 15px;border:1px solid var(--theme-line);border-radius:18px;background:rgba(255,255,255,.76)}
+.axis-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:var(--theme-soft);font-size:18px}
+.axis-copy{min-width:0}
+.axis-name{display:block;margin-bottom:3px;color:#786c65;font-size:12px;letter-spacing:.06em}
+.axis-value{display:block;color:var(--theme-deep);font-size:15px;font-weight:700;line-height:1.45}
+.axis-tone{display:inline-flex;align-items:center;white-space:nowrap;border-radius:999px;background:var(--theme-soft);color:var(--theme-accent);padding:6px 9px;font-size:11px;font-weight:700;letter-spacing:.04em}
+.axis-detail{grid-column:2 / -1;margin:-3px 0 0;color:#6d625c;font-size:13.5px;line-height:1.75}
+.insight-card{margin-top:12px;padding:18px;border:1px solid var(--theme-line);border-radius:20px;background:linear-gradient(145deg,rgba(255,255,255,.9),var(--theme-soft))}
+.insight-label{display:block;margin-bottom:7px;color:var(--theme-accent);font-size:12px;font-weight:700;letter-spacing:.1em}
+.insight-title{margin:0 0 7px;color:var(--theme-deep);font-size:18px;line-height:1.5}
+.insight-text{margin:0;color:#5d534e;font-size:14px;line-height:1.9}
+.near-cat{display:grid;grid-template-columns:48px 1fr;gap:12px;align-items:center}
+.near-cat-mark{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.78);border:1px solid var(--theme-line);font-size:22px}
+.result-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px auto 0;max-width:520px}
+.quiet-action{appearance:none;border:1px solid var(--theme-line);border-radius:999px;background:#fff;color:var(--theme-deep);min-height:54px;padding:14px 16px;font:inherit;font-size:15px;font-weight:700;text-align:center;cursor:pointer}
+.quiet-action.primary{background:var(--theme-deep);border-color:var(--theme-deep);color:#fff}
+.share-status{min-height:20px;margin:8px 0 0;text-align:center;color:var(--theme-accent);font-size:13px}
+.analysis-disclosure{margin-top:20px}
+.analysis-disclosure>summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:center;min-height:54px;padding:13px 18px;border:1px solid var(--theme-line);border-radius:999px;background:var(--theme-soft);color:var(--theme-deep);font-size:15px;font-weight:700}
+.analysis-disclosure>summary::-webkit-details-marker{display:none}
+.analysis-disclosure>summary::after{content:"＋";margin-left:10px;color:var(--theme-accent)}
+.analysis-disclosure[open]>summary::after{content:"−"}
+.analysis-content{padding-top:24px}
+.result-page .goods{border-radius:16px;border:1px solid var(--theme-line)}
+.result-page .start{margin-top:10px}
+body:has(#start_page:target) #start_page{display:block!important}
+
+@media(max-width:520px){
+  main{padding-top:max(10px,env(safe-area-inset-top));padding-bottom:max(28px,env(safe-area-inset-bottom))}
+  .brand{font-size:10px;margin-bottom:12px}
+  .card{padding:24px 17px;border-radius:24px}
+  .title{font-size:clamp(26px,8vw,30px)}
+  .intro{font-size:14px}
+  .q{font-size:19px;line-height:1.62}
+  #quiz_answers .btn{padding:15px 14px;min-height:60px}
+  .result-page .card::before{height:230px}
+  .result-thesis{font-size:18px;margin-top:21px}
+  .result-page .desc p{font-size:15px;line-height:1.92}
+  .axis-card{grid-template-columns:38px minmax(0,1fr) auto;padding:13px 12px;gap:10px}
+  .axis-icon{width:38px;height:38px;border-radius:12px}
+  .axis-value{font-size:14.5px}
+  .axis-detail{font-size:13px}
+  .portrait-card{padding:20px 16px 18px}
+  .portrait-line{font-size:16px}
+  .portrait-text{font-size:12.5px}
+  .balance-row{grid-template-columns:1fr;gap:3px}
+  .result-actions{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+.privacy-link{text-align:center;margin:25px 0 5px;font-size:13px}.privacy-link a{color:#78644f}
+</style><script src="assets/config.js"></script><script src="assets/analytics.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
+<div class="kicker">LITTLE MEW</div>
+<div class="cat">🐈</div>
+<h1 class="title">あなたはリトル・ミューの<br>どの猫？</h1>
+<p class="intro">古い時計、秘密の手紙、午後のお茶会、月明かりの路地。<br>
+二つの扉から、心に近いほうを選んでください。</p>
+<a class="start" id="start_quiz" href="#quiz_page">リトル・ミューへ</a>
+<div class="note">15問 ＋ 同点のときだけ少しだけ追加</div><p class="scope-note">性格全体ではなく、「何に美しさを感じ、どう受け継ぎ、どこで、誰と味わうか」を見る診断です。</p>
+</div></section><section id="quiz_page" class="page"><div class="card" id="quiz_card">
+<div class="quiz-top"><div class="progress" id="quiz_progress">1 / 15</div><button class="back-button" id="quiz_back" type="button" hidden>← ひとつ戻る</button></div>
+<div class="progress-track" aria-hidden="true"><span class="progress-fill" id="quiz_progress_fill"></span></div>
+<div class="axis" id="quiz_axis">あなたの心は、何に惹かれる？</div>
+<div class="q" id="quiz_question"></div>
+<div id="quiz_answers" aria-live="polite"></div>
+</div></section><section id="result_blood_life_quiet" class="page result-page theme-blood"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>気高き血統</span><em>The Crimson Crown</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.23</div><h1 class="title">王家のパティシエ</h1>
+<div style="text-align:center"><span class="pill">気高き血統</span><span class="pill">暮らしを愉しむ</span><span class="pill">静かに愛する</span></div><p class="result-thesis">好きなものには、ほんの少しだけ妥協したくないあなた。</p><div class="desc"><p>誰も気づかないくらいの違いでも、自分には分かります。リトル・ミューでは、静かな厨房で菓子を焼く猫。一度目。もう少し軽く。</p><p>二度目。まだ少し違う。誰かに褒めてもらうためではありません。自分が「これでいい」と思えるものを、きちんと作りたい。</p><p>誰も見ていない一枚のビスケットにも同じように向き合えること。それが、あなたの美意識です。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.23</span>シャーロット・ペンバートン</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>ケーキステッカー・原画</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_blood_life_share" class="page result-page theme-blood"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>気高き血統</span><em>The Crimson Crown</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.24</div><h1 class="title">晩餐会の猫</h1>
+<div style="text-align:center"><span class="pill">気高き血統</span><span class="pill">暮らしを愉しむ</span><span class="pill">分かち合う</span></div><p class="result-thesis">美味しいもの。美しいもの。そして、まだ終わらない楽しい会話。</p><div class="desc"><p>あなたにとって素敵なものは、誰かと一緒に味わうことで、もっと楽しくなります。リトル・ミューでは、大きな晩餐の席に猫たちを迎える猫。</p><p>デザートのお皿が空になっても、まだ話が残っているなら、「もう少し、ここにいましょう。」あなたはきっとそう言います。</p><p>食事そのものだけでなく、一緒に座り、笑い、話が続いていくことが好き。楽しい夜は、最後のお皿が下げられたからといって終わるものではありません。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.24</span>ミレイア・ホワイト</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>ハンカチ・マグネット・ブローチ</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_blood_message_quiet" class="page result-page theme-blood"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>気高き血統</span><em>The Crimson Crown</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.21</div><h1 class="title">冬布を継ぐ猫</h1>
+<div style="text-align:center"><span class="pill">気高き血統</span><span class="pill">想いを届ける</span><span class="pill">静かに愛する</span></div><p class="result-thesis">家に昔からあるものを見ると、その中に自分の小さな印も残したくなるあなた。</p><div class="desc"><p>リトル・ミューでは、長い冬のころから一族に伝わる大きな布があります。古い布をつなぎ合わせ、代々の猫たちが少しずつ刺繍を加えてきました。</p><p>大きな紋章でなくても構いません。小さな花。一枚の葉。灯りのついた小さな窓。「私がここにいたって分かれば、それでいい。」</p><p>受け継いだものの中へ、自分の小さな一針を残して、また次の猫へ渡していく。そんな優しさを持った猫です。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.21</span>マーガレット・アインズリー</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>ハンカチ・原画</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_blood_message_share" class="page result-page theme-blood"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>気高き血統</span><em>The Crimson Crown</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.22</div><h1 class="title">祝宴の女主人</h1>
+<div style="text-align:center"><span class="pill">気高き血統</span><span class="pill">想いを届ける</span><span class="pill">分かち合う</span></div><p class="result-thesis">特別な日は、できればたくさんの猫と過ごしたいあなた。</p><div class="desc"><p>予定より客が増えても、大丈夫。「では、もう一卓出しましょう。」リトル・ミューでは、収穫祭の大きな食卓を預かる女主人。</p><p>椅子の形が揃っていなくても、食器が少し足りなくても、それほど気にしません。大切なのは、来てくれた猫を一匹も立たせないこと。</p><p>美しい祝宴とは、すべてが完璧に並ぶことではなく、みんなに居場所があること。あなたは、そう考える猫です。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.22</span>マリア・トーニャ</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>ハンカチ・ブローチ</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_blood_time_quiet" class="page result-page theme-blood"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>気高き血統</span><em>The Crimson Crown</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.19</div><h1 class="title">時を継ぐ猫</h1>
+<div style="text-align:center"><span class="pill">気高き血統</span><span class="pill">時を愛する</span><span class="pill">静かに愛する</span></div><p class="result-thesis">古いものだから大切にする、というだけではないあなた。</p><div class="desc"><p>受け継いだものなら、これからもちゃんと使えるようにしておきたいと思います。リトル・ミューでは、古い時計を分解し、傷んだところだけを直していく猫。</p><p>まだ使える部品は残す。必要なところだけ新しくする。昔と同じ姿のまま止めておくのではなく、明日もまた針が動くように。</p><p>受け継ぐとは、変えないことではなく、次へ渡せるように手入れすること。あなたは、それを知っている猫です。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.19</span>オクタヴィア・スミス</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>時計・原画</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_blood_time_share" class="page result-page theme-blood"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>気高き血統</span><em>The Crimson Crown</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.20</div><h1 class="title">暦を守る猫</h1>
+<div style="text-align:center"><span class="pill">気高き血統</span><span class="pill">時を愛する</span><span class="pill">分かち合う</span></div><p class="result-thesis">毎年同じ季節に、同じ場所へ猫たちが集まる。</p><div class="desc"><p>去年より背が伸びた子猫。少し白い毛が増えた老猫。今年は新しい家族を連れてきた猫。</p><p>景色は同じでも、集まる猫たちは少しずつ変わります。だから帰り際に交わす言葉は、いつも同じ。「また来年。」</p><p>あなたにとって伝統とは、昔を繰り返すことではなく、来年もまた会おうと約束することなのです。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.20</span>エイリス</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>カレンダー</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_lady_life_quiet" class="page result-page theme-lady"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>優雅な令嬢たち</span><em>The Porcelain Cup</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.11</div><h1 class="title">午後三時の令嬢</h1>
+<div style="text-align:center"><span class="pill">優雅な令嬢たち</span><span class="pill">暮らしを愉しむ</span><span class="pill">静かに愛する</span></div><p class="result-thesis">忙しい日でも、一度だけ手を止めることを忘れないあなた。</p><div class="desc"><p>お茶を淹れて、窓辺へ。午後の光が少し傾けば、さっきまで同じだった部屋にも、違う色が見えてきます。</p><p>リトル・ミューでは、海辺の画廊で午後のお茶を楽しむ猫。急いでいると見落としてしまう色や香りを、あなたはよく知っています。</p><p>大きな出来事がなくても、その日の中に一つ好きなものを見つけられる。そんな猫です。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.11</span>アデライン・マーロウ</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>ケーキステッカー・ハンカチ</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_lady_life_share" class="page result-page theme-lady"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>優雅な令嬢たち</span><em>The Porcelain Cup</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.12</div><h1 class="title">ケーキ屋通りの令嬢</h1>
+<div style="text-align:center"><span class="pill">優雅な令嬢たち</span><span class="pill">暮らしを愉しむ</span><span class="pill">分かち合う</span></div><p class="result-thesis">おいしそうなものを見つけると、一匹で決めるより誰かと迷いたくなるあなた。</p><div class="desc"><p>「こっちも食べたいけれど、あっちも気になる。」そんなときは、「半分こすれば、両方食べられるでしょう？」</p><p>リトル・ミューでは、友達とケーキ屋通りを歩く令嬢猫。自分だけの一皿より、二匹で別々のものを選んで少しずつ交換する方が楽しそう。</p><p>小さな楽しみは、誰かと分けると選べるものまで増えていく。あなたは、そんな愉しみ方をよく知っています。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.12</span>マチルダ・フェアボーン</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>ケーキステッカー・マグネット</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_lady_message_quiet" class="page result-page theme-lady"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>優雅な令嬢たち</span><em>The Porcelain Cup</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.09</div><h1 class="title">便箋を選ぶ令嬢</h1>
+<div style="text-align:center"><span class="pill">優雅な令嬢たち</span><span class="pill">想いを届ける</span><span class="pill">静かに愛する</span></div><p class="result-thesis">手紙を書く前に、便箋を長いこと選んでしまうあなた。</p><div class="desc"><p>言葉だけでは足りません。相手に似合う色。紙の手触り。封筒を開いたとき、どんな気持ちになるだろう。</p><p>リトル・ミューでは、文具店の棚の前でなかなか一枚を決められない令嬢猫。けれど、ようやく選んだ便箋には、書き始める前からもう相手への想いが込められています。</p><p>「これを見たら、あの猫はきっと好きだと思う。」そう考えながら選ぶことも、あなたにとっては手紙の一部なのです。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.09</span>スミレ・トコハナ</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>手紙セット</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_lady_message_share" class="page result-page theme-lady"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>優雅な令嬢たち</span><em>The Porcelain Cup</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.10</div><h1 class="title">客間を開く令嬢</h1>
+<div style="text-align:center"><span class="pill">優雅な令嬢たち</span><span class="pill">想いを届ける</span><span class="pill">分かち合う</span></div><p class="result-thesis">予定になかった客が一匹増えても、あなたはあまり困りません。</p><div class="desc"><p>「では、もう一脚。」それで済むことを知っているからです。リトル・ミューでは、客間の扉を開いて猫たちを迎える令嬢。</p><p>初めて来た猫。少し緊張している猫。話す相手をまだ見つけられていない猫。そんな姿を見ると、自然に声をかけたくなります。</p><p>あなた自身が話題の中心になる必要はありません。誰かが「ここにいていいんだ」と思える場所をつくること。それが、あなたのおもてなしです。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.10</span>イヴリン・A・アッシュコム</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>手紙セット・ブローチ</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_lady_time_quiet" class="page result-page theme-lady"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>優雅な令嬢たち</span><em>The Porcelain Cup</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.07</div><h1 class="title">蕾の庭の令嬢</h1>
+<div style="text-align:center"><span class="pill">優雅な令嬢たち</span><span class="pill">時を愛する</span><span class="pill">静かに愛する</span></div><p class="result-thesis">楽しみなことがあると、すぐに答えを知るより、そこへ向かうあいだまで大切にしたいあなた。</p><div class="desc"><p>まだ開いていない蕾。読みかけの本。次の季節に、もう一度訪れたい場所。「いつかな」と待っていることも、あなたにとっては楽しみの一部です。</p><p>リトル・ミューでは、古い屋敷の庭や森を歩く若い令嬢猫。今年見つからなかった薔薇も、次の薔薇の季節になれば、もう一度現れるかもしれません。</p><p>まだ訪れていない美しいものを、楽しみにしまっておける猫。それが、あなたです。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.07</span>セシリー・ウェザビー</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>カレンダー・原画</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_lady_time_share" class="page result-page theme-lady"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>優雅な令嬢たち</span><em>The Porcelain Cup</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.08</div><h1 class="title">星暦をめくる令嬢</h1>
+<div style="text-align:center"><span class="pill">優雅な令嬢たち</span><span class="pill">時を愛する</span><span class="pill">分かち合う</span></div><p class="result-thesis">季節が変わるたび、「今年も来たね」と誰かと一緒に確かめたくなるあなた。</p><div class="desc"><p>春の最初の星。夏の長い夕暮れ。秋の澄んだ空。冬の夜に現れる星々。美しいものを見つけると、一匹で眺めるより、「ねえ、見て」と誰かを呼びたくなります。</p><p>リトル・ミューでは、古い星暦をめくりながら暮らす令嬢猫。星は毎年同じように巡ってきても、一緒に見上げる猫たちは少しずつ変わります。</p><p>「今年もみんなで見た。」そんな一行を、今年も星暦へ書き加える猫です。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.08</span>イモージェン・ルーク</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>カレンダー</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_rebel_life_quiet" class="page result-page theme-rebel"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>ささやかな反逆者</span><em>The Wayward Claw</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.05</div><h1 class="title">夜咲きの園丁</h1>
+<div style="text-align:center"><span class="pill">ささやかな反逆者</span><span class="pill">暮らしを愉しむ</span><span class="pill">静かに愛する</span></div><p class="result-thesis">まだ開いていない蕾を、つい何度も見に行ってしまうあなた。</p><div class="desc"><p>すぐに答えが出るものより、少しずつ変わっていくものに惹かれます。夜の温室。雨粒のついたガラス。昨日より少し膨らんだ蕾。</p><p>誰かに見せるためでなくても、その小さな変化に気づけることが嬉しい。リトル・ミューでは、一晩だけ咲く花のそばで、本を読みながら待つ猫。</p><p>眠ってしまっても、甘い香りで目を覚ますでしょう。美しいものは、急いで咲かせなくてもいい。あなたは、それをよく知っています。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.05</span>フレデリック（フレディ）・ヘイル</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>原画・カレンダー</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_rebel_life_share" class="page result-page theme-rebel"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>ささやかな反逆者</span><em>The Wayward Claw</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.06</div><h1 class="title">果樹園のいたずら猫</h1>
+<div style="text-align:center"><span class="pill">ささやかな反逆者</span><span class="pill">暮らしを愉しむ</span><span class="pill">分かち合う</span></div><p class="result-thesis">楽しいことを見つけると、自分だけでは終われないあなた。</p><div class="desc"><p>おいしいものを見つければ、「これ食べてみて！」と誰かを呼びたくなります。少しくらい予定から外れても、ちょっとくらい失敗しても、最後にみんなが笑っていれば、それも悪くありません。</p><p>リトル・ミューでは、果樹園を駆け回るいたずら好きな若猫。熟した果物を見つけては味見して、おいしければみんなのところへ。</p><p>幸せは、一匹で抱えるより、みんなで味わった方がおいしい。あなたは、それをよく知っています。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.06</span>アルフレッド（アルフィー）・ベルウェザー</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>ハンカチ・マグネット</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_rebel_message_quiet" class="page result-page theme-rebel"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>ささやかな反逆者</span><em>The Wayward Claw</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.03</div><h1 class="title">名もなき贈り主</h1>
+<div style="text-align:center"><span class="pill">ささやかな反逆者</span><span class="pill">想いを届ける</span><span class="pill">静かに愛する</span></div><p class="result-thesis">言いたいことほど、なぜか言葉にするのが難しいあなた。</p><div class="desc"><p>けれど、誰かが好きそうなものには、よく気づきます。友達がふと足を止めた店先。何気なく「これ、好きだな」と言ったもの。なくして困っていた、小さな持ち物。</p><p>そんなことを、あなたは案外よく覚えています。リトル・ミューでは、ときどき誰にも見つからないように、小さな贈り物を置いていく猫。</p><p>名前を書かなくてもいい。お礼を言われなくてもいい。「あなたのことを、ちゃんと覚えていたよ」その気持ちだけが、そっと相手へ届けば十分なのです。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.03</span>マイルズ・ファロウ</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>手紙セット・ブローチ</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_rebel_message_share" class="page result-page theme-rebel"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>ささやかな反逆者</span><em>The Wayward Claw</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.04</div><h1 class="title">気まぐれ郵便猫</h1>
+<div style="text-align:center"><span class="pill">ささやかな反逆者</span><span class="pill">想いを届ける</span><span class="pill">分かち合う</span></div><p class="result-thesis">「これ、君に似合うと思って。」そんなふうに、思いついたらすぐ届けに行ってしまうあなた。</p><div class="desc"><p>誰かから頼まれた手紙。返してほしい本。ちょっとした包み。気づけば、自分の用事より人の届け物の方が増えていることも。</p><p>でも、あなたは案外それを楽しんでいます。リトル・ミューでは、いつの間にかみんなから頼りにされる“気まぐれ郵便猫”。</p><p>ときには頼まれていない小さな贈り物まで加わります。誰かを思い出したその瞬間を、そのまま相手のところまで届けてしまう。それが、あなたの優しさです。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.04</span>ロミオ・グレイ</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>手紙セット・マグネット</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_rebel_time_quiet" class="page result-page theme-rebel"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>ささやかな反逆者</span><em>The Wayward Claw</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.01</div><h1 class="title">月影の反逆者</h1>
+<div style="text-align:center"><span class="pill">ささやかな反逆者</span><span class="pill">時を愛する</span><span class="pill">静かに愛する</span></div><p class="result-thesis">人と同じ道を歩くことに、ほんの少しだけ退屈してしまうあなた。</p><div class="desc"><p>みんなが賑やかな大通りへ向かっていても、月がきれいなら、少し遠回りをしてみたくなります。森の奥へ落ちる月明かり。いつもは気づかない細い小径。</p><p>雨上がりの葉に残った光。誰かに教えるためではなく、自分だけが見つけた美しいものを、そっと心にしまっておける猫です。</p><p>少しくらい遠回りでも構いません。心が向いた方へ歩いた先に、自分だけの景色が待っているかもしれないのですから。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.01</span>エドウィン・オドラン・ハロウビー</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>時計・原画</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_rebel_time_share" class="page result-page theme-rebel"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>ささやかな反逆者</span><em>The Wayward Claw</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.02</div><h1 class="title">放浪する時計師</h1>
+<div style="text-align:center"><span class="pill">ささやかな反逆者</span><span class="pill">時を愛する</span><span class="pill">分かち合う</span></div><p class="result-thesis">決められた道をまっすぐ進むより、思いがけない寄り道に惹かれるあなた。</p><div class="desc"><p>知らない町。古い店。少し気になる路地。「こっちへ行ってみよう」と曲がった先で、忘れられないものを見つけます。</p><p>リトル・ミューでは、工具箱を持って町から町へ歩く時計師。止まった時計を直すことも好きですが、それ以上に好きなのは、持ち主へ返した瞬間に見える嬉しそうな顔。</p><p>寄り道の先で誰かと出会い、その猫の一日に少しだけ新しい物語を増やしていく。そんな旅が、あなたにはよく似合います。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.02</span>テオ・ベケット</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>時計・カレンダー</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_salon_life_quiet" class="page result-page theme-salon"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>秘密のサロン</span><em>The Veiled Moon</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.17</div><h1 class="title">最後の一灯</h1>
+<div style="text-align:center"><span class="pill">秘密のサロン</span><span class="pill">暮らしを愉しむ</span><span class="pill">静かに愛する</span></div><p class="result-thesis">にぎやかな場所が嫌いなわけではないけれど、みんなが帰ったあとの静けさも好きなあなた。</p><div class="desc"><p>椅子が空になり、話し声が消え、最後の灯りだけが残った部屋。リトル・ミューでは、一日の終わった小さな劇場を歩く猫。</p><p>客席の灯りを一つずつ消して、最後に一灯だけ残します。誰もいない舞台を眺めたり、飲み物を一杯だけ楽しんだり。</p><p>誰かと過ごした場所を、最後に一匹でもう一度味わう。そんな静かな余韻を大切にする猫です。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.17</span>サイラス・ノースコット</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>原画・ハンカチ</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_salon_life_share" class="page result-page theme-salon"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>秘密のサロン</span><em>The Veiled Moon</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.18</div><h1 class="title">秘密のお茶会</h1>
+<div style="text-align:center"><span class="pill">秘密のサロン</span><span class="pill">暮らしを愉しむ</span><span class="pill">分かち合う</span></div><p class="result-thesis">大勢で賑やかに過ごすより、気の合う猫が数匹いれば満足なあなた。</p><div class="desc"><p>お茶を一杯。それから、もう一杯。「最後にもう一杯だけ」と言ったはずなのに、話が終わりません。</p><p>リトル・ミューでは、店じまい後の茶店で親しい猫たちと小さなお茶会を続ける猫。大切な話でも、くだらない話でも構いません。</p><p>「この猫たちとなら、もう少しここにいたい。」そう思えることが、あなたにとって一番のごちそうなのです。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.18</span>ローレンス・フィンチ</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>ケーキステッカー・マグネット・ハンカチ</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_salon_message_quiet" class="page result-page theme-salon"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>秘密のサロン</span><em>The Veiled Moon</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.15</div><h1 class="title">冬支度の灯り</h1>
+<div style="text-align:center"><span class="pill">秘密のサロン</span><span class="pill">想いを届ける</span><span class="pill">静かに愛する</span></div><p class="result-thesis">まだ会ったことのない誰かのことまで、ふと考えられるあなた。</p><div class="desc"><p>寒い日に困る猫がいるかもしれない。予定になかった旅猫が立ち寄るかもしれない。誰が使うか分からなくても、そっと一枚多く用意しておきます。</p><p>リトル・ミューでは、冬を迎える前に宿や道沿いの家を見て回る猫。毛布、薪、食べ物。使われなければ、それが一番。</p><p>けれど、本当に必要な猫が現れたとき、そこにちゃんと用意されている。まだ知らない誰かを思うことも、立派な優しさです。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.15</span>セドリック・アルベル</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>手紙セット・原画</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_salon_message_share" class="page result-page theme-salon"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>秘密のサロン</span><em>The Veiled Moon</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.16</div><h1 class="title">サロンの聞き手</h1>
+<div style="text-align:center"><span class="pill">秘密のサロン</span><span class="pill">想いを届ける</span><span class="pill">分かち合う</span></div><p class="result-thesis">話すことより、誰かの話を聞く方が好きなあなた。</p><div class="desc"><p>相手が少し言葉に詰まったときも、急いで答えを代わりに言ったりはしません。「それで、どうなったの？」</p><p>そんな小さな問いを一つ。リトル・ミューでは、サロンの片隅で静かに話を聞く猫。あなたが知りたいのは噂ではなく、その猫自身が何を感じているのか。</p><p>ちゃんと聞いてもらえたと分かったとき、猫は思っていたよりたくさん話せるものです。あなたは、そのための場所をそっと作れる猫です。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.16</span>ギルバート・ウィットコム</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>ブローチ・手紙セット</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_salon_time_quiet" class="page result-page theme-salon"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>秘密のサロン</span><em>The Veiled Moon</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.13</div><h1 class="title">古書室の猫</h1>
+<div style="text-align:center"><span class="pill">秘密のサロン</span><span class="pill">時を愛する</span><span class="pill">静かに愛する</span></div><p class="result-thesis">古い本そのものより、その隅に残された小さな痕跡が気になるあなた。</p><div class="desc"><p>余白の書き込み。忘れられた地名。古い台帳に一度だけ現れる言葉。リトル・ミューでは、静かな古書室で昔の記録を読み解く猫。</p><p>有名な英雄の物語だけではなく、何を食べ、どんな道を歩き、どんな言葉を使っていたのか。</p><p>そんな何気ない記録の中から、昔の猫たちの暮らしを見つけます。大きな歴史の隅に残った、小さな暮らしの跡を見逃さない猫。それが、あなたです。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.13</span>トバイアス・セルド・エラリー</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>原画・時計</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><section id="result_salon_time_share" class="page result-page theme-salon"><div class="card">
+<div class="kicker">YOUR LITTLE MEW</div><div class="category-mark"><span>秘密のサロン</span><em>The Veiled Moon</em></div><div class="cat">🐈</div>
+<div class="small">CAT No.14</div><h1 class="title">星図を囲む夜</h1>
+<div style="text-align:center"><span class="pill">秘密のサロン</span><span class="pill">時を愛する</span><span class="pill">分かち合う</span></div><p class="result-thesis">古い記録を見つけると、それを今の景色と重ねてみたくなるあなた。</p><div class="desc"><p>昔の星図。誰かが鉛筆で残した小さな印。何十年も前の観測記録。</p><p>リトル・ミューでは、そんな星図を机に広げ、気の合う猫たちと夜空を見上げます。「この印の星、どれだろう？」一匹で答えを見つけるより、みんなで探す方が面白い。</p><p>昔の猫が見たものを、今いる猫たちともう一度見つける。そんな夜を楽しめる猫です。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.14</span>ヒュー・フェナー</strong></aside><div class="goods"><b>あなたに似合うもの</b><br/>時計・マグネット</div>
+<p class="intro">あなたの猫を、暮らしのそばに。</p>
+<a class="btn start" href="#start_page">もう一度診断する</a>
+</div></section><p class="privacy-link"><a href="privacy.html">アクセス解析とプライバシーについて</a></p></main><script>
+(() => {
+  "use strict";
+
+  const questions = [
+    {
+      axis: "あなたの心は、何に惹かれる？",
+      question: "古い本を開くと、二つの書き込みが残っていました。より気になるのは？",
+      answers: [
+        ["百年前の日付と、かつての持ち主の名前", "time"],
+        ["「あなたへ」と書かれた、短い献辞", "message"]
+      ]
+    },
+    {
+      axis: "あなたの心は、何に惹かれる？",
+      question: "長く使われてきた古いカフェに入りました。最初に目が向くのは？",
+      answers: [
+        ["窓辺の花や食器など、今の店のしつらえ", "life"],
+        ["古い床や壁に残る、昔からの店の面影", "time"]
+      ]
+    },
+    {
+      axis: "あなたの心は、何に惹かれる？",
+      question: "小さなお店で、どちらか一つを選ぶなら？",
+      answers: [
+        ["贈る相手を思い浮かべながら選びたくなる、きれいな便箋", "message"],
+        ["毎日の時間が少し楽しくなりそうな、きれいなティーカップ", "life"]
+      ]
+    },
+    {
+      axis: "あなたの心は、何に惹かれる？",
+      question: "古いブローチを一つ見つけました。まず知りたくなるのは？",
+      answers: [
+        ["誰が誰へ、どんな気持ちで渡したものなのか", "message"],
+        ["いつ作られ、どんな時代を経てきたものなのか", "time"]
+      ]
+    },
+    {
+      axis: "あなたの心は、何に惹かれる？",
+      question: "知らない町をゆっくり歩くなら、つい目が向くのは？",
+      answers: [
+        ["古い建物や道に残る、昔の町の痕跡", "time"],
+        ["店先や窓辺、庭に見える、今の暮らしの工夫", "life"]
+      ]
+    },
+    {
+      axis: "あなたの心は、何に惹かれる？",
+      question: "部屋に置く小さな品を一つ選ぶなら？",
+      answers: [
+        ["見るたび、いつもの暮らしが少し心地よくなるもの", "life"],
+        ["見るたび、大切な誰かとの出来事を思い出すもの", "message"]
+      ]
+    },
+    {
+      axis: "受け継いだものと、どう付き合う？",
+      question: "古い家具をひとつ譲り受けました。使い続けるなら？",
+      answers: [
+        ["傷んだところだけ直し、形や意匠はなるべくそのまま残す", "inherit"],
+        ["由来は大切にしながら、自分の暮らしに合う形へ少し整え直す", "weave"]
+      ]
+    },
+    {
+      axis: "受け継いだものと、どう付き合う？",
+      question: "昔から伝わるお菓子のレシピを作るなら？",
+      answers: [
+        ["基本の味は残しながら、自分なりの工夫を少し加えてみたい", "weave"],
+        ["まずは昔からの分量と手順で、その味を再現してみたい", "inherit"]
+      ]
+    },
+    {
+      axis: "受け継いだものと、どう付き合う？",
+      question: "昔から続く町の行事を任されました。どちらに近い？",
+      answers: [
+        ["受け継がれてきた順序や形式まで含めて、そのまま味わいたい", "inherit"],
+        ["大切な意味は残しながら、見せ方や進め方は今に合う形へ整えたい", "weave"]
+      ]
+    },
+    {
+      axis: "美しいものを、どこに置く？",
+      question: "とても美しい小物を一つ手に入れました。家ではどうしたい？",
+      answers: [
+        ["日々よく目に入る場所に飾っておきたい", "outer"],
+        ["箱にしまって、見たいときにそっと取り出したい", "inner"]
+      ]
+    },
+    {
+      axis: "美しいものを、どこに置く？",
+      question: "旅先でもらった、小さくてきれいな紙片。残しておくなら？",
+      answers: [
+        ["手帳や本の内側に挟んで、ときどき取り出して眺める", "inner"],
+        ["額やボードに入れて、部屋の景色の一部にする", "outer"]
+      ]
+    },
+    {
+      axis: "美しいものを、どこに置く？",
+      question: "お気に入りの色や模様を取り入れるなら？",
+      answers: [
+        ["部屋や服の、目に入るところにしっかり使いたい", "outer"],
+        ["引き出しの内側や持ち物の細部に、そっと忍ばせたい", "inner"]
+      ]
+    },
+    {
+      axis: "喜びを、どう味わう？",
+      question: "とても嬉しいことがあった夜。自然なのは？",
+      answers: [
+        ["まずは一人で、その余韻をゆっくり味わう", "quiet"],
+        ["大切な人に話して、一緒に喜ぶ", "share"]
+      ]
+    },
+    {
+      axis: "喜びを、どう味わう？",
+      question: "すごくきれいな景色を見つけました。そのあと心に浮かぶのは？",
+      answers: [
+        ["今度は、大切な人と一緒に見に来たい", "share"],
+        ["この景色はもう少し、自分の中だけで味わっていたい", "quiet"]
+      ]
+    },
+    {
+      axis: "喜びを、どう味わう？",
+      question: "とっておきのお茶を開けるなら？",
+      answers: [
+        ["一人で静かに、香りや味に集中して楽しみたい", "quiet"],
+        ["親しい人と一緒に飲みながら、感想を交わしたい", "share"]
+      ]
+    }
+  ];
+
+  const tieBreaks = {
+    "message,time": {
+      question: "一つだけ大切に残すなら？",
+      answers: [
+        ["その日の年月日や出来事が残された記録", "time"],
+        ["大切な猫が自分に残してくれた言葉", "message"]
+      ]
+    },
+    "life,time": {
+      question: "古い街から一つだけ持ち帰るなら？",
+      answers: [
+        ["その街の時間の痕跡が残っている古い品", "time"],
+        ["これからの日々で使いたくなる美しい品", "life"]
+      ]
+    },
+    "life,message": {
+      question: "小さな品を一つ選ぶなら？",
+      answers: [
+        ["誰かとの出来事を思い出せる品", "message"],
+        ["使うたび日常が少し心地よくなる品", "life"]
+      ]
+    }
+  };
+
+  const labels = ["A", "B", "C"];
+  const initialScores = () => ({
+    time: 0, message: 0, life: 0,
+    inherit: 0, weave: 0,
+    outer: 0, inner: 0,
+    quiet: 0, share: 0
+  });
+
+  const axisMeta = {
+    time: {icon:"⌛", name:"心が惹かれるもの", value:"時の積み重なり", detail:"ものの古さだけでなく、そこに重なった年月や小さな痕跡へ心が向きます。"},
+    message: {icon:"✉", name:"心が惹かれるもの", value:"誰かの想い", detail:"品物や言葉の向こうにいる誰か、その気持ちや結びつきへ心が向きます。"},
+    life: {icon:"☕", name:"心が惹かれるもの", value:"日々の暮らし", detail:"いま目の前にある暮らしを、心地よく美しくするものへ心が向きます。"},
+    inherit: {icon:"♜", name:"受け継ぎ方", value:"残された形を受け継ぐ", detail:"由来や形そのものに意味を感じ、積み重ねられたものを丁寧に味わいます。"},
+    weave: {icon:"✦", name:"受け継ぎ方", value:"意味を残して織り直す", detail:"大切な由来を守りながら、いまの自分や暮らしに似合う形へ整えます。"},
+    inner: {icon:"◇", name:"美の置き場所", value:"自分の内側で大切にする", detail:"好きなものを大きく見せるより、自分だけが分かる場所でそっと育てます。"},
+    outer: {icon:"❀", name:"美の置き場所", value:"暮らしの表側に置く", detail:"心が動く色や形を、部屋や持ち物など日々目に触れる景色へ取り入れます。"},
+    quiet: {icon:"☾", name:"喜びの味わい方", value:"静かに余韻を味わう", detail:"心が動いたあとは、まず一匹でその感覚をゆっくり自分の中へ置きます。"},
+    share: {icon:"✧", name:"喜びの味わい方", value:"誰かと喜びを分かち合う", detail:"美しい発見を大切な誰かへ渡し、同じ景色を一緒に眺めることを楽しみます。"}
+  };
+
+  const resultPortraits = {
+    result_blood_life_quiet: {
+      line:"美しい型を守り、ひとりの納得まで磨く猫。",
+      text:"あなたが惹かれるのは、日々を心地よくする小さな美しさ。それを受け継いだ形のまま暮らしの表側に置き、まず自分の感覚で確かめます。王家のパティシエは、誰かの評価より『これでよい』と思える仕上がりを大切にする結果です。"
+    },
+    result_blood_life_share: {
+      line:"受け継いだ美しさを、みんなの楽しい今日にする猫。",
+      text:"あなたが惹かれるのは、食卓や部屋を心地よくする暮らしの美しさ。昔からの型を目に見える形で守りながら、その喜びを誰かと囲みます。晩餐会の猫は、伝統を飾っておくのではなく、いま集う猫たちの時間として続ける結果です。"
+    },
+    result_blood_message_quiet: {
+      line:"言葉にしすぎず、受け継いだ形へ想いを縫い込む猫。",
+      text:"あなたの心は、品物の向こうにいる誰かの想いへ向きます。その気持ちを、昔から残る形やしるしに託して暮らしの中へ置き、返事を急がず静かに守ります。冬布を継ぐ猫は、大きく語らなくても消えない一針を残す結果です。"
+    },
+    result_blood_message_share: {
+      line:"受け継いだ作法で、みんなの居場所をひらく猫。",
+      text:"あなたが大切にするのは、誰かの気持ちと、その猫がここにいてよいと思えるつながり。昔からの型を表側で守りながら、喜びは周囲へ分け渡します。祝宴の女主人は、整った形式を排除のためではなく、全員を迎える器として使う結果です。"
+    },
+    result_blood_time_quiet: {
+      line:"過ぎた時間を止めず、明日も動く形で守る猫。",
+      text:"あなたが惹かれるのは、ものに重なった年月や小さな痕跡。それを元の形を尊重しながら目に見える暮らしの中で守り、静かに確かめます。時を継ぐ猫は、古さを眺めるだけでなく、次の日も針が進むよう手入れする結果です。"
+    },
+    result_blood_time_share: {
+      line:"同じ季節を守り、また会う約束へ変える猫。",
+      text:"あなたは、長く続いてきた時間の積み重なりに心を動かされます。残された形を暮らしの表側で守り、その節目を誰かと分かち合います。暦を守る猫は、伝統を昔の再現ではなく、みんなが次の季節にも集まるための約束にする結果です。"
+    },
+    result_lady_life_quiet: {
+      line:"受け継いだ美意識を、今日の小さなご褒美へ整える猫。",
+      text:"あなたの心が向くのは、いまの暮らしを少し心地よくするもの。由来や意味を残しつつ自分に似合う形へ整え、目に入る景色として楽しみます。午後三時の令嬢は、見せるためだけではなく、自分の一日を丁寧に味わうために美を置く結果です。"
+    },
+    result_lady_life_share: {
+      line:"今日のときめきを、街じゅうへ軽やかに手渡す猫。",
+      text:"あなたが惹かれるのは、暮らしを明るくする色や味やしつらえ。受け継いだ意味をいまの形へ織り直し、見える景色にして誰かと喜びます。ケーキ屋通りの令嬢は、美しいものを自分だけの完成品にせず、楽しい寄り道へ広げる結果です。"
+    },
+    result_lady_message_quiet: {
+      line:"伝え方を選び抜き、想いをそっと見える形にする猫。",
+      text:"あなたは、ものや言葉に宿る誰かの気持ちへ心を向けます。昔からの作法をそのまま繰り返すのではなく、相手と今の自分に似合う形へ整えます。便箋を選ぶ令嬢は、声を大きくせず、紙や色の細部まで含めて気持ちを届ける結果です。"
+    },
+    result_lady_message_share: {
+      line:"想いが届くよう、古い扉を今日の客間へひらく猫。",
+      text:"あなたが大切にするのは、相手の気持ちと、互いに安心して過ごせるつながり。受け継いだ礼儀やしつらえを今に合う形へ整え、喜びを一緒に味わいます。客間を開く令嬢は、美しさを壁ではなく招待状として使う結果です。"
+    },
+    result_lady_time_quiet: {
+      line:"古い庭の続きを、自分の季節として咲かせる猫。",
+      text:"あなたは、長く重なった時間の跡に惹かれます。由来を大切にしながら今の暮らしに似合う姿へ整え、その変化を目に見える景色として静かに味わいます。蕾の庭の令嬢は、昔を固定せず、次に咲く一輪まで含めて受け継ぐ結果です。"
+    },
+    result_lady_time_share: {
+      line:"昔の星を、いま一緒に見上げる楽しみへ変える猫。",
+      text:"あなたの心は、年月を越えて残る記録やしるしへ向きます。それを今日の暮らしで親しめる形へ整え、発見を誰かと分かち合います。星暦をめくる令嬢は、古い知恵を遠い過去に閉じず、みんなの今夜へ連れてくる結果です。"
+    },
+    result_rebel_life_quiet: {
+      line:"誰にも見えないところで、暮らしを自分らしく育てる猫。",
+      text:"あなたが惹かれるのは、日々を心地よくする小さな工夫。受け継いだ意味は残しながら自分なりに織り直し、その美しさをまず内側で味わいます。夜咲きの園丁は、目立つ完成より、自分だけが気づく変化を静かに育てる結果です。"
+    },
+    result_rebel_life_share: {
+      line:"自分らしい工夫を、みんなの楽しい発見にする猫。",
+      text:"あなたの心は、暮らしを面白くする色や味や小さな変化へ向きます。決まりの意味を残しつつ自由に織り直し、見つけた喜びは誰かへ手渡します。果樹園のいたずら猫は、型を壊すためではなく、いつもの景色に新しい遊びを実らせる結果です。"
+    },
+    result_rebel_message_quiet: {
+      line:"名を残さず、自分だけの方法で想いを置いていく猫。",
+      text:"あなたが惹かれるのは、言葉や品物の向こうにある誰かの気持ち。決まった伝え方に縛られず、自分にできる形へそっと織り直し、返事や注目を求めず内側で大切にします。名もなき贈り主は、届くことそのものを喜べる結果です。"
+    },
+    result_rebel_message_share: {
+      line:"行き先のない想いに、自分らしい道を見つける猫。",
+      text:"あなたの心は、まだ届いていない誰かの気持ちへ向きます。古い決まりをそのまま守るより、意味を残した新しい届け方を考え、喜びをつなぎます。気まぐれ郵便猫は、予定された役目ではなくても、必要な手紙へ道をつくる結果です。"
+    },
+    result_rebel_time_quiet: {
+      line:"古い時間を、自分だけの読み方でそっとひらく猫。",
+      text:"あなたは、ものや場所に積もった年月へ心を動かされます。ただ保存するのではなく、自分の感覚で意味を読み替え、その発見を内側で深めます。月影の反逆者は、皆と同じ答えを急がず、古い景色の中に自分だけの道を見つける結果です。"
+    },
+    result_rebel_time_share: {
+      line:"古いものを直しながら、知らない景色まで連れていく猫。",
+      text:"あなたが惹かれるのは、長い時間を越えて残ったもの。それを昔の場所へ固定せず、今も使える形へ織り直し、旅先で得た発見を誰かと分かち合います。放浪する時計師は、受け継ぐことと新しい道を歩くことを両立する結果です。"
+    },
+    result_salon_life_quiet: {
+      line:"いつもの灯りを守り、ひとりの時間をやわらかく包む猫。",
+      text:"あなたが惹かれるのは、日々の暮らしを落ち着かせる小さな美しさ。残された形を丁寧に受け継ぎ、目立たない場所で静かに味わいます。最後の一灯は、新しさを競わず、変わらずそこにある安心を大切にする結果です。"
+    },
+    result_salon_life_share: {
+      line:"変わらないしつらえで、親しい猫との時間を囲む猫。",
+      text:"あなたの心は、お茶や灯りのように暮らしを心地よくするものへ向きます。馴染んだ形を内側で守りながら、その喜びは近しい誰かと分かち合います。秘密のお茶会は、大勢に見せる華やかさより、安心できる輪の中で同じ時間を味わう結果です。"
+    },
+    result_salon_message_quiet: {
+      line:"まだ知らない誰かのために、見えない備えを残す猫。",
+      text:"あなたが惹かれるのは、言葉の向こうにいる誰かと、その猫が必要とするもの。受け継いだやり方を目立たない場所で守り、感謝や返事を待たずに備えます。冬支度の灯りは、使われないかもしれない優しさも丁寧に置いておける結果です。"
+    },
+    result_salon_message_share: {
+      line:"言葉を奪わず、安心して話せる場所を守る猫。",
+      text:"あなたの心は、誰かの言葉と、その奥にある気持ちへ向きます。昔から続く静かな場の形を内側で守りながら、喜びや重荷を一緒に受け取ります。サロンの聞き手は、答えを代わりに出すより、相手の言葉が生まれる余白をつくる結果です。"
+    },
+    result_salon_time_quiet: {
+      line:"大きな歴史の隅で、小さな暮らしの跡を守る猫。",
+      text:"あなたが惹かれるのは、古い記録や品に残った時間の痕跡。形を変えず静かな場所で受け継ぎ、そこにいた猫たちの暮らしを丁寧に読み取ります。古書室の猫は、有名な物語より余白の小さな印を見逃さない結果です。"
+    },
+    result_salon_time_share: {
+      line:"昔の記録を囲み、いまの仲間と答えを探す猫。",
+      text:"あなたの心は、年月を越えて残るしるしへ向きます。その形を尊重して内側で守りながら、発見の喜びは気の合う誰かと分かち合います。星図を囲む夜は、一匹で正解を得るより、同じ痕跡を一緒に見つめる時間を大切にする結果です。"
+    }
+  };
+
+  const primaryLogic = {
+    time:"年月や痕跡に、現在だけでは見えない物語を感じ取ります。",
+    message:"品物や言葉の向こうにいる誰か、その気持ちや結びつきを見つめます。",
+    life:"いまの暮らしを心地よくする色・味・しつらえに心が向きます。"
+  };
+
+  const seriesLogic = {
+    rebel:"由来は残しながら自分らしく織り直し、その美しさを内側で育てる組み合わせです。",
+    lady:"由来を今の自分に似合う形へ整え、暮らしの表側へ美しく置く組み合わせです。",
+    salon:"残された形を丁寧に受け継ぎ、静かな内側で意味を深める組み合わせです。",
+    blood:"残された形を受け継ぎ、目に見える暮らしの中で守り続ける組み合わせです。"
+  };
+
+  const enjoymentLogic = {
+    quiet:"心が動いたあと、まず自分の中で余韻を確かめる選び方です。",
+    share:"心が動いたものを誰かへ渡し、一緒に味わう選び方です。"
+  };
+
+  const axisShort = {
+    time:"時の積み重なり", message:"誰かの想い", life:"日々の暮らし",
+    inherit:"形を受け継ぐ", weave:"意味を残して織り直す",
+    inner:"内側で大切にする", outer:"暮らしの表側に置く",
+    quiet:"静かに余韻を味わう", share:"誰かと分かち合う"
+  };
+
+  const seriesAxes = {
+    rebel: {relation:"weave", expression:"inner"},
+    lady: {relation:"weave", expression:"outer"},
+    salon: {relation:"inherit", expression:"inner"},
+    blood: {relation:"inherit", expression:"outer"}
+  };
+
+  const seriesFromAxes = (relation, expression) => ({
+    "weave,inner":"rebel", "weave,outer":"lady",
+    "inherit,inner":"salon", "inherit,outer":"blood"
+  }[`${relation},${expression}`]);
+
+  let index = 0;
+  let scores = initialScores();
+  let answerHistory = [];
+  let tieMode = false;
+
+  const progress = document.getElementById("quiz_progress");
+  const progressFill = document.getElementById("quiz_progress_fill");
+  const backButton = document.getElementById("quiz_back");
+  const axis = document.getElementById("quiz_axis");
+  const question = document.getElementById("quiz_question");
+  const answers = document.getElementById("quiz_answers");
+
+  function setRouteClasses() {
+    const target = location.hash ? document.querySelector(location.hash) : null;
+    document.body.classList.toggle("has-route", Boolean(target));
+    document.body.classList.toggle("start-route", location.hash === "#start_page");
+  }
+
+  function makeAnswer(text, key, letter, handler) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "btn";
+    button.innerHTML = `<span class="letter">${letter}</span><span></span>`;
+    button.lastElementChild.textContent = text;
+    button.addEventListener("click", () => handler(key));
+    return button;
+  }
+
+  function renderQuestion() {
+    const item = questions[index];
+    progress.textContent = `${index + 1} / 15`;
+    progressFill.style.width = `${((index + 1) / questions.length) * 100}%`;
+    backButton.hidden = index === 0;
+    tieMode = false;
+    axis.textContent = item.axis;
+    question.textContent = item.question;
+    answers.replaceChildren();
+    item.answers.forEach(([text, key], i) => {
+      answers.appendChild(makeAnswer(text, key, labels[i], chooseAnswer));
+    });
+  }
+
+  function chooseAnswer(key) {
+    scores[key] += 1;
+    answerHistory.push(key);
+    index += 1;
+    if (index < questions.length) {
+      renderQuestion();
+      window.scrollTo({top: 0, behavior: "smooth"});
+      return;
+    }
+    resolvePrimary();
+  }
+
+  function renderTieBreak(item) {
+    tieMode = true;
+    progress.textContent = "あと一つ";
+    progressFill.style.width = "100%";
+    backButton.hidden = false;
+    axis.textContent = "あと一つだけ、心に近いものを";
+    question.textContent = item.question;
+    answers.replaceChildren();
+    item.answers.forEach(([text, key], i) => {
+      answers.appendChild(makeAnswer(text, key, labels[i], finish));
+    });
+    window.scrollTo({top: 0, behavior: "smooth"});
+  }
+
+  function resolvePrimary() {
+    const primaryKeys = ["time", "message", "life"];
+    const max = Math.max(...primaryKeys.map(key => scores[key]));
+    const tied = primaryKeys.filter(key => scores[key] === max);
+
+    if (tied.length === 1) {
+      finish(tied[0]);
+      return;
+    }
+
+    if (tied.length === 2) {
+      renderTieBreak(tieBreaks[[...tied].sort().join(",")]);
+      return;
+    }
+
+    renderTieBreak({
+      question: "最後に、一番心が動くものを一つだけ。",
+      answers: [
+        ["長い時間を重ねてきた痕跡", "time"],
+        ["誰かの想いが宿っている気配", "message"],
+        ["日々の暮らしを美しくしてくれるもの", "life"]
+      ]
+    });
+  }
+
+  function finish(primary) {
+    const relation = scores.weave > scores.inherit ? "weave" : "inherit";
+    const expression = scores.outer > scores.inner ? "outer" : "inner";
+    const enjoyment = scores.share > scores.quiet ? "share" : "quiet";
+
+    const series = seriesFromAxes(relation, expression);
+
+    const resultId = `result_${series}_${primary}_${enjoyment}`;
+    if (!document.getElementById(resultId)) {
+      throw new Error(`Result page not found: ${resultId}`);
+    }
+    const snapshot = {resultId, primary, relation, expression, enjoyment, series, scores:{...scores}, primaryDecidedByTie:tieMode};
+    window.lmkTrack?.("diagnosis_complete", {result_id:resultId, series, primary, enjoyment});
+    try { sessionStorage.setItem("littleMewLastResult", JSON.stringify(snapshot)); } catch (_) {}
+    decorateResult(resultId, snapshot);
+    location.hash = resultId;
+    window.scrollTo({top: 0, behavior: "smooth"});
+  }
+
+  function resultParts(resultId) {
+    const match = resultId.match(/^result_(blood|lady|rebel|salon)_(time|message|life)_(quiet|share)$/);
+    if (!match) return null;
+    const [, series, primary, enjoyment] = match;
+    return {series, primary, enjoyment, ...seriesAxes[series]};
+  }
+
+  function resultTitle(resultId) {
+    return document.querySelector(`#${resultId} .title`)?.textContent.trim() || "もう一匹の猫";
+  }
+
+  function scoreStrength(selected, opposite, snapshot) {
+    if (!snapshot) return "選ばれた感性";
+    const margin = Math.abs(snapshot.scores[selected] - snapshot.scores[opposite]);
+    return margin === 3 ? "くっきり" : "やや近い";
+  }
+
+  function axisCard(key, snapshot, opposite = null) {
+    const meta = axisMeta[key];
+    const tone = opposite ? scoreStrength(key, opposite, snapshot) : "選ばれた感性";
+    return `<div class="axis-card"><span class="axis-icon" aria-hidden="true">${meta.icon}</span><span class="axis-copy"><span class="axis-name">${meta.name}</span><span class="axis-value">${meta.value}</span></span><span class="axis-tone">${tone}</span><p class="axis-detail">${meta.detail}</p></div>`;
+  }
+
+  function scoreBar(label, value, max, selected) {
+    const width = Math.max(5, (value / max) * 100);
+    return `<div class="score-row ${selected ? "is-selected" : ""}"><div class="score-row-head"><span>${label}</span><b>${value}</b></div><div class="score-track" aria-hidden="true"><span style="width:${width}%"></span></div></div>`;
+  }
+
+  function scorePanel(parts, snapshot) {
+    if (!snapshot) {
+      return `<div class="score-panel score-unavailable"><span class="insight-label">回答の濃淡</span><p>このリンクには回答履歴が含まれていないため、得点差は表示していません。あなた自身が診断すると、ここに感性の強さと境目が現れます。</p></div>`;
+    }
+    const primaryKeys = ["time","message","life"];
+    const primaryRows = primaryKeys.map(key => scoreBar(axisShort[key], snapshot.scores[key], 4, key === parts.primary)).join("");
+    const pairs = [
+      ["受け継ぎ方", parts.relation, parts.relation === "inherit" ? "weave" : "inherit"],
+      ["美の置き場所", parts.expression, parts.expression === "inner" ? "outer" : "inner"],
+      ["喜びの味わい方", parts.enjoyment, parts.enjoyment === "quiet" ? "share" : "quiet"]
+    ];
+    const pairRows = pairs.map(([name,a,b]) => `<div class="balance-row"><span class="balance-name">${name}</span><div class="balance-values"><b>${axisShort[a]} ${snapshot.scores[a]}</b><span>:</span><span>${snapshot.scores[b]} ${axisShort[b]}</span></div></div>`).join("");
+    const tieNote = snapshot.primaryDecidedByTie ? "『心が惹かれるもの』は同点になり、最後の一問で決まりました。" : "棒の長さと数字は、実際に選んだ回答数を表します。";
+    return `<div class="score-panel"><span class="insight-label">回答から見えた濃淡</span><div class="primary-scores">${primaryRows}</div><p class="score-note">心が惹かれるものは各感性が4回ずつ登場し、全6問で比べています。${tieNote}</p><div class="balance-list">${pairRows}</div></div>`;
+  }
+
+  function nearbyResults(parts, snapshot) {
+    if (!snapshot) return [];
+    const candidates = [];
+    for (const key of ["time","message","life"]) {
+      if (key === parts.primary) continue;
+      const margin = snapshot.scores[parts.primary] - snapshot.scores[key];
+      if (margin <= 1) candidates.push({axis:"primary",key,margin});
+    }
+    const binary = [
+      ["relation", parts.relation, parts.relation === "inherit" ? "weave" : "inherit"],
+      ["expression", parts.expression, parts.expression === "inner" ? "outer" : "inner"],
+      ["enjoyment", parts.enjoyment, parts.enjoyment === "quiet" ? "share" : "quiet"]
+    ];
+    for (const [axisName,current,other] of binary) {
+      const margin = Math.abs(snapshot.scores[current] - snapshot.scores[other]);
+      if (margin === 1) candidates.push({axis:axisName,key:other,margin});
+    }
+    return candidates.map(item => {
+      let primary=parts.primary, relation=parts.relation, expression=parts.expression, enjoyment=parts.enjoyment;
+      if (item.axis === "primary") primary=item.key;
+      if (item.axis === "relation") relation=item.key;
+      if (item.axis === "expression") expression=item.key;
+      if (item.axis === "enjoyment") enjoyment=item.key;
+      const altId = `result_${seriesFromAxes(relation,expression)}_${primary}_${enjoyment}`;
+      const reason = item.axis === "primary"
+        ? `「${axisShort[item.key]}」も${item.margin === 0 ? "同点" : "1点差"}`
+        : `「${axisShort[item.key]}」側とは2対1`;
+      return {altId,reason};
+    });
+  }
+
+  function nearbyPanel(parts, snapshot) {
+    if (!snapshot) return "";
+    const nearby = nearbyResults(parts,snapshot);
+    if (!nearby.length) {
+      return `<div class="insight-card clear-profile"><span class="insight-label">今回の輪郭</span><h3 class="insight-title">四つの感性が、くっきり揃いました</h3><p class="insight-text">各判定で反対側との差が大きく、今回の回答ではこの猫らしさがはっきり表れています。</p></div>`;
+    }
+    const card = ({altId,reason}) => `<div class="neighbor-item"><span class="neighbor-paw" aria-hidden="true">🐾</span><div><b>${resultTitle(altId)}</b><span>${reason}だったため、この結果もすぐ隣にあります。</span></div></div>`;
+    const visible = nearby.slice(0,3).map(card).join("");
+    const hidden = nearby.slice(3).map(card).join("");
+    const more = hidden ? `<details class="neighbor-more"><summary>ほか${nearby.length - 3}匹も同じ近さ</summary><div class="neighbor-list">${hidden}</div></details>` : "";
+    return `<div class="insight-card neighbors"><span class="insight-label">となりにいた猫</span><h3 class="insight-title">答えが少し違えば現れた結果</h3><p class="insight-text neighbor-intro">相性ではなく、実際の得点差から見た“近い結果”です。同じ近さの猫は省かずに表示しています。</p><div class="neighbor-list">${visible}</div>${more}</div>`;
+  }
+
+  function decorateResult(resultId, snapshot = null) {
+    const page = document.getElementById(resultId);
+    const parts = resultParts(resultId);
+    if (!page || !parts) return;
+    const card = page.querySelector(".card");
+    card.querySelector(".result-analysis")?.remove();
+    const section = document.createElement("section");
+    section.className = "result-analysis";
+    section.setAttribute("aria-label", "診断結果の詳しい分析");
+    section.innerHTML = `
+      <details class="analysis-disclosure">
+        <summary>詳しい診断結果を見る</summary>
+        <div class="analysis-content">
+          <h2 class="analysis-heading">この猫になった理由</h2>
+          <p class="analysis-lead">選んだ答えを、結果までつながる順に読み解きました。</p>
+          <div class="logic-path" aria-label="判定の道筋">
+            <div class="path-step"><span>1</span><div><b>心が向くもの｜${axisShort[parts.primary]}</b><p>${primaryLogic[parts.primary]}</p></div></div>
+            <div class="path-step"><span>2</span><div><b>シリーズを決める二つの軸</b><p>${axisShort[parts.relation]} × ${axisShort[parts.expression]}。${seriesLogic[parts.series]}</p></div></div>
+            <div class="path-step"><span>3</span><div><b>喜びの味わい方｜${axisShort[parts.enjoyment]}</b><p>${enjoymentLogic[parts.enjoyment]}</p></div></div>
+          </div>
+          ${scorePanel(parts,snapshot)}
+          ${nearbyPanel(parts,snapshot)}
+        </div>
+      </details>`;
+    card.querySelector(".goods").after(section);
+
+    let actions = card.querySelector(".result-actions");
+    if (!actions) {
+      actions = document.createElement("div");
+      actions.className = "result-actions";
+      const share = document.createElement("button");
+      share.type = "button";
+      share.className = "quiet-action primary";
+      share.textContent = "結果を共有する";
+      share.addEventListener("click", () => shareResult(resultId));
+      const restart = card.querySelector('a[href="#start_page"]');
+      restart.className = "quiet-action";
+      restart.textContent = "もう一度診断する";
+      actions.append(share,restart);
+      card.append(actions);
+      const status = document.createElement("p");
+      status.className = "share-status";
+      status.setAttribute("aria-live","polite");
+      card.append(status);
+    }
+  }
+
+  async function shareResult(resultId) {
+    const title = resultTitle(resultId);
+    const url = new URL(`share/${resultId}.html`, location.href);
+    const data = {title:"リトル・ミュー診断", text:`私は「${title}」でした。あなたはリトル・ミューのどの猫？`, url:url.toString()};
+    const status = document.querySelector(`#${resultId} .share-status`);
+    try {
+      if (navigator.share) {
+        await navigator.share(data);
+        status.textContent = "共有メニューを開きました";
+        window.lmkTrack?.("share", {method:"native", result_id:resultId, result_name:title});
+      } else {
+        await navigator.clipboard.writeText(`${data.text}\n${data.url}`);
+        status.textContent = "結果とリンクをコピーしました";
+        window.lmkTrack?.("share", {method:"copy", result_id:resultId, result_name:title});
+      }
+    } catch (error) {
+      if (error?.name !== "AbortError") status.textContent = "共有できませんでした。もう一度お試しください";
+    }
+  }
+
+  function goBackOneQuestion() {
+    if (!answerHistory.length) return;
+    const previousKey = answerHistory.pop();
+    scores[previousKey] -= 1;
+    index = Math.max(0, index - 1);
+    tieMode = false;
+    renderQuestion();
+    window.scrollTo({top:0,behavior:"smooth"});
+  }
+
+  function startQuiz() {
+    window.lmkTrack?.("diagnosis_start");
+    index = 0;
+    scores = initialScores();
+    answerHistory = [];
+    tieMode = false;
+    renderQuestion();
+  }
+
+  document.getElementById("start_quiz").addEventListener("click", startQuiz);
+  backButton.addEventListener("click", goBackOneQuestion);
+  document.querySelectorAll('.result-page a[href="#start_page"]').forEach(link => {
+    link.addEventListener("click", () => {
+      window.lmkTrack?.("restart", {from_result:link.closest(".result-page")?.id || ""});
+      index = 0;
+      scores = initialScores();
+      answerHistory = [];
+      tieMode = false;
+    });
+  });
+
+  window.addEventListener("hashchange", () => {
+    setRouteClasses();
+    if (location.hash === "#quiz_page") startQuiz();
+  });
+
+  setRouteClasses();
+  let savedResult = null;
+  try { savedResult = JSON.parse(sessionStorage.getItem("littleMewLastResult")); } catch (_) {}
+  document.querySelectorAll(".result-page").forEach(page => decorateResult(page.id, savedResult?.resultId === page.id ? savedResult : null));
+  if (location.hash === "#quiz_page") startQuiz();
+  else renderQuestion();
+})();
+</script></body></html>
