@@ -23,8 +23,9 @@ body:has(#start_page:target) .page:first-of-type{display:block}
 .title{text-align:center;font-size:30px;line-height:1.5;margin:10px 0} .intro{text-align:center;color:#756963;line-height:1.9}
 #start_page .title{font-size:clamp(28px,7vw,36px);line-height:1.25;letter-spacing:.02em;margin:14px 0 22px;white-space:nowrap}
 #start_page .intro{max-width:36em;margin:0 auto;text-wrap:balance}
-#start_page .intro span{display:block;text-wrap:balance}
+#start_page .intro span{display:block;white-space:nowrap}
 #start_page .intro span+span{margin-top:3px}
+#start_page .intro .intro-prompt{margin-top:11px;color:#5f554f;font-weight:500}
 .progress{font-size:11px;color:#9d7a47;letter-spacing:.1em;margin-bottom:12px} .axis{font-size:12px;color:#9d7a47;letter-spacing:.08em;margin-bottom:18px}
 .q{font-size:22px;line-height:1.65;margin:12px 0 25px}
 .btn{display:flex;gap:12px;align-items:flex-start;text-decoration:none;color:#392f2b;border:1px solid #e0d1bd;background:#fff;border-radius:17px;padding:16px 17px;margin:11px 0;line-height:1.65}
@@ -189,8 +190,9 @@ body:has(#start_page:target) #start_page{display:block!important}
 <div class="kicker">LITTLE MEW</div>
 <div class="cat">🐈</div>
 <h1 class="title">あなたはどの猫？</h1>
-<p class="intro"><span>古い時計、秘密の手紙、午後のお茶会、月明かりの路地。</span>
-<span>二つの扉から、心に近いほうを選んでください。</span></p>
+<p class="intro"><span>古い時計。秘密の手紙。</span>
+<span>午後のお茶会。月明かりの路地。</span>
+<span class="intro-prompt">心惹かれる扉を、選んでください。</span></p>
 <a class="start" id="start_quiz" href="#quiz_page">リトル・ミューへ</a>
 <div class="note">15問 ＋ 同点のときだけ少しだけ追加</div><p class="scope-note">性格全体ではなく、「何に心が向き、美しさとどう関わり、喜びをどう味わうか」を見る診断です。</p>
 </div></section><section id="quiz_page" class="page"><div class="card" id="quiz_card">
