@@ -54,11 +54,6 @@ body:has(#start_page:target) .page:first-of-type{display:block}
 .theme-salon{--theme-deep:#344873;--theme-accent:#7180a4;--theme-soft:#eef0f7;--theme-line:#d2d8e8;--motif-image:url("assets/salon.webp")}
 .theme-blood{--theme-deep:#762a31;--theme-accent:#a27443;--theme-soft:#f8eeee;--theme-line:#e5c9c7;--motif-image:url("assets/blood.webp")}
 
-.portrait-card{position:relative;margin:0 0 14px;padding:22px 20px 20px;border:1px solid var(--theme-line);border-radius:22px;background:linear-gradient(150deg,rgba(255,255,255,.96),var(--theme-soft));overflow:hidden}
-.portrait-card::after{content:"";position:absolute;width:90px;height:90px;right:-34px;top:-36px;border:1px solid var(--theme-line);border-radius:50%;opacity:.65}
-.portrait-mark{display:grid;place-items:center;width:31px;height:31px;margin:0 auto 10px;border-radius:50%;background:#fff;color:var(--theme-accent);border:1px solid var(--theme-line);font-size:13px}
-.portrait-line{margin:0;text-align:center;color:var(--theme-deep);font-size:17px;font-weight:700;line-height:1.75}
-.portrait-text{margin:13px 0 0;color:#665a54;font-size:13px;line-height:1.95}
 .logic-path{display:grid;gap:9px;margin:14px 0}
 .path-step{display:grid;grid-template-columns:31px 1fr;gap:11px;align-items:start;padding:14px 15px;border:1px solid var(--theme-line);border-radius:17px;background:rgba(255,255,255,.78)}
 .path-step>span{display:grid;place-items:center;width:29px;height:29px;border-radius:50%;background:var(--theme-soft);color:var(--theme-deep);font:700 12px Georgia,serif}
@@ -142,14 +137,6 @@ main{padding-left:var(--page-pad);padding-right:var(--page-pad)}
 .result-analysis{max-width:560px;margin:0 auto 30px}
 .analysis-heading{margin:0 0 7px;text-align:center;color:var(--theme-deep);font-size:21px;line-height:1.55;letter-spacing:.02em}
 .analysis-lead{margin:0 auto 20px;max-width:520px;text-align:center;color:#746861;font-size:13.5px;line-height:1.85}
-.axis-list{display:grid;gap:10px}
-.axis-card{display:grid;grid-template-columns:42px minmax(0,1fr) auto;align-items:center;gap:12px;padding:14px 15px;border:1px solid var(--theme-line);border-radius:18px;background:rgba(255,255,255,.76)}
-.axis-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:var(--theme-soft);font-size:18px}
-.axis-copy{min-width:0}
-.axis-name{display:block;margin-bottom:3px;color:#786c65;font-size:12px;letter-spacing:.06em}
-.axis-value{display:block;color:var(--theme-deep);font-size:15px;font-weight:700;line-height:1.45}
-.axis-tone{display:inline-flex;align-items:center;white-space:nowrap;border-radius:999px;background:var(--theme-soft);color:var(--theme-accent);padding:6px 9px;font-size:11px;font-weight:700;letter-spacing:.04em}
-.axis-detail{grid-column:2 / -1;margin:-3px 0 0;color:#6d625c;font-size:13.5px;line-height:1.75}
 .insight-card{margin-top:12px;padding:18px;border:1px solid var(--theme-line);border-radius:20px;background:linear-gradient(145deg,rgba(255,255,255,.9),var(--theme-soft))}
 .insight-label{display:block;margin-bottom:7px;color:var(--theme-accent);font-size:12px;font-weight:700;letter-spacing:.1em}
 .insight-title{margin:0 0 7px;color:var(--theme-deep);font-size:18px;line-height:1.5}
@@ -181,13 +168,6 @@ body:has(#start_page:target) #start_page{display:block!important}
   .result-page .card::before{height:230px}
   .result-thesis{font-size:18px;margin-top:21px}
   .result-page .desc p{font-size:15px;line-height:1.92}
-  .axis-card{grid-template-columns:38px minmax(0,1fr) auto;padding:13px 12px;gap:10px}
-  .axis-icon{width:38px;height:38px;border-radius:12px}
-  .axis-value{font-size:14.5px}
-  .axis-detail{font-size:13px}
-  .portrait-card{padding:20px 16px 18px}
-  .portrait-line{font-size:16px}
-  .portrait-text{font-size:12.5px}
   .goods{margin:24px auto;padding:21px 16px 20px;border-radius:20px}
   .goods-item{font-size:19px}
   .balance-row{grid-template-columns:1fr;gap:3px}
@@ -513,117 +493,6 @@ body:has(#start_page:target) #start_page{display:block!important}
     quiet: 0, share: 0
   });
 
-  const axisMeta = {
-    time: {icon:"⌛", name:"心が惹かれるもの", value:"時の積み重なり", detail:"ものの古さだけでなく、そこに重なった年月や小さな痕跡へ心が向きます。"},
-    message: {icon:"✉", name:"心が惹かれるもの", value:"誰かの想い", detail:"品物や言葉の向こうにいる誰か、その気持ちや結びつきへ心が向きます。"},
-    life: {icon:"☕", name:"心が惹かれるもの", value:"日々の暮らし", detail:"いま目の前にある暮らしを、心地よく美しくするものへ心が向きます。"},
-    inherit: {icon:"♜", name:"受け継ぎ方", value:"残された形を受け継ぐ", detail:"由来や形そのものに意味を感じ、積み重ねられたものを丁寧に味わいます。"},
-    weave: {icon:"✦", name:"受け継ぎ方", value:"意味を残して織り直す", detail:"大切な由来を守りながら、いまの自分や暮らしに似合う形へ整えます。"},
-    inner: {icon:"◇", name:"美の置き場所", value:"自分の内側で大切にする", detail:"好きなものを大きく見せるより、自分だけが分かる場所でそっと育てます。"},
-    outer: {icon:"❀", name:"美の置き場所", value:"暮らしの表側に置く", detail:"心が動く色や形を、部屋や持ち物など日々目に触れる景色へ取り入れます。"},
-    quiet: {icon:"☾", name:"喜びの味わい方", value:"静かに余韻を味わう", detail:"心が動いたあとは、まず一匹でその感覚をゆっくり自分の中へ置きます。"},
-    share: {icon:"✧", name:"喜びの味わい方", value:"誰かと喜びを分かち合う", detail:"美しい発見を大切な誰かへ渡し、同じ景色を一緒に眺めることを楽しみます。"}
-  };
-
-  const resultPortraits = {
-    result_blood_life_quiet: {
-      line:"美しい型を守り、ひとりの納得まで磨く猫。",
-      text:"あなたが惹かれるのは、日々を心地よくする小さな美しさ。それを受け継いだ形のまま暮らしの表側に置き、まず自分の感覚で確かめます。王家のパティシエは、誰かの評価より『これでよい』と思える仕上がりを大切にする結果です。"
-    },
-    result_blood_life_share: {
-      line:"受け継いだ美しさを、みんなの楽しい今日にする猫。",
-      text:"あなたが惹かれるのは、食卓や部屋を心地よくする暮らしの美しさ。昔からの型を目に見える形で守りながら、その喜びを誰かと囲みます。晩餐会の猫は、伝統を飾っておくのではなく、いま集う猫たちの時間として続ける結果です。"
-    },
-    result_blood_message_quiet: {
-      line:"言葉にしすぎず、受け継いだ形へ想いを縫い込む猫。",
-      text:"あなたの心は、品物の向こうにいる誰かの想いへ向きます。その気持ちを、昔から残る形やしるしに託して暮らしの中へ置き、返事を急がず静かに守ります。冬布を継ぐ猫は、大きく語らなくても消えない一針を残す結果です。"
-    },
-    result_blood_message_share: {
-      line:"受け継いだ作法で、みんなの居場所をひらく猫。",
-      text:"あなたが大切にするのは、誰かの気持ちと、その猫がここにいてよいと思えるつながり。昔からの型を表側で守りながら、喜びは周囲へ分け渡します。祝宴の女主人は、整った形式を排除のためではなく、全員を迎える器として使う結果です。"
-    },
-    result_blood_time_quiet: {
-      line:"過ぎた時間を止めず、明日も動く形で守る猫。",
-      text:"あなたが惹かれるのは、ものに重なった年月や小さな痕跡。それを元の形を尊重しながら目に見える暮らしの中で守り、静かに確かめます。時を継ぐ猫は、古さを眺めるだけでなく、次の日も針が進むよう手入れする結果です。"
-    },
-    result_blood_time_share: {
-      line:"同じ季節を守り、また会う約束へ変える猫。",
-      text:"あなたは、長く続いてきた時間の積み重なりに心を動かされます。残された形を暮らしの表側で守り、その節目を誰かと分かち合います。暦を守る猫は、伝統を昔の再現ではなく、みんなが次の季節にも集まるための約束にする結果です。"
-    },
-    result_lady_life_quiet: {
-      line:"受け継いだ美意識を、今日の小さなご褒美へ整える猫。",
-      text:"あなたの心が向くのは、いまの暮らしを少し心地よくするもの。由来や意味を残しつつ自分に似合う形へ整え、目に入る景色として楽しみます。午後三時の令嬢は、見せるためだけではなく、自分の一日を丁寧に味わうために美を置く結果です。"
-    },
-    result_lady_life_share: {
-      line:"今日のときめきを、街じゅうへ軽やかに手渡す猫。",
-      text:"あなたが惹かれるのは、暮らしを明るくする色や味やしつらえ。受け継いだ意味をいまの形へ織り直し、見える景色にして誰かと喜びます。ケーキ屋通りの令嬢は、美しいものを自分だけの完成品にせず、楽しい寄り道へ広げる結果です。"
-    },
-    result_lady_message_quiet: {
-      line:"伝え方を選び抜き、想いをそっと見える形にする猫。",
-      text:"あなたは、ものや言葉に宿る誰かの気持ちへ心を向けます。昔からの作法をそのまま繰り返すのではなく、相手と今の自分に似合う形へ整えます。便箋を選ぶ令嬢は、声を大きくせず、紙や色の細部まで含めて気持ちを届ける結果です。"
-    },
-    result_lady_message_share: {
-      line:"想いが届くよう、古い扉を今日の客間へひらく猫。",
-      text:"あなたが大切にするのは、相手の気持ちと、互いに安心して過ごせるつながり。受け継いだ礼儀やしつらえを今に合う形へ整え、喜びを一緒に味わいます。客間を開く令嬢は、美しさを壁ではなく招待状として使う結果です。"
-    },
-    result_lady_time_quiet: {
-      line:"古い庭の続きを、自分の季節として咲かせる猫。",
-      text:"あなたは、長く重なった時間の跡に惹かれます。由来を大切にしながら今の暮らしに似合う姿へ整え、その変化を目に見える景色として静かに味わいます。蕾の庭の令嬢は、昔を固定せず、次に咲く一輪まで含めて受け継ぐ結果です。"
-    },
-    result_lady_time_share: {
-      line:"昔の星を、いま一緒に見上げる楽しみへ変える猫。",
-      text:"あなたの心は、年月を越えて残る記録やしるしへ向きます。それを今日の暮らしで親しめる形へ整え、発見を誰かと分かち合います。星暦をめくる令嬢は、古い知恵を遠い過去に閉じず、みんなの今夜へ連れてくる結果です。"
-    },
-    result_rebel_life_quiet: {
-      line:"誰にも見えないところで、暮らしを自分らしく育てる猫。",
-      text:"あなたが惹かれるのは、日々を心地よくする小さな工夫。受け継いだ意味は残しながら自分なりに織り直し、その美しさをまず内側で味わいます。夜咲きの園丁は、目立つ完成より、自分だけが気づく変化を静かに育てる結果です。"
-    },
-    result_rebel_life_share: {
-      line:"自分らしい工夫を、みんなの楽しい発見にする猫。",
-      text:"あなたの心は、暮らしを面白くする色や味や小さな変化へ向きます。決まりの意味を残しつつ自由に織り直し、見つけた喜びは誰かへ手渡します。果樹園のいたずら猫は、型を壊すためではなく、いつもの景色に新しい遊びを実らせる結果です。"
-    },
-    result_rebel_message_quiet: {
-      line:"名を残さず、自分だけの方法で想いを置いていく猫。",
-      text:"あなたが惹かれるのは、言葉や品物の向こうにある誰かの気持ち。決まった伝え方に縛られず、自分にできる形へそっと織り直し、返事や注目を求めず内側で大切にします。名もなき贈り主は、届くことそのものを喜べる結果です。"
-    },
-    result_rebel_message_share: {
-      line:"行き先のない想いに、自分らしい道を見つける猫。",
-      text:"あなたの心は、まだ届いていない誰かの気持ちへ向きます。古い決まりをそのまま守るより、意味を残した新しい届け方を考え、喜びをつなぎます。気まぐれ郵便猫は、予定された役目ではなくても、必要な手紙へ道をつくる結果です。"
-    },
-    result_rebel_time_quiet: {
-      line:"古い時間を、自分だけの読み方でそっとひらく猫。",
-      text:"あなたは、ものや場所に積もった年月へ心を動かされます。ただ保存するのではなく、自分の感覚で意味を読み替え、その発見を内側で深めます。月影の反逆者は、皆と同じ答えを急がず、古い景色の中に自分だけの道を見つける結果です。"
-    },
-    result_rebel_time_share: {
-      line:"古いものを直しながら、知らない景色まで連れていく猫。",
-      text:"あなたが惹かれるのは、長い時間を越えて残ったもの。それを昔の場所へ固定せず、今も使える形へ織り直し、旅先で得た発見を誰かと分かち合います。放浪する時計師は、受け継ぐことと新しい道を歩くことを両立する結果です。"
-    },
-    result_salon_life_quiet: {
-      line:"いつもの灯りを守り、ひとりの時間をやわらかく包む猫。",
-      text:"あなたが惹かれるのは、日々の暮らしを落ち着かせる小さな美しさ。残された形を丁寧に受け継ぎ、目立たない場所で静かに味わいます。最後の一灯は、新しさを競わず、変わらずそこにある安心を大切にする結果です。"
-    },
-    result_salon_life_share: {
-      line:"変わらないしつらえで、親しい猫との時間を囲む猫。",
-      text:"あなたの心は、お茶や灯りのように暮らしを心地よくするものへ向きます。馴染んだ形を内側で守りながら、その喜びは近しい誰かと分かち合います。秘密のお茶会は、大勢に見せる華やかさより、安心できる輪の中で同じ時間を味わう結果です。"
-    },
-    result_salon_message_quiet: {
-      line:"まだ知らない誰かのために、見えない備えを残す猫。",
-      text:"あなたが惹かれるのは、言葉の向こうにいる誰かと、その猫が必要とするもの。受け継いだやり方を目立たない場所で守り、感謝や返事を待たずに備えます。冬支度の灯りは、使われないかもしれない優しさも丁寧に置いておける結果です。"
-    },
-    result_salon_message_share: {
-      line:"言葉を奪わず、安心して話せる場所を守る猫。",
-      text:"あなたの心は、誰かの言葉と、その奥にある気持ちへ向きます。昔から続く静かな場の形を内側で守りながら、喜びや重荷を一緒に受け取ります。サロンの聞き手は、答えを代わりに出すより、相手の言葉が生まれる余白をつくる結果です。"
-    },
-    result_salon_time_quiet: {
-      line:"大きな歴史の隅で、小さな暮らしの跡を守る猫。",
-      text:"あなたが惹かれるのは、古い記録や品に残った時間の痕跡。形を変えず静かな場所で受け継ぎ、そこにいた猫たちの暮らしを丁寧に読み取ります。古書室の猫は、有名な物語より余白の小さな印を見逃さない結果です。"
-    },
-    result_salon_time_share: {
-      line:"昔の記録を囲み、いまの仲間と答えを探す猫。",
-      text:"あなたの心は、年月を越えて残るしるしへ向きます。その形を尊重して内側で守りながら、発見の喜びは気の合う誰かと分かち合います。星図を囲む夜は、一匹で正解を得るより、同じ痕跡を一緒に見つめる時間を大切にする結果です。"
-    }
-  };
-
   const primaryLogic = {
     time:"年月や痕跡に、現在だけでは見えない物語を感じ取ります。",
     message:"品物や言葉の向こうにいる誰か、その気持ちや結びつきを見つめます。",
@@ -782,18 +651,6 @@ body:has(#start_page:target) #start_page{display:block!important}
 
   function resultTitle(resultId) {
     return document.querySelector(`#${resultId} .title`)?.textContent.trim() || "もう一匹の猫";
-  }
-
-  function scoreStrength(selected, opposite, snapshot) {
-    if (!snapshot) return "選ばれた感性";
-    const margin = Math.abs(snapshot.scores[selected] - snapshot.scores[opposite]);
-    return margin === 3 ? "くっきり" : "やや近い";
-  }
-
-  function axisCard(key, snapshot, opposite = null) {
-    const meta = axisMeta[key];
-    const tone = opposite ? scoreStrength(key, opposite, snapshot) : "選ばれた感性";
-    return `<div class="axis-card"><span class="axis-icon" aria-hidden="true">${meta.icon}</span><span class="axis-copy"><span class="axis-name">${meta.name}</span><span class="axis-value">${meta.value}</span></span><span class="axis-tone">${tone}</span><p class="axis-detail">${meta.detail}</p></div>`;
   }
 
   function scoreBar(label, value, max, selected) {
