@@ -634,13 +634,6 @@ body:has(#start_page:target) #start_page{display:block!important}
     blood:"残された形を受け継ぎ、目に見える暮らしの中で守り続ける組み合わせです。"
   };
 
-  const seriesShort = {
-    rebel:"意味を織り直し、内側で育てる",
-    lady:"意味を織り直し、暮らしに映す",
-    salon:"形を受け継ぎ、内側で深める",
-    blood:"形を受け継ぎ、暮らしに残す"
-  };
-
   const enjoymentLogic = {
     quiet:"心が動いたあと、まず自分の中で余韻を確かめる選び方です。",
     share:"心が動いたものを誰かへ渡し、一緒に味わう選び方です。"
@@ -882,7 +875,7 @@ body:has(#start_page:target) #start_page{display:block!important}
           <p class="analysis-lead">三つの感性がどう重なり、この猫になったのかを読み解きます。</p>
           <div class="logic-path" aria-label="判定の道筋">
             <div class="path-step"><span>1</span><div><b>心が向くもの｜${axisShort[parts.primary]}</b><p>${primaryLogic[parts.primary]}</p></div></div>
-            <div class="path-step"><span>2</span><div><b>美しさとの関わり方｜${seriesShort[parts.series]}</b><p>${seriesLogic[parts.series]}</p></div></div>
+            <div class="path-step"><span>2</span><div><b>シリーズを決める二つの軸｜${axisShort[parts.relation]} × ${axisShort[parts.expression]}</b><p>${seriesLogic[parts.series]}</p></div></div>
             <div class="path-step"><span>3</span><div><b>喜びの味わい方｜${axisShort[parts.enjoyment]}</b><p>${enjoymentLogic[parts.enjoyment]}</p></div></div>
           </div>
           ${scorePanel(parts,snapshot)}
