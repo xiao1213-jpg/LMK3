@@ -947,7 +947,6 @@ body:has(#start_page:target) #start_page{display:block!important}
     renderQuestion();
   }
 
-  document.getElementById("start_quiz").addEventListener("click", startQuiz);
   backButton.addEventListener("click", goBackOneQuestion);
   document.querySelectorAll('.result-page a[href="#start_page"]').forEach(link => {
     link.addEventListener("click", () => {
