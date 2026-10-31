@@ -62,8 +62,11 @@ body:has(#start_page:target) .page:first-of-type{display:block}
 .logic-path{display:grid;gap:9px;margin:14px 0}
 .path-step{display:grid;grid-template-columns:31px 1fr;gap:11px;align-items:start;padding:14px 15px;border:1px solid var(--theme-line);border-radius:17px;background:rgba(255,255,255,.78)}
 .path-step>span{display:grid;place-items:center;width:29px;height:29px;border-radius:50%;background:var(--theme-soft);color:var(--theme-deep);font:700 12px Georgia,serif}
-.path-step b{display:block;color:var(--theme-deep);font-size:14.5px;line-height:1.55}
-.path-step p{margin:5px 0 0;color:#746861;font-size:13.5px;line-height:1.75}
+.path-label{display:block;margin:0 0 2px;color:#8a7d76;font-size:11.5px;font-weight:600;line-height:1.5;letter-spacing:.055em}
+.path-step b{display:block;color:var(--theme-deep);font-size:15.5px;line-height:1.55}
+.path-value-part{white-space:nowrap}
+.path-times{display:inline-block;margin:0 .28em;color:var(--theme-accent)}
+.path-step p{margin:7px 0 0;color:#746861;font-size:13.5px;line-height:1.75}
 .score-panel{margin-top:12px;padding:18px;border:1px solid var(--theme-line);border-radius:20px;background:rgba(255,255,255,.78)}
 .score-unavailable p{margin:0;color:#756861;font-size:13.5px;line-height:1.85}
 .primary-scores{display:grid;gap:9px}
@@ -874,9 +877,9 @@ body:has(#start_page:target) #start_page{display:block!important}
           <h2 class="analysis-heading">この結果ができるまで</h2>
           <p class="analysis-lead">三つの感性がどう重なり、この猫になったのかを読み解きます。</p>
           <div class="logic-path" aria-label="判定の道筋">
-            <div class="path-step"><span>1</span><div><b>心が向くもの｜${axisShort[parts.primary]}</b><p>${primaryLogic[parts.primary]}</p></div></div>
-            <div class="path-step"><span>2</span><div><b>シリーズを決める二つの軸｜${axisShort[parts.relation]} × ${axisShort[parts.expression]}</b><p>${seriesLogic[parts.series]}</p></div></div>
-            <div class="path-step"><span>3</span><div><b>喜びの味わい方｜${axisShort[parts.enjoyment]}</b><p>${enjoymentLogic[parts.enjoyment]}</p></div></div>
+            <div class="path-step"><span>1</span><div><span class="path-label">心が向くもの</span><b>${axisShort[parts.primary]}</b><p>${primaryLogic[parts.primary]}</p></div></div>
+            <div class="path-step"><span>2</span><div><span class="path-label">シリーズを決める二つの軸</span><b><span class="path-value-part">${axisShort[parts.relation]}</span><span class="path-times">×</span><span class="path-value-part">${axisShort[parts.expression]}</span></b><p>${seriesLogic[parts.series]}</p></div></div>
+            <div class="path-step"><span>3</span><div><span class="path-label">喜びの味わい方</span><b>${axisShort[parts.enjoyment]}</b><p>${enjoymentLogic[parts.enjoyment]}</p></div></div>
           </div>
           ${scorePanel(parts,snapshot)}
           ${nearbyPanel(parts,snapshot)}
