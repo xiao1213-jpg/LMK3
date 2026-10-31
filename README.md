@@ -71,7 +71,7 @@ Google Analytics 4 測定ID：`G-FJ9LS51YKS`
 - `assets/results.json`：24結果の補助データ
 - `assets/*.webp`：4シリーズの背景画像
 - `assets/share-rebel.jpg` / `share-lady.jpg` / `share-salon.jpg` / `share-blood.jpg`：4分類別のSNS共有画像
-- `share/`：24結果それぞれの共有用URL
+- `share/`：24結果それぞれの共有用URL（LINE等のプレビュー更新時は共有URLとOG画像に同じ版番号を付与）
 - `privacy.html`：アクセス解析とプライバシーの説明
 - `.nojekyll`：GitHub Pages向け設定
 

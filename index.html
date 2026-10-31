@@ -768,6 +768,7 @@ body:has(#start_page:target) #start_page{display:block!important}
   async function shareResult(resultId) {
     const title = resultTitle(resultId);
     const url = new URL(`share/${resultId}.html`, location.href);
+    url.searchParams.set("v", "20261031-1");
     const data = {title:"リトル・ミュー診断", text:`私は「${title}」でした。あなたはリトル・ミューのどの猫？`, url:url.toString()};
     const status = document.querySelector(`#${resultId} .share-status`);
     try {
