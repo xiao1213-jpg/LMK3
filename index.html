@@ -931,19 +931,7 @@ body:has(#start_page:target) #start_page{display:block!important}
       const restart = card.querySelector('a[href="#start_page"]');
       restart.className = "quiet-action";
       restart.textContent = "もう一度診断する";
-      const appleDevice = /iPhone|iPad|iPod|Macintosh|Mac OS X/i.test(navigator.userAgent || "");
-      if (appleDevice) {
-        const airDrop = document.createElement("button");
-        airDrop.type = "button";
-        airDrop.className = "quiet-action airdrop-action";
-        airDrop.textContent = "AirDropで送る";
-        airDrop.setAttribute("aria-label","共有メニューを開いてAirDropで送る");
-        airDrop.addEventListener("click", () => shareResult(resultId,"airdrop"));
-        actions.classList.add("has-airdrop");
-        actions.append(share,airDrop,restart);
-      } else {
-        actions.append(share,restart);
-      }
+      actions.append(share,restart);
       card.append(actions);
       const status = document.createElement("p");
       status.className = "share-status";
