@@ -160,8 +160,6 @@ main{padding-left:var(--page-pad);padding-right:var(--page-pad)}
 .result-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px auto 0;max-width:520px}
 .quiet-action{appearance:none;border:1px solid var(--theme-line);border-radius:999px;background:#fff;color:var(--theme-deep);min-height:54px;padding:14px 16px;font:inherit;font-size:15px;font-weight:700;text-align:center;cursor:pointer}
 .quiet-action.primary{background:var(--theme-deep);border-color:var(--theme-deep);color:#fff}
-.result-actions.has-airdrop .share-primary{grid-column:1/-1}
-.airdrop-action{background:linear-gradient(145deg,#fff,var(--theme-soft))}
 .share-status{min-height:20px;margin:8px 0 0;text-align:center;color:var(--theme-accent);font-size:13px}
 .analysis-disclosure{margin:0;border-top:1px solid var(--theme-line);border-bottom:1px solid var(--theme-line)}
 .analysis-disclosure>summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:52px;padding:14px 4px;border:0;background:transparent;color:var(--theme-deep);font-size:14px;font-weight:700;line-height:1.55;letter-spacing:.02em}
@@ -935,23 +933,22 @@ body:has(#start_page:target) #start_page{display:block!important}
     }
   }
 
-  async function shareResult(resultId, method = "native") {
+  async function shareResult(resultId) {
     const title = resultTitle(resultId);
     const url = new URL(`share/${resultId}.html`, location.href);
     url.searchParams.set("v", "20261101-3");
     const data = {title:"リトル・ミュー診断", text:`私は「${title}」でした。あなたはリトル・ミューのどの猫？`, url:url.toString()};
     const status = document.querySelector(`#${resultId} .share-status`);
-    const wantsAirDrop = method === "airdrop";
     try {
       if (navigator.share) {
-        status.textContent = wantsAirDrop ? "共有メニューで「AirDrop」を選んでください" : "共有メニューを開いています";
+        status.textContent = "共有メニューを開いています";
         await navigator.share(data);
-        if (!wantsAirDrop) status.textContent = "共有メニューを開きました";
-        window.lmkTrack?.("share", {method:wantsAirDrop ? "airdrop_sheet" : "native", result_id:resultId, result_name:title});
+        status.textContent = "共有メニューを開きました";
+        window.lmkTrack?.("share", {method:"native", result_id:resultId, result_name:title});
       } else {
         await navigator.clipboard.writeText(`${data.text}\n${data.url}`);
-        status.textContent = wantsAirDrop ? "リンクをコピーしました。Safariで開くとAirDropを使えます" : "結果とリンクをコピーしました";
-        window.lmkTrack?.("share", {method:wantsAirDrop ? "airdrop_copy" : "copy", result_id:resultId, result_name:title});
+        status.textContent = "結果とリンクをコピーしました";
+        window.lmkTrack?.("share", {method:"copy", result_id:resultId, result_name:title});
       }
     } catch (error) {
       if (error?.name === "AbortError") status.textContent = "";
