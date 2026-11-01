@@ -1,6 +1,6 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>リトル・ミュー診断｜あなたはどの猫？</title>
 <meta name="description" content="15の問いから、あなたにいちばん近いリトル・ミューの猫を見つける診断です。">
-<meta name="lmk-build" content="2026-11-01-v7">
+<meta name="lmk-build" content="2026-11-01-v8">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Little Mew Kingdom">
 <meta property="og:title" content="リトル・ミュー診断｜あなたはどの猫？">
@@ -624,7 +624,7 @@ body:has(#start_page:target) #start_page{display:block!important}
     const payload = encodeTakeHome(snapshot);
     if (!payload) return "";
     const url = new URL("index.html",document.baseURI);
-    url.searchParams.set("v","20261101-v7");
+    url.searchParams.set("v","20261101-v8");
     url.hash = resultId + "~" + payload;
     return url.toString();
   }
@@ -658,7 +658,7 @@ body:has(#start_page:target) #start_page{display:block!important}
         new QRCode(qrTarget,{text:url,width:218,height:218,colorDark:"#392f2b",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.M});
         const canvas = qrTarget.querySelector("canvas");
         const image = qrTarget.querySelector("img");
-        const keep = canvas || image || qrTarget.firstElementChild;
+        const keep = image || canvas || qrTarget.firstElementChild;
         [...qrTarget.children].forEach(node => { if (node !== keep) node.remove(); });
         if (keep) {
           keep.style.display = "block";
