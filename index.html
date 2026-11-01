@@ -1,6 +1,6 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>リトル・ミュー診断｜あなたはどの猫？</title>
 <meta name="description" content="15の問いから、あなたにいちばん近いリトル・ミューの猫を見つける診断です。">
-<meta name="lmk-build" content="2026-11-01-v8">
+<meta name="lmk-build" content="2026-11-01-v9">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Little Mew Kingdom">
 <meta property="og:title" content="リトル・ミュー診断｜あなたはどの猫？">
@@ -158,6 +158,7 @@ main{padding-left:var(--page-pad);padding-right:var(--page-pad)}
 .take-home-card.is-arrived{padding-bottom:27px}
 
 .result-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px auto 0;max-width:520px}
+body.mode-store .result-actions{grid-template-columns:1fr;max-width:360px}
 .quiet-action{appearance:none;border:1px solid var(--theme-line);border-radius:999px;background:#fff;color:var(--theme-deep);min-height:54px;padding:14px 16px;font:inherit;font-size:15px;font-weight:700;text-align:center;cursor:pointer}
 .quiet-action.primary{background:var(--theme-deep);border-color:var(--theme-deep);color:#fff}
 .share-status{min-height:20px;margin:8px 0 0;text-align:center;color:var(--theme-accent);font-size:13px}
@@ -552,8 +553,11 @@ body:has(#start_page:target) #start_page{display:block!important}
   const takeHomeStoragePrefix = "littleMewTakeHome:";
   const takeHomeVersion = "1";
   const kioskResetDelay = 180000;
+  const viewMode = new URLSearchParams(location.search).get("mode") === "store" ? "store" : "mobile";
+  const isStoreMode = viewMode === "store";
   let isCarriedView = false;
   let kioskResetTimer = null;
+  document.body.classList.add(isStoreMode ? "mode-store" : "mode-mobile");
 
   function encodeTakeHome(snapshot) {
     if (!snapshot?.scores) return "";
@@ -624,13 +628,15 @@ body:has(#start_page:target) #start_page{display:block!important}
     const payload = encodeTakeHome(snapshot);
     if (!payload) return "";
     const url = new URL("index.html",document.baseURI);
-    url.searchParams.set("v","20261101-v8");
+    url.searchParams.set("mode","mobile");
+    url.searchParams.set("v","20261101-v9");
     url.hash = resultId + "~" + payload;
     return url.toString();
   }
 
   function renderTakeHomeCard(page,resultId,snapshot,carried) {
     page.querySelector(".take-home-card")?.remove();
+    if (!isStoreMode) return;
     if (!snapshot) return;
     const goods = page.querySelector(".goods");
     if (!goods) return;
@@ -691,6 +697,7 @@ body:has(#start_page:target) #start_page{display:block!important}
   function armKioskReset() {
     clearTimeout(kioskResetTimer);
     kioskResetTimer = null;
+    if (!isStoreMode) return;
     if (isCarriedView) return;
     const resultId = location.hash.slice(1);
     if (!resultId.startsWith("result_")) return;
@@ -927,15 +934,20 @@ body:has(#start_page:target) #start_page{display:block!important}
     if (!actions) {
       actions = document.createElement("div");
       actions.className = "result-actions";
-      const share = document.createElement("button");
-      share.type = "button";
-      share.className = "quiet-action primary share-primary";
-      share.textContent = "結果を共有する";
-      share.addEventListener("click", () => shareResult(resultId));
       const restart = card.querySelector('a[href="#start_page"]');
       restart.className = "quiet-action";
       restart.textContent = "もう一度診断する";
-      actions.append(share,restart);
+      if (isStoreMode) {
+        restart.classList.add("primary");
+        actions.append(restart);
+      } else {
+        const share = document.createElement("button");
+        share.type = "button";
+        share.className = "quiet-action primary share-primary";
+        share.textContent = "結果を共有する";
+        share.addEventListener("click", () => shareResult(resultId));
+        actions.append(share,restart);
+      }
       card.append(actions);
       const status = document.createElement("p");
       status.className = "share-status";
@@ -1026,3 +1038,4 @@ body:has(#start_page:target) #start_page{display:block!important}
   else renderQuestion();
 })();
 </script></body></html>
+
