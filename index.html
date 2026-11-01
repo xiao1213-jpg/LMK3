@@ -1,6 +1,6 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>リトル・ミュー診断｜あなたはどの猫？</title>
 <meta name="description" content="15の問いから、あなたにいちばん近いリトル・ミューの猫を見つける診断です。">
-<meta name="lmk-build" content="2026-11-01-v3">
+<meta name="lmk-build" content="2026-11-01-v4">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Little Mew Kingdom">
 <meta property="og:title" content="リトル・ミュー診断｜あなたはどの猫？">
@@ -143,6 +143,22 @@ main{padding-left:var(--page-pad);padding-right:var(--page-pad)}
 .insight-text{margin:0;color:#5d534e;font-size:14px;line-height:1.9}
 .near-cat{display:grid;grid-template-columns:48px 1fr;gap:12px;align-items:center}
 .near-cat-mark{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.78);border:1px solid var(--theme-line);font-size:22px}
+
+.take-home-card{position:relative;box-sizing:border-box;max-width:520px;margin:28px auto 26px;padding:27px 24px 24px;text-align:center;overflow:hidden;border:1px solid var(--theme-line);border-radius:24px;background:linear-gradient(145deg,#fff,var(--theme-soft));box-shadow:0 12px 30px rgba(61,45,36,.08)}
+.take-home-card::before{content:"";position:absolute;inset:0 auto auto 0;width:100%;height:4px;background:linear-gradient(90deg,transparent,var(--theme-accent),transparent);opacity:.55}
+.take-home-kicker{display:block;margin-bottom:7px;color:var(--theme-accent);font:600 10px Georgia,serif;letter-spacing:.18em}
+.take-home-title{margin:0;color:var(--theme-deep);font-size:23px;line-height:1.55}
+.take-home-result{display:block;margin:8px 0 0;color:var(--theme-deep);font-size:15px;line-height:1.6}
+.take-home-qr-wrap{width:244px;max-width:100%;margin:20px auto 17px;padding:12px;border:1px solid var(--theme-line);border-radius:18px;background:#fff;box-shadow:0 8px 22px rgba(61,45,36,.09)}
+.take-home-qr{width:218px;max-width:100%;margin:auto}
+.take-home-qr canvas,.take-home-qr img{display:block!important;width:100%!important;height:auto!important;margin:auto}
+.take-home-copy{margin:0 auto;max-width:390px;color:#5f554f;font-size:14px;line-height:1.9}
+.take-home-copy strong{color:var(--theme-deep)}
+.take-home-privacy{margin:13px 0 0;color:#8a7d76;font-size:11.5px;line-height:1.7}
+.take-home-reset{margin:8px 0 0;color:#8a7d76;font-size:11px;line-height:1.65}
+.take-home-arrived-mark{display:grid;place-items:center;width:76px;height:76px;margin:18px auto 14px;border-radius:50%;background:rgba(255,255,255,.82);border:1px solid var(--theme-line);font-size:34px}
+.take-home-card.is-arrived{padding-bottom:27px}
+
 .result-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px auto 0;max-width:520px}
 .quiet-action{appearance:none;border:1px solid var(--theme-line);border-radius:999px;background:#fff;color:var(--theme-deep);min-height:54px;padding:14px 16px;font:inherit;font-size:15px;font-weight:700;text-align:center;cursor:pointer}
 .quiet-action.primary{background:var(--theme-deep);border-color:var(--theme-deep);color:#fff}
@@ -172,12 +188,16 @@ body:has(#start_page:target) #start_page{display:block!important}
   .result-page .desc p{font-size:15px;line-height:1.92}
   .goods{margin:24px auto;padding:21px 16px 20px;border-radius:20px}
   .goods-item{font-size:19px}
+  .take-home-card{margin:24px auto;padding:23px 17px 21px;border-radius:20px}
+  .take-home-title{font-size:21px}
+  .take-home-qr-wrap{width:228px}
+  .take-home-qr{width:202px}
   .balance-row{grid-template-columns:1fr;gap:3px}
   .result-actions{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 .privacy-link{text-align:center;margin:25px 0 5px;font-size:13px}.privacy-link a{color:#78644f}
-</style><script src="assets/config.js"></script><script src="assets/analytics.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
+</style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">LITTLE MEW</div>
 <div class="cat">🐈</div>
 <h1 class="title">あなたはどの猫？</h1>
@@ -532,6 +552,150 @@ body:has(#start_page:target) #start_page{display:block!important}
     "inherit,inner":"salon", "inherit,outer":"blood"
   }[`${relation},${expression}`]);
 
+  const scoreKeys = ["time","message","life","inherit","weave","outer","inner","quiet","share"];
+  const takeHomeStoragePrefix = "littleMewTakeHome:";
+  const takeHomeVersion = "1";
+  const kioskResetDelay = 180000;
+  let isCarriedView = false;
+  let kioskResetTimer = null;
+
+  function encodeTakeHome(snapshot) {
+    if (!snapshot?.scores) return "";
+    const values = scoreKeys.map(key => Number(snapshot.scores[key]));
+    if (values.some(value => !Number.isInteger(value) || value < 0 || value > 6)) return "";
+    return takeHomeVersion + values.map(value => value.toString(36)).join("") + (snapshot.primaryDecidedByTie ? "1" : "0");
+  }
+
+  function decodeTakeHome(resultId, payload) {
+    if (!/^result_(blood|lady|rebel|salon)_(time|message|life)_(quiet|share)$/.test(resultId)) return null;
+    if (typeof payload !== "string" || payload.length !== 11 || payload[0] !== takeHomeVersion) return null;
+    const values = [...payload.slice(1,10)].map(value => parseInt(value,36));
+    if (values.some(value => !Number.isInteger(value) || value < 0 || value > 6)) return null;
+    const tie = payload[10] === "1";
+    if (!tie && payload[10] !== "0") return null;
+    const scores = Object.fromEntries(scoreKeys.map((key,index) => [key,values[index]]));
+    if (scores.time + scores.message + scores.life !== 6) return null;
+    if (scores.inherit + scores.weave !== 3 || scores.outer + scores.inner !== 3 || scores.quiet + scores.share !== 3) return null;
+    const parts = resultParts(resultId);
+    if (!parts) return null;
+    const primaryValues = ["time","message","life"].map(key => scores[key]);
+    const max = Math.max(...primaryValues);
+    const tiedCount = primaryValues.filter(value => value === max).length;
+    if (scores[parts.primary] !== max) return null;
+    if ((tie && tiedCount < 2) || (!tie && tiedCount !== 1)) return null;
+    const oppositeRelation = parts.relation === "inherit" ? "weave" : "inherit";
+    const oppositeExpression = parts.expression === "inner" ? "outer" : "inner";
+    const oppositeEnjoyment = parts.enjoyment === "quiet" ? "share" : "quiet";
+    if (scores[parts.relation] <= scores[oppositeRelation]) return null;
+    if (scores[parts.expression] <= scores[oppositeExpression]) return null;
+    if (scores[parts.enjoyment] <= scores[oppositeEnjoyment]) return null;
+    return {resultId,primary:parts.primary,relation:parts.relation,expression:parts.expression,enjoyment:parts.enjoyment,series:parts.series,scores,primaryDecidedByTie:tie};
+  }
+
+  function storeCarriedSnapshot(snapshot) {
+    try { localStorage.setItem(takeHomeStoragePrefix + snapshot.resultId, JSON.stringify(snapshot)); } catch (_) {}
+  }
+
+  function storedCarriedSnapshot(resultId) {
+    try {
+      const stored = JSON.parse(localStorage.getItem(takeHomeStoragePrefix + resultId));
+      const payload = encodeTakeHome(stored);
+      return payload ? decodeTakeHome(resultId,payload) : null;
+    } catch (_) { return null; }
+  }
+
+  function readTakeHomeState() {
+    const raw = location.hash.slice(1);
+    const separator = raw.indexOf("~");
+    const resultId = separator > 0 ? raw.slice(0,separator) : raw;
+    const payload = separator > 0 ? raw.slice(separator + 1) : "";
+    if (payload) {
+      const snapshot = decodeTakeHome(resultId,payload);
+      if (!snapshot) return null;
+      storeCarriedSnapshot(snapshot);
+      history.replaceState(null,"",location.pathname + location.search + "#" + resultId);
+      window.lmkTrack?.("take_home_open",{result_id:resultId});
+      return {snapshot,carried:true};
+    }
+    if (resultId.startsWith("result_")) {
+      const snapshot = storedCarriedSnapshot(resultId);
+      if (snapshot) return {snapshot,carried:true};
+    }
+    return null;
+  }
+
+  function takeHomeUrl(resultId,snapshot) {
+    const payload = encodeTakeHome(snapshot);
+    if (!payload) return "";
+    const url = new URL("index.html",document.baseURI);
+    url.hash = resultId + "~" + payload;
+    return url.toString();
+  }
+
+  function renderTakeHomeCard(page,resultId,snapshot,carried) {
+    page.querySelector(".take-home-card")?.remove();
+    if (!snapshot) return;
+    const goods = page.querySelector(".goods");
+    if (!goods) return;
+    const title = resultTitle(resultId);
+    const card = document.createElement("aside");
+    card.className = "take-home-card" + (carried ? " is-arrived" : "");
+    card.setAttribute("aria-label",carried ? "スマホへ持ち帰った結果" : "この結果をスマホへ持ち帰る");
+    if (carried) {
+      card.innerHTML = `
+        <span class="take-home-kicker">YOUR LITTLE MEW IS HERE</span>
+        <h2 class="take-home-title">この猫を連れてきました</h2>
+        <span class="take-home-result">「${title}」</span>
+        <div class="take-home-arrived-mark" aria-hidden="true">🐈</div>
+        <p class="take-home-copy">診断結果と回答の濃淡を、<strong>このスマホで開いています。</strong><br>このページをブックマークすると、あとからもう一度会えます。</p>
+        <p class="take-home-privacy">診断結果はこの端末内に保存され、氏名や連絡先は使用しません。</p>`;
+    } else {
+      const url = takeHomeUrl(resultId,snapshot);
+      card.innerHTML = `
+        <span class="take-home-kicker">LITTLE MEW TAKE HOME</span>
+        <h2 class="take-home-title">この猫を連れて帰る</h2>
+        <span class="take-home-result">「${title}」</span>
+        <div class="take-home-qr-wrap"><div class="take-home-qr" role="img" aria-label="この診断結果をスマホで開くQRコード"></div></div>
+        <p class="take-home-copy">スマホのカメラを向けるだけ。<br><strong>診断結果と回答の濃淡</strong>が、そのまま開きます。</p>
+        <p class="take-home-privacy">名前・電話番号・メールアドレスは保存しません。</p>
+        <p class="take-home-reset">3分間操作がないと、次のお客様のため最初の画面に戻ります。</p>`;
+      const qrTarget = card.querySelector(".take-home-qr");
+      try {
+        new QRCode(qrTarget,{text:url,width:218,height:218,colorDark:"#392f2b",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.M});
+        window.lmkTrack?.("take_home_qr_shown",{result_id:resultId});
+      } catch (_) {
+        qrTarget.closest(".take-home-qr-wrap").innerHTML = '<p class="take-home-copy">QRコードを表示できませんでした。下の「結果を共有する」をお試しください。</p>';
+      }
+    }
+    goods.after(card);
+  }
+
+  function resetKiosk() {
+    clearTimeout(kioskResetTimer);
+    kioskResetTimer = null;
+    try { sessionStorage.removeItem("littleMewLastResult"); } catch (_) {}
+    index = 0;
+    scores = initialScores();
+    answerHistory = [];
+    tieMode = false;
+    history.replaceState(null,"",location.pathname + location.search + "#start_page");
+    setRouteClasses();
+    window.scrollTo({top:0,behavior:"smooth"});
+    window.lmkTrack?.("kiosk_auto_reset");
+  }
+
+  function armKioskReset() {
+    clearTimeout(kioskResetTimer);
+    kioskResetTimer = null;
+    if (isCarriedView) return;
+    const resultId = location.hash.slice(1);
+    if (!resultId.startsWith("result_")) return;
+    let saved = null;
+    try { saved = JSON.parse(sessionStorage.getItem("littleMewLastResult")); } catch (_) {}
+    if (saved?.resultId !== resultId) return;
+    kioskResetTimer = setTimeout(resetKiosk,kioskResetDelay);
+  }
+
   let index = 0;
   let scores = initialScores();
   let answerHistory = [];
@@ -626,6 +790,7 @@ body:has(#start_page:target) #start_page{display:block!important}
   }
 
   function finish(primary) {
+    isCarriedView = false;
     const relation = scores.weave > scores.inherit ? "weave" : "inherit";
     const expression = scores.outer > scores.inner ? "outer" : "inner";
     const enjoyment = scores.share > scores.quiet ? "share" : "quiet";
@@ -720,7 +885,14 @@ body:has(#start_page:target) #start_page{display:block!important}
     return `<div class="insight-card neighbors"><span class="insight-label">近くにあった結果</span><h3 class="insight-title">答えが少し違えば現れた結果</h3><p class="insight-text neighbor-intro">相性ではなく、実際の得点差から見た“近い結果”です。同じ近さの猫は省かずに表示しています。</p><div class="neighbor-list">${visible}</div>${more}</div>`;
   }
 
-  function decorateResult(resultId, snapshot = null) {
+
+  function renderTakeHomeForResult(resultId,snapshot,carried=false) {
+    const page = document.getElementById(resultId);
+    if (!page) return;
+    renderTakeHomeCard(page,resultId,snapshot,carried);
+  }
+
+  function decorateResult(resultId, snapshot = null, options = {}) {
     const page = document.getElementById(resultId);
     const parts = resultParts(resultId);
     if (!page || !parts) return;
@@ -745,6 +917,7 @@ body:has(#start_page:target) #start_page{display:block!important}
         </div>
       </details>`;
     card.querySelector(".desc").after(section);
+    renderTakeHomeForResult(resultId,snapshot,options.carried === true);
 
     let actions = card.querySelector(".result-actions");
     if (!actions) {
@@ -835,13 +1008,29 @@ body:has(#start_page:target) #start_page{display:block!important}
 
   window.addEventListener("hashchange", () => {
     setRouteClasses();
-    if (location.hash === "#quiz_page") startQuiz();
+    if (location.hash === "#quiz_page") {
+      clearTimeout(kioskResetTimer);
+      startQuiz();
+    } else {
+      armKioskReset();
+    }
   });
 
+  ["pointerdown","touchstart","keydown"].forEach(eventName => {
+    document.addEventListener(eventName,() => {
+      if (kioskResetTimer) armKioskReset();
+    },{passive:true});
+  });
+
+  const takeHomeState = readTakeHomeState();
+  isCarriedView = Boolean(takeHomeState?.carried);
   setRouteClasses();
-  let savedResult = null;
-  try { savedResult = JSON.parse(sessionStorage.getItem("littleMewLastResult")); } catch (_) {}
-  document.querySelectorAll(".result-page").forEach(page => decorateResult(page.id, savedResult?.resultId === page.id ? savedResult : null));
+  let savedResult = takeHomeState?.snapshot || null;
+  if (!savedResult) {
+    try { savedResult = JSON.parse(sessionStorage.getItem("littleMewLastResult")); } catch (_) {}
+  }
+  document.querySelectorAll(".result-page").forEach(page => decorateResult(page.id,savedResult?.resultId === page.id ? savedResult : null,{carried:isCarriedView && savedResult?.resultId === page.id}));
+  armKioskReset();
   if (location.hash === "#quiz_page") startQuiz();
   else renderQuestion();
 })();
