@@ -1,6 +1,6 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>リトル・ミュー診断｜あなたはどの猫？</title>
 <meta name="description" content="15の問いから、あなたにいちばん近いリトル・ミューの猫を見つける診断です。">
-<meta name="lmk-build" content="2026-11-01-v4">
+<meta name="lmk-build" content="2026-11-01-v5">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Little Mew Kingdom">
 <meta property="og:title" content="リトル・ミュー診断｜あなたはどの猫？">
@@ -154,8 +154,6 @@ main{padding-left:var(--page-pad);padding-right:var(--page-pad)}
 .take-home-qr canvas,.take-home-qr img{display:block!important;width:100%!important;height:auto!important;margin:auto}
 .take-home-copy{margin:0 auto;max-width:390px;color:#5f554f;font-size:14px;line-height:1.9}
 .take-home-copy strong{color:var(--theme-deep)}
-.take-home-privacy{margin:13px 0 0;color:#8a7d76;font-size:11.5px;line-height:1.7}
-.take-home-reset{margin:8px 0 0;color:#8a7d76;font-size:11px;line-height:1.65}
 .take-home-arrived-mark{display:grid;place-items:center;width:76px;height:76px;margin:18px auto 14px;border-radius:50%;background:rgba(255,255,255,.82);border:1px solid var(--theme-line);font-size:34px}
 .take-home-card.is-arrived{padding-bottom:27px}
 
@@ -647,8 +645,7 @@ body:has(#start_page:target) #start_page{display:block!important}
         <h2 class="take-home-title">この猫を連れてきました</h2>
         <span class="take-home-result">「${title}」</span>
         <div class="take-home-arrived-mark" aria-hidden="true">🐈</div>
-        <p class="take-home-copy">診断結果と回答の濃淡を、<strong>このスマホで開いています。</strong><br>このページをブックマークすると、あとからもう一度会えます。</p>
-        <p class="take-home-privacy">診断結果はこの端末内に保存され、氏名や連絡先は使用しません。</p>`;
+        <p class="take-home-copy">診断結果と回答の濃淡を、<br><strong>このスマホで見返せます。</strong></p>`;
     } else {
       const url = takeHomeUrl(resultId,snapshot);
       card.innerHTML = `
@@ -656,9 +653,7 @@ body:has(#start_page:target) #start_page{display:block!important}
         <h2 class="take-home-title">この猫を連れて帰る</h2>
         <span class="take-home-result">「${title}」</span>
         <div class="take-home-qr-wrap"><div class="take-home-qr" role="img" aria-label="この診断結果をスマホで開くQRコード"></div></div>
-        <p class="take-home-copy">スマホのカメラを向けるだけ。<br><strong>診断結果と回答の濃淡</strong>が、そのまま開きます。</p>
-        <p class="take-home-privacy">名前・電話番号・メールアドレスは保存しません。</p>
-        <p class="take-home-reset">3分間操作がないと、次のお客様のため最初の画面に戻ります。</p>`;
+        <p class="take-home-copy">QRコードを読み取ると、<br><strong>診断結果と回答の濃淡</strong>がスマホで開きます。</p>`;
       const qrTarget = card.querySelector(".take-home-qr");
       try {
         new QRCode(qrTarget,{text:url,width:218,height:218,colorDark:"#392f2b",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.M});
