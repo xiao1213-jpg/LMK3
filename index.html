@@ -759,7 +759,7 @@ body:has(#start_page:target) #start_page{display:block!important}
       restart.className = "quiet-action";
       restart.textContent = "もう一度診断する";
       const appleDevice = /iPhone|iPad|iPod|Macintosh|Mac OS X/i.test(navigator.userAgent || "");
-      if (appleDevice && typeof navigator.share === "function") {
+      if (appleDevice) {
         const airDrop = document.createElement("button");
         airDrop.type = "button";
         airDrop.className = "quiet-action airdrop-action";
@@ -794,7 +794,7 @@ body:has(#start_page:target) #start_page{display:block!important}
         window.lmkTrack?.("share", {method:wantsAirDrop ? "airdrop_sheet" : "native", result_id:resultId, result_name:title});
       } else {
         await navigator.clipboard.writeText(`${data.text}\n${data.url}`);
-        status.textContent = wantsAirDrop ? "リンクをコピーしました。共有メニューからAirDropしてください" : "結果とリンクをコピーしました";
+        status.textContent = wantsAirDrop ? "リンクをコピーしました。Safariで開くとAirDropを使えます" : "結果とリンクをコピーしました";
         window.lmkTrack?.("share", {method:wantsAirDrop ? "airdrop_copy" : "copy", result_id:resultId, result_name:title});
       }
     } catch (error) {
