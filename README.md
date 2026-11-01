@@ -13,6 +13,10 @@
 - 4 × 3 × 2＝24結果
 - 各結果に診断本文、3要素の解説、回答の濃淡、近い結果、案内役の猫、似合うものを表示
 - 24結果それぞれにSNS共有用URLを用意
+- 常設端末の結果画面に「この猫を連れて帰る」QRコードを表示
+- QRコードから、診断結果・回答の濃淡・近い結果をスマートフォンへ復元
+- 氏名や連絡先を使わず、持ち帰った結果は読み取った端末内だけに保存
+- 常設端末は結果表示後、3分間操作がなければスタート画面へ自動復帰
 - スマートフォン対応
 - Google Analytics 4による匿名の利用状況集計
 
@@ -46,6 +50,8 @@
 - 結果本文が案内役キャラクターの性格ではなく、診断分類に基づいている
 - 「この結果をつくる3つの要素を見る」が開閉できる
 - 案内役と「あなたに似合うもの」が表示される
+- 「この猫を連れて帰る」のQRコードが表示される
+- QRコードを別端末で開くと、得点と近い結果まで復元される
 - 「結果を共有する」「もう一度診断する」が動く
 - スマートフォンで横方向にはみ出さない
 - プライバシーページが開く
@@ -60,6 +66,9 @@ Google Analytics 4 測定ID：`G-FJ9LS51YKS`
 - 診断完了：`diagnosis_complete`
 - 結果共有：`share`
 - 再診断：`restart`
+- 持ち帰りQR表示：`take_home_qr_shown`
+- 持ち帰り結果を開く：`take_home_open`
+- 常設端末の自動初期化：`kiosk_auto_reset`
 
 同じ測定IDを使い続けるため、今後の集計は同じGA4プロパティへ蓄積されます。測定タグ設置前のアクセスは、後からさかのぼって記録されません。
 
@@ -67,7 +76,9 @@ Google Analytics 4 測定ID：`G-FJ9LS51YKS`
 
 - `index.html`：診断本体・24結果・採点処理
 - `assets/config.js`：GA4測定ID
-- `assets/analytics.js`：アクセス解析処理
+- `assets/analytics.js`：アクセス解析処理（持ち帰り用の得点符号は解析へ送信しない）
+- `assets/qrcode.min.js`：端末内でQRコードを生成するQRCode.js
+- `assets/qrcode-LICENSE.txt`：QRCode.jsのMITライセンス
 - `assets/results.json`：24結果の補助データ
 - `assets/*.webp`：4シリーズの背景画像
 - `assets/share-rebel.jpg` / `share-lady.jpg` / `share-salon.jpg` / `share-blood.jpg`：4分類別のSNS共有画像
