@@ -146,6 +146,8 @@ main{padding-left:var(--page-pad);padding-right:var(--page-pad)}
 .result-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px auto 0;max-width:520px}
 .quiet-action{appearance:none;border:1px solid var(--theme-line);border-radius:999px;background:#fff;color:var(--theme-deep);min-height:54px;padding:14px 16px;font:inherit;font-size:15px;font-weight:700;text-align:center;cursor:pointer}
 .quiet-action.primary{background:var(--theme-deep);border-color:var(--theme-deep);color:#fff}
+.result-actions.has-airdrop .share-primary{grid-column:1/-1}
+.airdrop-action{background:linear-gradient(145deg,#fff,var(--theme-soft))}
 .share-status{min-height:20px;margin:8px 0 0;text-align:center;color:var(--theme-accent);font-size:13px}
 .analysis-disclosure{margin:0;border-top:1px solid var(--theme-line);border-bottom:1px solid var(--theme-line)}
 .analysis-disclosure>summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:52px;padding:14px 4px;border:0;background:transparent;color:var(--theme-deep);font-size:14px;font-weight:700;line-height:1.55;letter-spacing:.02em}
@@ -750,13 +752,25 @@ body:has(#start_page:target) #start_page{display:block!important}
       actions.className = "result-actions";
       const share = document.createElement("button");
       share.type = "button";
-      share.className = "quiet-action primary";
+      share.className = "quiet-action primary share-primary";
       share.textContent = "結果を共有する";
       share.addEventListener("click", () => shareResult(resultId));
       const restart = card.querySelector('a[href="#start_page"]');
       restart.className = "quiet-action";
       restart.textContent = "もう一度診断する";
-      actions.append(share,restart);
+      const appleDevice = /iPhone|iPad|iPod|Macintosh|Mac OS X/i.test(navigator.userAgent || "");
+      if (appleDevice && typeof navigator.share === "function") {
+        const airDrop = document.createElement("button");
+        airDrop.type = "button";
+        airDrop.className = "quiet-action airdrop-action";
+        airDrop.textContent = "AirDropで送る";
+        airDrop.setAttribute("aria-label","共有メニューを開いてAirDropで送る");
+        airDrop.addEventListener("click", () => shareResult(resultId,"airdrop"));
+        actions.classList.add("has-airdrop");
+        actions.append(share,airDrop,restart);
+      } else {
+        actions.append(share,restart);
+      }
       card.append(actions);
       const status = document.createElement("p");
       status.className = "share-status";
@@ -765,24 +779,27 @@ body:has(#start_page:target) #start_page{display:block!important}
     }
   }
 
-  async function shareResult(resultId) {
+  async function shareResult(resultId, method = "native") {
     const title = resultTitle(resultId);
     const url = new URL(`share/${resultId}.html`, location.href);
     url.searchParams.set("v", "20261031-2");
     const data = {title:"リトル・ミュー診断", text:`私は「${title}」でした。あなたはリトル・ミューのどの猫？`, url:url.toString()};
     const status = document.querySelector(`#${resultId} .share-status`);
+    const wantsAirDrop = method === "airdrop";
     try {
       if (navigator.share) {
+        status.textContent = wantsAirDrop ? "共有メニューで「AirDrop」を選んでください" : "共有メニューを開いています";
         await navigator.share(data);
-        status.textContent = "共有メニューを開きました";
-        window.lmkTrack?.("share", {method:"native", result_id:resultId, result_name:title});
+        if (!wantsAirDrop) status.textContent = "共有メニューを開きました";
+        window.lmkTrack?.("share", {method:wantsAirDrop ? "airdrop_sheet" : "native", result_id:resultId, result_name:title});
       } else {
         await navigator.clipboard.writeText(`${data.text}\n${data.url}`);
-        status.textContent = "結果とリンクをコピーしました";
-        window.lmkTrack?.("share", {method:"copy", result_id:resultId, result_name:title});
+        status.textContent = wantsAirDrop ? "リンクをコピーしました。共有メニューからAirDropしてください" : "結果とリンクをコピーしました";
+        window.lmkTrack?.("share", {method:wantsAirDrop ? "airdrop_copy" : "copy", result_id:resultId, result_name:title});
       }
     } catch (error) {
-      if (error?.name !== "AbortError") status.textContent = "共有できませんでした。もう一度お試しください";
+      if (error?.name === "AbortError") status.textContent = "";
+      else status.textContent = "共有できませんでした。もう一度お試しください";
     }
   }
 
