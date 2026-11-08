@@ -1,10 +1,10 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>リトル・ミュー診断｜あなたはどの猫？</title>
-<meta name="description" content="15の問いから、あなたにいちばん近いリトル・ミューの猫を見つける診断です。">
-<meta name="lmk-build" content="2026-11-01-v9">
+<meta name="description" content="9つの問いに答えると、リトル・ミュー王国からあなたへの招待状が届きます。">
+<meta name="lmk-build" content="2026-11-09-invitation-v1">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Little Mew Kingdom">
 <meta property="og:title" content="リトル・ミュー診断｜あなたはどの猫？">
-<meta property="og:description" content="15の問いから、あなたにいちばん近いリトル・ミューの猫を見つけよう。">
+<meta property="og:description" content="9つの問いの先で、リトル・ミュー王国からあなたへの招待状が届きます。">
 <meta property="og:url" content="https://xiao1213-jpg.github.io/LMK3/">
 <meta property="og:image" content="https://xiao1213-jpg.github.io/LMK3/assets/share-preview.jpg">
 <meta property="og:image:width" content="1200">
@@ -194,21 +194,55 @@ body:has(#start_page:target) #start_page{display:block!important}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 .privacy-link{text-align:center;margin:25px 0 5px;font-size:13px}.privacy-link a{color:#78644f}
+
+/* --- royal invitation sequence --- */
+.invitation-card{position:relative;overflow:hidden;text-align:center;background:
+  radial-gradient(circle at 50% 20%,rgba(255,255,255,.92),transparent 35%),
+  linear-gradient(145deg,#fffdf8,#f7efe4)}
+.invitation-card::before,.invitation-card::after{content:"";position:absolute;width:120px;height:120px;border:1px solid rgba(157,122,71,.18);border-radius:50%;pointer-events:none}
+.invitation-card::before{left:-66px;top:-58px}.invitation-card::after{right:-72px;bottom:-62px}
+.arrival-kicker{color:#9d7a47;font:600 10px/1.5 Georgia,serif;letter-spacing:.22em}
+.arrival-title{max-width:11em;margin:14px auto 8px;color:#3d302b;font-size:clamp(27px,7vw,35px);line-height:1.48;letter-spacing:.025em}
+.arrival-copy{margin:0 auto 24px;color:#776a62;font-size:14px;line-height:1.9}
+.envelope{position:relative;width:min(390px,92%);aspect-ratio:1.62;margin:22px auto 24px;border:1px solid #d8c5a8;border-radius:8px;background:linear-gradient(155deg,#fffaf0,#efe0c8);box-shadow:0 18px 35px rgba(71,49,35,.14);overflow:hidden}
+.envelope::before{content:"";position:absolute;left:-3%;right:-3%;top:-52%;height:104%;background:linear-gradient(145deg,#f8ecd7,#fff9ee);border:1px solid #d8c5a8;transform:rotate(45deg);transform-origin:center}
+.envelope::after{content:"";position:absolute;left:-7%;right:-7%;bottom:-64%;height:115%;background:linear-gradient(145deg,#f4e6d0,#fff8ec);border:1px solid #d8c5a8;transform:rotate(45deg)}
+.wax-seal{position:absolute;z-index:2;left:50%;top:52%;display:grid;place-items:center;width:68px;height:68px;border-radius:50%;transform:translate(-50%,-50%);background:radial-gradient(circle at 35% 30%,#ad5c55,#74312f 68%,#54211f);border:4px double rgba(255,225,202,.42);box-shadow:0 5px 11px rgba(70,29,25,.28);color:#f5d7bd;font:700 27px/1 Georgia,serif;text-shadow:0 1px 1px #4b1e1d}
+.office-line{margin:0;color:#554943;font-size:13px;line-height:1.75}
+.office-line strong{display:block;color:#3f332e;font-size:15px;letter-spacing:.055em}
+.office-line em{display:block;color:#9d7a47;font:italic 11px/1.7 Georgia,serif;letter-spacing:.08em}
+.open-letter{border:0;cursor:pointer}
+.invitation-card.is-opening .envelope{animation:letter-open .68s ease both}
+.invitation-card.is-opening .wax-seal{animation:seal-break .42s ease both}
+@keyframes letter-open{0%{transform:translateY(0) scale(1)}45%{transform:translateY(-4px) scale(1.012)}100%{transform:translateY(8px) scale(.985);opacity:0}}
+@keyframes seal-break{to{transform:translate(-50%,-50%) rotate(-12deg) scale(.72);opacity:0}}
+.royal-warrant{max-width:540px;margin:0 auto 24px;padding:20px 18px 18px;border:1px solid var(--theme-line);border-radius:20px;background:rgba(255,253,248,.88);text-align:center}
+.royal-warrant-kicker{display:block;color:var(--theme-accent);font:600 9px/1.5 Georgia,serif;letter-spacing:.2em}
+.royal-warrant-office{display:block;margin-top:7px;color:#756861;font-size:12px;line-height:1.6}
+.royal-warrant p{margin:9px 0 0;color:var(--theme-deep);font-size:15px;font-weight:700;line-height:1.75}
+@media(max-width:520px){.envelope{width:94%;margin-top:18px}.wax-seal{width:62px;height:62px}.royal-warrant{padding:17px 14px}}
 </style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">LITTLE MEW</div>
 <div class="cat">🐈</div>
-<h1 class="title">あなたはどの猫？</h1>
+<h1 class="title">王国で、あなたはどの猫？</h1>
 <p class="intro"><span>古い時計。秘密の手紙。</span>
 <span>午後のお茶会。月明かりの路地。</span>
-<span class="intro-prompt">心惹かれる扉を、選んでください。</span></p>
-<a class="start" id="start_quiz" href="#quiz_page">リトル・ミューへ</a>
-<div class="note">15問 ＋ 同点のときだけ少しだけ追加</div><p class="scope-note">性格全体ではなく、「何に心が向き、美しさとどう関わり、喜びをどう味わうか」を見る診断です。</p>
+<span class="intro-prompt">心惹かれる扉の先から、<br>あなたへの招待状が届きます。</span></p>
+<a class="start" id="start_quiz" href="#quiz_page">王国への扉をひらく</a>
+<div class="note">9問 ＋ 最初の軸が同点のときだけ、あと一つ</div><p class="scope-note">「何に心が向き、美しさとどう関わり、喜びをどう味わうか」から、王国でのあなたを見つけます。</p>
 </div></section><section id="quiz_page" class="page"><div class="card" id="quiz_card">
-<div class="quiz-top"><div class="progress" id="quiz_progress">1 / 15</div><button class="back-button" id="quiz_back" type="button" hidden>← ひとつ戻る</button></div>
+<div class="quiz-top"><div class="progress" id="quiz_progress">1 / 9</div><button class="back-button" id="quiz_back" type="button" hidden>← ひとつ戻る</button></div>
 <div class="progress-track" aria-hidden="true"><span class="progress-fill" id="quiz_progress_fill"></span></div>
 <div class="axis" id="quiz_axis">あなたの心は、何に惹かれる？</div>
 <div class="q" id="quiz_question"></div>
 <div id="quiz_answers" aria-live="polite"></div>
+</div></section><section id="invitation_page" class="page"><div class="card invitation-card" id="invitation_card">
+<div class="arrival-kicker">POST FROM LITTLE MEW</div>
+<h1 class="arrival-title">王国から<br>招待状が届きました</h1>
+<p class="arrival-copy">封蝋には、王室の印が押されています。</p>
+<div class="envelope" aria-hidden="true"><span class="wax-seal">M</span></div>
+<p class="office-line"><strong>リトル・ミュー王国 王室侍従長室</strong><em>Office of the Lord Chamberlain</em></p>
+<button class="start open-letter" id="open_invitation" type="button">封を開ける</button>
 </div></section><section id="result_blood_life_quiet" class="page result-page theme-blood"><div class="card">
 <div class="kicker">YOUR LITTLE MEW TYPE</div><div class="category-mark"><span>気高き血統</span><em>The Crimson Crown</em></div><div class="cat">🐈</div>
 <div class="small">CAT No.23</div><h1 class="title">王家のパティシエ</h1>
@@ -368,14 +402,6 @@ body:has(#start_page:target) #start_page{display:block!important}
     },
     {
       axis: "あなたの心は、何に惹かれる？",
-      question: "長く使われてきた古いカフェに入りました。最初に目が向くのは？",
-      answers: [
-        ["窓辺の花や食器など、今の店のしつらえ", "life"],
-        ["古い床や壁に残る、昔からの店の面影", "time"]
-      ]
-    },
-    {
-      axis: "あなたの心は、何に惹かれる？",
       question: "小さなお店で、どちらか一つを選ぶなら？",
       answers: [
         ["贈る相手を思い浮かべながら選びたくなる、きれいな便箋", "message"],
@@ -384,26 +410,10 @@ body:has(#start_page:target) #start_page{display:block!important}
     },
     {
       axis: "あなたの心は、何に惹かれる？",
-      question: "古いブローチを一つ見つけました。まず知りたくなるのは？",
-      answers: [
-        ["誰が誰へ、どんな気持ちで渡したものなのか", "message"],
-        ["いつ作られ、どんな時代を経てきたものなのか", "time"]
-      ]
-    },
-    {
-      axis: "あなたの心は、何に惹かれる？",
       question: "知らない町をゆっくり歩くなら、つい目が向くのは？",
       answers: [
         ["古い建物や道に残る、昔の町の痕跡", "time"],
         ["店先や窓辺、庭に見える、今の暮らしの工夫", "life"]
-      ]
-    },
-    {
-      axis: "あなたの心は、何に惹かれる？",
-      question: "部屋に置く小さな品を一つ選ぶなら？",
-      answers: [
-        ["見るたび、いつもの暮らしが少し心地よくなるもの", "life"],
-        ["見るたび、大切な誰かとの出来事を思い出すもの", "message"]
       ]
     },
     {
@@ -423,14 +433,6 @@ body:has(#start_page:target) #start_page{display:block!important}
       ]
     },
     {
-      axis: "受け継いだものと、どう付き合う？",
-      question: "昔から続く町の行事を任されました。どちらに近い？",
-      answers: [
-        ["受け継がれてきた順序や形式まで含めて、そのまま味わいたい", "inherit"],
-        ["大切な意味は残しながら、見せ方や進め方は今に合う形へ整えたい", "weave"]
-      ]
-    },
-    {
       axis: "美しいものを、どこに置く？",
       question: "とても美しい小物を一つ手に入れました。家ではどうしたい？",
       answers: [
@@ -444,14 +446,6 @@ body:has(#start_page:target) #start_page{display:block!important}
       answers: [
         ["手帳や本の内側に挟んで、ときどき取り出して眺める", "inner"],
         ["額やボードに入れて、部屋の景色の一部にする", "outer"]
-      ]
-    },
-    {
-      axis: "美しいものを、どこに置く？",
-      question: "お気に入りの色や模様を取り入れるなら？",
-      answers: [
-        ["部屋や服の、目に入るところにしっかり使いたい", "outer"],
-        ["引き出しの内側や持ち物の細部に、そっと忍ばせたい", "inner"]
       ]
     },
     {
@@ -470,14 +464,6 @@ body:has(#start_page:target) #start_page{display:block!important}
         ["この景色はもう少し、自分の中だけで味わっていたい", "quiet"]
       ]
     },
-    {
-      axis: "喜びを、どう味わう？",
-      question: "とっておきのお茶を開けるなら？",
-      answers: [
-        ["一人で静かに、香りや味に集中して楽しみたい", "quiet"],
-        ["親しい人と一緒に飲みながら、感想を交わしたい", "share"]
-      ]
-    }
   ];
 
   const tieBreaks = {
@@ -551,7 +537,7 @@ body:has(#start_page:target) #start_page{display:block!important}
 
   const scoreKeys = ["time","message","life","inherit","weave","outer","inner","quiet","share"];
   const takeHomeStoragePrefix = "littleMewTakeHome:";
-  const takeHomeVersion = "1";
+  const takeHomeVersion = "2";
   const kioskResetDelay = 180000;
   const viewMode = new URLSearchParams(location.search).get("mode") === "store" ? "store" : "mobile";
   const isStoreMode = viewMode === "store";
@@ -568,14 +554,16 @@ body:has(#start_page:target) #start_page{display:block!important}
 
   function decodeTakeHome(resultId, payload) {
     if (!/^result_(blood|lady|rebel|salon)_(time|message|life)_(quiet|share)$/.test(resultId)) return null;
-    if (typeof payload !== "string" || payload.length !== 11 || payload[0] !== takeHomeVersion) return null;
+    if (typeof payload !== "string" || payload.length !== 11 || !["1","2"].includes(payload[0])) return null;
+    const payloadVersion = payload[0];
     const values = [...payload.slice(1,10)].map(value => parseInt(value,36));
     if (values.some(value => !Number.isInteger(value) || value < 0 || value > 6)) return null;
     const tie = payload[10] === "1";
     if (!tie && payload[10] !== "0") return null;
     const scores = Object.fromEntries(scoreKeys.map((key,index) => [key,values[index]]));
-    if (scores.time + scores.message + scores.life !== 6) return null;
-    if (scores.inherit + scores.weave !== 3 || scores.outer + scores.inner !== 3 || scores.quiet + scores.share !== 3) return null;
+    if (scores.time + scores.message + scores.life !== (payloadVersion === "1" ? 6 : 3)) return null;
+    const validBinaryTotal = (a,b) => payloadVersion === "1" ? a + b === 3 : [2,3].includes(a + b);
+    if (!validBinaryTotal(scores.inherit,scores.weave) || !validBinaryTotal(scores.outer,scores.inner) || !validBinaryTotal(scores.quiet,scores.share)) return null;
     const parts = resultParts(resultId);
     if (!parts) return null;
     const primaryValues = ["time","message","life"].map(key => scores[key]);
@@ -688,6 +676,8 @@ body:has(#start_page:target) #start_page{display:block!important}
     scores = initialScores();
     answerHistory = [];
     tieMode = false;
+    primaryTieUsed = false;
+    pendingInvitation = null;
     history.replaceState(null,"",location.pathname + location.search + "#start_page");
     setRouteClasses();
     window.scrollTo({top:0,behavior:"smooth"});
@@ -711,6 +701,8 @@ body:has(#start_page:target) #start_page{display:block!important}
   let scores = initialScores();
   let answerHistory = [];
   let tieMode = false;
+  let primaryTieUsed = false;
+  let pendingInvitation = null;
 
   const progress = document.getElementById("quiz_progress");
   const progressFill = document.getElementById("quiz_progress_fill");
@@ -737,7 +729,7 @@ body:has(#start_page:target) #start_page{display:block!important}
 
   function renderQuestion() {
     const item = questions[index];
-    progress.textContent = `${index + 1} / 15`;
+    progress.textContent = (index + 1) + " / " + questions.length;
     progressFill.style.width = `${((index + 1) / questions.length) * 100}%`;
     backButton.hidden = index === 0;
     tieMode = false;
@@ -761,16 +753,16 @@ body:has(#start_page:target) #start_page{display:block!important}
     resolvePrimary();
   }
 
-  function renderTieBreak(item) {
+  function renderTieBreak(item, handler, remaining = 1) {
     tieMode = true;
-    progress.textContent = "あと一つ";
+    progress.textContent = remaining > 1 ? "同点の軸を確認中" : "あと一つ";
     progressFill.style.width = "100%";
-    backButton.hidden = false;
-    axis.textContent = "あと一つだけ、心に近いものを";
+    backButton.hidden = true;
+    axis.textContent = item.axis || "あと一つだけ、心に近いものを";
     question.textContent = item.question;
     answers.replaceChildren();
     item.answers.forEach(([text, key], i) => {
-      answers.appendChild(makeAnswer(text, key, labels[i], finish));
+      answers.appendChild(makeAnswer(text, key, labels[i], handler));
     });
     window.scrollTo({top: 0, behavior: "smooth"});
   }
@@ -781,15 +773,17 @@ body:has(#start_page:target) #start_page{display:block!important}
     const tied = primaryKeys.filter(key => scores[key] === max);
 
     if (tied.length === 1) {
-      finish(tied[0]);
+      resolveBinaryAxes(tied[0]);
       return;
     }
 
     if (tied.length === 2) {
-      renderTieBreak(tieBreaks[[...tied].sort().join(",")]);
+      primaryTieUsed = true;
+      renderTieBreak(tieBreaks[[...tied].sort().join(",")], resolveBinaryAxes);
       return;
     }
 
+    primaryTieUsed = true;
     renderTieBreak({
       question: "最後に、一番心が動くものを一つだけ。",
       answers: [
@@ -797,7 +791,21 @@ body:has(#start_page:target) #start_page{display:block!important}
         ["誰かの想いが宿っている気配", "message"],
         ["日々の暮らしを美しくしてくれるもの", "life"]
       ]
+    }, resolveBinaryAxes);
+  }
+
+  function resolveBinaryAxes(primary) {
+    const anchors = [
+      ["inherit","weave",4],
+      ["outer","inner",6],
+      ["quiet","share",8]
+    ];
+    anchors.forEach(([left,right,questionIndex]) => {
+      if (scores[left] !== scores[right]) return;
+      const anchorAnswer = answerHistory[questionIndex];
+      if (anchorAnswer === left || anchorAnswer === right) scores[anchorAnswer] += 1;
     });
+    finish(primary);
   }
 
   function finish(primary) {
@@ -808,16 +816,41 @@ body:has(#start_page:target) #start_page{display:block!important}
 
     const series = seriesFromAxes(relation, expression);
 
-    const resultId = `result_${series}_${primary}_${enjoyment}`;
+    const resultId = "result_" + series + "_" + primary + "_" + enjoyment;
     if (!document.getElementById(resultId)) {
-      throw new Error(`Result page not found: ${resultId}`);
+      throw new Error("Result page not found: " + resultId);
     }
-    const snapshot = {resultId, primary, relation, expression, enjoyment, series, scores:{...scores}, primaryDecidedByTie:tieMode};
+    const snapshot = {resultId, primary, relation, expression, enjoyment, series, scores:{...scores}, primaryDecidedByTie:primaryTieUsed};
     window.lmkTrack?.("diagnosis_complete", {result_id:resultId, series, primary, enjoyment});
     try { sessionStorage.setItem("littleMewLastResult", JSON.stringify(snapshot)); } catch (_) {}
-    decorateResult(resultId, snapshot);
-    location.hash = resultId;
+    pendingInvitation = snapshot;
+    document.getElementById("invitation_card")?.classList.remove("is-opening");
+    const openButton = document.getElementById("open_invitation");
+    if (openButton) openButton.disabled = false;
+    location.hash = "invitation_page";
     window.scrollTo({top: 0, behavior: "smooth"});
+  }
+
+  function openInvitation() {
+    let snapshot = pendingInvitation;
+    if (!snapshot) {
+      try { snapshot = JSON.parse(sessionStorage.getItem("littleMewLastResult")); } catch (_) {}
+    }
+    if (!snapshot?.resultId || !document.getElementById(snapshot.resultId)) {
+      location.hash = "start_page";
+      return;
+    }
+    const card = document.getElementById("invitation_card");
+    const button = document.getElementById("open_invitation");
+    if (button) button.disabled = true;
+    card?.classList.add("is-opening");
+    window.lmkTrack?.("invitation_open",{result_id:snapshot.resultId});
+    window.setTimeout(() => {
+      decorateResult(snapshot.resultId,snapshot);
+      location.hash = snapshot.resultId;
+      window.scrollTo({top:0,behavior:"auto"});
+      pendingInvitation = null;
+    },620);
   }
 
   function resultParts(resultId) {
@@ -841,15 +874,20 @@ body:has(#start_page:target) #start_page{display:block!important}
       return `<div class="score-panel score-unavailable"><span class="insight-label">回答の濃淡</span><p>このリンクには回答履歴が含まれていないため、得点差は表示していません。あなた自身が診断すると、ここに感性の強さと境目が現れます。</p></div>`;
     }
     const primaryKeys = ["time","message","life"];
-    const primaryRows = primaryKeys.map(key => scoreBar(axisShort[key], snapshot.scores[key], 4, key === parts.primary)).join("");
+    const primaryTotal = primaryKeys.reduce((sum,key) => sum + snapshot.scores[key],0);
+    const primaryMaximum = primaryTotal === 3 ? 2 : 4;
+    const primaryRows = primaryKeys.map(key => scoreBar(axisShort[key], snapshot.scores[key], primaryMaximum, key === parts.primary)).join("");
     const pairs = [
       ["受け継ぎ方", parts.relation, parts.relation === "inherit" ? "weave" : "inherit"],
       ["美の置き場所", parts.expression, parts.expression === "inner" ? "outer" : "inner"],
       ["喜びの味わい方", parts.enjoyment, parts.enjoyment === "quiet" ? "share" : "quiet"]
     ];
     const pairRows = pairs.map(([name,a,b]) => `<div class="balance-row"><span class="balance-name">${name}</span><div class="balance-values"><b>${axisShort[a]} ${snapshot.scores[a]}</b><span>:</span><span>${snapshot.scores[b]} ${axisShort[b]}</span></div></div>`).join("");
-    const tieNote = snapshot.primaryDecidedByTie ? "『心が惹かれるもの』は同点になり、最後の一問で決まりました。" : "棒の長さと数字は、実際に選んだ回答数を表します。";
-    return `<div class="score-panel"><span class="insight-label">回答から見えた濃淡</span><div class="primary-scores">${primaryRows}</div><p class="score-note">心が惹かれるものは各感性が4回ずつ登場し、全6問で比べています。${tieNote}</p><div class="balance-list">${pairRows}</div></div>`;
+    const tieNote = snapshot.primaryDecidedByTie
+      ? "『心が惹かれるもの』は同点になり、最後の一問で決まりました。各二択軸は、回答が分かれた場合に基準質問を優先しています。"
+      : "各二択軸は、回答が分かれた場合に、より直接的な基準質問を優先しています。";
+    const primaryMethod = primaryTotal === 3 ? "三つの感性を互いに一度ずつ比べています。" : "三つの感性を全6問で比べています。";
+    return `<div class="score-panel"><span class="insight-label">回答から見えた濃淡</span><div class="primary-scores">${primaryRows}</div><p class="score-note">${primaryMethod}${tieNote}</p><div class="balance-list">${pairRows}</div></div>`;
   }
 
   function nearbyResults(parts, snapshot) {
@@ -908,6 +946,11 @@ body:has(#start_page:target) #start_page{display:block!important}
     const parts = resultParts(resultId);
     if (!page || !parts) return;
     const card = page.querySelector(".card");
+    card.querySelector(".royal-warrant")?.remove();
+    const warrant = document.createElement("div");
+    warrant.className = "royal-warrant";
+    warrant.innerHTML = '<span class="royal-warrant-kicker">ROYAL INVITATION</span><span class="royal-warrant-office">リトル・ミュー王国 王室侍従長室</span><p>あなたを、リトル・ミュー王国へお招きします。</p>';
+    card.querySelector(".kicker")?.after(warrant);
     card.querySelector(".result-analysis")?.remove();
     const section = document.createElement("section");
     section.className = "result-analysis";
@@ -995,10 +1038,13 @@ body:has(#start_page:target) #start_page{display:block!important}
     scores = initialScores();
     answerHistory = [];
     tieMode = false;
+    primaryTieUsed = false;
+    pendingInvitation = null;
     renderQuestion();
   }
 
   backButton.addEventListener("click", goBackOneQuestion);
+  document.getElementById("open_invitation")?.addEventListener("click", openInvitation);
   document.querySelectorAll('.result-page a[href="#start_page"]').forEach(link => {
     link.addEventListener("click", () => {
       window.lmkTrack?.("restart", {from_result:link.closest(".result-page")?.id || ""});
@@ -1006,6 +1052,8 @@ body:has(#start_page:target) #start_page{display:block!important}
       scores = initialScores();
       answerHistory = [];
       tieMode = false;
+      primaryTieUsed = false;
+      pendingInvitation = null;
     });
   });
 
@@ -1032,6 +1080,7 @@ body:has(#start_page:target) #start_page{display:block!important}
   if (!savedResult) {
     try { savedResult = JSON.parse(sessionStorage.getItem("littleMewLastResult")); } catch (_) {}
   }
+  if (location.hash === "#invitation_page") pendingInvitation = savedResult;
   document.querySelectorAll(".result-page").forEach(page => decorateResult(page.id,savedResult?.resultId === page.id ? savedResult : null,{carried:isCarriedView && savedResult?.resultId === page.id}));
   armKioskReset();
   if (location.hash === "#quiz_page") startQuiz();
