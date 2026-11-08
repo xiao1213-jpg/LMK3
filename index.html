@@ -1,6 +1,6 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>リトル・ミュー診断｜あなたはどの猫？</title>
 <meta name="description" content="9つの問いに答えると、リトル・ミュー王国からあなたへの招待状が届きます。">
-<meta name="lmk-build" content="2026-11-09-royal-register-v2">
+<meta name="lmk-build" content="2026-11-09-portrait-provenance-v4">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Little Mew Kingdom">
 <meta property="og:title" content="リトル・ミュー診断｜あなたはどの猫？">
@@ -204,10 +204,13 @@ body:has(#start_page:target) #start_page{display:block!important}
 .arrival-kicker{color:#9d7a47;font:600 10px/1.5 Georgia,serif;letter-spacing:.22em}
 .arrival-title{max-width:11em;margin:14px auto 8px;color:#3d302b;font-size:clamp(27px,7vw,35px);line-height:1.48;letter-spacing:.025em}
 .arrival-copy{margin:0 auto 24px;color:#776a62;font-size:14px;line-height:1.9}
-.envelope{position:relative;width:min(390px,92%);aspect-ratio:1.62;margin:22px auto 24px;border:1px solid #d8c5a8;border-radius:8px;background:linear-gradient(155deg,#fffaf0,#efe0c8);box-shadow:0 18px 35px rgba(71,49,35,.14);overflow:hidden}
+.envelope{appearance:none;display:block;position:relative;width:min(390px,92%);aspect-ratio:1.62;margin:22px auto 24px;padding:0;border:1px solid #d8c5a8;border-radius:8px;background:linear-gradient(155deg,#fffaf0,#efe0c8);box-shadow:0 18px 35px rgba(71,49,35,.14);overflow:hidden;cursor:pointer}
 .envelope::before{content:"";position:absolute;left:-3%;right:-3%;top:-52%;height:104%;background:linear-gradient(145deg,#f8ecd7,#fff9ee);border:1px solid #d8c5a8;transform:rotate(45deg);transform-origin:center}
 .envelope::after{content:"";position:absolute;left:-7%;right:-7%;bottom:-64%;height:115%;background:linear-gradient(145deg,#f4e6d0,#fff8ec);border:1px solid #d8c5a8;transform:rotate(45deg)}
-.wax-seal{position:absolute;z-index:2;left:50%;top:52%;display:grid;place-items:center;width:68px;height:68px;border-radius:50%;transform:translate(-50%,-50%);background:radial-gradient(circle at 35% 30%,#ad5c55,#74312f 68%,#54211f);border:4px double rgba(255,225,202,.42);box-shadow:0 5px 11px rgba(70,29,25,.28);color:#f5d7bd;font:700 27px/1 Georgia,serif;text-shadow:0 1px 1px #4b1e1d}
+.wax-seal{position:absolute;z-index:2;left:50%;top:52%;display:flex;flex-direction:column;align-items:center;justify-content:center;width:74px;height:74px;border-radius:50%;transform:translate(-50%,-50%);background:radial-gradient(circle at 35% 30%,#b85c55,#74312f 68%,#54211f);border:4px double rgba(255,225,202,.48);box-shadow:0 7px 14px rgba(70,29,25,.32);color:#f5d7bd;font:700 25px/1 Georgia,serif;text-shadow:0 1px 1px #4b1e1d;transition:transform .16s ease,box-shadow .16s ease}
+.wax-seal small{margin-top:4px;font:700 7px/1 Georgia,serif;letter-spacing:.12em}
+.envelope:hover .wax-seal,.envelope:focus-visible .wax-seal{transform:translate(-50%,-50%) scale(1.06);box-shadow:0 10px 20px rgba(70,29,25,.35)}
+.envelope:focus-visible{outline:3px solid rgba(143,69,63,.28);outline-offset:5px}
 .office-line{margin:0;color:#554943;font-size:13px;line-height:1.75}
 .office-line strong{display:block;color:#3f332e;font-size:15px;letter-spacing:.055em}
 .office-line em{display:block;color:#9d7a47;font:italic 11px/1.7 Georgia,serif;letter-spacing:.08em}
@@ -246,16 +249,43 @@ body:has(#start_page:target) #start_page{display:block!important}
 .name-bridge-kicker{display:block;margin-bottom:7px;color:var(--theme-accent);font-size:10.5px;font-weight:700;letter-spacing:.11em}
 .name-bridge p{margin:0;color:#574e49;font-size:14px;line-height:1.95}
 .name-bridge strong{color:var(--theme-deep)}
-@media(max-width:520px){.envelope{width:94%;margin-top:18px}.wax-seal{width:62px;height:62px}.royal-warrant{padding:17px 14px}.royal-letter{padding:30px 19px 24px}.visitor-record{padding:20px 15px 17px}.visitor-grid{grid-template-columns:1fr}.name-bridge{padding:18px 17px}}
+.portrait-route{max-width:520px;margin:22px auto 26px;padding:20px;border:1px solid var(--theme-line);border-radius:20px;background:linear-gradient(145deg,rgba(255,255,255,.94),var(--theme-soft));text-align:center}
+.portrait-route-kicker{display:block;color:var(--theme-accent);font:600 9px/1.5 Georgia,serif;letter-spacing:.16em}
+.portrait-route h2{margin:7px 0 8px;color:var(--theme-deep);font-size:20px;line-height:1.55}
+.portrait-route p{margin:0 0 15px;color:#6d625c;font-size:13.5px;line-height:1.8}
+.portrait-route button{margin:0 auto}
+
+.provenance-page .card{min-height:620px;text-align:center;overflow:hidden;position:relative;isolation:isolate;transition:background .3s ease,color .3s ease}
+.provenance-page .card::before{content:"";position:absolute;inset:0;z-index:-2;opacity:.58;background:radial-gradient(circle at 50% 0%,rgba(255,255,255,.9),transparent 38%)}
+.provenance-page.tier-ivory .card{background:linear-gradient(150deg,#fffdf7,#eee3d1);--record-accent:#8c6c43;--record-line:#d8c4a5;--record-deep:#49392e}
+.provenance-page.tier-silver .card{background:linear-gradient(150deg,#fbfcfd,#dfe7ea);--record-accent:#687b86;--record-line:#b8c8ce;--record-deep:#344852}
+.provenance-page.tier-gold .card{background:linear-gradient(150deg,#fff9e8,#e9d098);--record-accent:#9b6b16;--record-line:#cda84c;--record-deep:#5d410f}
+.provenance-page.tier-crown .card{background:radial-gradient(circle at 50% 5%,#874148,#4d2027 48%,#261015);--record-accent:#f1ce7d;--record-line:#b98a3c;--record-deep:#fff3d6;color:#fff3d6;box-shadow:0 22px 70px rgba(55,16,23,.28)}
+.record-seal{display:grid;place-items:center;width:76px;height:76px;margin:0 auto 12px;border:2px double var(--record-line);border-radius:50%;color:var(--record-accent);font:700 23px/1 Georgia,serif}
+.record-rarity{display:inline-block;margin:0 auto 10px;padding:7px 12px;border:1px solid var(--record-line);border-radius:999px;color:var(--record-accent);font-size:11px;font-weight:700;letter-spacing:.1em}
+.record-heading{margin:4px 0 8px;color:var(--record-deep);font-size:clamp(28px,7vw,36px);line-height:1.4}
+.record-probability{margin:0 0 24px;color:var(--record-accent);font-size:13px;line-height:1.8}
+.provenance-page .visitor-record{margin-top:0;border-color:var(--record-line);background:rgba(255,255,255,.82)}
+.provenance-page .visitor-record-title,.provenance-page .visitor-field b{color:var(--record-deep)}
+.provenance-page .visitor-record-kicker{color:var(--record-accent)}
+.provenance-page.tier-crown .visitor-record{background:rgba(255,248,231,.95)}
+.provenance-page.tier-crown .visitor-record-title,.provenance-page.tier-crown .visitor-field b{color:#5d342d}
+.provenance-page.tier-crown .visitor-record-note,.provenance-page.tier-crown .visitor-field span{color:#806c61}
+.record-bridge{max-width:540px;margin:18px auto 22px;padding:18px 19px;border:1px solid var(--record-line);border-radius:18px;background:rgba(255,255,255,.72);text-align:left}
+.record-bridge span{display:block;margin-bottom:6px;color:var(--record-accent);font-size:10px;font-weight:700;letter-spacing:.1em}
+.record-bridge p{margin:0;color:#584d46;font-size:14px;line-height:1.9}
+.provenance-page .start{background:var(--record-deep)!important}
+.provenance-page.tier-crown .start{background:#f1ce7d!important;color:#3e2327!important}
+@media(max-width:520px){.envelope{width:94%;margin-top:18px}.wax-seal{width:68px;height:68px}.royal-warrant{padding:17px 14px}.royal-letter{padding:30px 19px 24px}.visitor-record{padding:20px 15px 17px}.visitor-grid{grid-template-columns:1fr}.name-bridge{padding:18px 17px}.provenance-page .card{padding:25px 16px}.record-bridge{padding:16px}}
 </style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">LITTLE MEW</div>
 <div class="cat">🐈</div>
 <h1 class="title">王国で、あなたはどの猫？</h1>
 <p class="intro"><span>古い時計。秘密の手紙。</span>
 <span>午後のお茶会。月明かりの路地。</span>
-<span class="intro-prompt">心惹かれる扉の先から、<br>あなたへの招待状が届きます。</span></p>
+<span class="intro-prompt">九つの扉を選び終えると、<br>あなたの猫の肖像と、王国での来歴がひらかれます。</span></p>
 <a class="start" id="start_quiz" href="#quiz_page">王国への扉をひらく</a>
-<div class="note">全9問</div><p class="scope-note">「何に心が向き、美しさとどう関わり、喜びをどう味わうか」から、王国でのあなたを見つけます。</p>
+<div class="note">全9問・すべて2択</div><p class="scope-note">問いから描かれる「猫の肖像」と、王室記録からひらかれる「王国での来歴」。二つを重ねて、王国でのあなたを見つけます。</p>
 </div></section><section id="quiz_page" class="page"><div class="card" id="quiz_card">
 <div class="quiz-top"><div class="progress" id="quiz_progress">1 / 9</div><button class="back-button" id="quiz_back" type="button" hidden>← ひとつ戻る</button></div>
 <div class="progress-track" aria-hidden="true"><span class="progress-fill" id="quiz_progress_fill"></span></div>
@@ -266,19 +296,26 @@ body:has(#start_page:target) #start_page{display:block!important}
 <div class="arrival-kicker">POST FROM LITTLE MEW</div>
 <h1 class="arrival-title">国王陛下から<br>招待状が届きました</h1>
 <p class="arrival-copy">王室の封蝋が押された、正式な招待状です。</p>
-<div class="envelope" aria-hidden="true"><span class="wax-seal">M</span></div>
+<button class="envelope" id="open_invitation" type="button" aria-label="赤い封蝋を押して招待状を開く"><span class="wax-seal"><span>M</span><small>OPEN</small></span></button>
 <p class="office-line"><strong>リトル・ミュー王国 王室侍従長室</strong><em>Office of the Lord Chamberlain</em></p>
-<button class="start open-letter" id="open_invitation" type="button">封を開ける</button>
 <article class="royal-letter" id="royal_letter" aria-live="polite">
 <div class="royal-letter-cypher" aria-hidden="true">T III R</div>
 <span class="royal-letter-command">BY COMMAND OF HIS MAJESTY THE KING</span>
 <h2>国王陛下よりの招待状</h2>
-<p class="royal-letter-body">あなたへ<br><br>リトル・ミュー王国国王ティボルト三世陛下は、<br>王国の定める来訪の手続に従い、<br>ここにあなたを王国へ招かれます。</p>
+<p class="royal-letter-body">あなたへ<br><br>国王ティボルト三世陛下の御意により、<br>王国の定める来訪手続を経たあなたを、<br>ここにリトル・ミュー王国へお招きします。</p>
 <strong class="royal-letter-name" id="royal_letter_name"></strong>
 <p class="royal-letter-body">同封の来訪者記録には、<br>猫としてのあなたの姿と、<br>受け継いだ家の記憶が記されています。</p>
 <p class="royal-letter-sign">国王陛下の命により<br>セント・ミルク宮殿　王室侍従長室<span class="royal-letter-register" id="royal_letter_register"></span></p>
-<button class="start" id="enter_kingdom" type="button">来訪者記録を見る</button>
+<button class="start" id="enter_kingdom" type="button">猫の肖像を見る</button>
 </article>
+</div></section><section id="provenance_page" class="page provenance-page tier-ivory"><div class="card">
+<div class="record-seal" aria-hidden="true">LMK</div>
+<div class="record-rarity" id="record_rarity">アイヴォリー記録</div>
+<h1 class="record-heading">王国での来歴</h1>
+<p class="record-probability" id="record_probability"></p>
+<div id="provenance_record_mount"></div>
+<div class="record-bridge" id="record_bridge"></div>
+<button class="start" id="return_portrait" type="button">猫の肖像へ戻る</button>
 </div></section><section id="result_blood_life_quiet" class="page result-page theme-blood"><div class="card">
 <div class="kicker">YOUR LITTLE MEW TYPE</div><div class="category-mark"><span>気高き血統</span><em>The Crimson Crown</em></div><div class="cat">🐈</div>
 <div class="small">CAT No.23</div><h1 class="title">王家のパティシエ</h1>
@@ -430,94 +467,79 @@ body:has(#start_page:target) #start_page{display:block!important}
   const questions = [
     {
       axis: "あなたの心は、何に惹かれる？",
-      question: "知らない家の机に、三つだけ残っていました。最初に手を伸ばすなら？",
+      question: "古い本を開くと、二つの書き込みが残っていました。より気になるのは？",
       answers: [
-        ["何年もの書き込みが重なった古い暦", "time", 1],
-        ["宛名だけが書かれていない手紙", "message", 1],
-        ["毎朝使われていた、小さなティーカップ", "life", 1]
+        ["百年前の日付と、かつての持ち主の名前", "time", 1],
+        ["『あなたへ』と書かれた、短い献辞", "message", 1]
       ]
     },
     {
       axis: "あなたの心は、何に惹かれる？",
-      question: "町を歩くなら、いちばん足を止めたいのは？",
+      question: "小さなお店で、どちらか一つを選ぶなら？",
       answers: [
-        ["石段や壁に残った、長い年月の跡", "time", 1],
-        ["誰かのために選ばれた、店先の包み", "message", 1],
-        ["窓辺の花や食卓がつくる、今日の暮らし", "life", 1]
+        ["贈る相手を思い浮かべながら選ぶ、きれいな便箋", "message", 1],
+        ["毎日の時間が少し楽しくなる、きれいなティーカップ", "life", 1]
       ]
     },
     {
       axis: "あなたの心は、何に惹かれる？",
-      question: "一つだけ、明日へ残せるとしたら？",
+      question: "知らない町をゆっくり歩くなら、つい目が向くのは？",
       answers: [
-        ["そこに至るまでの時間が分かる記録", "time", 1],
-        ["そこにいた誰かの想いが分かる言葉", "message", 1],
-        ["そこで営まれていた暮らしが分かる道具", "life", 1]
+        ["古い建物や道に残る、昔の町の痕跡", "time", 1],
+        ["店先や窓辺に見える、今の暮らしの工夫", "life", 1]
       ]
     },
     {
-      axis: "美しさと、どう関わる？",
-      question: "古い品を受け継ぐとして、片方しか守れないなら？",
+      axis: "受け継いだものと、どう付き合う？",
+      question: "古い家具をひとつ譲り受けました。使い続けるなら？",
       answers: [
-        ["元の形を、できるだけそのまま残したい", "inherit", 2],
-        ["元の形を、なるべく残したい", "inherit", 1],
-        ["込められた意味を、今の形で生かしたい", "weave", 1],
-        ["込められた意味を、形を変えても生かしたい", "weave", 2]
+        ["傷んだところだけ直し、形や意匠はなるべく残す", "inherit", 1],
+        ["由来は大切にしながら、暮らしに合う形へ整え直す", "weave", 1]
       ]
     },
     {
-      axis: "美しさと、どう関わる？",
-      question: "少し欠けた古い小箱。あなたなら？",
+      axis: "受け継いだものと、どう付き合う？",
+      question: "昔から伝わるお菓子のレシピを作るなら？",
       answers: [
-        ["傷も含め、ほとんど手を加えず置いておく", "inherit", 2],
-        ["見た目を変えない範囲で直して使う", "inherit", 1],
-        ["中身に合うよう、内側を作り替えて使う", "weave", 1],
-        ["今の暮らしで役立つ別の品へ仕立て直す", "weave", 2]
+        ["昔からの分量と手順で、まずその味を再現する", "inherit", 1],
+        ["基本の味は残し、自分なりの工夫を少し加える", "weave", 1]
       ]
     },
     {
-      axis: "好きなものを、どこに置く？",
-      question: "とても好きなものを一つだけ置くなら？",
+      axis: "美しいものを、どこに置く？",
+      question: "とても美しい小物を一つ手に入れました。家ではどうしたい？",
       answers: [
-        ["訪れた猫の目にも入る場所に、はっきり置きたい", "outer", 2],
-        ["部屋の景色になじむ場所に、さりげなく置きたい", "outer", 1],
-        ["自分だけが気づく場所に置きたい", "inner", 1],
-        ["自分だけが開ける場所にしまいたい", "inner", 2]
+        ["日々よく目に入る場所に飾っておきたい", "outer", 1],
+        ["箱にしまい、見たいときに取り出したい", "inner", 1]
       ]
     },
     {
-      axis: "好きなものを、どこに置く？",
-      question: "気に入った色を暮らしへ加えるなら？",
+      axis: "美しいものを、どこに置く？",
+      question: "旅先でもらった、小さくてきれいな紙片。残しておくなら？",
       answers: [
-        ["部屋の中心になる品に使う", "outer", 2],
-        ["棚や机の小物に使う", "outer", 1],
-        ["服や鞄の内側に忍ばせる", "inner", 1],
-        ["自分だけが見る手帳や箱の中に使う", "inner", 2]
+        ["額やボードに入れ、部屋の景色の一部にする", "outer", 1],
+        ["手帳や本の内側に挟み、ときどき眺める", "inner", 1]
       ]
     },
     {
       axis: "喜びを、どう味わう？",
-      question: "うれしい出来事のあと、一つだけ残せるなら？",
+      question: "とても嬉しいことがあった夜。自然なのは？",
       answers: [
-        ["自分の中に鮮やかに残る余韻", "quiet", 2],
-        ["まず自分で十分に味わった記憶", "quiet", 1],
-        ["誰かと『よかったね』と言えた記憶", "share", 1],
-        ["あとで一緒に思い返せる記憶", "share", 2]
+        ["まずは一匹で、その余韻をゆっくり味わう", "quiet", 1],
+        ["大切な猫に話して、一緒に喜ぶ", "share", 1]
       ]
     },
     {
       axis: "喜びを、どう味わう？",
-      question: "思いがけず素敵なものを見つけた直後、いちばん近いのは？",
+      question: "すごくきれいな景色を見つけました。そのあと心に浮かぶのは？",
       answers: [
-        ["その場に残り、まず一匹でじっくり眺める", "quiet", 2],
-        ["少し眺めてから、心の中へしまう", "quiet", 1],
-        ["近しい猫へ、あとで話したくなる", "share", 1],
-        ["その場で近しい猫にも見せたくなる", "share", 2]
+        ["この景色はもう少し、自分の中だけで味わいたい", "quiet", 1],
+        ["今度は、大切な猫と一緒に見に来たい", "share", 1]
       ]
     },
   ];
 
-  const labels = ["A", "B", "C", "D"];
+  const labels = ["A", "B"];
   const initialScores = () => ({
     time: 0, message: 0, life: 0,
     inherit: 0, weave: 0,
@@ -568,103 +590,111 @@ body:has(#start_page:target) #start_page{display:block!important}
     ["麦わら",.8],["クリーム",.6],["ポイント",.4],["しみ付き",.15],["淡色の二毛・三毛",.05]
   ];
 
+  const titlePool = [
+    ["公爵家の分家につながる家",2],
+    ["侯爵家の分家につながる家",5],
+    ["伯爵家の分家につながる家",13],
+    ["子爵家の分家につながる家",25],
+    ["男爵家の分家につながる家",55]
+  ];
+
   const regionPool = [
     {
-      id:"mewminster",name:"ミューミンスター特別区",weight:24,
+      id:"mewminster",name:"ミューミンスター特別区",weight:30,
       births:["王都ミューミンスターの学術街","王都の古い商店街","王都中央駅に近い街区","ランタンの灯る劇場街","セント・ミルク宮殿に近い住宅街"],
       families:[
-        ["王都に屋敷を持つ爵位家の分家につながる家",2.5,["古い王室行事の招待札","小さな銀の家印"]],
+        ["爵位家",12,["古い王室行事の招待札","小さな銀の家印"],"titled"],
         ["王都に古くから屋敷を構える無爵位旧家",2.5,["昔の王都を描いた庭図","古い館の小鍵"]],
-        ["王立大学の学寮へ本を納めてきた製本家の家",20,["創業時の真鍮ルーペ","書き込みの残る古い講義録"]],
-        ["王都中央駅の開業を支えた商家",20,["最初の開業硬券","駅前商店の小さな帳面"]],
-        ["ランタン街で小劇場を守ってきた家",20,["小劇場の初演目録","客席番号を刻んだ真鍮札"]],
+        ["王立大学の学寮へ本を納めてきた製本家の家",18,["創業時の真鍮ルーペ","書き込みの残る古い講義録"]],
+        ["王都中央駅の開業を支えた商家",18,["最初の開業硬券","駅前商店の小さな帳面"]],
+        ["ランタン街で小劇場を守ってきた家",18,["小劇場の初演目録","客席番号を刻んだ真鍮札"]],
         ["王都近郊の菜園を何代も守ってきた家",1,["季節を書き込んだ栽培暦","最初の収穫を載せた小皿"]],
-        ["議会記録の印刷と配達に関わってきた家",25,["議会記録の校正刷り","使い込まれた活字見本"]],
-        ["宮殿や大学の客間を長く整えてきた家",9,["家族の名が刻まれたティーポット","客間で使われた小さな呼び鈴"]]
+        ["議会記録の印刷と配達に関わってきた家",22,["議会記録の校正刷り","使い込まれた活字見本"]],
+        ["宮殿や大学の客間を長く整えてきた家",8.5,["家族の名が刻まれたティーポット","客間で使われた小さな呼び鈴"]]
       ]
     },
     {
-      id:"whitecliff",name:"ホワイトクリフ",weight:15,
+      id:"whitecliff",name:"ホワイトクリフ",weight:18,
       births:["ソルト・ヘイブン","ハーヴァリー","カスタミア","葡萄とオリーブの丘","海辺の小さな国内港"],
       families:[
-        ["海辺の伯爵家の分家につながる家",1.4,["伯爵家の古い家印の写し","海辺の館から贈られた銀の小皿"]],
+        ["爵位家",8,["爵位家の古い家印の写し","海辺の館から贈られた銀の小皿"],"titled"],
         ["丘の土地台帳に古くから名を残す家",3.6,["葡萄畑の古い境界図","丘の館の小鍵"]],
-        ["外国語の通訳や翻訳を担ってきた家",10,["二つの言葉で書かれた手紙","港の語学手帳"]],
-        ["ソルト・ヘイブンの船荷を扱ってきた商家",25,["最初の蒸気船入港日の荷札","外国から届いた小箱"]],
-        ["青い硝子を焼いてきた工房の家",20,["青い硝子の小瓶","硝子の色見本"]],
-        ["葡萄畑やオリーブ畑を守ってきた家",20,["葡萄の収穫帳","秋最初の実を載せる皿"]],
-        ["灯台と沿岸救難を支えてきた家",12,["灯台当番の小時計","救難記録を綴じた帳面"]],
-        ["海辺の宿を長く切り盛りしてきた家",8,["旅猫の名が並ぶ古い宿帳","朝食用の小さな呼び鈴"]]
+        ["外国語の通訳や翻訳を担ってきた家",9,["二つの言葉で書かれた手紙","港の語学手帳"]],
+        ["ソルト・ヘイブンの船荷を扱ってきた商家",23,["最初の蒸気船入港日の荷札","外国から届いた小箱"]],
+        ["青い硝子を焼いてきた工房の家",18,["青い硝子の小瓶","硝子の色見本"]],
+        ["葡萄畑やオリーブ畑を守ってきた家",19,["葡萄の収穫帳","秋最初の実を載せる皿"]],
+        ["灯台と沿岸救難を支えてきた家",11,["灯台当番の小時計","救難記録を綴じた帳面"]],
+        ["海辺の宿を長く切り盛りしてきた家",8.4,["旅猫の名が並ぶ古い宿帳","朝食用の小さな呼び鈴"]]
       ]
     },
     {
-      id:"crownshire",name:"クラウンシャー",weight:12,
+      id:"crownshire",name:"クラウンシャー",weight:10,
       births:["ステイブリッジ近郊","古い街道町","寄宿学校のある町","王都近郊の田園","海辺の国内港"],
       families:[
-        ["クラウンシャーの男爵家につながる家",1.5,["男爵家の庭図の写し","家印を刻んだ小さなブローチ"]],
+        ["爵位家",11,["爵位家の庭図の写し","家印を刻んだ小さなブローチ"],"titled"],
         ["寄宿学校へ土地を提供した無爵位旧家",8.5,["最初の寄贈本の蔵書印","開校日の真鍮鈴"]],
-        ["街道沿いの学校を支えてきた教師の家",10,["何代も書き足された授業帳","古い地理図帳"]],
-        ["王都へ農産物を送ってきた商家",7,["王都行き荷札の束","果実の値を記した小帳面"]],
-        ["古い石橋を補修してきた石工の家",15,["石橋の小さな測量尺","最初の補修年を刻んだ金具"]],
-        ["麦畑と広い草地を守ってきた家",40,["季節を書き込んだ農事暦","秋最初の実を載せる皿"]],
-        ["王都近郊鉄道の開通を支えた家",10,["開通日の硬券","古い列車時刻表"]],
-        ["学校や街道宿へ長く勤めてきた家",8,["街道宿の小鍵","何度も繕われた膝掛け"]]
+        ["街道沿いの学校を支えてきた教師の家",9,["何代も書き足された授業帳","古い地理図帳"]],
+        ["王都へ農産物を送ってきた商家",6,["王都行き荷札の束","果実の値を記した小帳面"]],
+        ["古い石橋を補修してきた石工の家",13,["石橋の小さな測量尺","最初の補修年を刻んだ金具"]],
+        ["麦畑と広い草地を守ってきた家",36,["季節を書き込んだ農事暦","秋最初の実を載せる皿"]],
+        ["王都近郊鉄道の開通を支えた家",9,["開通日の硬券","古い列車時刻表"]],
+        ["学校や街道宿へ長く勤めてきた家",7.5,["街道宿の小鍵","何度も繕われた膝掛け"]]
       ]
     },
     {
-      id:"rosewick",name:"ローズウィック",weight:14,
+      id:"rosewick",name:"ローズウィック",weight:12,
       births:["ウィッチフォード大学街","ブライアヒル","古い市場町","野ばらの丘","森の縁の村"],
       families:[
-        ["森の丘に館を持つ男爵家の分家につながる家",1.4,["館の鍵を模したブローチ","古い庭図の写し"]],
+        ["爵位家",9,["館の鍵を模したブローチ","古い庭図の写し"],"titled"],
         ["市場町の記録に古くから名を残す家",6.6,["町の古い土地台帳","祭りの日付を書き込んだ暦"]],
-        ["ウィッチフォード大学と古くから縁のある家",13,["野ばらを挟んだ野帳","大学街の古い蔵書票"]],
-        ["大学街へ書籍を運んできた商家",7,["書籍荷札の束","創業時の仕入帳"]],
-        ["製本と古書修復を続けてきた家",19,["手綴じの歌集","製本用の真鍮ルーペ"]],
-        ["野ばらや薬草を育ててきた家",36,["花のシロップ帳","乾かした野ばらを挟んだ植物帖"]],
-        ["地方の歌や祭りの記録を残してきた家",9,["古い祭りの歌集","町の行事を書いた記録帳"]],
-        ["学生向けの下宿を長く営んできた家",8,["下宿の小さな呼び鈴","歴代の学生が署名したティーポット"]]
+        ["ウィッチフォード大学と古くから縁のある家",12,["野ばらを挟んだ野帳","大学街の古い蔵書票"]],
+        ["大学街へ書籍を運んできた商家",6,["書籍荷札の束","創業時の仕入帳"]],
+        ["製本と古書修復を続けてきた家",17,["手綴じの歌集","製本用の真鍮ルーペ"]],
+        ["野ばらや薬草を育ててきた家",33,["花のシロップ帳","乾かした野ばらを挟んだ植物帖"]],
+        ["地方の歌や祭りの記録を残してきた家",8,["古い祭りの歌集","町の行事を書いた記録帳"]],
+        ["学生向けの下宿を長く営んできた家",8.4,["下宿の小さな呼び鈴","歴代の学生が署名したティーポット"]]
       ]
     },
     {
-      id:"brambleshire",name:"ブランブルシャー",weight:14,
+      id:"brambleshire",name:"ブランブルシャー",weight:12,
       births:["エドマンドウィック","《ドルヴァ》の森の縁","古城を囲む町","谷あいの市場町","森へ続く街道集落"],
       families:[
-        ["ハロウビー家と古くから縁のある家",1.5,["《ふたつの冠》の古い招待札","古城の鍵を模したブローチ"]],
+        ["爵位家",12,["《ふたつの冠》の古い招待札","古城の鍵を模したブローチ"],"titled"],
         ["古城と土地台帳を守ってきた無爵位旧家",8.5,["森の境を記した地図","水路図の写し"]],
-        ["エドマンドウィック大学と縁のある家",13,["古い講義録","大学ポータンブル大会の入場札"]],
-        ["谷町の木材と家具を扱ってきた商家",7,["木材の仕入帳","創業時の小さな家印"]],
-        ["木工や地図づくりに関わってきた家",20,["家具工房の木型","使い込まれた地図用定規"]],
-        ["森の縁で果樹と木苺を育ててきた家",32,["木苺の保存帳","収穫用の小さな木籠"]],
-        ["谷町の橋と水路を守ってきた家",10,["橋の補修記録","水位を刻んだ真鍮札"]],
-        ["古城や大学の客間へ長く勤めてきた家",8,["植物繊維で織った虎縞の布","客間の古い燭台"]]
+        ["エドマンドウィック大学と縁のある家",11,["古い講義録","大学ポータンブル大会の入場札"]],
+        ["谷町の木材と家具を扱ってきた商家",6,["木材の仕入帳","創業時の小さな家印"]],
+        ["木工や地図づくりに関わってきた家",17,["家具工房の木型","使い込まれた地図用定規"]],
+        ["森の縁で果樹と木苺を育ててきた家",29,["木苺の保存帳","収穫用の小さな木籠"]],
+        ["谷町の橋と水路を守ってきた家",9,["橋の補修記録","水位を刻んだ真鍮札"]],
+        ["古城や大学の客間へ長く勤めてきた家",7.5,["植物繊維で織った虎縞の布","客間の古い燭台"]]
       ]
     },
     {
-      id:"bellmere",name:"ベルメア",weight:12,
+      id:"bellmere",name:"ベルメア",weight:10,
       births:["サンミア湖畔の果樹園地帯","グリーンステッド","イーストバンク","農業・園芸カレッジの町","湖畔の市場町"],
       families:[
-        ["ベルメア公爵家と古くから縁のある家",1.2,["公爵家から贈られた銀縁皿","家印を刻んだ小さな徽章"]],
+        ["爵位家",9,["湖畔の館から贈られた銀縁皿","家印を刻んだ小さな徽章"],"titled"],
         ["湖畔の土地台帳に古くから名を残す家",8.8,["果樹園の古い区画図","湖畔の館の小鍵"]],
-        ["農業・園芸カレッジを支えてきた家",8,["試験園の観察ノート","果実の接ぎ方を描いた図譜"]],
-        ["湖畔市場で果実と加工品を扱ってきた商家",6,["果実の選別印","《ミルクの実》菓子の古い包み紙"]],
-        ["果実の保存道具を作ってきた職人の家",15,["木製の果実型","瓶のラベルを刷った版木"]],
-        ["サンミア湖畔の果樹園を守ってきた家",50,["秋最初の梨を載せる銀縁皿","何代も書き足された収穫帳"]],
-        ["湖上蒸気船と水位観測を支えてきた家",6,["湖上蒸気船の乗船札","湖の水位帳"]],
-        ["地方学校や果樹園の館へ長く勤めてきた家",5,["食堂で使われた小さな呼び鈴","何度も繕われた植物繊維の膝掛け"]]
+        ["農業・園芸カレッジを支えてきた家",7,["試験園の観察ノート","果実の接ぎ方を描いた図譜"]],
+        ["湖畔市場で果実と加工品を扱ってきた商家",5,["果実の選別印","《ミルクの実》菓子の古い包み紙"]],
+        ["果実の保存道具を作ってきた職人の家",13,["木製の果実型","瓶のラベルを刷った版木"]],
+        ["サンミア湖畔の果樹園を守ってきた家",47,["秋最初の梨を載せる銀縁皿","何代も書き足された収穫帳"]],
+        ["湖上蒸気船と水位観測を支えてきた家",5,["湖上蒸気船の乗船札","湖の水位帳"]],
+        ["地方学校や果樹園の館へ長く勤めてきた家",5.2,["食堂で使われた小さな呼び鈴","何度も繕われた植物繊維の膝掛け"]]
       ]
     },
     {
-      id:"northfell",name:"ノースフェル",weight:9,
+      id:"northfell",name:"ノースフェル",weight:8,
       births:["コホーリア湯郷","エイヴリング高地","雪深い谷あいの町","北岸の国内港","山地の大学町"],
       families:[
-        ["北方の男爵家につながる家",1.2,["男爵家の星印を写した小章","高地の館の小鍵"]],
+        ["爵位家",7,["北方の爵位家の星印を写した小章","高地の館の小鍵"],"titled"],
         ["峠道の記録に古くから名を残す家",7.8,["冬の峠を描いた古地図","初雪の日の銅燭台"]],
-        ["山地の総合大学で観測を支えてきた家",10,["古い星図","寒冷地植物の観察帖"]],
-        ["薬草と保存食を各地へ送ってきた商家",6,["薬草の仕入帳","保存瓶の古いラベル"]],
-        ["植物繊維の織物を作ってきた家",20,["細かな織り見本","使い込まれた木の糸巻き"]],
-        ["高地で薬草と果実を育ててきた家",38,["薬草を乾かす小箱","霜の日を書き込んだ栽培暦"]],
+        ["山地の総合大学で観測を支えてきた家",9,["古い星図","寒冷地植物の観察帖"]],
+        ["薬草と保存食を各地へ送ってきた商家",5,["薬草の仕入帳","保存瓶の古いラベル"]],
+        ["植物繊維の織物を作ってきた家",18,["細かな織り見本","使い込まれた木の糸巻き"]],
+        ["高地で薬草と果実を育ててきた家",36,["薬草を乾かす小箱","霜の日を書き込んだ栽培暦"]],
         ["谷鉄道と冬の郵便・救難を支えてきた家",8,["谷鉄道の開通硬券","冬の郵便経路図"]],
-        ["コホーリアの宿や共同浴場へ長く勤めてきた家",9,["湯郷の古い客帳札","旅猫を迎えた小さな呼び鈴"]]
+        ["コホーリアの宿や共同浴場へ長く勤めてきた家",9.2,["湯郷の古い客帳札","旅猫を迎えた小さな呼び鈴"]]
       ]
     }
   ];
@@ -730,12 +760,23 @@ body:has(#start_page:target) #start_page{display:block!important}
 
   function generateProvenance(seed) {
     const random = mulberry32(seed >>> 0);
-    const coat = weightedPick(coatPool,random)[0];
+    const coatEntry = weightedPick(coatPool,random);
+    const coat = coatEntry[0];
     const region = weightedPick(regionPool,random,item => item.weight);
     const birthplace = pick(region.births,random);
     const family = weightedPick(region.families,random);
+    let familyName = family[0];
+    let titleProbability = 1;
+    if (family[3] === "titled") {
+      const title = weightedPick(titlePool,random);
+      familyName = title[0];
+      titleProbability = title[1] / 100;
+    }
     const heirloom = pick(family[2],random);
-    return {seed:seed >>> 0,coat,region:region.name,regionId:region.id,birthplace,family:family[0],heirloom,registry:registryNumber(seed)};
+    const probability = (coatEntry[1]/100) * (region.weight/100) * (1/region.births.length) * (family[1]/100) * titleProbability * (1/family[2].length);
+    const oneIn = Math.max(1,Math.round(1/probability));
+    const tier = probability >= .000104 ? "ivory" : probability >= .00003168 ? "silver" : probability >= .000006 ? "gold" : "crown";
+    return {seed:seed >>> 0,coat,region:region.name,regionId:region.id,birthplace,family:familyName,heirloom,registry:registryNumber(seed),probability,oneIn,tier};
   }
 
   function bridgeText(resultId, provenance) {
@@ -746,7 +787,8 @@ body:has(#start_page:target) #start_page{display:block!important}
       : parts.primary === "message"
         ? `${provenance.heirloom}の向こうにいた猫の想いを、自然と思い描くこと。`
         : `${provenance.heirloom}を、今日の暮らしにつながるものとして感じること。`;
-    return `王室があなたに<strong>「${title}」</strong>の名を贈ったのは、家柄や生まれた土地がこの名を決めたからではありません。${focus}${titleMotifs[resultId] || "その心の向きが、この二つ名と響き合っています。"}`;
+    const motif = (titleMotifs[resultId] || "その心の向きが、この肖像へつながっています。").replace(/の名に重なります。$/,"という肖像につながります。");
+    return `この来歴が、<strong>「${title}」</strong>という肖像を決めたのではありません。${focus}${motif}`;
   }
 
   const scoreKeys = ["time","message","life","inherit","weave","outer","inner","quiet","share"];
@@ -822,6 +864,7 @@ body:has(#start_page:target) #start_page{display:block!important}
       const snapshot = decodeTakeHome(resultId,payload);
       if (!snapshot) return null;
       storeCarriedSnapshot(snapshot);
+      try { sessionStorage.setItem("littleMewLastResult",JSON.stringify(snapshot)); } catch (_) {}
       history.replaceState(null,"",location.pathname + location.search + "#" + resultId);
       window.lmkTrack?.("take_home_open",{result_id:resultId});
       return {snapshot,carried:true};
@@ -1029,7 +1072,7 @@ body:has(#start_page:target) #start_page{display:block!important}
   function renderRoyalLetter(snapshot) {
     const name = document.getElementById("royal_letter_name");
     const register = document.getElementById("royal_letter_register");
-    if (name) name.textContent = `王国であなたに贈られる二つ名は――「${resultTitle(snapshot.resultId)}」`;
+    if (name) name.textContent = `九つの問いから描かれた、あなたの猫の肖像は――「${resultTitle(snapshot.resultId)}」`;
     if (register) register.textContent = `王室来訪者登録　第 ${snapshot.provenance?.registry || registryNumber(snapshot.seed || 0)} 号`;
   }
 
@@ -1102,11 +1145,11 @@ body:has(#start_page:target) #start_page{display:block!important}
     const pairRows = pairs.map(([name,a,b]) => `<div class="balance-row"><span class="balance-name">${name}</span><div class="balance-values"><b>${axisShort[a]} ${snapshot.scores[a]}</b><span>:</span><span>${snapshot.scores[b]} ${axisShort[b]}</span></div></div>`).join("");
     const boundaryCount = pairs.filter(([,a,b]) => snapshot.scores[a] === snapshot.scores[b]).length;
     const tieNote = snapshot.primaryDecidedByTie
-      ? "『心が向くもの』は三つが一票ずつになり、最終優先を尋ねた3問目で決まりました。"
+      ? "『心が向くもの』は三つが一票ずつになったため、最後に答えた第3問を基準にしています。"
       : "『心が向くもの』は、三つの場面で最も多く選ばれたものです。";
     const boundaryNote = boundaryCount
-      ? ` 二択軸のうち${boundaryCount}つは価値と行動が同点になり、「失いたくないもの」を尋ねた第一問を採用しています。`
-      : " 二択軸は、価値の優先と実際の選び方を同じ重みで合わせています。";
+      ? ` 二択軸のうち${boundaryCount}つは二つの場面で答えが分かれ、分類には基準となる第一問を使っています。もう一方の答えも、傾向の幅として読み解きに残しています。`
+      : " 二択軸は、二つの異なる場面で同じ方向が選ばれています。";
     const primaryMethod = "同じ問いの言い換えではなく、異なる場面への反応を重ねています。";
     return `<div class="score-panel"><span class="insight-label">回答から見えた濃淡</span><div class="primary-scores">${primaryRows}</div><p class="score-note">${tieNote}${boundaryNote}${primaryMethod}</p><div class="balance-list">${pairRows}</div></div>`;
   }
@@ -1162,48 +1205,74 @@ body:has(#start_page:target) #start_page{display:block!important}
     renderTakeHomeCard(page,resultId,snapshot,carried);
   }
 
-  function decorateResult(resultId, snapshot = null, options = {}) {
-    const page = document.getElementById(resultId);
-    const parts = resultParts(resultId);
-    if (!page || !parts) return;
-    const card = page.querySelector(".card");
-    card.querySelector(".royal-warrant")?.remove();
-    card.querySelector(".visitor-record")?.remove();
-    card.querySelector(".name-bridge")?.remove();
-    if (snapshot) {
-      const provenance = snapshot.provenance || generateProvenance(snapshot.seed || 0);
-      snapshot.provenance = provenance;
-      const record = document.createElement("section");
-      record.className = "visitor-record";
-      record.setAttribute("aria-label","猫としての来訪者記録");
-      record.innerHTML = `
+  function renderProvenancePage(snapshot) {
+    if (!snapshot?.resultId) return;
+    const provenance = snapshot.provenance?.tier ? snapshot.provenance : generateProvenance(snapshot.seed || 0);
+    snapshot.provenance = provenance;
+    const page = document.getElementById("provenance_page");
+    const tierLabels = {
+      ivory:"希少度　★☆☆☆　アイヴォリー記録",
+      silver:"希少度　★★☆☆　銀葉の記録",
+      gold:"希少度　★★★☆　金星の記録",
+      crown:"希少度　★★★★　王冠印の記録"
+    };
+    page.className = `page provenance-page tier-${provenance.tier}`;
+    document.getElementById("record_rarity").textContent = tierLabels[provenance.tier];
+    document.getElementById("record_probability").textContent = `王国でおよそ ${provenance.oneIn.toLocaleString("ja-JP")}匹に一匹の組み合わせ`;
+    document.getElementById("provenance_record_mount").innerHTML = `
+      <section class="visitor-record" aria-label="王国での来歴">
         <div class="visitor-record-head">
           <span class="visitor-record-kicker">ROYAL VISITORS’ REGISTER</span>
-          <h2 class="visitor-record-title">猫としてのあなた</h2>
-          <p class="visitor-record-note">国王陛下の招待に際して、王室来訪者登録簿に記された姿です。</p>
+          <h2 class="visitor-record-title">王室来訪者記録</h2>
+          <p class="visitor-record-note">登録番号 ${provenance.registry}</p>
         </div>
         <div class="visitor-grid">
           <div class="visitor-field"><span>毛色</span><b>${provenance.coat}</b></div>
           <div class="visitor-field"><span>生まれた土地</span><b>${provenance.birthplace}<br><small>${provenance.region}</small></b></div>
           <div class="visitor-field"><span>家の来歴</span><b>${provenance.family}</b></div>
           <div class="visitor-field"><span>家に伝わるもの</span><b>${provenance.heirloom}</b></div>
-        </div>`;
-      const bridge = document.createElement("section");
-      bridge.className = "name-bridge";
-      bridge.setAttribute("aria-label","二つ名と来歴のつながり");
-      bridge.innerHTML = `<span class="name-bridge-kicker">この二つ名と、この来歴</span><p>${bridgeText(resultId,provenance)}</p>`;
-      const thesis = card.querySelector(".result-thesis");
-      thesis.after(record,bridge);
+        </div>
+      </section>`;
+    document.getElementById("record_bridge").innerHTML = `<span>猫の肖像と、王国での来歴</span><p>${bridgeText(snapshot.resultId,provenance)}</p>`;
+    const returnButton = document.getElementById("return_portrait");
+    returnButton.onclick = () => { location.hash = snapshot.resultId; window.scrollTo({top:0,behavior:"auto"}); };
+  }
+
+  function openProvenance(snapshot) {
+    renderProvenancePage(snapshot);
+    location.hash = "provenance_page";
+    window.scrollTo({top:0,behavior:"auto"});
+    window.lmkTrack?.("provenance_open",{result_id:snapshot.resultId,tier:snapshot.provenance?.tier});
+  }
+
+  function decorateResult(resultId, snapshot = null, options = {}) {
+    const page = document.getElementById(resultId);
+    const parts = resultParts(resultId);
+    if (!page || !parts) return;
+    const card = page.querySelector(".card");
+    const kicker = card.querySelector(".kicker");
+    if (kicker) kicker.textContent = "YOUR CAT PORTRAIT";
+    card.querySelector(".royal-warrant")?.remove();
+    card.querySelector(".visitor-record")?.remove();
+    card.querySelector(".name-bridge")?.remove();
+    card.querySelector(".portrait-route")?.remove();
+    if (snapshot) {
+      if (!snapshot.provenance?.tier) snapshot.provenance = generateProvenance(snapshot.seed || 0);
+      const route = document.createElement("section");
+      route.className = "portrait-route";
+      route.innerHTML = `<span class="portrait-route-kicker">ANOTHER RECORD AWAITS</span><h2>王国での来歴も届いています</h2><p>毛色、生まれた土地、家の記憶。<br>王室記録を開くまで、内容と希少度は分かりません。</p><button class="quiet-action primary" type="button">王室記録をひらく</button>`;
+      route.querySelector("button").addEventListener("click",()=>openProvenance(snapshot));
+      card.querySelector(".desc").after(route);
     }
     card.querySelector(".result-analysis")?.remove();
     const section = document.createElement("section");
     section.className = "result-analysis";
-    section.setAttribute("aria-label", "診断結果の詳しい分析");
+    section.setAttribute("aria-label", "猫の肖像の詳しい読み解き");
     section.innerHTML = `
       <details class="analysis-disclosure">
         <summary>この結果をつくる3つの要素を見る</summary>
         <div class="analysis-content">
-          <h2 class="analysis-heading">この結果ができるまで</h2>
+          <h2 class="analysis-heading">この肖像が描かれるまで</h2>
           <p class="analysis-lead">三つの感性がどう重なり、この猫になったのかを読み解きます。</p>
           <div class="logic-path" aria-label="判定の道筋">
             <div class="path-step"><span>1</span><div><span class="path-label">心が向くもの</span><b>${axisShort[parts.primary]}</b><p>${primaryLogic[parts.primary]}</p></div></div>
@@ -1214,7 +1283,8 @@ body:has(#start_page:target) #start_page{display:block!important}
           ${nearbyPanel(parts,snapshot)}
         </div>
       </details>`;
-    card.querySelector(".desc").after(section);
+    const routeAnchor = card.querySelector(".portrait-route");
+    (routeAnchor || card.querySelector(".desc")).after(section);
     renderTakeHomeForResult(resultId,snapshot,options.carried === true);
 
     let actions = card.querySelector(".result-actions");
@@ -1332,6 +1402,10 @@ body:has(#start_page:target) #start_page{display:block!important}
       if (!savedResult.provenance) savedResult.provenance = generateProvenance(savedResult.seed || 0);
       renderRoyalLetter(savedResult);
     }
+  }
+  if (location.hash === "#provenance_page" && savedResult) {
+    if (!savedResult.provenance?.tier) savedResult.provenance = generateProvenance(savedResult.seed || 0);
+    renderProvenancePage(savedResult);
   }
   document.querySelectorAll(".result-page").forEach(page => decorateResult(page.id,savedResult?.resultId === page.id ? savedResult : null,{carried:isCarriedView && savedResult?.resultId === page.id}));
   armKioskReset();
