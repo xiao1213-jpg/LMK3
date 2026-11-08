@@ -1,6 +1,6 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>リトル・ミュー診断｜あなたはどの猫？</title>
 <meta name="description" content="9つの問いに答えると、リトル・ミュー王国からあなたへの招待状が届きます。">
-<meta name="lmk-build" content="2026-11-09-invitation-v1">
+<meta name="lmk-build" content="2026-11-09-royal-register-v2">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Little Mew Kingdom">
 <meta property="og:title" content="リトル・ミュー診断｜あなたはどの猫？">
@@ -220,7 +220,33 @@ body:has(#start_page:target) #start_page{display:block!important}
 .royal-warrant-kicker{display:block;color:var(--theme-accent);font:600 9px/1.5 Georgia,serif;letter-spacing:.2em}
 .royal-warrant-office{display:block;margin-top:7px;color:#756861;font-size:12px;line-height:1.6}
 .royal-warrant p{margin:9px 0 0;color:var(--theme-deep);font-size:15px;font-weight:700;line-height:1.75}
-@media(max-width:520px){.envelope{width:94%;margin-top:18px}.wax-seal{width:62px;height:62px}.royal-warrant{padding:17px 14px}}
+.royal-letter{display:none;position:relative;max-width:510px;margin:20px auto 0;padding:34px 28px 28px;border:1px solid #d8c5a8;border-radius:10px;background:#fffdf7;box-shadow:0 18px 42px rgba(66,45,31,.12);text-align:center}
+.royal-letter::before{content:"";position:absolute;inset:9px;border:1px solid rgba(157,122,71,.22);pointer-events:none}
+.royal-letter-cypher{display:grid;place-items:center;width:58px;height:58px;margin:0 auto 13px;border:1px solid #b69261;border-radius:50%;color:#76562f;font:700 18px/1 Georgia,serif}
+.royal-letter-command{display:block;color:#9d7a47;font:600 9px/1.5 Georgia,serif;letter-spacing:.18em}
+.royal-letter h2{margin:10px 0 20px;color:#3f332e;font-size:23px;line-height:1.5}
+.royal-letter-body{margin:0;color:#554943;font-size:14px;line-height:2}
+.royal-letter-name{display:block;margin:18px 0;color:#5e342f;font-size:21px;font-weight:700;line-height:1.6}
+.royal-letter-sign{margin:20px 0 0;padding-top:15px;border-top:1px solid #e5d8c5;color:#756861;font-size:12px;line-height:1.8}
+.royal-letter-register{display:block;margin-top:5px;color:#9d7a47;font:600 10px/1.5 Georgia,serif;letter-spacing:.08em}
+.invitation-card.is-opened .arrival-kicker,.invitation-card.is-opened .arrival-title,.invitation-card.is-opened .arrival-copy,.invitation-card.is-opened .envelope,.invitation-card.is-opened .office-line,.invitation-card.is-opened #open_invitation{display:none}
+.invitation-card.is-opened .royal-letter{display:block;animation:letter-arrive .48s ease both}
+@keyframes letter-arrive{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+.visitor-record{max-width:560px;margin:25px auto 18px;padding:23px 20px 20px;border:1px solid var(--theme-line);border-radius:23px;background:linear-gradient(145deg,rgba(255,255,255,.96),var(--theme-soft));box-shadow:0 12px 28px rgba(70,55,51,.07)}
+.visitor-record-head{text-align:center;margin-bottom:17px}
+.visitor-record-kicker{display:block;color:var(--theme-accent);font:600 9px/1.5 Georgia,serif;letter-spacing:.18em}
+.visitor-record-title{margin:6px 0 4px;color:var(--theme-deep);font-size:21px;line-height:1.5}
+.visitor-record-note{margin:0;color:#776b64;font-size:12.5px;line-height:1.7}
+.visitor-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.visitor-field{padding:13px 14px;border:1px solid var(--theme-line);border-radius:15px;background:rgba(255,255,255,.72)}
+.visitor-field span{display:block;margin-bottom:5px;color:#8a7d76;font-size:10.5px;letter-spacing:.08em}
+.visitor-field b{display:block;color:var(--theme-deep);font-size:14px;line-height:1.65}
+.name-bridge{max-width:560px;margin:0 auto 26px;padding:20px 21px;border-left:3px solid var(--theme-accent);border-radius:4px 18px 18px 4px;background:rgba(255,255,255,.72)}
+.name-bridge-kicker{display:block;margin-bottom:7px;color:var(--theme-accent);font-size:10.5px;font-weight:700;letter-spacing:.11em}
+.name-bridge p{margin:0;color:#574e49;font-size:14px;line-height:1.95}
+.name-bridge strong{color:var(--theme-deep)}
+@media(max-width:520px){.envelope{width:94%;margin-top:18px}.wax-seal{width:62px;height:62px}.royal-warrant{padding:17px 14px}.royal-letter{padding:30px 19px 24px}.visitor-record{padding:20px 15px 17px}.visitor-grid{grid-template-columns:1fr}.name-bridge{padding:18px 17px}}
 </style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">LITTLE MEW</div>
 <div class="cat">🐈</div>
@@ -229,7 +255,7 @@ body:has(#start_page:target) #start_page{display:block!important}
 <span>午後のお茶会。月明かりの路地。</span>
 <span class="intro-prompt">心惹かれる扉の先から、<br>あなたへの招待状が届きます。</span></p>
 <a class="start" id="start_quiz" href="#quiz_page">王国への扉をひらく</a>
-<div class="note">9問 ＋ 最初の軸が同点のときだけ、あと一つ</div><p class="scope-note">「何に心が向き、美しさとどう関わり、喜びをどう味わうか」から、王国でのあなたを見つけます。</p>
+<div class="note">全9問</div><p class="scope-note">「何に心が向き、美しさとどう関わり、喜びをどう味わうか」から、王国でのあなたを見つけます。</p>
 </div></section><section id="quiz_page" class="page"><div class="card" id="quiz_card">
 <div class="quiz-top"><div class="progress" id="quiz_progress">1 / 9</div><button class="back-button" id="quiz_back" type="button" hidden>← ひとつ戻る</button></div>
 <div class="progress-track" aria-hidden="true"><span class="progress-fill" id="quiz_progress_fill"></span></div>
@@ -238,11 +264,21 @@ body:has(#start_page:target) #start_page{display:block!important}
 <div id="quiz_answers" aria-live="polite"></div>
 </div></section><section id="invitation_page" class="page"><div class="card invitation-card" id="invitation_card">
 <div class="arrival-kicker">POST FROM LITTLE MEW</div>
-<h1 class="arrival-title">王国から<br>招待状が届きました</h1>
-<p class="arrival-copy">封蝋には、王室の印が押されています。</p>
+<h1 class="arrival-title">国王陛下から<br>招待状が届きました</h1>
+<p class="arrival-copy">王室の封蝋が押された、正式な招待状です。</p>
 <div class="envelope" aria-hidden="true"><span class="wax-seal">M</span></div>
 <p class="office-line"><strong>リトル・ミュー王国 王室侍従長室</strong><em>Office of the Lord Chamberlain</em></p>
 <button class="start open-letter" id="open_invitation" type="button">封を開ける</button>
+<article class="royal-letter" id="royal_letter" aria-live="polite">
+<div class="royal-letter-cypher" aria-hidden="true">T III R</div>
+<span class="royal-letter-command">BY COMMAND OF HIS MAJESTY THE KING</span>
+<h2>国王陛下よりの招待状</h2>
+<p class="royal-letter-body">あなたへ<br><br>リトル・ミュー王国国王ティボルト三世陛下は、<br>王国の定める来訪の手続に従い、<br>ここにあなたを王国へ招かれます。</p>
+<strong class="royal-letter-name" id="royal_letter_name"></strong>
+<p class="royal-letter-body">同封の来訪者記録には、<br>猫としてのあなたの姿と、<br>受け継いだ家の記憶が記されています。</p>
+<p class="royal-letter-sign">国王陛下の命により<br>セント・ミルク宮殿　王室侍従長室<span class="royal-letter-register" id="royal_letter_register"></span></p>
+<button class="start" id="enter_kingdom" type="button">来訪者記録を見る</button>
+</article>
 </div></section><section id="result_blood_life_quiet" class="page result-page theme-blood"><div class="card">
 <div class="kicker">YOUR LITTLE MEW TYPE</div><div class="category-mark"><span>気高き血統</span><em>The Crimson Crown</em></div><div class="cat">🐈</div>
 <div class="small">CAT No.23</div><h1 class="title">王家のパティシエ</h1>
@@ -394,103 +430,94 @@ body:has(#start_page:target) #start_page{display:block!important}
   const questions = [
     {
       axis: "あなたの心は、何に惹かれる？",
-      question: "古い本を開くと、二つの書き込みが残っていました。より気になるのは？",
+      question: "知らない家の机に、三つだけ残っていました。最初に手を伸ばすなら？",
       answers: [
-        ["百年前の日付と、かつての持ち主の名前", "time"],
-        ["「あなたへ」と書かれた、短い献辞", "message"]
+        ["何年もの書き込みが重なった古い暦", "time", 1],
+        ["宛名だけが書かれていない手紙", "message", 1],
+        ["毎朝使われていた、小さなティーカップ", "life", 1]
       ]
     },
     {
       axis: "あなたの心は、何に惹かれる？",
-      question: "小さなお店で、どちらか一つを選ぶなら？",
+      question: "町を歩くなら、いちばん足を止めたいのは？",
       answers: [
-        ["贈る相手を思い浮かべながら選びたくなる、きれいな便箋", "message"],
-        ["毎日の時間が少し楽しくなりそうな、きれいなティーカップ", "life"]
+        ["石段や壁に残った、長い年月の跡", "time", 1],
+        ["誰かのために選ばれた、店先の包み", "message", 1],
+        ["窓辺の花や食卓がつくる、今日の暮らし", "life", 1]
       ]
     },
     {
       axis: "あなたの心は、何に惹かれる？",
-      question: "知らない町をゆっくり歩くなら、つい目が向くのは？",
+      question: "一つだけ、明日へ残せるとしたら？",
       answers: [
-        ["古い建物や道に残る、昔の町の痕跡", "time"],
-        ["店先や窓辺、庭に見える、今の暮らしの工夫", "life"]
+        ["そこに至るまでの時間が分かる記録", "time", 1],
+        ["そこにいた誰かの想いが分かる言葉", "message", 1],
+        ["そこで営まれていた暮らしが分かる道具", "life", 1]
       ]
     },
     {
-      axis: "受け継いだものと、どう付き合う？",
-      question: "古い家具をひとつ譲り受けました。使い続けるなら？",
+      axis: "美しさと、どう関わる？",
+      question: "古い品を受け継ぐとして、片方しか守れないなら？",
       answers: [
-        ["傷んだところだけ直し、形や意匠はなるべくそのまま残す", "inherit"],
-        ["由来は大切にしながら、自分の暮らしに合う形へ少し整え直す", "weave"]
+        ["元の形を、できるだけそのまま残したい", "inherit", 2],
+        ["元の形を、なるべく残したい", "inherit", 1],
+        ["込められた意味を、今の形で生かしたい", "weave", 1],
+        ["込められた意味を、形を変えても生かしたい", "weave", 2]
       ]
     },
     {
-      axis: "受け継いだものと、どう付き合う？",
-      question: "昔から伝わるお菓子のレシピを作るなら？",
+      axis: "美しさと、どう関わる？",
+      question: "少し欠けた古い小箱。あなたなら？",
       answers: [
-        ["基本の味は残しながら、自分なりの工夫を少し加えてみたい", "weave"],
-        ["まずは昔からの分量と手順で、その味を再現してみたい", "inherit"]
+        ["傷も含め、ほとんど手を加えず置いておく", "inherit", 2],
+        ["見た目を変えない範囲で直して使う", "inherit", 1],
+        ["中身に合うよう、内側を作り替えて使う", "weave", 1],
+        ["今の暮らしで役立つ別の品へ仕立て直す", "weave", 2]
       ]
     },
     {
-      axis: "美しいものを、どこに置く？",
-      question: "とても美しい小物を一つ手に入れました。家ではどうしたい？",
+      axis: "好きなものを、どこに置く？",
+      question: "とても好きなものを一つだけ置くなら？",
       answers: [
-        ["日々よく目に入る場所に飾っておきたい", "outer"],
-        ["箱にしまって、見たいときにそっと取り出したい", "inner"]
+        ["訪れた猫の目にも入る場所に、はっきり置きたい", "outer", 2],
+        ["部屋の景色になじむ場所に、さりげなく置きたい", "outer", 1],
+        ["自分だけが気づく場所に置きたい", "inner", 1],
+        ["自分だけが開ける場所にしまいたい", "inner", 2]
       ]
     },
     {
-      axis: "美しいものを、どこに置く？",
-      question: "旅先でもらった、小さくてきれいな紙片。残しておくなら？",
+      axis: "好きなものを、どこに置く？",
+      question: "気に入った色を暮らしへ加えるなら？",
       answers: [
-        ["手帳や本の内側に挟んで、ときどき取り出して眺める", "inner"],
-        ["額やボードに入れて、部屋の景色の一部にする", "outer"]
+        ["部屋の中心になる品に使う", "outer", 2],
+        ["棚や机の小物に使う", "outer", 1],
+        ["服や鞄の内側に忍ばせる", "inner", 1],
+        ["自分だけが見る手帳や箱の中に使う", "inner", 2]
       ]
     },
     {
       axis: "喜びを、どう味わう？",
-      question: "とても嬉しいことがあった夜。自然なのは？",
+      question: "うれしい出来事のあと、一つだけ残せるなら？",
       answers: [
-        ["まずは一人で、その余韻をゆっくり味わう", "quiet"],
-        ["大切な人に話して、一緒に喜ぶ", "share"]
+        ["自分の中に鮮やかに残る余韻", "quiet", 2],
+        ["まず自分で十分に味わった記憶", "quiet", 1],
+        ["誰かと『よかったね』と言えた記憶", "share", 1],
+        ["あとで一緒に思い返せる記憶", "share", 2]
       ]
     },
     {
       axis: "喜びを、どう味わう？",
-      question: "すごくきれいな景色を見つけました。そのあと心に浮かぶのは？",
+      question: "思いがけず素敵なものを見つけた直後、いちばん近いのは？",
       answers: [
-        ["今度は、大切な人と一緒に見に来たい", "share"],
-        ["この景色はもう少し、自分の中だけで味わっていたい", "quiet"]
+        ["その場に残り、まず一匹でじっくり眺める", "quiet", 2],
+        ["少し眺めてから、心の中へしまう", "quiet", 1],
+        ["近しい猫へ、あとで話したくなる", "share", 1],
+        ["その場で近しい猫にも見せたくなる", "share", 2]
       ]
     },
   ];
 
-  const tieBreaks = {
-    "message,time": {
-      question: "一つだけ大切に残すなら？",
-      answers: [
-        ["その日の年月日や出来事が残された記録", "time"],
-        ["大切な猫が自分に残してくれた言葉", "message"]
-      ]
-    },
-    "life,time": {
-      question: "古い街から一つだけ持ち帰るなら？",
-      answers: [
-        ["その街の時間の痕跡が残っている古い品", "time"],
-        ["これからの日々で使いたくなる美しい品", "life"]
-      ]
-    },
-    "life,message": {
-      question: "小さな品を一つ選ぶなら？",
-      answers: [
-        ["誰かとの出来事を思い出せる品", "message"],
-        ["使うたび日常が少し心地よくなる品", "life"]
-      ]
-    }
-  };
-
-  const labels = ["A", "B", "C"];
+  const labels = ["A", "B", "C", "D"];
   const initialScores = () => ({
     time: 0, message: 0, life: 0,
     inherit: 0, weave: 0,
@@ -535,9 +562,196 @@ body:has(#start_page:target) #start_page{display:block!important}
     "inherit,inner":"salon", "inherit,outer":"blood"
   }[`${relation},${expression}`]);
 
+  const coatPool = [
+    ["キジトラ",16],["キジ白",12],["茶トラ",11],["茶白",6],["サバトラ",9],["サバ白",6],
+    ["黒",9],["白",8],["灰",5],["灰白",4],["ハチワレ",6],["三毛",4],["サビ",2],
+    ["麦わら",.8],["クリーム",.6],["ポイント",.4],["しみ付き",.15],["淡色の二毛・三毛",.05]
+  ];
+
+  const regionPool = [
+    {
+      id:"mewminster",name:"ミューミンスター特別区",weight:24,
+      births:["王都ミューミンスターの学術街","王都の古い商店街","王都中央駅に近い街区","ランタンの灯る劇場街","セント・ミルク宮殿に近い住宅街"],
+      families:[
+        ["王都に屋敷を持つ爵位家の分家につながる家",2.5,["古い王室行事の招待札","小さな銀の家印"]],
+        ["王都に古くから屋敷を構える無爵位旧家",2.5,["昔の王都を描いた庭図","古い館の小鍵"]],
+        ["王立大学の学寮へ本を納めてきた製本家の家",20,["創業時の真鍮ルーペ","書き込みの残る古い講義録"]],
+        ["王都中央駅の開業を支えた商家",20,["最初の開業硬券","駅前商店の小さな帳面"]],
+        ["ランタン街で小劇場を守ってきた家",20,["小劇場の初演目録","客席番号を刻んだ真鍮札"]],
+        ["王都近郊の菜園を何代も守ってきた家",1,["季節を書き込んだ栽培暦","最初の収穫を載せた小皿"]],
+        ["議会記録の印刷と配達に関わってきた家",25,["議会記録の校正刷り","使い込まれた活字見本"]],
+        ["宮殿や大学の客間を長く整えてきた家",9,["家族の名が刻まれたティーポット","客間で使われた小さな呼び鈴"]]
+      ]
+    },
+    {
+      id:"whitecliff",name:"ホワイトクリフ",weight:15,
+      births:["ソルト・ヘイブン","ハーヴァリー","カスタミア","葡萄とオリーブの丘","海辺の小さな国内港"],
+      families:[
+        ["海辺の伯爵家の分家につながる家",1.4,["伯爵家の古い家印の写し","海辺の館から贈られた銀の小皿"]],
+        ["丘の土地台帳に古くから名を残す家",3.6,["葡萄畑の古い境界図","丘の館の小鍵"]],
+        ["外国語の通訳や翻訳を担ってきた家",10,["二つの言葉で書かれた手紙","港の語学手帳"]],
+        ["ソルト・ヘイブンの船荷を扱ってきた商家",25,["最初の蒸気船入港日の荷札","外国から届いた小箱"]],
+        ["青い硝子を焼いてきた工房の家",20,["青い硝子の小瓶","硝子の色見本"]],
+        ["葡萄畑やオリーブ畑を守ってきた家",20,["葡萄の収穫帳","秋最初の実を載せる皿"]],
+        ["灯台と沿岸救難を支えてきた家",12,["灯台当番の小時計","救難記録を綴じた帳面"]],
+        ["海辺の宿を長く切り盛りしてきた家",8,["旅猫の名が並ぶ古い宿帳","朝食用の小さな呼び鈴"]]
+      ]
+    },
+    {
+      id:"crownshire",name:"クラウンシャー",weight:12,
+      births:["ステイブリッジ近郊","古い街道町","寄宿学校のある町","王都近郊の田園","海辺の国内港"],
+      families:[
+        ["クラウンシャーの男爵家につながる家",1.5,["男爵家の庭図の写し","家印を刻んだ小さなブローチ"]],
+        ["寄宿学校へ土地を提供した無爵位旧家",8.5,["最初の寄贈本の蔵書印","開校日の真鍮鈴"]],
+        ["街道沿いの学校を支えてきた教師の家",10,["何代も書き足された授業帳","古い地理図帳"]],
+        ["王都へ農産物を送ってきた商家",7,["王都行き荷札の束","果実の値を記した小帳面"]],
+        ["古い石橋を補修してきた石工の家",15,["石橋の小さな測量尺","最初の補修年を刻んだ金具"]],
+        ["麦畑と広い草地を守ってきた家",40,["季節を書き込んだ農事暦","秋最初の実を載せる皿"]],
+        ["王都近郊鉄道の開通を支えた家",10,["開通日の硬券","古い列車時刻表"]],
+        ["学校や街道宿へ長く勤めてきた家",8,["街道宿の小鍵","何度も繕われた膝掛け"]]
+      ]
+    },
+    {
+      id:"rosewick",name:"ローズウィック",weight:14,
+      births:["ウィッチフォード大学街","ブライアヒル","古い市場町","野ばらの丘","森の縁の村"],
+      families:[
+        ["森の丘に館を持つ男爵家の分家につながる家",1.4,["館の鍵を模したブローチ","古い庭図の写し"]],
+        ["市場町の記録に古くから名を残す家",6.6,["町の古い土地台帳","祭りの日付を書き込んだ暦"]],
+        ["ウィッチフォード大学と古くから縁のある家",13,["野ばらを挟んだ野帳","大学街の古い蔵書票"]],
+        ["大学街へ書籍を運んできた商家",7,["書籍荷札の束","創業時の仕入帳"]],
+        ["製本と古書修復を続けてきた家",19,["手綴じの歌集","製本用の真鍮ルーペ"]],
+        ["野ばらや薬草を育ててきた家",36,["花のシロップ帳","乾かした野ばらを挟んだ植物帖"]],
+        ["地方の歌や祭りの記録を残してきた家",9,["古い祭りの歌集","町の行事を書いた記録帳"]],
+        ["学生向けの下宿を長く営んできた家",8,["下宿の小さな呼び鈴","歴代の学生が署名したティーポット"]]
+      ]
+    },
+    {
+      id:"brambleshire",name:"ブランブルシャー",weight:14,
+      births:["エドマンドウィック","《ドルヴァ》の森の縁","古城を囲む町","谷あいの市場町","森へ続く街道集落"],
+      families:[
+        ["ハロウビー家と古くから縁のある家",1.5,["《ふたつの冠》の古い招待札","古城の鍵を模したブローチ"]],
+        ["古城と土地台帳を守ってきた無爵位旧家",8.5,["森の境を記した地図","水路図の写し"]],
+        ["エドマンドウィック大学と縁のある家",13,["古い講義録","大学ポータンブル大会の入場札"]],
+        ["谷町の木材と家具を扱ってきた商家",7,["木材の仕入帳","創業時の小さな家印"]],
+        ["木工や地図づくりに関わってきた家",20,["家具工房の木型","使い込まれた地図用定規"]],
+        ["森の縁で果樹と木苺を育ててきた家",32,["木苺の保存帳","収穫用の小さな木籠"]],
+        ["谷町の橋と水路を守ってきた家",10,["橋の補修記録","水位を刻んだ真鍮札"]],
+        ["古城や大学の客間へ長く勤めてきた家",8,["植物繊維で織った虎縞の布","客間の古い燭台"]]
+      ]
+    },
+    {
+      id:"bellmere",name:"ベルメア",weight:12,
+      births:["サンミア湖畔の果樹園地帯","グリーンステッド","イーストバンク","農業・園芸カレッジの町","湖畔の市場町"],
+      families:[
+        ["ベルメア公爵家と古くから縁のある家",1.2,["公爵家から贈られた銀縁皿","家印を刻んだ小さな徽章"]],
+        ["湖畔の土地台帳に古くから名を残す家",8.8,["果樹園の古い区画図","湖畔の館の小鍵"]],
+        ["農業・園芸カレッジを支えてきた家",8,["試験園の観察ノート","果実の接ぎ方を描いた図譜"]],
+        ["湖畔市場で果実と加工品を扱ってきた商家",6,["果実の選別印","《ミルクの実》菓子の古い包み紙"]],
+        ["果実の保存道具を作ってきた職人の家",15,["木製の果実型","瓶のラベルを刷った版木"]],
+        ["サンミア湖畔の果樹園を守ってきた家",50,["秋最初の梨を載せる銀縁皿","何代も書き足された収穫帳"]],
+        ["湖上蒸気船と水位観測を支えてきた家",6,["湖上蒸気船の乗船札","湖の水位帳"]],
+        ["地方学校や果樹園の館へ長く勤めてきた家",5,["食堂で使われた小さな呼び鈴","何度も繕われた植物繊維の膝掛け"]]
+      ]
+    },
+    {
+      id:"northfell",name:"ノースフェル",weight:9,
+      births:["コホーリア湯郷","エイヴリング高地","雪深い谷あいの町","北岸の国内港","山地の大学町"],
+      families:[
+        ["北方の男爵家につながる家",1.2,["男爵家の星印を写した小章","高地の館の小鍵"]],
+        ["峠道の記録に古くから名を残す家",7.8,["冬の峠を描いた古地図","初雪の日の銅燭台"]],
+        ["山地の総合大学で観測を支えてきた家",10,["古い星図","寒冷地植物の観察帖"]],
+        ["薬草と保存食を各地へ送ってきた商家",6,["薬草の仕入帳","保存瓶の古いラベル"]],
+        ["植物繊維の織物を作ってきた家",20,["細かな織り見本","使い込まれた木の糸巻き"]],
+        ["高地で薬草と果実を育ててきた家",38,["薬草を乾かす小箱","霜の日を書き込んだ栽培暦"]],
+        ["谷鉄道と冬の郵便・救難を支えてきた家",8,["谷鉄道の開通硬券","冬の郵便経路図"]],
+        ["コホーリアの宿や共同浴場へ長く勤めてきた家",9,["湯郷の古い客帳札","旅猫を迎えた小さな呼び鈴"]]
+      ]
+    }
+  ];
+
+  const titleMotifs = {
+    result_rebel_time_quiet:"残された時間を自分の目で読み替え、答えを急いで外へ渡さない。その姿が、月影の小径を選ぶ反逆者に重なります。",
+    result_rebel_time_share:"古い時間にまだ見ぬ続きを見つけ、その発見を誰かと確かめたい。その動きが、時計を抱いて歩く猫の名に重なります。",
+    result_rebel_message_quiet:"想いに似合う届け方を自分で選び、名を残すことを求めない。その心遣いが、名もなき贈り主の名に重なります。",
+    result_rebel_message_share:"想いが本当に届く道を探し、受け取った猫の表情まで喜びにする。その軽やかさが、気まぐれ郵便猫の名に重なります。",
+    result_rebel_life_quiet:"今日の暮らしに自分だけの工夫を植え、育つ様子を内側で楽しむ。その姿が、夜に花を咲かせる園丁の名に重なります。",
+    result_rebel_life_share:"いつもの実りへ新しい遊びを加え、皆の反応から次の楽しみを見つける。その明るさが、果樹園のいたずら猫の名に重なります。",
+    result_lady_time_quiet:"受け取った時間を今の自分に似合う姿へ整え、まだ開かない美しさも待てる。その眼差しが、蕾の庭の名に重なります。",
+    result_lady_time_share:"古い巡りを今夜の言葉へ整え、同じ空を誰かと見上げる。その姿が、星暦をめくる猫の名に重なります。",
+    result_lady_message_quiet:"想いが誤解なく届く形を選び、言葉を整える時間そのものを大切にする。その心が、便箋を選ぶ猫の名に重なります。",
+    result_lady_message_share:"受け継いだ礼を相手に似合う形へ整え、『ここにいてよい』と伝える。その迎え方が、客間を開く猫の名に重なります。",
+    result_lady_life_quiet:"昔からの心地よさを今の気分へなじませ、自分だけの午後を整える。その余白が、午後三時の猫の名に重なります。",
+    result_lady_life_share:"今日に似合う楽しみを選び、迷う時間まで隣の猫と分け合う。その姿が、ケーキ屋通りの猫の名に重なります。",
+    result_salon_time_quiet:"残された形を急いで変えず、時間の層を一匹で読み深める。その姿が、古書室の猫の名に重なります。",
+    result_salon_time_share:"古い時間を同じ机で囲み、違う見方が重なる夜まで味わう。その姿が、星図を囲む夜の名に重なります。",
+    result_salon_message_quiet:"まだ言葉にならない必要へ気づき、見えない場所で支度を整える。その温かさが、冬支度の灯りの名に重なります。",
+    result_salon_message_share:"言葉が生まれるまで同じ場所にいて、その奥の想いまで受け止める。その静けさが、サロンの聞き手の名に重なります。",
+    result_salon_life_quiet:"使い慣れた暮らしの美しさを守り、にぎわいの後の余韻まで味わう。その時間が、最後の一灯の名に重なります。",
+    result_salon_life_share:"慣れ親しんだ時間を守りながら、心を許した猫のためにもう一脚を用意する。その親密さが、秘密のお茶会の名に重なります。",
+    result_blood_time_quiet:"受け継いだ形と働きを守り、明日も同じ音が続くよう整える。その確かさが、時を継ぐ猫の名に重なります。",
+    result_blood_time_share:"季節の形を守り、今年の顔ぶれも同じ喜びへ招く。その姿が、暦を守る猫の名に重なります。",
+    result_blood_message_quiet:"託された想いを形の中に残し、次の猫へ渡るよう一針を重ねる。その姿が、冬布を継ぐ猫の名に重なります。",
+    result_blood_message_share:"受け継いだ作法を、誰も置き去りにしない喜びへ変える。その迎え方が、祝宴の女主人の名に重なります。",
+    result_blood_life_quiet:"磨かれた手順を暮らしの細部まで守り、自分で納得できる一品へ仕上げる。その誇りが、王家のパティシエの名に重なります。",
+    result_blood_life_share:"美しい食卓を整え、席についた猫たちの喜びで完成させる。その姿が、晩餐会の猫の名に重なります。"
+  };
+
+  function mulberry32(seed) {
+    return function() {
+      let t = seed += 0x6D2B79F5;
+      t = Math.imul(t ^ t >>> 15, t | 1);
+      t ^= t + Math.imul(t ^ t >>> 7, t | 61);
+      return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    };
+  }
+
+  function weightedPick(items, random, weightAt = item => item[1]) {
+    const total = items.reduce((sum,item) => sum + Number(weightAt(item)),0);
+    let cursor = random() * total;
+    for (const item of items) {
+      cursor -= Number(weightAt(item));
+      if (cursor < 0) return item;
+    }
+    return items[items.length - 1];
+  }
+
+  function pick(items, random) {
+    return items[Math.floor(random() * items.length)];
+  }
+
+  function freshSeed() {
+    if (window.crypto?.getRandomValues) return window.crypto.getRandomValues(new Uint32Array(1))[0];
+    return Math.floor(Math.random() * 4294967296) >>> 0;
+  }
+
+  function registryNumber(seed) {
+    return "LMK-" + (seed >>> 0).toString(36).toUpperCase().padStart(7,"0");
+  }
+
+  function generateProvenance(seed) {
+    const random = mulberry32(seed >>> 0);
+    const coat = weightedPick(coatPool,random)[0];
+    const region = weightedPick(regionPool,random,item => item.weight);
+    const birthplace = pick(region.births,random);
+    const family = weightedPick(region.families,random);
+    const heirloom = pick(family[2],random);
+    return {seed:seed >>> 0,coat,region:region.name,regionId:region.id,birthplace,family:family[0],heirloom,registry:registryNumber(seed)};
+  }
+
+  function bridgeText(resultId, provenance) {
+    const parts = resultParts(resultId);
+    const title = resultTitle(resultId);
+    const focus = parts.primary === "time"
+      ? `${provenance.heirloom}に残る年月へ、まず目が向くこと。`
+      : parts.primary === "message"
+        ? `${provenance.heirloom}の向こうにいた猫の想いを、自然と思い描くこと。`
+        : `${provenance.heirloom}を、今日の暮らしにつながるものとして感じること。`;
+    return `王室があなたに<strong>「${title}」</strong>の名を贈ったのは、家柄や生まれた土地がこの名を決めたからではありません。${focus}${titleMotifs[resultId] || "その心の向きが、この二つ名と響き合っています。"}`;
+  }
+
   const scoreKeys = ["time","message","life","inherit","weave","outer","inner","quiet","share"];
   const takeHomeStoragePrefix = "littleMewTakeHome:";
-  const takeHomeVersion = "2";
+  const takeHomeVersion = "3";
   const kioskResetDelay = 180000;
   const viewMode = new URLSearchParams(location.search).get("mode") === "store" ? "store" : "mobile";
   const isStoreMode = viewMode === "store";
@@ -549,20 +763,26 @@ body:has(#start_page:target) #start_page{display:block!important}
     if (!snapshot?.scores) return "";
     const values = scoreKeys.map(key => Number(snapshot.scores[key]));
     if (values.some(value => !Number.isInteger(value) || value < 0 || value > 6)) return "";
-    return takeHomeVersion + values.map(value => value.toString(36)).join("") + (snapshot.primaryDecidedByTie ? "1" : "0");
+    const seed = Number(snapshot.seed);
+    if (!Number.isInteger(seed) || seed < 0 || seed > 0xffffffff) return "";
+    return takeHomeVersion + values.map(value => value.toString(36)).join("") + (snapshot.primaryDecidedByTie ? "1" : "0") + (seed >>> 0).toString(36).padStart(7,"0");
   }
 
   function decodeTakeHome(resultId, payload) {
     if (!/^result_(blood|lady|rebel|salon)_(time|message|life)_(quiet|share)$/.test(resultId)) return null;
-    if (typeof payload !== "string" || payload.length !== 11 || !["1","2"].includes(payload[0])) return null;
+    if (typeof payload !== "string" || ![11,18].includes(payload.length) || !["1","2","3"].includes(payload[0])) return null;
     const payloadVersion = payload[0];
+    if (payloadVersion === "3" && payload.length !== 18) return null;
+    if (payloadVersion !== "3" && payload.length !== 11) return null;
     const values = [...payload.slice(1,10)].map(value => parseInt(value,36));
     if (values.some(value => !Number.isInteger(value) || value < 0 || value > 6)) return null;
     const tie = payload[10] === "1";
     if (!tie && payload[10] !== "0") return null;
+    const seed = payloadVersion === "3" ? parseInt(payload.slice(11),36) : 0;
+    if (!Number.isInteger(seed) || seed < 0 || seed > 0xffffffff) return null;
     const scores = Object.fromEntries(scoreKeys.map((key,index) => [key,values[index]]));
     if (scores.time + scores.message + scores.life !== (payloadVersion === "1" ? 6 : 3)) return null;
-    const validBinaryTotal = (a,b) => payloadVersion === "1" ? a + b === 3 : [2,3].includes(a + b);
+    const validBinaryTotal = (a,b) => payloadVersion === "1" ? a + b === 3 : payloadVersion === "2" ? [2,3].includes(a + b) : a + b >= 2 && a + b <= 4;
     if (!validBinaryTotal(scores.inherit,scores.weave) || !validBinaryTotal(scores.outer,scores.inner) || !validBinaryTotal(scores.quiet,scores.share)) return null;
     const parts = resultParts(resultId);
     if (!parts) return null;
@@ -574,10 +794,11 @@ body:has(#start_page:target) #start_page{display:block!important}
     const oppositeRelation = parts.relation === "inherit" ? "weave" : "inherit";
     const oppositeExpression = parts.expression === "inner" ? "outer" : "inner";
     const oppositeEnjoyment = parts.enjoyment === "quiet" ? "share" : "quiet";
-    if (scores[parts.relation] <= scores[oppositeRelation]) return null;
-    if (scores[parts.expression] <= scores[oppositeExpression]) return null;
-    if (scores[parts.enjoyment] <= scores[oppositeEnjoyment]) return null;
-    return {resultId,primary:parts.primary,relation:parts.relation,expression:parts.expression,enjoyment:parts.enjoyment,series:parts.series,scores,primaryDecidedByTie:tie};
+    const invalidDecision = (selected,opposite) => payloadVersion === "3" ? scores[selected] < scores[opposite] : scores[selected] <= scores[opposite];
+    if (invalidDecision(parts.relation,oppositeRelation)) return null;
+    if (invalidDecision(parts.expression,oppositeExpression)) return null;
+    if (invalidDecision(parts.enjoyment,oppositeEnjoyment)) return null;
+    return {resultId,primary:parts.primary,relation:parts.relation,expression:parts.expression,enjoyment:parts.enjoyment,series:parts.series,scores,primaryDecidedByTie:tie,seed,provenance:generateProvenance(seed)};
   }
 
   function storeCarriedSnapshot(snapshot) {
@@ -617,7 +838,7 @@ body:has(#start_page:target) #start_page{display:block!important}
     if (!payload) return "";
     const url = new URL("index.html",document.baseURI);
     url.searchParams.set("mode","mobile");
-    url.searchParams.set("v","20261101-v9");
+    url.searchParams.set("v","20261109-v10");
     url.hash = resultId + "~" + payload;
     return url.toString();
   }
@@ -717,13 +938,13 @@ body:has(#start_page:target) #start_page{display:block!important}
     document.body.classList.toggle("start-route", location.hash === "#start_page");
   }
 
-  function makeAnswer(text, key, letter, handler) {
+  function makeAnswer(text, key, weight, letter, handler) {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "btn";
     button.innerHTML = `<span class="letter">${letter}</span><span></span>`;
     button.lastElementChild.textContent = text;
-    button.addEventListener("click", () => handler(key));
+    button.addEventListener("click", () => handler(key,weight));
     return button;
   }
 
@@ -736,14 +957,14 @@ body:has(#start_page:target) #start_page{display:block!important}
     axis.textContent = item.axis;
     question.textContent = item.question;
     answers.replaceChildren();
-    item.answers.forEach(([text, key], i) => {
-      answers.appendChild(makeAnswer(text, key, labels[i], chooseAnswer));
+    item.answers.forEach(([text, key, weight = 1], i) => {
+      answers.appendChild(makeAnswer(text, key, weight, labels[i], chooseAnswer));
     });
   }
 
-  function chooseAnswer(key) {
-    scores[key] += 1;
-    answerHistory.push(key);
+  function chooseAnswer(key, weight = 1) {
+    scores[key] += weight;
+    answerHistory.push({key,weight,questionIndex:index});
     index += 1;
     if (index < questions.length) {
       renderQuestion();
@@ -751,20 +972,6 @@ body:has(#start_page:target) #start_page{display:block!important}
       return;
     }
     resolvePrimary();
-  }
-
-  function renderTieBreak(item, handler, remaining = 1) {
-    tieMode = true;
-    progress.textContent = remaining > 1 ? "同点の軸を確認中" : "あと一つ";
-    progressFill.style.width = "100%";
-    backButton.hidden = true;
-    axis.textContent = item.axis || "あと一つだけ、心に近いものを";
-    question.textContent = item.question;
-    answers.replaceChildren();
-    item.answers.forEach(([text, key], i) => {
-      answers.appendChild(makeAnswer(text, key, labels[i], handler));
-    });
-    window.scrollTo({top: 0, behavior: "smooth"});
   }
 
   function resolvePrimary() {
@@ -777,42 +984,28 @@ body:has(#start_page:target) #start_page{display:block!important}
       return;
     }
 
-    if (tied.length === 2) {
-      primaryTieUsed = true;
-      renderTieBreak(tieBreaks[[...tied].sort().join(",")], resolveBinaryAxes);
-      return;
-    }
-
     primaryTieUsed = true;
-    renderTieBreak({
-      question: "最後に、一番心が動くものを一つだけ。",
-      answers: [
-        ["長い時間を重ねてきた痕跡", "time"],
-        ["誰かの想いが宿っている気配", "message"],
-        ["日々の暮らしを美しくしてくれるもの", "life"]
-      ]
-    }, resolveBinaryAxes);
+    const finalPriority = answerHistory[2]?.key;
+    resolveBinaryAxes(primaryKeys.includes(finalPriority) ? finalPriority : tied[0]);
   }
 
   function resolveBinaryAxes(primary) {
-    const anchors = [
-      ["inherit","weave",4],
-      ["outer","inner",6],
-      ["quiet","share",8]
-    ];
-    anchors.forEach(([left,right,questionIndex]) => {
-      if (scores[left] !== scores[right]) return;
-      const anchorAnswer = answerHistory[questionIndex];
-      if (anchorAnswer === left || anchorAnswer === right) scores[anchorAnswer] += 1;
+    const decide = (left,right,anchorIndex) => {
+      if (scores[left] > scores[right]) return left;
+      if (scores[right] > scores[left]) return right;
+      const anchor = answerHistory[anchorIndex]?.key;
+      return anchor === right ? right : left;
+    };
+    finish(primary,{
+      relation:decide("inherit","weave",3),
+      expression:decide("outer","inner",5),
+      enjoyment:decide("quiet","share",7)
     });
-    finish(primary);
   }
 
-  function finish(primary) {
+  function finish(primary,decisions) {
     isCarriedView = false;
-    const relation = scores.weave > scores.inherit ? "weave" : "inherit";
-    const expression = scores.outer > scores.inner ? "outer" : "inner";
-    const enjoyment = scores.share > scores.quiet ? "share" : "quiet";
+    const {relation,expression,enjoyment} = decisions;
 
     const series = seriesFromAxes(relation, expression);
 
@@ -820,15 +1013,24 @@ body:has(#start_page:target) #start_page{display:block!important}
     if (!document.getElementById(resultId)) {
       throw new Error("Result page not found: " + resultId);
     }
-    const snapshot = {resultId, primary, relation, expression, enjoyment, series, scores:{...scores}, primaryDecidedByTie:primaryTieUsed};
+    const seed = freshSeed();
+    const snapshot = {resultId, primary, relation, expression, enjoyment, series, scores:{...scores}, primaryDecidedByTie:primaryTieUsed,seed,provenance:generateProvenance(seed)};
     window.lmkTrack?.("diagnosis_complete", {result_id:resultId, series, primary, enjoyment});
     try { sessionStorage.setItem("littleMewLastResult", JSON.stringify(snapshot)); } catch (_) {}
     pendingInvitation = snapshot;
-    document.getElementById("invitation_card")?.classList.remove("is-opening");
+    document.getElementById("invitation_card")?.classList.remove("is-opening","is-opened");
     const openButton = document.getElementById("open_invitation");
     if (openButton) openButton.disabled = false;
+    renderRoyalLetter(snapshot);
     location.hash = "invitation_page";
     window.scrollTo({top: 0, behavior: "smooth"});
+  }
+
+  function renderRoyalLetter(snapshot) {
+    const name = document.getElementById("royal_letter_name");
+    const register = document.getElementById("royal_letter_register");
+    if (name) name.textContent = `王国であなたに贈られる二つ名は――「${resultTitle(snapshot.resultId)}」`;
+    if (register) register.textContent = `王室来訪者登録　第 ${snapshot.provenance?.registry || registryNumber(snapshot.seed || 0)} 号`;
   }
 
   function openInvitation() {
@@ -846,11 +1048,26 @@ body:has(#start_page:target) #start_page{display:block!important}
     card?.classList.add("is-opening");
     window.lmkTrack?.("invitation_open",{result_id:snapshot.resultId});
     window.setTimeout(() => {
-      decorateResult(snapshot.resultId,snapshot);
-      location.hash = snapshot.resultId;
-      window.scrollTo({top:0,behavior:"auto"});
-      pendingInvitation = null;
+      card?.classList.remove("is-opening");
+      card?.classList.add("is-opened");
+      window.scrollTo({top:0,behavior:"smooth"});
     },620);
+  }
+
+  function enterKingdom() {
+    let snapshot = pendingInvitation;
+    if (!snapshot) {
+      try { snapshot = JSON.parse(sessionStorage.getItem("littleMewLastResult")); } catch (_) {}
+    }
+    if (!snapshot?.resultId || !document.getElementById(snapshot.resultId)) {
+      location.hash = "start_page";
+      return;
+    }
+    if (!snapshot.provenance) snapshot.provenance = generateProvenance(snapshot.seed || 0);
+    decorateResult(snapshot.resultId,snapshot);
+    location.hash = snapshot.resultId;
+    window.scrollTo({top:0,behavior:"auto"});
+    pendingInvitation = null;
   }
 
   function resultParts(resultId) {
@@ -875,7 +1092,7 @@ body:has(#start_page:target) #start_page{display:block!important}
     }
     const primaryKeys = ["time","message","life"];
     const primaryTotal = primaryKeys.reduce((sum,key) => sum + snapshot.scores[key],0);
-    const primaryMaximum = primaryTotal === 3 ? 2 : 4;
+    const primaryMaximum = 3;
     const primaryRows = primaryKeys.map(key => scoreBar(axisShort[key], snapshot.scores[key], primaryMaximum, key === parts.primary)).join("");
     const pairs = [
       ["受け継ぎ方", parts.relation, parts.relation === "inherit" ? "weave" : "inherit"],
@@ -883,11 +1100,15 @@ body:has(#start_page:target) #start_page{display:block!important}
       ["喜びの味わい方", parts.enjoyment, parts.enjoyment === "quiet" ? "share" : "quiet"]
     ];
     const pairRows = pairs.map(([name,a,b]) => `<div class="balance-row"><span class="balance-name">${name}</span><div class="balance-values"><b>${axisShort[a]} ${snapshot.scores[a]}</b><span>:</span><span>${snapshot.scores[b]} ${axisShort[b]}</span></div></div>`).join("");
+    const boundaryCount = pairs.filter(([,a,b]) => snapshot.scores[a] === snapshot.scores[b]).length;
     const tieNote = snapshot.primaryDecidedByTie
-      ? "『心が惹かれるもの』は同点になり、最後の一問で決まりました。各二択軸は、回答が分かれた場合に基準質問を優先しています。"
-      : "各二択軸は、回答が分かれた場合に、より直接的な基準質問を優先しています。";
-    const primaryMethod = primaryTotal === 3 ? "三つの感性を互いに一度ずつ比べています。" : "三つの感性を全6問で比べています。";
-    return `<div class="score-panel"><span class="insight-label">回答から見えた濃淡</span><div class="primary-scores">${primaryRows}</div><p class="score-note">${primaryMethod}${tieNote}</p><div class="balance-list">${pairRows}</div></div>`;
+      ? "『心が向くもの』は三つが一票ずつになり、最終優先を尋ねた3問目で決まりました。"
+      : "『心が向くもの』は、三つの場面で最も多く選ばれたものです。";
+    const boundaryNote = boundaryCount
+      ? ` 二択軸のうち${boundaryCount}つは価値と行動が同点になり、「失いたくないもの」を尋ねた第一問を採用しています。`
+      : " 二択軸は、価値の優先と実際の選び方を同じ重みで合わせています。";
+    const primaryMethod = "同じ問いの言い換えではなく、異なる場面への反応を重ねています。";
+    return `<div class="score-panel"><span class="insight-label">回答から見えた濃淡</span><div class="primary-scores">${primaryRows}</div><p class="score-note">${tieNote}${boundaryNote}${primaryMethod}</p><div class="balance-list">${pairRows}</div></div>`;
   }
 
   function nearbyResults(parts, snapshot) {
@@ -905,7 +1126,7 @@ body:has(#start_page:target) #start_page{display:block!important}
     ];
     for (const [axisName,current,other] of binary) {
       const margin = Math.abs(snapshot.scores[current] - snapshot.scores[other]);
-      if (margin === 1) candidates.push({axis:axisName,key:other,margin});
+      if (margin <= 1) candidates.push({axis:axisName,key:other,margin});
     }
     return candidates.map(item => {
       let primary=parts.primary, relation=parts.relation, expression=parts.expression, enjoyment=parts.enjoyment;
@@ -916,7 +1137,7 @@ body:has(#start_page:target) #start_page{display:block!important}
       const altId = `result_${seriesFromAxes(relation,expression)}_${primary}_${enjoyment}`;
       const reason = item.axis === "primary"
         ? `「${axisShort[item.key]}」も${item.margin === 0 ? "同点" : "1点差"}`
-        : `「${axisShort[item.key]}」側とは2対1`;
+        : item.margin === 0 ? `「${axisShort[item.key]}」側と同じ強さ` : `「${axisShort[item.key]}」側とは1点差`;
       return {altId,reason};
     });
   }
@@ -947,10 +1168,33 @@ body:has(#start_page:target) #start_page{display:block!important}
     if (!page || !parts) return;
     const card = page.querySelector(".card");
     card.querySelector(".royal-warrant")?.remove();
-    const warrant = document.createElement("div");
-    warrant.className = "royal-warrant";
-    warrant.innerHTML = '<span class="royal-warrant-kicker">ROYAL INVITATION</span><span class="royal-warrant-office">リトル・ミュー王国 王室侍従長室</span><p>あなたを、リトル・ミュー王国へお招きします。</p>';
-    card.querySelector(".kicker")?.after(warrant);
+    card.querySelector(".visitor-record")?.remove();
+    card.querySelector(".name-bridge")?.remove();
+    if (snapshot) {
+      const provenance = snapshot.provenance || generateProvenance(snapshot.seed || 0);
+      snapshot.provenance = provenance;
+      const record = document.createElement("section");
+      record.className = "visitor-record";
+      record.setAttribute("aria-label","猫としての来訪者記録");
+      record.innerHTML = `
+        <div class="visitor-record-head">
+          <span class="visitor-record-kicker">ROYAL VISITORS’ REGISTER</span>
+          <h2 class="visitor-record-title">猫としてのあなた</h2>
+          <p class="visitor-record-note">国王陛下の招待に際して、王室来訪者登録簿に記された姿です。</p>
+        </div>
+        <div class="visitor-grid">
+          <div class="visitor-field"><span>毛色</span><b>${provenance.coat}</b></div>
+          <div class="visitor-field"><span>生まれた土地</span><b>${provenance.birthplace}<br><small>${provenance.region}</small></b></div>
+          <div class="visitor-field"><span>家の来歴</span><b>${provenance.family}</b></div>
+          <div class="visitor-field"><span>家に伝わるもの</span><b>${provenance.heirloom}</b></div>
+        </div>`;
+      const bridge = document.createElement("section");
+      bridge.className = "name-bridge";
+      bridge.setAttribute("aria-label","二つ名と来歴のつながり");
+      bridge.innerHTML = `<span class="name-bridge-kicker">この二つ名と、この来歴</span><p>${bridgeText(resultId,provenance)}</p>`;
+      const thesis = card.querySelector(".result-thesis");
+      thesis.after(record,bridge);
+    }
     card.querySelector(".result-analysis")?.remove();
     const section = document.createElement("section");
     section.className = "result-analysis";
@@ -1024,8 +1268,8 @@ body:has(#start_page:target) #start_page{display:block!important}
 
   function goBackOneQuestion() {
     if (!answerHistory.length) return;
-    const previousKey = answerHistory.pop();
-    scores[previousKey] -= 1;
+    const previous = answerHistory.pop();
+    scores[previous.key] -= previous.weight;
     index = Math.max(0, index - 1);
     tieMode = false;
     renderQuestion();
@@ -1040,11 +1284,13 @@ body:has(#start_page:target) #start_page{display:block!important}
     tieMode = false;
     primaryTieUsed = false;
     pendingInvitation = null;
+    document.getElementById("invitation_card")?.classList.remove("is-opening","is-opened");
     renderQuestion();
   }
 
   backButton.addEventListener("click", goBackOneQuestion);
   document.getElementById("open_invitation")?.addEventListener("click", openInvitation);
+  document.getElementById("enter_kingdom")?.addEventListener("click", enterKingdom);
   document.querySelectorAll('.result-page a[href="#start_page"]').forEach(link => {
     link.addEventListener("click", () => {
       window.lmkTrack?.("restart", {from_result:link.closest(".result-page")?.id || ""});
@@ -1080,7 +1326,13 @@ body:has(#start_page:target) #start_page{display:block!important}
   if (!savedResult) {
     try { savedResult = JSON.parse(sessionStorage.getItem("littleMewLastResult")); } catch (_) {}
   }
-  if (location.hash === "#invitation_page") pendingInvitation = savedResult;
+  if (location.hash === "#invitation_page") {
+    pendingInvitation = savedResult;
+    if (savedResult) {
+      if (!savedResult.provenance) savedResult.provenance = generateProvenance(savedResult.seed || 0);
+      renderRoyalLetter(savedResult);
+    }
+  }
   document.querySelectorAll(".result-page").forEach(page => decorateResult(page.id,savedResult?.resultId === page.id ? savedResult : null,{carried:isCarriedView && savedResult?.resultId === page.id}));
   armKioskReset();
   if (location.hash === "#quiz_page") startQuiz();
