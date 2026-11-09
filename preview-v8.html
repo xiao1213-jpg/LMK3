@@ -446,6 +446,24 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
 .dossier-cover .take-home-copy{font-size:13px}
 .mode-store .dossier-actions{display:none}
 .mode-mobile .dossier-cover .take-home-card{display:none}
+
+/* A small individual engraved signature for all 24 portraits */
+.portrait-art{margin-bottom:32px}
+.portrait-medallion{position:absolute;right:20px;bottom:-21px;min-width:103px;height:45px;padding:9px 13px;display:flex;justify-content:center;align-items:center;gap:10px;border:1px solid var(--theme-line);border-radius:999px;background:#fffdf8;color:var(--theme-deep);box-shadow:0 4px 14px rgba(40,28,22,.10)}
+.portrait-medallion svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.portrait-medallion span{height:20px;width:1px;background:var(--theme-line)}
+.portrait-file-code{text-align:center;color:#a08a72;font:10px/1.5 Georgia,serif;letter-spacing:.11em;margin:7px 0}
+.portrait-about{max-width:29em;margin:-5px auto 25px;padding:0 0 14px;border-bottom:1px solid var(--theme-line);text-align:center}
+.portrait-about summary{font:500 12px/1.7 var(--lmk-sans);color:var(--theme-accent);cursor:pointer;padding:8px;list-style:none}
+.portrait-about summary::-webkit-details-marker{display:none}
+.portrait-about summary::after{content:" ＋"}
+.portrait-about[open] summary::after{content:" −"}
+.portrait-about p{font:400 13px/1.95 var(--lmk-sans);max-width:27em;color:#77685e;margin:10px auto 0;text-align:left}
+.provenance-page.tier-silver .registry-crest{color:#728896}
+.provenance-page.tier-gold .registry-crest{color:#ab8648}
+.provenance-page.tier-crown .registry-masthead{background:linear-gradient(145deg,#faf0d8,#fff7e8);border:1px solid #dbb97b;margin:0 -8px;padding:22px 8px 28px}
+.provenance-page.tier-crown .registry-crest{color:#9a6734;font-size:29px}
+@media(max-width:520px){.portrait-medallion{right:15px;bottom:-18px;height:40px;min-width:90px;padding:8px 11px}.portrait-medallion svg{height:21px;width:21px}}
 </style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">LITTLE MEW</div>
 <div class="cat">🐈</div>
@@ -1533,7 +1551,15 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
     if (!card.querySelector(".portrait-art")) {
       const illustration = document.createElement("figure");
       illustration.className = "portrait-art";
-      illustration.innerHTML = '<img src="assets/' + parts.series + '.webp" alt="肖像画集を彩る挿絵" loading="lazy"><figcaption>THE LITTLE MEW PORTRAIT COLLECTION</figcaption>';
+      const sigils = {
+        time:'<svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"></circle><path d="M16 8v9l6 4"></path></svg>',
+        message:'<svg viewBox="0 0 32 32"><rect x="5" y="9" width="22" height="15" rx="2"></rect><path d="m6 10 10 8 10-8"></path></svg>',
+        life:'<svg viewBox="0 0 32 32"><path d="M16 28V11m0 12C9 22 7 17 7 14c6 0 9 3 9 9Zm0-6c0-7 4-10 10-10 0 7-4 10-10 10Z"></path></svg>',
+        quiet:'<svg viewBox="0 0 32 32"><path d="M23 7a11 11 0 1 0 2 18A12 12 0 0 1 23 7Z"></path></svg>',
+        share:'<svg viewBox="0 0 32 32"><path d="m16 3 3.2 9.8L29 16l-9.8 3.2L16 29l-3.2-9.8L3 16l9.8-3.2Z"></path></svg>'
+      };
+      illustration.innerHTML = '<img src="assets/' + parts.series + '.webp" alt="肖像画集を彩る挿絵" loading="lazy">' +
+        '<div class="portrait-medallion" aria-hidden="true">' + sigils[parts.primary] + '<span></span>' + sigils[parts.enjoyment] + '</div>';
       const cat = card.querySelector(".cat");
       if (cat) cat.replaceWith(illustration); else kicker?.after(illustration);
     }
@@ -1566,6 +1592,19 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
         </div>
       </details>`;
     const desc = card.querySelector(".desc");
+    if (!card.querySelector(".portrait-about")) {
+      const about = document.createElement("details");
+      about.className = "portrait-about";
+      about.innerHTML = '<summary>この肖像題について</summary><p>九つの答えに現れた感性を、王国の人物や情景になぞらえて描いた肖像です。毛色や家の記録は、別紙の王国来歴証に収められています。</p>';
+      card.querySelector(".result-thesis")?.after(about);
+    }
+    card.querySelector(".portrait-file-code")?.remove();
+    if (snapshot?.provenance?.registry) {
+      const fileRef = document.createElement("div");
+      fileRef.className = "portrait-file-code";
+      fileRef.textContent = "FILE · " + snapshot.provenance.registry;
+      card.querySelector(".category-mark")?.before(fileRef);
+    }
     desc.after(section);
     // The single transfer/QR card belongs to the dossier cover, not the portrait.
     page.querySelector(".take-home-card")?.remove();
