@@ -1,4 +1,4 @@
-/* Little Mew Kingdom — localized life and guide notes, v10. */
+/* Little Mew Kingdom — regional life and character story seeds, v10. */
 window.LMK_KINGDOM_NOTES_V10 = {
   "placeScenes": {
     "mewminster": [
@@ -292,29 +292,29 @@ window.LMK_KINGDOM_NOTES_V10 = {
     ]
   },
   "guides": {
-    "result_blood_life_quiet": "宮殿の菓子室。シャーロットが最後のひと飾りを確かめています。",
-    "result_blood_life_share": "晩餐会の席で、ミレイアが淡い葡萄を隣の皿へ分けています。",
-    "result_blood_message_quiet": "冬布の端に残る小さな一針。マーガレットの物語はそこから。",
-    "result_blood_message_share": "農村の猫たちにも開かれた宴へ、マリア＝トワニーヌが招きます。",
-    "result_blood_time_quiet": "オクタヴィアの古い時計は、今日も静かに時を刻んでいます。",
-    "result_blood_time_share": "エイリスの暦には、今年も楽しみな日が書き込まれました。",
-    "result_lady_life_quiet": "午後三時、アデラインの窓辺には小さなカップがひとつ。",
-    "result_lady_life_share": "ケーキ屋通りで、マチルダは誰かの席も空けておきます。",
-    "result_lady_message_quiet": "スミレは一枚の便箋を選ぶところから、手紙を始めます。",
-    "result_lady_message_share": "イヴリンの客間には、初めての猫のための椅子もあります。",
-    "result_lady_time_quiet": "セシリーの庭で、まだ開かない蕾をゆっくり待ちましょう。",
-    "result_lady_time_share": "イモージェンが星暦をひらくと、古い空の物語が始まります。",
-    "result_rebel_life_quiet": "アスターリーの硝子温室。フレディは葉の裏まで夢中です。",
-    "result_rebel_life_share": "サンミア湖を望む果樹園で、アルフィーが今日も何かを発見。",
-    "result_rebel_message_quiet": "名を残さず誰かを喜ばせる。その贈り物の行方をマイルズと。",
-    "result_rebel_message_share": "ロミオの郵便鞄には、今日もたくさんの小さな便り。",
-    "result_rebel_time_quiet": "エドウィンと、古城の石段に残る騎士の伝承をたどって。",
-    "result_rebel_time_share": "テオの時計の音が、見知らぬ町への旅を知らせます。",
-    "result_salon_life_quiet": "賑やかな時間が過ぎたあと、サイラスは最後の灯りを残します。",
-    "result_salon_life_share": "ローレンスの茶会には、まだ語られていない話がありそうです。",
-    "result_salon_message_quiet": "冬の戸口に置かれた小さな灯り。その用意をするセドリック。",
-    "result_salon_message_share": "古書室の隅から、ウィットコムがふいに現れるかもしれません。",
-    "result_salon_time_quiet": "雨の谷町。トバイアスの古い本に、知らない頁が挟まっています。",
-    "result_salon_time_share": "王立大学で、ヒュー先生と学生猫たちの賑やかな議論へ。"
+    "result_blood_life_quiet": "セント・ミルク宮殿の菓子室から、甘い香りが漂います。シャーロットは最後のひと飾りを、もう一度だけ確かめて。",
+    "result_blood_life_share": "宮殿の晩餐会。長い卓の片隅で、ミレイアが淡緑の葡萄を隣の猫へ分けてあげます。",
+    "result_blood_message_quiet": "窓辺に広げた古い冬布には、細かなほつれがひとつ。マーガレットは新しい一針を、そっと重ねます。",
+    "result_blood_message_share": "収穫祭の宮殿に、農村の猫たちの姿が。マリア＝トワニーヌの願いで、今年はいつもより多くの席が用意されました。",
+    "result_blood_time_quiet": "古い時計の針を戻す前に、オクタヴィアは小さな傷を確かめます。昨日までと同じ音を、明日も。",
+    "result_blood_time_share": "エイリスの暦には、今年も新しい日付が書き加えられます。誰かと待ち合わせる日には、赤い丸をひとつ。",
+    "result_lady_life_quiet": "午後三時。アデラインの窓辺には小さなカップと、今日選んだ一輪の花があります。",
+    "result_lady_life_share": "ケーキ屋通りの角を曲がると、マチルダが待っています。小さなテーブルには、もう一脚の椅子。",
+    "result_lady_message_quiet": "便箋を選ぶだけで、午後の光が少し傾きます。スミレはまだ書いていない一行を、静かに考えています。",
+    "result_lady_message_share": "イヴリンの客間には、初めて訪れた猫のための椅子も。扉の向こうからは、温かな茶の香り。",
+    "result_lady_time_quiet": "セシリーの庭では、まだ開かない蕾も大切な景色。今日は花の名前を確かめるだけにしましょう。",
+    "result_lady_time_share": "イモージェンが古い星暦を広げると、今夜の空は少し違って見えます。窓辺にはもう一匹の影。",
+    "result_rebel_life_quiet": "アスターリーの硝子温室。フレディは葉の裏まで夢中で観察しています。古い棚の向こうには、気づかないままの気配。",
+    "result_rebel_life_share": "サンミア湖を望む果樹園で、アルフィーが小さな発見をしました。誰かに見せたくて、もう駆け出しています。",
+    "result_rebel_message_quiet": "届け主の名がない小箱。包み紙の端には、誰かが選んだ小さな飾り。マイルズが知る、その贈り物の行方。",
+    "result_rebel_message_share": "ロミオの郵便鞄は、朝から少し重そうです。今日も通りの店々へ、小さな便りを届けに。",
+    "result_rebel_time_quiet": "古城へ続く石段に、エドウィンは立ち止まります。騎士と虎の伝承を知るには、まず森の声を聞かなくては。",
+    "result_rebel_time_share": "テオの時計が午後の時を告げます。遠い駅の発車時刻も、なぜか今日は気になって。",
+    "result_salon_life_quiet": "客猫たちが帰ったあとの窓辺。サイラスは最後の一灯を残し、静かな部屋を整えます。",
+    "result_salon_life_share": "ローレンスの茶会には、まだ一つ空席があります。次に来る猫がどんな話をするかは、誰も知りません。",
+    "result_salon_message_quiet": "寒い日の戸口に、小さな灯りがひとつ。セドリックは誰が置いたのか、あえて訊きません。",
+    "result_salon_message_share": "古書室を出たはずのウィットコムが、次の棚の向こうに。話の続きは、たぶんここからです。",
+    "result_salon_time_quiet": "雨の谷町で、トバイアスが古い本をひらきます。知らない頁の間から、乾いた葉が一枚。",
+    "result_salon_time_share": "王立大学を訪れた学生猫たち。ヒュー先生が手を挙げると、思いがけない問いから議論が始まります。"
   }
 };
