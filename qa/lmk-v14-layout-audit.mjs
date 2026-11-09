@@ -44,6 +44,7 @@ for(const width of [320,375,390,768]){
    el.textContent=orig;return results;
   }
   return {coat:test("coat",coats),title:test("title",titles.map(t=>"《"+t+"》")),origin:test("origin",places.map(x=>x+"に生まれた猫")),
+    proposedTitle:test("title",titles),proposedOrigin:test("origin",places),
     single:{preface:document.querySelector(".dossier-preface").innerText,subjectPadding:getComputedStyle(subject).padding,frameWidth:subject.getBoundingClientRect().width,
       title:document.querySelector(".dossier-cover .portal-heading").getBoundingClientRect().height}};
  },{coats,places,titles});
@@ -54,7 +55,7 @@ await browser.close();
 const summary=report.cases.map(({width,data})=>({
  width,subjectWidth:data.single.frameWidth,padding:data.single.subjectPadding,
  fonts:{coat:data.coat[0].fontSize,title:data.title[0].fontSize,origin:data.origin[0].fontSize},
- wrapCounts:{coat:data.coat.filter(x=>x.lineCount>1).length,title:data.title.filter(x=>x.lineCount>1).length,origin:data.origin.filter(x=>x.lineCount>1).length},
+ wrapCounts:{coat:data.coat.filter(x=>x.lineCount>1).length,title:data.title.filter(x=>x.lineCount>1).length,origin:data.origin.filter(x=>x.lineCount>1).length,proposedTitle:data.proposedTitle.filter(x=>x.lineCount>1).length,proposedOrigin:data.proposedOrigin.filter(x=>x.lineCount>1).length},
  orphanOrigins:data.origin.filter(x=>x.lineCount>1&&x.lastLine<=4).map(x=>({v:x.value,lines:x.lines})).slice(0,16),
  maxOriginLines:Math.max(...data.origin.map(x=>x.lineCount)),
  maxTitleLines:Math.max(...data.title.map(x=>x.lineCount)),
