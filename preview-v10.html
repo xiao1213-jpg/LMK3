@@ -597,6 +597,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 .provenance-page .locality-scene,.provenance-page .family-scene{font-size:13px}
 .guide-story-scene{font-size:13.5px}
 }
+
+.invite-copy-button{border:0;background:transparent;display:block;margin:9px auto 4px;padding:13px 14px;min-height:46px;font:500 13px/1.6 var(--lmk-sans);color:#7f6850;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px;cursor:pointer}
+.invite-copy-button:focus-visible{outline:2px solid #a98d65;outline-offset:2px}
 </style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script><script src="assets/kingdom-notes-v10.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">LITTLE MEW</div>
 <div class="cat">🐈</div>
@@ -639,7 +642,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 <button class="dossier-entry" id="open_registration" type="button"><span class="dossier-numeral">Ⅱ</span><span class="dossier-entry-text"><small>GENERAL REGISTER OFFICE</small><strong>来歴の頁</strong><em>この猫の毛並み、生まれ、家の記録。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
 </div>
 <p class="dossier-footnote">肖像は九つの答えから。来歴は王国の記録から。</p>
-<section class="invitation-share" id="invitation_share_section" aria-label="招待状を持ち帰る"><span class="invitation-share-label">A LETTER TO KEEP</span><h2>招待状を、誰かのもとへ。</h2><p>この招待状には、あなたの猫の記録へ続くQRが添えられています。<br>相手も封を開いて、あなたの一件簿を読めます。</p><div class="invitation-canvas-wrap"><canvas id="invitation_share_canvas" width="1080" height="1350" role="img" aria-label="国王陛下からの招待状を描いた共有画像"></canvas></div><div class="invitation-share-actions"><button type="button" id="dossier_share" class="quiet-action primary">招待状を送る</button><button type="button" id="dossier_save" class="quiet-action">画像を保存</button></div><p class="share-status" id="dossier_share_status" aria-live="polite"></p></section>
+<section class="invitation-share" id="invitation_share_section" aria-label="招待状を持ち帰る"><span class="invitation-share-label">A LETTER TO KEEP</span><h2>招待状を、誰かのもとへ。</h2><p>この招待状には、あなたの猫の記録へ続くQRが添えられています。<br>相手も封を開いて、あなたの一件簿を読めます。</p><div class="invitation-canvas-wrap"><canvas id="invitation_share_canvas" width="1080" height="1350" role="img" aria-label="国王陛下からの招待状を描いた共有画像"></canvas></div><div class="invitation-share-actions"><button type="button" id="dossier_share" class="quiet-action primary">招待状を送る</button><button type="button" id="dossier_save" class="quiet-action">画像を保存</button></div><button type="button" id="dossier_copy" class="invite-copy-button">招待状へのリンクをコピー</button><p class="share-status" id="dossier_share_status" aria-live="polite"></p></section>
 <a class="portal-restart" href="#start_page">最初から診断する</a>
 </div></section>
 <section id="provenance_page" class="page provenance-page tier-ivory"><div class="card provenance-sheet">
@@ -673,7 +676,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 </div></section><section id="result_blood_message_share" class="page result-page theme-blood"><div class="card">
 <div class="kicker">YOUR LITTLE MEW TYPE</div><div class="category-mark"><span>気高き血統</span><em>The Crimson Crown</em></div><div class="cat">🐈</div>
 <div class="small">CAT No.22</div><h1 class="title">祝宴の女主人</h1>
-<p class="result-thesis">あなたは、受け継いだ心遣いでみんなの祝宴を整える猫です。</p><div class="desc"><p>受け継がれてきた作法を、格式のためだけでなく、相手を大切に扱うための形として守ります。遅れてきた猫にも席を用意し、初めての猫にも分かるよう、さりげなく手を差し伸べます。</p><p>決まりが正しく働き、誰も置き去りにならずに喜びを交わせたとき、祝宴は最も美しくなります。その安心を皆と分かち合うことが、あなたの誇りです。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.22</span>マリア・トーニャ</strong></aside><aside class="goods" aria-label="あなたに似合うもの"><span class="goods-kicker">LITTLE MEW SELECTION</span><b>あなたに似合うもの</b><span class="goods-item">ハンカチ・ブローチ</span></aside>
+<p class="result-thesis">あなたは、受け継いだ心遣いでみんなの祝宴を整える猫です。</p><div class="desc"><p>受け継がれてきた作法を、格式のためだけでなく、相手を大切に扱うための形として守ります。遅れてきた猫にも席を用意し、初めての猫にも分かるよう、さりげなく手を差し伸べます。</p><p>決まりが正しく働き、誰も置き去りにならずに喜びを交わせたとき、祝宴は最も美しくなります。その安心を皆と分かち合うことが、あなたの誇りです。</p></div><aside class="guide-cat" aria-label="この物語の案内役"><span class="guide-cat-label">猫になったあなたを、この物語へ案内するのは</span><strong class="guide-cat-name"><span class="guide-cat-number">No.22</span>マリア＝トワニーヌ</strong></aside><aside class="goods" aria-label="あなたに似合うもの"><span class="goods-kicker">LITTLE MEW SELECTION</span><b>あなたに似合うもの</b><span class="goods-item">ハンカチ・ブローチ</span></aside>
 <p class="intro">あなたの猫を、暮らしのそばに。</p>
 <a class="btn start" href="#start_page">もう一度診断する</a>
 </div></section><section id="result_blood_time_quiet" class="page result-page theme-blood"><div class="card">
@@ -1537,6 +1540,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     renderTakeHomeCard(document.getElementById("result_portal"),snapshot.resultId,snapshot,isCarriedView);
     document.getElementById("dossier_share").onclick = () => shareInvitation(snapshot);
     document.getElementById("dossier_save").onclick = () => saveInvitationArtwork(snapshot);
+    document.getElementById("dossier_copy").onclick = () => copyInvitationLink(snapshot);
   }
 
   function openResultPortal(snapshot) {
@@ -1930,6 +1934,18 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     window.lmkTrack?.("invitation_saved",{result_id:snapshot.resultId});
   }
 
+  async function copyInvitationLink(snapshot) {
+    const status=document.getElementById("dossier_share_status");
+    const url=takeHomeUrl(snapshot.resultId,snapshot);
+    try {
+      await navigator.clipboard.writeText(url);
+      if(status)status.textContent="招待状へのリンクをコピーしました。";
+      window.lmkTrack?.("invitation_link_copied",{result_id:snapshot.resultId});
+    }catch(_) {
+      if(status)status.textContent="この端末ではリンクをコピーできませんでした。";
+    }
+  }
+
   async function shareInvitation(snapshot) {
     const status=document.getElementById("dossier_share_status");
     const url=takeHomeUrl(snapshot.resultId,snapshot);
@@ -1944,8 +1960,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
         await navigator.share({title:"リトル・ミュー王国からの招待状",text:"王国から招待状が届きました。封を開いてみてください。\n"+url,files:[file]});
         if(status)status.textContent="共有メニューを開きました。";
         window.lmkTrack?.("invitation_shared",{result_id:snapshot.resultId,method:"image"});
+      }else if(navigator.share){
+        await navigator.share({title:"リトル・ミュー王国からの招待状",text:"王国から届いた招待状です。封を開いてみてください。",url});
+        if(status)status.textContent="招待状へのリンクを共有しました。";
+        window.lmkTrack?.("invitation_shared",{result_id:snapshot.resultId,method:"link"});
       }else{
-        if(status)status.textContent="この端末では画像を直接共有できません。「画像を保存」をお使いください。";
+        await copyInvitationLink(snapshot);
+        if(status && !status.textContent)status.textContent="リンクをコピーしました。画像は別に保存できます。";
       }
     }catch(error){
       if(error?.name==="AbortError"){if(status)status.textContent="";}
