@@ -38,7 +38,7 @@
       "bodyWidth": 390,
       "activeWidth": 370,
       "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
-      "activeHeight": 741.125
+      "activeHeight": 786.875
     },
     {
       "name": "03-dossier",
@@ -51,7 +51,7 @@
       "bodyWidth": 390,
       "activeWidth": 370,
       "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
-      "activeHeight": 1712.625
+      "activeHeight": 1058.703125
     },
     {
       "name": "04-portrait",
@@ -116,7 +116,7 @@
       "bodyWidth": 375,
       "activeWidth": 355,
       "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
-      "activeHeight": 741.125
+      "activeHeight": 777.875
     },
     {
       "name": "03-dossier",
@@ -129,7 +129,7 @@
       "bodyWidth": 375,
       "activeWidth": 355,
       "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
-      "activeHeight": 1712.625
+      "activeHeight": 1058.703125
     },
     {
       "name": "04-portrait",
@@ -155,7 +155,7 @@
       "bodyWidth": 375,
       "activeWidth": 355,
       "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
-      "activeHeight": 1283.453125
+      "activeHeight": 1308.140625
     },
     {
       "name": "00-start",
@@ -194,7 +194,7 @@
       "bodyWidth": 390,
       "activeWidth": 370,
       "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
-      "activeHeight": 741.125
+      "activeHeight": 786.875
     },
     {
       "name": "03-dossier",
@@ -207,7 +207,7 @@
       "bodyWidth": 390,
       "activeWidth": 370,
       "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
-      "activeHeight": 1421.078125
+      "activeHeight": 1387.078125
     },
     {
       "name": "04-portrait",
