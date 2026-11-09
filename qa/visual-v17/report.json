@@ -1,0 +1,1140 @@
+{
+  "errors": [],
+  "results": [
+    {
+      "name": "00-start",
+      "width": 320,
+      "height": 640,
+      "mode": "mobile",
+      "route": "#start_page",
+      "viewport": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320,
+      "activeWidth": 300,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 594.078125,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "01-sealed",
+      "width": 320,
+      "height": 640,
+      "mode": "mobile",
+      "route": "#invitation_page",
+      "viewport": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320,
+      "activeWidth": 300,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 414.53125,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "02-letter",
+      "width": 320,
+      "height": 640,
+      "mode": "mobile",
+      "route": "#invitation_page",
+      "viewport": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320,
+      "activeWidth": 300,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 772.8125,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "03-dossier",
+      "width": 320,
+      "height": 640,
+      "mode": "mobile",
+      "route": "#result_portal",
+      "viewport": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320,
+      "activeWidth": 300,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 863.265625,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "03-typographic-stress",
+      "width": 320,
+      "height": 640,
+      "mode": "mobile",
+      "total": 95,
+      "overflow": [],
+      "widest": [
+        {
+          "kind": "birthplace",
+          "value": "アヴェル川沿いのロウ・キーズ",
+          "clientWidth": 170,
+          "scrollWidth": 170,
+          "height": 47.25,
+          "font": "13.5px"
+        },
+        {
+          "kind": "birthplace",
+          "value": "アヴェル川に近い小さな住宅街",
+          "clientWidth": 170,
+          "scrollWidth": 170,
+          "height": 47.25,
+          "font": "13.5px"
+        },
+        {
+          "kind": "birthplace",
+          "value": "風の強い北方の農家の家並み",
+          "clientWidth": 170,
+          "scrollWidth": 170,
+          "height": 47.25,
+          "font": "13.5px"
+        },
+        {
+          "kind": "coat",
+          "value": "ハチワレ",
+          "clientWidth": 170,
+          "scrollWidth": 170,
+          "height": 31.234375,
+          "font": "22px"
+        },
+        {
+          "kind": "coat",
+          "value": "パステルトビ",
+          "clientWidth": 170,
+          "scrollWidth": 170,
+          "height": 31.234375,
+          "font": "22px"
+        },
+        {
+          "kind": "coat",
+          "value": "グレーシロ",
+          "clientWidth": 170,
+          "scrollWidth": 170,
+          "height": 31.234375,
+          "font": "22px"
+        },
+        {
+          "kind": "portrait",
+          "value": "王家のパティシエ",
+          "clientWidth": 195,
+          "scrollWidth": 195,
+          "height": 23.796875,
+          "font": "14px"
+        },
+        {
+          "kind": "portrait",
+          "value": "晩餐会の猫",
+          "clientWidth": 195,
+          "scrollWidth": 195,
+          "height": 23.796875,
+          "font": "14px"
+        }
+      ]
+    },
+    {
+      "name": "03-hierarchy",
+      "width": 320,
+      "height": 640,
+      "mode": "mobile",
+      "headline": 26,
+      "coat": 22,
+      "toc": 18,
+      "portrait": 14,
+      "titlesOnCover": 1,
+      "methodInitiallyCollapsed": true,
+      "shareInitiallyCollapsed": true
+    },
+    {
+      "name": "03-stress-long",
+      "width": 320,
+      "height": 640,
+      "mode": "mobile",
+      "route": "#result_portal",
+      "viewport": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320,
+      "activeWidth": 300,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 863.265625,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "04-portrait",
+      "width": 320,
+      "height": 640,
+      "mode": "mobile",
+      "route": "#result_blood_time_quiet",
+      "viewport": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320,
+      "activeWidth": 300,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1484.421875,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "05-provenance",
+      "width": 320,
+      "height": 640,
+      "mode": "mobile",
+      "route": "#provenance_page",
+      "viewport": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320,
+      "activeWidth": 300,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1392.53125,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "center"
+      }
+    },
+    {
+      "name": "00-start",
+      "width": 375,
+      "height": 667,
+      "mode": "mobile",
+      "route": "#start_page",
+      "viewport": 375,
+      "scrollWidth": 375,
+      "bodyWidth": 375,
+      "activeWidth": 355,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 556.015625,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "01-sealed",
+      "width": 375,
+      "height": 667,
+      "mode": "mobile",
+      "route": "#invitation_page",
+      "viewport": 375,
+      "scrollWidth": 375,
+      "bodyWidth": 375,
+      "activeWidth": 355,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 423.515625,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "02-letter",
+      "width": 375,
+      "height": 667,
+      "mode": "mobile",
+      "route": "#invitation_page",
+      "viewport": 375,
+      "scrollWidth": 375,
+      "bodyWidth": 375,
+      "activeWidth": 355,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 791.515625,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "03-dossier",
+      "width": 375,
+      "height": 667,
+      "mode": "mobile",
+      "route": "#result_portal",
+      "viewport": 375,
+      "scrollWidth": 375,
+      "bodyWidth": 375,
+      "activeWidth": 355,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 871.375,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "03-typographic-stress",
+      "width": 375,
+      "height": 667,
+      "mode": "mobile",
+      "total": 95,
+      "overflow": [],
+      "widest": [
+        {
+          "kind": "coat",
+          "value": "ハチワレ",
+          "clientWidth": 203,
+          "scrollWidth": 203,
+          "height": 33.546875,
+          "font": "23.625px"
+        },
+        {
+          "kind": "coat",
+          "value": "パステルトビ",
+          "clientWidth": 203,
+          "scrollWidth": 203,
+          "height": 33.546875,
+          "font": "23.625px"
+        },
+        {
+          "kind": "coat",
+          "value": "グレーシロ",
+          "clientWidth": 203,
+          "scrollWidth": 203,
+          "height": 33.546875,
+          "font": "23.625px"
+        },
+        {
+          "kind": "portrait",
+          "value": "王家のパティシエ",
+          "clientWidth": 242,
+          "scrollWidth": 242,
+          "height": 25.5,
+          "font": "15px"
+        },
+        {
+          "kind": "portrait",
+          "value": "晩餐会の猫",
+          "clientWidth": 242,
+          "scrollWidth": 242,
+          "height": 25.5,
+          "font": "15px"
+        },
+        {
+          "kind": "portrait",
+          "value": "冬布を継ぐ猫",
+          "clientWidth": 242,
+          "scrollWidth": 242,
+          "height": 25.5,
+          "font": "15px"
+        },
+        {
+          "kind": "portrait",
+          "value": "祝宴の女主人",
+          "clientWidth": 242,
+          "scrollWidth": 242,
+          "height": 25.5,
+          "font": "15px"
+        },
+        {
+          "kind": "portrait",
+          "value": "時を継ぐ猫",
+          "clientWidth": 242,
+          "scrollWidth": 242,
+          "height": 25.5,
+          "font": "15px"
+        }
+      ]
+    },
+    {
+      "name": "03-hierarchy",
+      "width": 375,
+      "height": 667,
+      "mode": "mobile",
+      "headline": 26,
+      "coat": 23.625,
+      "toc": 18,
+      "portrait": 15,
+      "titlesOnCover": 1,
+      "methodInitiallyCollapsed": true,
+      "shareInitiallyCollapsed": true
+    },
+    {
+      "name": "03-stress-long",
+      "width": 375,
+      "height": 667,
+      "mode": "mobile",
+      "route": "#result_portal",
+      "viewport": 375,
+      "scrollWidth": 375,
+      "bodyWidth": 375,
+      "activeWidth": 355,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 871.375,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "04-portrait",
+      "width": 375,
+      "height": 667,
+      "mode": "mobile",
+      "route": "#result_blood_time_quiet",
+      "viewport": 375,
+      "scrollWidth": 375,
+      "bodyWidth": 375,
+      "activeWidth": 355,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1460.109375,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "05-provenance",
+      "width": 375,
+      "height": 667,
+      "mode": "mobile",
+      "route": "#provenance_page",
+      "viewport": 375,
+      "scrollWidth": 375,
+      "bodyWidth": 375,
+      "activeWidth": 355,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1318.0625,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "center"
+      }
+    },
+    {
+      "name": "00-start",
+      "width": 390,
+      "height": 844,
+      "mode": "mobile",
+      "route": "#start_page",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 559.296875,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "01-sealed",
+      "width": 390,
+      "height": 844,
+      "mode": "mobile",
+      "route": "#invitation_page",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 432.78125,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "02-letter",
+      "width": 390,
+      "height": 844,
+      "mode": "mobile",
+      "route": "#invitation_page",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 800.390625,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "03-dossier",
+      "width": 390,
+      "height": 844,
+      "mode": "mobile",
+      "route": "#result_portal",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 872.703125,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "03-typographic-stress",
+      "width": 390,
+      "height": 844,
+      "mode": "mobile",
+      "total": 95,
+      "overflow": [],
+      "widest": [
+        {
+          "kind": "coat",
+          "value": "ハチワレ",
+          "clientWidth": 218,
+          "scrollWidth": 218,
+          "height": 34.875,
+          "font": "24.57px"
+        },
+        {
+          "kind": "coat",
+          "value": "パステルトビ",
+          "clientWidth": 218,
+          "scrollWidth": 218,
+          "height": 34.875,
+          "font": "24.57px"
+        },
+        {
+          "kind": "coat",
+          "value": "グレーシロ",
+          "clientWidth": 218,
+          "scrollWidth": 218,
+          "height": 34.875,
+          "font": "24.57px"
+        },
+        {
+          "kind": "portrait",
+          "value": "王家のパティシエ",
+          "clientWidth": 257,
+          "scrollWidth": 257,
+          "height": 25.5,
+          "font": "15px"
+        },
+        {
+          "kind": "portrait",
+          "value": "晩餐会の猫",
+          "clientWidth": 257,
+          "scrollWidth": 257,
+          "height": 25.5,
+          "font": "15px"
+        },
+        {
+          "kind": "portrait",
+          "value": "冬布を継ぐ猫",
+          "clientWidth": 257,
+          "scrollWidth": 257,
+          "height": 25.5,
+          "font": "15px"
+        },
+        {
+          "kind": "portrait",
+          "value": "祝宴の女主人",
+          "clientWidth": 257,
+          "scrollWidth": 257,
+          "height": 25.5,
+          "font": "15px"
+        },
+        {
+          "kind": "portrait",
+          "value": "時を継ぐ猫",
+          "clientWidth": 257,
+          "scrollWidth": 257,
+          "height": 25.5,
+          "font": "15px"
+        }
+      ]
+    },
+    {
+      "name": "03-hierarchy",
+      "width": 390,
+      "height": 844,
+      "mode": "mobile",
+      "headline": 26,
+      "coat": 24.57,
+      "toc": 18,
+      "portrait": 15,
+      "titlesOnCover": 1,
+      "methodInitiallyCollapsed": true,
+      "shareInitiallyCollapsed": true
+    },
+    {
+      "name": "03-stress-long",
+      "width": 390,
+      "height": 844,
+      "mode": "mobile",
+      "route": "#result_portal",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 872.703125,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "04-portrait",
+      "width": 390,
+      "height": 844,
+      "mode": "mobile",
+      "route": "#result_blood_time_quiet",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1405.390625,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "05-provenance",
+      "width": 390,
+      "height": 844,
+      "mode": "mobile",
+      "route": "#provenance_page",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1292.15625,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "center"
+      }
+    },
+    {
+      "name": "00-start",
+      "width": 768,
+      "height": 1024,
+      "mode": "mobile",
+      "route": "#start_page",
+      "viewport": 768,
+      "scrollWidth": 768,
+      "bodyWidth": 768,
+      "activeWidth": 670,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 593.296875,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "01-sealed",
+      "width": 768,
+      "height": 1024,
+      "mode": "mobile",
+      "route": "#invitation_page",
+      "viewport": 768,
+      "scrollWidth": 768,
+      "bodyWidth": 768,
+      "activeWidth": 670,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 519.09375,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "02-letter",
+      "width": 768,
+      "height": 1024,
+      "mode": "mobile",
+      "route": "#invitation_page",
+      "viewport": 768,
+      "scrollWidth": 768,
+      "bodyWidth": 768,
+      "activeWidth": 670,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 869.46875,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "03-dossier",
+      "width": 768,
+      "height": 1024,
+      "mode": "mobile",
+      "route": "#result_portal",
+      "viewport": 768,
+      "scrollWidth": 768,
+      "bodyWidth": 768,
+      "activeWidth": 670,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 955.75,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "03-typographic-stress",
+      "width": 768,
+      "height": 1024,
+      "mode": "mobile",
+      "total": 95,
+      "overflow": [],
+      "widest": [
+        {
+          "kind": "coat",
+          "value": "ハチワレ",
+          "clientWidth": 315,
+          "scrollWidth": 315,
+          "height": 36.90625,
+          "font": "26px"
+        },
+        {
+          "kind": "coat",
+          "value": "パステルトビ",
+          "clientWidth": 315,
+          "scrollWidth": 315,
+          "height": 36.90625,
+          "font": "26px"
+        },
+        {
+          "kind": "coat",
+          "value": "グレーシロ",
+          "clientWidth": 315,
+          "scrollWidth": 315,
+          "height": 36.90625,
+          "font": "26px"
+        },
+        {
+          "kind": "portrait",
+          "value": "王家のパティシエ",
+          "clientWidth": 411,
+          "scrollWidth": 411,
+          "height": 27.1875,
+          "font": "16px"
+        },
+        {
+          "kind": "portrait",
+          "value": "晩餐会の猫",
+          "clientWidth": 411,
+          "scrollWidth": 411,
+          "height": 27.1875,
+          "font": "16px"
+        },
+        {
+          "kind": "portrait",
+          "value": "冬布を継ぐ猫",
+          "clientWidth": 411,
+          "scrollWidth": 411,
+          "height": 27.1875,
+          "font": "16px"
+        },
+        {
+          "kind": "portrait",
+          "value": "祝宴の女主人",
+          "clientWidth": 411,
+          "scrollWidth": 411,
+          "height": 27.1875,
+          "font": "16px"
+        },
+        {
+          "kind": "portrait",
+          "value": "時を継ぐ猫",
+          "clientWidth": 411,
+          "scrollWidth": 411,
+          "height": 27.1875,
+          "font": "16px"
+        }
+      ]
+    },
+    {
+      "name": "03-hierarchy",
+      "width": 768,
+      "height": 1024,
+      "mode": "mobile",
+      "headline": 33,
+      "coat": 26,
+      "toc": 19,
+      "portrait": 16,
+      "titlesOnCover": 1,
+      "methodInitiallyCollapsed": true,
+      "shareInitiallyCollapsed": true
+    },
+    {
+      "name": "03-stress-long",
+      "width": 768,
+      "height": 1024,
+      "mode": "mobile",
+      "route": "#result_portal",
+      "viewport": 768,
+      "scrollWidth": 768,
+      "bodyWidth": 768,
+      "activeWidth": 670,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 955.75,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "04-portrait",
+      "width": 768,
+      "height": 1024,
+      "mode": "mobile",
+      "route": "#result_blood_time_quiet",
+      "viewport": 768,
+      "scrollWidth": 768,
+      "bodyWidth": 768,
+      "activeWidth": 670,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1447.578125,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "05-provenance",
+      "width": 768,
+      "height": 1024,
+      "mode": "mobile",
+      "route": "#provenance_page",
+      "viewport": 768,
+      "scrollWidth": 768,
+      "bodyWidth": 768,
+      "activeWidth": 670,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1365.140625,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "center"
+      }
+    },
+    {
+      "name": "00-start",
+      "width": 390,
+      "height": 844,
+      "mode": "store",
+      "route": "#start_page",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 559.296875,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "01-sealed",
+      "width": 390,
+      "height": 844,
+      "mode": "store",
+      "route": "#invitation_page",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 432.78125,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "02-letter",
+      "width": 390,
+      "height": 844,
+      "mode": "store",
+      "route": "#invitation_page",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 800.390625,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "03-dossier",
+      "width": 390,
+      "height": 844,
+      "mode": "store",
+      "route": "#result_portal",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1201.1875,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "03-typographic-stress",
+      "width": 390,
+      "height": 844,
+      "mode": "store",
+      "total": 95,
+      "overflow": [],
+      "widest": [
+        {
+          "kind": "coat",
+          "value": "ハチワレ",
+          "clientWidth": 218,
+          "scrollWidth": 218,
+          "height": 34.875,
+          "font": "24.57px"
+        },
+        {
+          "kind": "coat",
+          "value": "パステルトビ",
+          "clientWidth": 218,
+          "scrollWidth": 218,
+          "height": 34.875,
+          "font": "24.57px"
+        },
+        {
+          "kind": "coat",
+          "value": "グレーシロ",
+          "clientWidth": 218,
+          "scrollWidth": 218,
+          "height": 34.875,
+          "font": "24.57px"
+        },
+        {
+          "kind": "portrait",
+          "value": "王家のパティシエ",
+          "clientWidth": 257,
+          "scrollWidth": 257,
+          "height": 25.5,
+          "font": "15px"
+        },
+        {
+          "kind": "portrait",
+          "value": "晩餐会の猫",
+          "clientWidth": 257,
+          "scrollWidth": 257,
+          "height": 25.5,
+          "font": "15px"
+        },
+        {
+          "kind": "portrait",
+          "value": "冬布を継ぐ猫",
+          "clientWidth": 257,
+          "scrollWidth": 257,
+          "height": 25.5,
+          "font": "15px"
+        },
+        {
+          "kind": "portrait",
+          "value": "祝宴の女主人",
+          "clientWidth": 257,
+          "scrollWidth": 257,
+          "height": 25.5,
+          "font": "15px"
+        },
+        {
+          "kind": "portrait",
+          "value": "時を継ぐ猫",
+          "clientWidth": 257,
+          "scrollWidth": 257,
+          "height": 25.5,
+          "font": "15px"
+        }
+      ]
+    },
+    {
+      "name": "03-hierarchy",
+      "width": 390,
+      "height": 844,
+      "mode": "store",
+      "headline": 26,
+      "coat": 24.57,
+      "toc": 18,
+      "portrait": 15,
+      "titlesOnCover": 1,
+      "methodInitiallyCollapsed": true,
+      "shareInitiallyCollapsed": true
+    },
+    {
+      "name": "03-stress-long",
+      "width": 390,
+      "height": 844,
+      "mode": "store",
+      "route": "#result_portal",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1201.1875,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "04-portrait",
+      "width": 390,
+      "height": 844,
+      "mode": "store",
+      "route": "#result_blood_time_quiet",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1405.390625,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "05-provenance",
+      "width": 390,
+      "height": 844,
+      "mode": "store",
+      "route": "#provenance_page",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1343.96875,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "center"
+      }
+    }
+  ]
+}
