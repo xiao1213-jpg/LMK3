@@ -740,6 +740,16 @@ main{width:100%;max-width:760px;margin:0 auto;padding:0 12px 24px}
  .invitation-share-inner{padding:17px 15px 20px}
 }
 @media(max-width:360px){.royal-letter-body.ceremonial-lines span{white-space:normal}}
+
+/* Fine Japanese line endings: paragraphs should not strand a final character. */
+@supports(text-wrap:pretty){
+ .provenance-page .locality-scene,
+ .provenance-page .family-scene,
+ .result-page .desc p,
+ .result-page .guide-story-scene,
+ .dossier-preface,
+ .invitation-share-inner>p{ text-wrap:pretty }
+}
 </style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script><script src="assets/kingdom-notes-v12.js"></script><!-- Open-world birthplace preview: sample localities are not a complete gazetteer. --></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">A LITTLE MEW STORY</div>
 <div class="cat"><svg class="start-cat-emblem" viewBox="0 0 124 92" fill="none" aria-hidden="true"><path d="M26 42 26 16 44 28Q62 22 80 28L98 16 98 42Q103 48 100 60Q93 77 62 78Q31 77 24 60Q21 49 26 42Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M43 48Q48 44 53 48M71 48Q76 44 81 48M57 59l5 4 5-4m-5 4v3m0 0q-6 5-11 0m11 0q6 5 11 0M38 57l-15-4m15 10-15 2m63-8 15-4m-15 10 15 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
