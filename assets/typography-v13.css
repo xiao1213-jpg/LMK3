@@ -451,3 +451,15 @@ main {max-width:730px; padding:16px 12px 29px}
 @media(prefers-reduced-motion:reduce){
  .page .start:active{transform:none}
 }
+
+/* Final small-screen optical balance: never leave one kana stranded. */
+#start_page .title span {display:inline}
+.dossier-footnote span {display:block;white-space:nowrap}
+@media(max-width:365px){
+  #start_page .title {font-size:29px;line-height:1.43}
+  #start_page .title span {display:block;white-space:nowrap}
+  .royal-letter h2 {font-size:20px!important;white-space:nowrap;letter-spacing:0}
+  .royal-letter-command {font-size:9.2px;letter-spacing:.04em;white-space:nowrap}
+  .dossier-entry-text em {font-size:12.1px}
+  .dossier-footnote {font-size:12px}
+}
