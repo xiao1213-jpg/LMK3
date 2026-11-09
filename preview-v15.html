@@ -877,7 +877,8 @@ body{color:var(--noble-ink);font-family:var(--noble-sans);font-feature-settings:
  .dossier-cover .portal-heading{font-size:27px}
  .result-page .guide-story-scene{max-width:25em}
 }
-</style><link rel="stylesheet" href="assets/typography-v13.css?v=20261109-13"><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script><script src="assets/kingdom-notes-v12.js"></script><!-- Open-world birthplace preview: sample localities are not a complete gazetteer. --></head><body><main><div class="brand">LITTLE MEW KINGDOM</div><section id="start_page" class="page "><div class="card">
+</style>
+<link rel="stylesheet" href="assets/lmk-v15-editorial.css"><link rel="stylesheet" href="assets/typography-v13.css?v=20261109-13"><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script><script src="assets/kingdom-notes-v12.js"></script><!-- Open-world birthplace preview: sample localities are not a complete gazetteer. --></head><body><main><div class="brand">LITTLE MEW KINGDOM</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">A LITTLE MEW STORY</div>
 <div class="cat"><svg class="start-cat-emblem" viewBox="0 0 124 92" fill="none" aria-hidden="true"><path d="M26 42 26 16 44 28Q62 22 80 28L98 16 98 42Q103 48 100 60Q93 77 62 78Q31 77 24 60Q21 49 26 42Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M43 48Q48 44 53 48M71 48Q76 44 81 48M57 59l5 4 5-4m-5 4v3m0 0q-6 5-11 0m11 0q6 5 11 0M38 57l-15-4m15 10-15 2m63-8 15-4m-15 10 15 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
 <h1 class="title"><span>猫になって、</span><span>王国へ。</span></h1>
@@ -912,13 +913,24 @@ body{color:var(--noble-ink);font-family:var(--noble-sans);font-feature-settings:
 <p class="dossier-overline">ROYAL VISITOR'S DOSSIER</p>
 <h1 class="portal-heading">王室来訪者一件簿</h1>
 <p class="dossier-number" id="dossier_number">REGISTER · LMK</p>
-<p class="dossier-preface">王国でのあなたが、一匹の猫として<br>この一冊に記されています。</p>
-<div class="dossier-subject" aria-label="王国に招かれた猫"><span class="dossier-subject-kicker">THE INVITED CAT</span><strong id="dossier_subject_coat"></strong><span class="dossier-subject-origin" id="dossier_subject_origin"></span><small class="dossier-place-tag" id="dossier_place_tag"></small><span class="dossier-subject-separator" aria-hidden="true">✦</span><span class="dossier-subject-caption">この猫の肖像に与えられた題</span><b id="dossier_subject_portrait"></b></div>
-<div class="dossier-index" aria-label="同封の記録">
-<button class="dossier-entry" id="open_portrait" type="button"><span class="dossier-numeral">Ⅰ</span><span class="dossier-entry-text"><small>ROYAL PORTRAIT GALLERY</small><strong>肖像の頁</strong><em>九つの答えから描いた肖像。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
-<button class="dossier-entry" id="open_registration" type="button"><span class="dossier-numeral">Ⅱ</span><span class="dossier-entry-text"><small>GENERAL REGISTER OFFICE</small><strong>来歴の頁</strong><em>生まれと、家の来歴。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
+<p class="dossier-preface">国王陛下の招待を受けた、<br>一匹の猫についての記録。</p>
+<section class="dossier-subject" aria-label="王国でのあなたと心象肖像">
+<div class="dossier-subject-identity">
+<p class="dossier-subject-kicker">THE INVITED CAT</p>
+<div class="dossier-coat"><span class="dossier-field-label">毛色</span><strong id="dossier_subject_coat"></strong></div>
+<p class="dossier-birth-line"><span class="dossier-field-label">出生地</span><span class="dossier-subject-origin" id="dossier_subject_origin"></span></p>
 </div>
-<p class="dossier-footnote"><span>肖像は九つの答えから。</span><span>来歴は王国の記録から。</span></p>
+<div class="dossier-subject-divider" aria-hidden="true"><span>✧</span></div>
+<div class="dossier-subject-portrait">
+<p class="dossier-portrait-label">心象肖像の題</p>
+<h2 class="dossier-portrait-name" id="dossier_subject_portrait"></h2>
+</div>
+</section>
+<div class="dossier-index" aria-label="同封の記録">
+<button class="dossier-entry" id="open_portrait" type="button"><span class="dossier-numeral">Ⅰ</span><span class="dossier-entry-text"><small>ROYAL PORTRAIT GALLERY</small><strong>肖像の頁</strong><em>あなたの感性と、案内する猫。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
+<button class="dossier-entry" id="open_registration" type="button"><span class="dossier-numeral">Ⅱ</span><span class="dossier-entry-text"><small>GENERAL REGISTER OFFICE</small><strong>来歴の頁</strong><em>土地の風景と、家に残るもの。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
+</div>
+<p class="dossier-footnote">肖像は九つの答えから、来歴は王国の記録から。</p>
 <section class="invitation-share" id="invitation_share_section" aria-label="招待状の共有">
 <details class="invitation-share-disclosure"><summary class="invitation-share-toggle">
 <span class="invitation-share-label">THE ROYAL LETTER · KEEP & SHARE</span>
@@ -1856,12 +1868,8 @@ body{color:var(--noble-ink);font-family:var(--noble-sans);font-feature-settings:
     const number = document.getElementById("dossier_number");
     if (number) number.textContent = "REGISTER · " + snapshot.provenance.registry;
     document.getElementById("dossier_subject_coat").textContent = snapshot.provenance.coat;
-    document.getElementById("dossier_subject_origin").textContent = snapshot.provenance.birthplace + "に生まれた猫";
-    const placeRegion = regionPool.find(r => r.id === snapshot.provenance.regionId);
-    const placeIndex = placeRegion?.births.indexOf(snapshot.provenance.birthplace) ?? -1;
-    const placeTag = snapshot.provenance.placeTag || window.LMK_KINGDOM_NOTES_V12?.placeTags?.[snapshot.provenance.regionId]?.[placeIndex] || "";
-    document.getElementById("dossier_place_tag").textContent = placeTag;
-    document.getElementById("dossier_subject_portrait").textContent = "《" + resultTitle(snapshot.resultId) + "》";
+    document.getElementById("dossier_subject_origin").textContent = snapshot.provenance.birthplace;
+    document.getElementById("dossier_subject_portrait").textContent = resultTitle(snapshot.resultId);
     if (!isStoreMode) void drawInvitationArtwork(snapshot);
     document.getElementById("open_portrait").onclick = () => {
       decorateResult(snapshot.resultId,snapshot,{carried:isCarriedView});
