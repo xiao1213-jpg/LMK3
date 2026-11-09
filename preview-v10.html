@@ -1298,7 +1298,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     const pageFile = /^preview-v\d+\.html$/.test(pathFile) ? pathFile : "index.html";
     const url = new URL(pageFile,document.baseURI);
     url.searchParams.set("mode","mobile");
-    url.searchParams.set("v","20261109-v9-invitation");
+    url.searchParams.set("v","20261109-v10-stories");
     url.hash = "invitation_page~" + resultId + "~" + payload;
     return url.toString();
   }
@@ -1760,7 +1760,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
       const guideScene = window.LMK_KINGDOM_NOTES_V10?.guides?.[resultId] || "";
       guide.classList.add("story-guide");
       guide.innerHTML = '<span class="guide-story-kicker">A CAT TO MEET</span>' +
-        '<h3 class="guide-story-heading">王国で出会う猫</h3>' +
+        '<h3 class="guide-story-heading">この肖像にゆかりのある猫</h3>' +
         '<strong class="guide-story-name"></strong><p class="guide-story-scene"></p>';
       guide.querySelector(".guide-story-name").textContent = guideName;
       guide.querySelector(".guide-story-scene").textContent = guideScene;
@@ -1769,7 +1769,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     if (!card.querySelector(".portrait-about")) {
       const about = document.createElement("details");
       about.className = "portrait-about";
-      about.innerHTML = '<summary>この肖像題について</summary><p>九つの答えに現れた感性を、王国の人物や情景になぞらえて描いた肖像です。毛色や家の記録は、別紙の王国来歴証に収められています。</p>';
+      about.innerHTML = '<summary>この肖像題について</summary><p>九つの答えから、王国の猫たちの物語と響き合う一篇を選び、肖像題にしました。毛色や家の記録は、来歴の頁に綴じられています。</p>';
       card.querySelector(".result-thesis")?.after(about);
     }
     card.querySelector(".portrait-file-code")?.remove();
@@ -1888,8 +1888,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
       ctx.strokeStyle="#cdbb9d";ctx.beginPath();ctx.moveTo(222,953);ctx.lineTo(858,953);ctx.stroke();
       textOnCanvas(ctx,"王室侍従長室",222,1002,'27px "Hiragino Mincho ProN","Yu Mincho",serif',"#655747","left");
       textOnCanvas(ctx,"REGISTER  " + snapshot.provenance.registry,222,1042,'21px Georgia,serif',"#937954","left");
-      textOnCanvas(ctx,"封を開くと、この猫の記録が届きます。",220,1113,'21px "Hiragino Sans",sans-serif',"#81705f","left");
-      textOnCanvas(ctx,"ST. MILK PALACE  ·  LITTLE MEW KINGDOM",540,1182,'20px Georgia,serif',"#9b825e");
+      textOnCanvas(ctx,"封を開いて、記録を読む",220,1113,'21px "Hiragino Sans",sans-serif',"#81705f","left");
+      textOnCanvas(ctx,"ST. MILK PALACE  ·  LITTLE MEW KINGDOM",540,1202,'20px Georgia,serif',"#9b825e");
       try {
         if(typeof QRCode==="function"){
           const qrDiv=document.createElement("div");
