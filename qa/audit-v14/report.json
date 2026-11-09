@@ -1,0 +1,5391 @@
+{
+  "summary": [
+    {
+      "width": 320,
+      "subjectWidth": 252,
+      "padding": "25px 12px",
+      "fonts": {
+        "coat": "33px",
+        "title": "24px",
+        "origin": "13px"
+      },
+      "wrapCounts": {
+        "coat": 0,
+        "title": 4,
+        "origin": 14
+      },
+      "orphanOrigins": [
+        {
+          "v": "セント・ミルク宮殿に近い住宅街に生まれた猫",
+          "lines": [
+            "セント・ミルク宮殿に近い住宅街に生",
+            "まれた猫"
+          ]
+        },
+        {
+          "v": "王都ミューミンスターの学術街に生まれた猫",
+          "lines": [
+            "王都ミューミンスターの学術街に生ま",
+            "れた猫"
+          ]
+        },
+        {
+          "v": "アヴェル川沿いのロウ・キーズに生まれた猫",
+          "lines": [
+            "アヴェル川沿いのロウ・キーズに生ま",
+            "れた猫"
+          ]
+        },
+        {
+          "v": "アヴェル川に近い小さな住宅街に生まれた猫",
+          "lines": [
+            "アヴェル川に近い小さな住宅街に生ま",
+            "れた猫"
+          ]
+        },
+        {
+          "v": "サンミア湖畔の果樹園地帯に生まれた猫",
+          "lines": [
+            "サンミア湖畔の果樹園地帯に生まれた",
+            "猫"
+          ]
+        },
+        {
+          "v": "ベルグレイヴ・ガーデンズに生まれた猫",
+          "lines": [
+            "ベルグレイヴ・ガーデンズに生まれた",
+            "猫"
+          ]
+        },
+        {
+          "v": "フィッシュベル市場の近くに生まれた猫",
+          "lines": [
+            "フィッシュベル市場の近くに生まれた",
+            "猫"
+          ]
+        },
+        {
+          "v": "白い丘のふもとの小さな町に生まれた猫",
+          "lines": [
+            "白い丘のふもとの小さな町に生まれた",
+            "猫"
+          ]
+        },
+        {
+          "v": "オリーブ畑に囲まれた小村に生まれた猫",
+          "lines": [
+            "オリーブ畑に囲まれた小村に生まれた",
+            "猫"
+          ]
+        },
+        {
+          "v": "ダーンリー炭田に近い集落に生まれた猫",
+          "lines": [
+            "ダーンリー炭田に近い集落に生まれた",
+            "猫"
+          ]
+        },
+        {
+          "v": "草地に囲まれた小さな集落に生まれた猫",
+          "lines": [
+            "草地に囲まれた小さな集落に生まれた",
+            "猫"
+          ]
+        },
+        {
+          "v": "サンミア湖の入り江の小村に生まれた猫",
+          "lines": [
+            "サンミア湖の入り江の小村に生まれた",
+            "猫"
+          ]
+        },
+        {
+          "v": "なだらかな丘の農家の集落に生まれた猫",
+          "lines": [
+            "なだらかな丘の農家の集落に生まれた",
+            "猫"
+          ]
+        },
+        {
+          "v": "風の強い北方の農家の家並みに生まれた猫",
+          "lines": [
+            "風の強い北方の農家の家並みに生まれ",
+            "た猫"
+          ]
+        }
+      ],
+      "maxOriginLines": 2,
+      "maxTitleLines": 2,
+      "samples": {
+        "coat": {
+          "value": "ハチワレ",
+          "fontSize": "33px",
+          "lines": [
+            "ハチワレ"
+          ],
+          "lineCount": 1,
+          "lastLine": 4,
+          "centerOffset": 0,
+          "width": 228
+        },
+        "title": {
+          "value": "《暦を守る猫》",
+          "fontSize": "24px",
+          "lines": [
+            "《暦を守る猫》"
+          ],
+          "lineCount": 1,
+          "lastLine": 7,
+          "centerOffset": 0,
+          "width": 228
+        },
+        "longestOrigins": [
+          {
+            "value": "セント・ミルク宮殿に近い住宅街に生まれた猫",
+            "fontSize": "13px",
+            "lines": [
+              "セント・ミルク宮殿に近い住宅街に生",
+              "まれた猫"
+            ],
+            "lineCount": 2,
+            "lastLine": 4,
+            "centerOffset": 0,
+            "width": 228
+          },
+          {
+            "value": "王都ミューミンスターの学術街に生まれた猫",
+            "fontSize": "13px",
+            "lines": [
+              "王都ミューミンスターの学術街に生ま",
+              "れた猫"
+            ],
+            "lineCount": 2,
+            "lastLine": 3,
+            "centerOffset": 0,
+            "width": 228
+          },
+          {
+            "value": "アヴェル川沿いのロウ・キーズに生まれた猫",
+            "fontSize": "13px",
+            "lines": [
+              "アヴェル川沿いのロウ・キーズに生ま",
+              "れた猫"
+            ],
+            "lineCount": 2,
+            "lastLine": 3,
+            "centerOffset": 0,
+            "width": 228
+          },
+          {
+            "value": "アヴェル川に近い小さな住宅街に生まれた猫",
+            "fontSize": "13px",
+            "lines": [
+              "アヴェル川に近い小さな住宅街に生ま",
+              "れた猫"
+            ],
+            "lineCount": 2,
+            "lastLine": 3,
+            "centerOffset": 0,
+            "width": 228
+          }
+        ]
+      }
+    },
+    {
+      "width": 375,
+      "subjectWidth": 305.75,
+      "padding": "25px 12px",
+      "fonts": {
+        "coat": "33px",
+        "title": "24px",
+        "origin": "13px"
+      },
+      "wrapCounts": {
+        "coat": 0,
+        "title": 0,
+        "origin": 0
+      },
+      "orphanOrigins": [],
+      "maxOriginLines": 1,
+      "maxTitleLines": 1,
+      "samples": {
+        "coat": {
+          "value": "ハチワレ",
+          "fontSize": "33px",
+          "lines": [
+            "ハチワレ"
+          ],
+          "lineCount": 1,
+          "lastLine": 4,
+          "centerOffset": 0,
+          "width": 281.75
+        },
+        "title": {
+          "value": "《暦を守る猫》",
+          "fontSize": "24px",
+          "lines": [
+            "《暦を守る猫》"
+          ],
+          "lineCount": 1,
+          "lastLine": 7,
+          "centerOffset": 0,
+          "width": 281.75
+        },
+        "longestOrigins": [
+          {
+            "value": "セント・ミルク宮殿に近い住宅街に生まれた猫",
+            "fontSize": "13px",
+            "lines": [
+              "セント・ミルク宮殿に近い住宅街に生まれた猫"
+            ],
+            "lineCount": 1,
+            "lastLine": 21,
+            "centerOffset": 0,
+            "width": 281.75
+          },
+          {
+            "value": "王都ミューミンスターの学術街に生まれた猫",
+            "fontSize": "13px",
+            "lines": [
+              "王都ミューミンスターの学術街に生まれた猫"
+            ],
+            "lineCount": 1,
+            "lastLine": 20,
+            "centerOffset": 0,
+            "width": 281.75
+          },
+          {
+            "value": "アヴェル川沿いのロウ・キーズに生まれた猫",
+            "fontSize": "13px",
+            "lines": [
+              "アヴェル川沿いのロウ・キーズに生まれた猫"
+            ],
+            "lineCount": 1,
+            "lastLine": 20,
+            "centerOffset": 0,
+            "width": 281.75
+          },
+          {
+            "value": "アヴェル川に近い小さな住宅街に生まれた猫",
+            "fontSize": "13px",
+            "lines": [
+              "アヴェル川に近い小さな住宅街に生まれた猫"
+            ],
+            "lineCount": 1,
+            "lastLine": 20,
+            "centerOffset": 0,
+            "width": 281.75
+          }
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "subjectWidth": 318.875,
+      "padding": "25px 12px",
+      "fonts": {
+        "coat": "33px",
+        "title": "24px",
+        "origin": "13px"
+      },
+      "wrapCounts": {
+        "coat": 0,
+        "title": 0,
+        "origin": 0
+      },
+      "orphanOrigins": [],
+      "maxOriginLines": 1,
+      "maxTitleLines": 1,
+      "samples": {
+        "coat": {
+          "value": "ハチワレ",
+          "fontSize": "33px",
+          "lines": [
+            "ハチワレ"
+          ],
+          "lineCount": 1,
+          "lastLine": 4,
+          "centerOffset": 0,
+          "width": 294.875
+        },
+        "title": {
+          "value": "《暦を守る猫》",
+          "fontSize": "24px",
+          "lines": [
+            "《暦を守る猫》"
+          ],
+          "lineCount": 1,
+          "lastLine": 7,
+          "centerOffset": 0,
+          "width": 294.875
+        },
+        "longestOrigins": [
+          {
+            "value": "セント・ミルク宮殿に近い住宅街に生まれた猫",
+            "fontSize": "13px",
+            "lines": [
+              "セント・ミルク宮殿に近い住宅街に生まれた猫"
+            ],
+            "lineCount": 1,
+            "lastLine": 21,
+            "centerOffset": 0,
+            "width": 294.875
+          },
+          {
+            "value": "王都ミューミンスターの学術街に生まれた猫",
+            "fontSize": "13px",
+            "lines": [
+              "王都ミューミンスターの学術街に生まれた猫"
+            ],
+            "lineCount": 1,
+            "lastLine": 20,
+            "centerOffset": 0,
+            "width": 294.875
+          },
+          {
+            "value": "アヴェル川沿いのロウ・キーズに生まれた猫",
+            "fontSize": "13px",
+            "lines": [
+              "アヴェル川沿いのロウ・キーズに生まれた猫"
+            ],
+            "lineCount": 1,
+            "lastLine": 20,
+            "centerOffset": 0,
+            "width": 294.875
+          },
+          {
+            "value": "アヴェル川に近い小さな住宅街に生まれた猫",
+            "fontSize": "13px",
+            "lines": [
+              "アヴェル川に近い小さな住宅街に生まれた猫"
+            ],
+            "lineCount": 1,
+            "lastLine": 20,
+            "centerOffset": 0,
+            "width": 294.875
+          }
+        ]
+      }
+    },
+    {
+      "width": 768,
+      "subjectWidth": 495,
+      "padding": "26px 17px 27px",
+      "fonts": {
+        "coat": "38px",
+        "title": "29px",
+        "origin": "13px"
+      },
+      "wrapCounts": {
+        "coat": 0,
+        "title": 0,
+        "origin": 0
+      },
+      "orphanOrigins": [],
+      "maxOriginLines": 1,
+      "maxTitleLines": 1,
+      "samples": {
+        "coat": {
+          "value": "ハチワレ",
+          "fontSize": "38px",
+          "lines": [
+            "ハチワレ"
+          ],
+          "lineCount": 1,
+          "lastLine": 4,
+          "centerOffset": 0,
+          "width": 461
+        },
+        "title": {
+          "value": "《暦を守る猫》",
+          "fontSize": "29px",
+          "lines": [
+            "《暦を守る猫》"
+          ],
+          "lineCount": 1,
+          "lastLine": 7,
+          "centerOffset": 0,
+          "width": 406
+        },
+        "longestOrigins": [
+          {
+            "value": "セント・ミルク宮殿に近い住宅街に生まれた猫",
+            "fontSize": "13px",
+            "lines": [
+              "セント・ミルク宮殿に近い住宅街に生まれた猫"
+            ],
+            "lineCount": 1,
+            "lastLine": 21,
+            "centerOffset": 0,
+            "width": 461
+          },
+          {
+            "value": "王都ミューミンスターの学術街に生まれた猫",
+            "fontSize": "13px",
+            "lines": [
+              "王都ミューミンスターの学術街に生まれた猫"
+            ],
+            "lineCount": 1,
+            "lastLine": 20,
+            "centerOffset": 0,
+            "width": 461
+          },
+          {
+            "value": "アヴェル川沿いのロウ・キーズに生まれた猫",
+            "fontSize": "13px",
+            "lines": [
+              "アヴェル川沿いのロウ・キーズに生まれた猫"
+            ],
+            "lineCount": 1,
+            "lastLine": 20,
+            "centerOffset": 0,
+            "width": 461
+          },
+          {
+            "value": "アヴェル川に近い小さな住宅街に生まれた猫",
+            "fontSize": "13px",
+            "lines": [
+              "アヴェル川に近い小さな住宅街に生まれた猫"
+            ],
+            "lineCount": 1,
+            "lastLine": 20,
+            "centerOffset": 0,
+            "width": 461
+          }
+        ]
+      }
+    }
+  ],
+  "full": {
+    "cases": [
+      {
+        "width": 320,
+        "data": {
+          "coat": [
+            {
+              "value": "キジトラ",
+              "fontSize": "33px",
+              "lines": [
+                "キジトラ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "キジシロ",
+              "fontSize": "33px",
+              "lines": [
+                "キジシロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "チャトラ",
+              "fontSize": "33px",
+              "lines": [
+                "チャトラ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "チャシロ",
+              "fontSize": "33px",
+              "lines": [
+                "チャシロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "サバトラ",
+              "fontSize": "33px",
+              "lines": [
+                "サバトラ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "サバシロ",
+              "fontSize": "33px",
+              "lines": [
+                "サバシロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "クロ",
+              "fontSize": "33px",
+              "lines": [
+                "クロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 2,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "シロ",
+              "fontSize": "33px",
+              "lines": [
+                "シロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 2,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "グレー",
+              "fontSize": "33px",
+              "lines": [
+                "グレー"
+              ],
+              "lineCount": 1,
+              "lastLine": 3,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "グレーシロ",
+              "fontSize": "33px",
+              "lines": [
+                "グレーシロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ハチワレ",
+              "fontSize": "33px",
+              "lines": [
+                "ハチワレ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ミケ",
+              "fontSize": "33px",
+              "lines": [
+                "ミケ"
+              ],
+              "lineCount": 1,
+              "lastLine": 2,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "サビ",
+              "fontSize": "33px",
+              "lines": [
+                "サビ"
+              ],
+              "lineCount": 1,
+              "lastLine": 2,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ムギワラ",
+              "fontSize": "33px",
+              "lines": [
+                "ムギワラ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "クリーム",
+              "fontSize": "33px",
+              "lines": [
+                "クリーム"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ポイント",
+              "fontSize": "33px",
+              "lines": [
+                "ポイント"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "シミツキ",
+              "fontSize": "33px",
+              "lines": [
+                "シミツキ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "パステルトビ",
+              "fontSize": "33px",
+              "lines": [
+                "パステルトビ"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            }
+          ],
+          "title": [
+            {
+              "value": "《王家のパティシエ》",
+              "fontSize": "24px",
+              "lines": [
+                "《王家のパ",
+                "ティシエ》"
+              ],
+              "lineCount": 2,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《晩餐会の猫》",
+              "fontSize": "24px",
+              "lines": [
+                "《晩餐会の猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《冬布を継ぐ猫》",
+              "fontSize": "24px",
+              "lines": [
+                "《冬布を継ぐ猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《祝宴の女主人》",
+              "fontSize": "24px",
+              "lines": [
+                "《祝宴の女主人》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《時を継ぐ猫》",
+              "fontSize": "24px",
+              "lines": [
+                "《時を継ぐ猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《暦を守る猫》",
+              "fontSize": "24px",
+              "lines": [
+                "《暦を守る猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《午後三時の令嬢》",
+              "fontSize": "24px",
+              "lines": [
+                "《午後三時の令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《ケーキ屋通りの令嬢》",
+              "fontSize": "24px",
+              "lines": [
+                "《ケーキ屋",
+                "通りの令嬢》"
+              ],
+              "lineCount": 2,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《便箋を選ぶ令嬢》",
+              "fontSize": "24px",
+              "lines": [
+                "《便箋を選ぶ令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《客間を開く令嬢》",
+              "fontSize": "24px",
+              "lines": [
+                "《客間を開く令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《蕾の庭の令嬢》",
+              "fontSize": "24px",
+              "lines": [
+                "《蕾の庭の令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《星暦をめくる令嬢》",
+              "fontSize": "24px",
+              "lines": [
+                "《星暦をめ",
+                "くる令嬢》"
+              ],
+              "lineCount": 2,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《夜咲きの園丁》",
+              "fontSize": "24px",
+              "lines": [
+                "《夜咲きの園丁》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《果樹園のいたずら猫》",
+              "fontSize": "24px",
+              "lines": [
+                "《果樹園のい",
+                "たずら猫》"
+              ],
+              "lineCount": 2,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《名もなき贈り主》",
+              "fontSize": "24px",
+              "lines": [
+                "《名もなき贈り主》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《気まぐれ郵便猫》",
+              "fontSize": "24px",
+              "lines": [
+                "《気まぐれ郵便猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《月影の反逆者》",
+              "fontSize": "24px",
+              "lines": [
+                "《月影の反逆者》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《放浪する時計師》",
+              "fontSize": "24px",
+              "lines": [
+                "《放浪する時計師》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《最後の一灯》",
+              "fontSize": "24px",
+              "lines": [
+                "《最後の一灯》"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《秘密のお茶会》",
+              "fontSize": "24px",
+              "lines": [
+                "《秘密のお茶会》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《冬支度の灯り》",
+              "fontSize": "24px",
+              "lines": [
+                "《冬支度の灯り》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《サロンの聞き手》",
+              "fontSize": "24px",
+              "lines": [
+                "《サロンの聞き手》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《古書室の猫》",
+              "fontSize": "24px",
+              "lines": [
+                "《古書室の猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《星図を囲む夜》",
+              "fontSize": "24px",
+              "lines": [
+                "《星図を囲む夜》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            }
+          ],
+          "origin": [
+            {
+              "value": "セント・ミルク宮殿に近い住宅街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "セント・ミルク宮殿に近い住宅街に生",
+                "まれた猫"
+              ],
+              "lineCount": 2,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "王都ミューミンスターの学術街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "王都ミューミンスターの学術街に生ま",
+                "れた猫"
+              ],
+              "lineCount": 2,
+              "lastLine": 3,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "アヴェル川沿いのロウ・キーズに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川沿いのロウ・キーズに生ま",
+                "れた猫"
+              ],
+              "lineCount": 2,
+              "lastLine": 3,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "アヴェル川に近い小さな住宅街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川に近い小さな住宅街に生ま",
+                "れた猫"
+              ],
+              "lineCount": 2,
+              "lastLine": 3,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "王都行きの鉄道沿線の町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "王都行きの鉄道沿線の町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "サンミア湖畔の果樹園地帯に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "サンミア湖畔の果樹園地帯に生まれた",
+                "猫"
+              ],
+              "lineCount": 2,
+              "lastLine": 1,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "オールド・ミンスターに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "オールド・ミンスターに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ベルグレイヴ・ガーデンズに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ベルグレイヴ・ガーデンズに生まれた",
+                "猫"
+              ],
+              "lineCount": 2,
+              "lastLine": 1,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "フィッシュベル市場の近くに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "フィッシュベル市場の近くに生まれた",
+                "猫"
+              ],
+              "lineCount": 2,
+              "lastLine": 1,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ピカデリー・ミューズに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ピカデリー・ミューズに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "王都の静かな裏通りに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "王都の静かな裏通りに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "白い丘のふもとの小さな町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "白い丘のふもとの小さな町に生まれた",
+                "猫"
+              ],
+              "lineCount": 2,
+              "lastLine": 1,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "白い断崖のふもとの集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "白い断崖のふもとの集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "海霧のかかる小さな漁村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "海霧のかかる小さな漁村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "オリーブ畑に囲まれた小村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "オリーブ畑に囲まれた小村に生まれた",
+                "猫"
+              ],
+              "lineCount": 2,
+              "lastLine": 1,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "港から離れた市場町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "港から離れた市場町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "波の静かな入り江の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "波の静かな入り江の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "東岸の葡萄農家の家並みに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "東岸の葡萄農家の家並みに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "海沿いの細い路地に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "海沿いの細い路地に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "フォックスリーに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "フォックスリーに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ブラッケンフォードに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ブラッケンフォードに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ハーヴァリーに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ハーヴァリーに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ダーンリー炭田に近い集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ダーンリー炭田に近い集落に生まれた",
+                "猫"
+              ],
+              "lineCount": 2,
+              "lastLine": 1,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "街道を外れた小さな農村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "街道を外れた小さな農村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "石橋のたもとの集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "石橋のたもとの集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "低い丘の果樹園集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "低い丘の果樹園集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "草地に囲まれた小さな集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "草地に囲まれた小さな集落に生まれた",
+                "猫"
+              ],
+              "lineCount": 2,
+              "lastLine": 1,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ブレドンに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ブレドンに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "トランドに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "トランドに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ペヴェレルに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ペヴェレルに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "アルダーコムに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アルダーコムに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "アスターリーに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アスターリーに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "マーデンに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "マーデンに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "キャロウデンに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "キャロウデンに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ウィットコムに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ウィットコムに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "森に寄り添う小村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "森に寄り添う小村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "野ばらの谷の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "野ばらの谷の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "朝霧のたまる農村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "朝霧のたまる農村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ハロウゲイトに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ハロウゲイトに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "オールド・ブラッケンに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "オールド・ブラッケンに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "モス・ホロウに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "モス・ホロウに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ナイツ・エンドに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ナイツ・エンドに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "古い城地に近い丘の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "古い城地に近い丘の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ダンコムに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ダンコムに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ウェストウォッチに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ウェストウォッチに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "レイヴン・クリフに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "レイヴン・クリフに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "木苺の森の縁の小村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "木苺の森の縁の小村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "谷あいの小さな集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "谷あいの小さな集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "深い森へ続く木工の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "深い森へ続く木工の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ラークフォードに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ラークフォードに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ベルクロスに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ベルクロスに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ウィロウミアに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ウィロウミアに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ストーンブリッジに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ストーンブリッジに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "レッドリーフに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "レッドリーフに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "サンミア湖の入り江の小村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "サンミア湖の入り江の小村に生まれた",
+                "猫"
+              ],
+              "lineCount": 2,
+              "lastLine": 1,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "水路沿いの果樹園の村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "水路沿いの果樹園の村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "なだらかな丘の農家の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "なだらかな丘の農家の集落に生まれた",
+                "猫"
+              ],
+              "lineCount": 2,
+              "lastLine": 1,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "渡し場のそばの家並みに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "渡し場のそばの家並みに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "湖の東岸の小さな村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "湖の東岸の小さな村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ハイフェルに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ハイフェルに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ケルドウィックに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ケルドウィックに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "山道の奥の小村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "山道の奥の小村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "冬の湖畔の村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "冬の湖畔の村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "星空の開ける高原の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "星空の開ける高原の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "峠の小さな宿場に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "峠の小さな宿場に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "雪深い谷奥の村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "雪深い谷奥の村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "風の強い北方の農家の家並みに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "風の強い北方の農家の家並みに生まれ",
+                "た猫"
+              ],
+              "lineCount": 2,
+              "lastLine": 2,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "湯治場から離れた小集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "湯治場から離れた小集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 228
+            }
+          ],
+          "single": {
+            "preface": "王国でのあなたが、一匹の猫として\nこの一冊に記されています。",
+            "subjectPadding": "25px 12px",
+            "frameWidth": 252,
+            "title": 37.4375
+          }
+        }
+      },
+      {
+        "width": 375,
+        "data": {
+          "coat": [
+            {
+              "value": "キジトラ",
+              "fontSize": "33px",
+              "lines": [
+                "キジトラ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "キジシロ",
+              "fontSize": "33px",
+              "lines": [
+                "キジシロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "チャトラ",
+              "fontSize": "33px",
+              "lines": [
+                "チャトラ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "チャシロ",
+              "fontSize": "33px",
+              "lines": [
+                "チャシロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "サバトラ",
+              "fontSize": "33px",
+              "lines": [
+                "サバトラ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "サバシロ",
+              "fontSize": "33px",
+              "lines": [
+                "サバシロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "クロ",
+              "fontSize": "33px",
+              "lines": [
+                "クロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 2,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "シロ",
+              "fontSize": "33px",
+              "lines": [
+                "シロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 2,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "グレー",
+              "fontSize": "33px",
+              "lines": [
+                "グレー"
+              ],
+              "lineCount": 1,
+              "lastLine": 3,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "グレーシロ",
+              "fontSize": "33px",
+              "lines": [
+                "グレーシロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ハチワレ",
+              "fontSize": "33px",
+              "lines": [
+                "ハチワレ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ミケ",
+              "fontSize": "33px",
+              "lines": [
+                "ミケ"
+              ],
+              "lineCount": 1,
+              "lastLine": 2,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "サビ",
+              "fontSize": "33px",
+              "lines": [
+                "サビ"
+              ],
+              "lineCount": 1,
+              "lastLine": 2,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ムギワラ",
+              "fontSize": "33px",
+              "lines": [
+                "ムギワラ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "クリーム",
+              "fontSize": "33px",
+              "lines": [
+                "クリーム"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ポイント",
+              "fontSize": "33px",
+              "lines": [
+                "ポイント"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "シミツキ",
+              "fontSize": "33px",
+              "lines": [
+                "シミツキ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "パステルトビ",
+              "fontSize": "33px",
+              "lines": [
+                "パステルトビ"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            }
+          ],
+          "title": [
+            {
+              "value": "《王家のパティシエ》",
+              "fontSize": "24px",
+              "lines": [
+                "《王家のパティシエ》"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《晩餐会の猫》",
+              "fontSize": "24px",
+              "lines": [
+                "《晩餐会の猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《冬布を継ぐ猫》",
+              "fontSize": "24px",
+              "lines": [
+                "《冬布を継ぐ猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《祝宴の女主人》",
+              "fontSize": "24px",
+              "lines": [
+                "《祝宴の女主人》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《時を継ぐ猫》",
+              "fontSize": "24px",
+              "lines": [
+                "《時を継ぐ猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《暦を守る猫》",
+              "fontSize": "24px",
+              "lines": [
+                "《暦を守る猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《午後三時の令嬢》",
+              "fontSize": "24px",
+              "lines": [
+                "《午後三時の令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《ケーキ屋通りの令嬢》",
+              "fontSize": "24px",
+              "lines": [
+                "《ケーキ屋通りの令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《便箋を選ぶ令嬢》",
+              "fontSize": "24px",
+              "lines": [
+                "《便箋を選ぶ令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《客間を開く令嬢》",
+              "fontSize": "24px",
+              "lines": [
+                "《客間を開く令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《蕾の庭の令嬢》",
+              "fontSize": "24px",
+              "lines": [
+                "《蕾の庭の令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《星暦をめくる令嬢》",
+              "fontSize": "24px",
+              "lines": [
+                "《星暦をめくる令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《夜咲きの園丁》",
+              "fontSize": "24px",
+              "lines": [
+                "《夜咲きの園丁》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《果樹園のいたずら猫》",
+              "fontSize": "24px",
+              "lines": [
+                "《果樹園のいたずら猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《名もなき贈り主》",
+              "fontSize": "24px",
+              "lines": [
+                "《名もなき贈り主》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《気まぐれ郵便猫》",
+              "fontSize": "24px",
+              "lines": [
+                "《気まぐれ郵便猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《月影の反逆者》",
+              "fontSize": "24px",
+              "lines": [
+                "《月影の反逆者》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《放浪する時計師》",
+              "fontSize": "24px",
+              "lines": [
+                "《放浪する時計師》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《最後の一灯》",
+              "fontSize": "24px",
+              "lines": [
+                "《最後の一灯》"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《秘密のお茶会》",
+              "fontSize": "24px",
+              "lines": [
+                "《秘密のお茶会》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《冬支度の灯り》",
+              "fontSize": "24px",
+              "lines": [
+                "《冬支度の灯り》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《サロンの聞き手》",
+              "fontSize": "24px",
+              "lines": [
+                "《サロンの聞き手》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《古書室の猫》",
+              "fontSize": "24px",
+              "lines": [
+                "《古書室の猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《星図を囲む夜》",
+              "fontSize": "24px",
+              "lines": [
+                "《星図を囲む夜》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            }
+          ],
+          "origin": [
+            {
+              "value": "セント・ミルク宮殿に近い住宅街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "セント・ミルク宮殿に近い住宅街に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 21,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "王都ミューミンスターの学術街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "王都ミューミンスターの学術街に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 20,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "アヴェル川沿いのロウ・キーズに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川沿いのロウ・キーズに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 20,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "アヴェル川に近い小さな住宅街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川に近い小さな住宅街に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 20,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "王都行きの鉄道沿線の町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "王都行きの鉄道沿線の町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "サンミア湖畔の果樹園地帯に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "サンミア湖畔の果樹園地帯に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "オールド・ミンスターに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "オールド・ミンスターに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ベルグレイヴ・ガーデンズに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ベルグレイヴ・ガーデンズに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "フィッシュベル市場の近くに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "フィッシュベル市場の近くに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ピカデリー・ミューズに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ピカデリー・ミューズに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "王都の静かな裏通りに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "王都の静かな裏通りに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "白い丘のふもとの小さな町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "白い丘のふもとの小さな町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "白い断崖のふもとの集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "白い断崖のふもとの集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "海霧のかかる小さな漁村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "海霧のかかる小さな漁村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "オリーブ畑に囲まれた小村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "オリーブ畑に囲まれた小村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "港から離れた市場町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "港から離れた市場町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "波の静かな入り江の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "波の静かな入り江の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "東岸の葡萄農家の家並みに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "東岸の葡萄農家の家並みに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "海沿いの細い路地に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "海沿いの細い路地に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "フォックスリーに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "フォックスリーに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ブラッケンフォードに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ブラッケンフォードに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ハーヴァリーに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ハーヴァリーに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ダーンリー炭田に近い集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ダーンリー炭田に近い集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "街道を外れた小さな農村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "街道を外れた小さな農村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "石橋のたもとの集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "石橋のたもとの集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "低い丘の果樹園集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "低い丘の果樹園集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "草地に囲まれた小さな集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "草地に囲まれた小さな集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ブレドンに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ブレドンに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "トランドに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "トランドに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ペヴェレルに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ペヴェレルに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "アルダーコムに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アルダーコムに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "アスターリーに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アスターリーに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "マーデンに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "マーデンに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "キャロウデンに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "キャロウデンに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ウィットコムに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ウィットコムに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "森に寄り添う小村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "森に寄り添う小村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "野ばらの谷の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "野ばらの谷の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "朝霧のたまる農村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "朝霧のたまる農村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ハロウゲイトに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ハロウゲイトに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "オールド・ブラッケンに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "オールド・ブラッケンに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "モス・ホロウに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "モス・ホロウに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ナイツ・エンドに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ナイツ・エンドに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "古い城地に近い丘の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "古い城地に近い丘の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ダンコムに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ダンコムに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ウェストウォッチに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ウェストウォッチに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "レイヴン・クリフに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "レイヴン・クリフに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "木苺の森の縁の小村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "木苺の森の縁の小村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "谷あいの小さな集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "谷あいの小さな集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "深い森へ続く木工の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "深い森へ続く木工の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ラークフォードに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ラークフォードに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ベルクロスに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ベルクロスに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ウィロウミアに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ウィロウミアに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ストーンブリッジに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ストーンブリッジに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "レッドリーフに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "レッドリーフに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "サンミア湖の入り江の小村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "サンミア湖の入り江の小村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "水路沿いの果樹園の村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "水路沿いの果樹園の村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "なだらかな丘の農家の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "なだらかな丘の農家の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "渡し場のそばの家並みに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "渡し場のそばの家並みに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "湖の東岸の小さな村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "湖の東岸の小さな村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ハイフェルに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ハイフェルに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ケルドウィックに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ケルドウィックに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "山道の奥の小村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "山道の奥の小村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "冬の湖畔の村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "冬の湖畔の村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "星空の開ける高原の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "星空の開ける高原の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "峠の小さな宿場に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "峠の小さな宿場に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "雪深い谷奥の村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "雪深い谷奥の村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "風の強い北方の農家の家並みに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "風の強い北方の農家の家並みに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 19,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "湯治場から離れた小集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "湯治場から離れた小集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 281.75
+            }
+          ],
+          "single": {
+            "preface": "王国でのあなたが、一匹の猫として\nこの一冊に記されています。",
+            "subjectPadding": "25px 12px",
+            "frameWidth": 305.75,
+            "title": 40.3125
+          }
+        }
+      },
+      {
+        "width": 390,
+        "data": {
+          "coat": [
+            {
+              "value": "キジトラ",
+              "fontSize": "33px",
+              "lines": [
+                "キジトラ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "キジシロ",
+              "fontSize": "33px",
+              "lines": [
+                "キジシロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "チャトラ",
+              "fontSize": "33px",
+              "lines": [
+                "チャトラ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "チャシロ",
+              "fontSize": "33px",
+              "lines": [
+                "チャシロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "サバトラ",
+              "fontSize": "33px",
+              "lines": [
+                "サバトラ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "サバシロ",
+              "fontSize": "33px",
+              "lines": [
+                "サバシロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "クロ",
+              "fontSize": "33px",
+              "lines": [
+                "クロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 2,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "シロ",
+              "fontSize": "33px",
+              "lines": [
+                "シロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 2,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "グレー",
+              "fontSize": "33px",
+              "lines": [
+                "グレー"
+              ],
+              "lineCount": 1,
+              "lastLine": 3,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "グレーシロ",
+              "fontSize": "33px",
+              "lines": [
+                "グレーシロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ハチワレ",
+              "fontSize": "33px",
+              "lines": [
+                "ハチワレ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ミケ",
+              "fontSize": "33px",
+              "lines": [
+                "ミケ"
+              ],
+              "lineCount": 1,
+              "lastLine": 2,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "サビ",
+              "fontSize": "33px",
+              "lines": [
+                "サビ"
+              ],
+              "lineCount": 1,
+              "lastLine": 2,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ムギワラ",
+              "fontSize": "33px",
+              "lines": [
+                "ムギワラ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "クリーム",
+              "fontSize": "33px",
+              "lines": [
+                "クリーム"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ポイント",
+              "fontSize": "33px",
+              "lines": [
+                "ポイント"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "シミツキ",
+              "fontSize": "33px",
+              "lines": [
+                "シミツキ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "パステルトビ",
+              "fontSize": "33px",
+              "lines": [
+                "パステルトビ"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            }
+          ],
+          "title": [
+            {
+              "value": "《王家のパティシエ》",
+              "fontSize": "24px",
+              "lines": [
+                "《王家のパティシエ》"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《晩餐会の猫》",
+              "fontSize": "24px",
+              "lines": [
+                "《晩餐会の猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《冬布を継ぐ猫》",
+              "fontSize": "24px",
+              "lines": [
+                "《冬布を継ぐ猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《祝宴の女主人》",
+              "fontSize": "24px",
+              "lines": [
+                "《祝宴の女主人》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《時を継ぐ猫》",
+              "fontSize": "24px",
+              "lines": [
+                "《時を継ぐ猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《暦を守る猫》",
+              "fontSize": "24px",
+              "lines": [
+                "《暦を守る猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《午後三時の令嬢》",
+              "fontSize": "24px",
+              "lines": [
+                "《午後三時の令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《ケーキ屋通りの令嬢》",
+              "fontSize": "24px",
+              "lines": [
+                "《ケーキ屋通りの令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《便箋を選ぶ令嬢》",
+              "fontSize": "24px",
+              "lines": [
+                "《便箋を選ぶ令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《客間を開く令嬢》",
+              "fontSize": "24px",
+              "lines": [
+                "《客間を開く令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《蕾の庭の令嬢》",
+              "fontSize": "24px",
+              "lines": [
+                "《蕾の庭の令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《星暦をめくる令嬢》",
+              "fontSize": "24px",
+              "lines": [
+                "《星暦をめくる令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《夜咲きの園丁》",
+              "fontSize": "24px",
+              "lines": [
+                "《夜咲きの園丁》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《果樹園のいたずら猫》",
+              "fontSize": "24px",
+              "lines": [
+                "《果樹園のいたずら猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《名もなき贈り主》",
+              "fontSize": "24px",
+              "lines": [
+                "《名もなき贈り主》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《気まぐれ郵便猫》",
+              "fontSize": "24px",
+              "lines": [
+                "《気まぐれ郵便猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《月影の反逆者》",
+              "fontSize": "24px",
+              "lines": [
+                "《月影の反逆者》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《放浪する時計師》",
+              "fontSize": "24px",
+              "lines": [
+                "《放浪する時計師》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《最後の一灯》",
+              "fontSize": "24px",
+              "lines": [
+                "《最後の一灯》"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《秘密のお茶会》",
+              "fontSize": "24px",
+              "lines": [
+                "《秘密のお茶会》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《冬支度の灯り》",
+              "fontSize": "24px",
+              "lines": [
+                "《冬支度の灯り》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《サロンの聞き手》",
+              "fontSize": "24px",
+              "lines": [
+                "《サロンの聞き手》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《古書室の猫》",
+              "fontSize": "24px",
+              "lines": [
+                "《古書室の猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《星図を囲む夜》",
+              "fontSize": "24px",
+              "lines": [
+                "《星図を囲む夜》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            }
+          ],
+          "origin": [
+            {
+              "value": "セント・ミルク宮殿に近い住宅街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "セント・ミルク宮殿に近い住宅街に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 21,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "王都ミューミンスターの学術街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "王都ミューミンスターの学術街に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 20,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "アヴェル川沿いのロウ・キーズに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川沿いのロウ・キーズに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 20,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "アヴェル川に近い小さな住宅街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川に近い小さな住宅街に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 20,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "王都行きの鉄道沿線の町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "王都行きの鉄道沿線の町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "サンミア湖畔の果樹園地帯に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "サンミア湖畔の果樹園地帯に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "オールド・ミンスターに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "オールド・ミンスターに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ベルグレイヴ・ガーデンズに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ベルグレイヴ・ガーデンズに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "フィッシュベル市場の近くに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "フィッシュベル市場の近くに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ピカデリー・ミューズに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ピカデリー・ミューズに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "王都の静かな裏通りに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "王都の静かな裏通りに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "白い丘のふもとの小さな町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "白い丘のふもとの小さな町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "白い断崖のふもとの集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "白い断崖のふもとの集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "海霧のかかる小さな漁村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "海霧のかかる小さな漁村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "オリーブ畑に囲まれた小村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "オリーブ畑に囲まれた小村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "港から離れた市場町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "港から離れた市場町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "波の静かな入り江の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "波の静かな入り江の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "東岸の葡萄農家の家並みに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "東岸の葡萄農家の家並みに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "海沿いの細い路地に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "海沿いの細い路地に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "フォックスリーに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "フォックスリーに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ブラッケンフォードに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ブラッケンフォードに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ハーヴァリーに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ハーヴァリーに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ダーンリー炭田に近い集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ダーンリー炭田に近い集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "街道を外れた小さな農村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "街道を外れた小さな農村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "石橋のたもとの集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "石橋のたもとの集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "低い丘の果樹園集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "低い丘の果樹園集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "草地に囲まれた小さな集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "草地に囲まれた小さな集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ブレドンに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ブレドンに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "トランドに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "トランドに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ペヴェレルに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ペヴェレルに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "アルダーコムに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アルダーコムに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "アスターリーに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アスターリーに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "マーデンに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "マーデンに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "キャロウデンに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "キャロウデンに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ウィットコムに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ウィットコムに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "森に寄り添う小村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "森に寄り添う小村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "野ばらの谷の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "野ばらの谷の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "朝霧のたまる農村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "朝霧のたまる農村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ハロウゲイトに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ハロウゲイトに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "オールド・ブラッケンに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "オールド・ブラッケンに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "モス・ホロウに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "モス・ホロウに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ナイツ・エンドに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ナイツ・エンドに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "古い城地に近い丘の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "古い城地に近い丘の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ダンコムに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ダンコムに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ウェストウォッチに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ウェストウォッチに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "レイヴン・クリフに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "レイヴン・クリフに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "木苺の森の縁の小村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "木苺の森の縁の小村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "谷あいの小さな集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "谷あいの小さな集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "深い森へ続く木工の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "深い森へ続く木工の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ラークフォードに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ラークフォードに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ベルクロスに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ベルクロスに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ウィロウミアに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ウィロウミアに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ストーンブリッジに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ストーンブリッジに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "レッドリーフに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "レッドリーフに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "サンミア湖の入り江の小村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "サンミア湖の入り江の小村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "水路沿いの果樹園の村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "水路沿いの果樹園の村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "なだらかな丘の農家の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "なだらかな丘の農家の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "渡し場のそばの家並みに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "渡し場のそばの家並みに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "湖の東岸の小さな村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "湖の東岸の小さな村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ハイフェルに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ハイフェルに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ケルドウィックに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ケルドウィックに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "山道の奥の小村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "山道の奥の小村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "冬の湖畔の村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "冬の湖畔の村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "星空の開ける高原の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "星空の開ける高原の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "峠の小さな宿場に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "峠の小さな宿場に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "雪深い谷奥の村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "雪深い谷奥の村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "風の強い北方の農家の家並みに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "風の強い北方の農家の家並みに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 19,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "湯治場から離れた小集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "湯治場から離れた小集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 294.875
+            }
+          ],
+          "single": {
+            "preface": "王国でのあなたが、一匹の猫として\nこの一冊に記されています。",
+            "subjectPadding": "25px 12px",
+            "frameWidth": 318.875,
+            "title": 40.3125
+          }
+        }
+      },
+      {
+        "width": 768,
+        "data": {
+          "coat": [
+            {
+              "value": "キジトラ",
+              "fontSize": "38px",
+              "lines": [
+                "キジトラ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "キジシロ",
+              "fontSize": "38px",
+              "lines": [
+                "キジシロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "チャトラ",
+              "fontSize": "38px",
+              "lines": [
+                "チャトラ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "チャシロ",
+              "fontSize": "38px",
+              "lines": [
+                "チャシロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "サバトラ",
+              "fontSize": "38px",
+              "lines": [
+                "サバトラ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "サバシロ",
+              "fontSize": "38px",
+              "lines": [
+                "サバシロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "クロ",
+              "fontSize": "38px",
+              "lines": [
+                "クロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 2,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "シロ",
+              "fontSize": "38px",
+              "lines": [
+                "シロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 2,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "グレー",
+              "fontSize": "38px",
+              "lines": [
+                "グレー"
+              ],
+              "lineCount": 1,
+              "lastLine": 3,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "グレーシロ",
+              "fontSize": "38px",
+              "lines": [
+                "グレーシロ"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ハチワレ",
+              "fontSize": "38px",
+              "lines": [
+                "ハチワレ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ミケ",
+              "fontSize": "38px",
+              "lines": [
+                "ミケ"
+              ],
+              "lineCount": 1,
+              "lastLine": 2,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "サビ",
+              "fontSize": "38px",
+              "lines": [
+                "サビ"
+              ],
+              "lineCount": 1,
+              "lastLine": 2,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ムギワラ",
+              "fontSize": "38px",
+              "lines": [
+                "ムギワラ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "クリーム",
+              "fontSize": "38px",
+              "lines": [
+                "クリーム"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ポイント",
+              "fontSize": "38px",
+              "lines": [
+                "ポイント"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "シミツキ",
+              "fontSize": "38px",
+              "lines": [
+                "シミツキ"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "パステルトビ",
+              "fontSize": "38px",
+              "lines": [
+                "パステルトビ"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 461
+            }
+          ],
+          "title": [
+            {
+              "value": "《王家のパティシエ》",
+              "fontSize": "29px",
+              "lines": [
+                "《王家のパティシエ》"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《晩餐会の猫》",
+              "fontSize": "29px",
+              "lines": [
+                "《晩餐会の猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《冬布を継ぐ猫》",
+              "fontSize": "29px",
+              "lines": [
+                "《冬布を継ぐ猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《祝宴の女主人》",
+              "fontSize": "29px",
+              "lines": [
+                "《祝宴の女主人》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《時を継ぐ猫》",
+              "fontSize": "29px",
+              "lines": [
+                "《時を継ぐ猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《暦を守る猫》",
+              "fontSize": "29px",
+              "lines": [
+                "《暦を守る猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《午後三時の令嬢》",
+              "fontSize": "29px",
+              "lines": [
+                "《午後三時の令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《ケーキ屋通りの令嬢》",
+              "fontSize": "29px",
+              "lines": [
+                "《ケーキ屋通りの令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《便箋を選ぶ令嬢》",
+              "fontSize": "29px",
+              "lines": [
+                "《便箋を選ぶ令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《客間を開く令嬢》",
+              "fontSize": "29px",
+              "lines": [
+                "《客間を開く令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《蕾の庭の令嬢》",
+              "fontSize": "29px",
+              "lines": [
+                "《蕾の庭の令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《星暦をめくる令嬢》",
+              "fontSize": "29px",
+              "lines": [
+                "《星暦をめくる令嬢》"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《夜咲きの園丁》",
+              "fontSize": "29px",
+              "lines": [
+                "《夜咲きの園丁》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《果樹園のいたずら猫》",
+              "fontSize": "29px",
+              "lines": [
+                "《果樹園のいたずら猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《名もなき贈り主》",
+              "fontSize": "29px",
+              "lines": [
+                "《名もなき贈り主》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《気まぐれ郵便猫》",
+              "fontSize": "29px",
+              "lines": [
+                "《気まぐれ郵便猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《月影の反逆者》",
+              "fontSize": "29px",
+              "lines": [
+                "《月影の反逆者》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《放浪する時計師》",
+              "fontSize": "29px",
+              "lines": [
+                "《放浪する時計師》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《最後の一灯》",
+              "fontSize": "29px",
+              "lines": [
+                "《最後の一灯》"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《秘密のお茶会》",
+              "fontSize": "29px",
+              "lines": [
+                "《秘密のお茶会》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《冬支度の灯り》",
+              "fontSize": "29px",
+              "lines": [
+                "《冬支度の灯り》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《サロンの聞き手》",
+              "fontSize": "29px",
+              "lines": [
+                "《サロンの聞き手》"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《古書室の猫》",
+              "fontSize": "29px",
+              "lines": [
+                "《古書室の猫》"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "《星図を囲む夜》",
+              "fontSize": "29px",
+              "lines": [
+                "《星図を囲む夜》"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 406
+            }
+          ],
+          "origin": [
+            {
+              "value": "セント・ミルク宮殿に近い住宅街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "セント・ミルク宮殿に近い住宅街に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 21,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "王都ミューミンスターの学術街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "王都ミューミンスターの学術街に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 20,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "アヴェル川沿いのロウ・キーズに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川沿いのロウ・キーズに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 20,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "アヴェル川に近い小さな住宅街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川に近い小さな住宅街に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 20,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "王都行きの鉄道沿線の町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "王都行きの鉄道沿線の町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "サンミア湖畔の果樹園地帯に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "サンミア湖畔の果樹園地帯に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "オールド・ミンスターに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "オールド・ミンスターに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ベルグレイヴ・ガーデンズに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ベルグレイヴ・ガーデンズに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "フィッシュベル市場の近くに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "フィッシュベル市場の近くに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ピカデリー・ミューズに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ピカデリー・ミューズに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "王都の静かな裏通りに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "王都の静かな裏通りに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "白い丘のふもとの小さな町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "白い丘のふもとの小さな町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "白い断崖のふもとの集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "白い断崖のふもとの集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "海霧のかかる小さな漁村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "海霧のかかる小さな漁村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "オリーブ畑に囲まれた小村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "オリーブ畑に囲まれた小村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "港から離れた市場町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "港から離れた市場町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "波の静かな入り江の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "波の静かな入り江の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "東岸の葡萄農家の家並みに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "東岸の葡萄農家の家並みに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "海沿いの細い路地に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "海沿いの細い路地に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "フォックスリーに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "フォックスリーに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ブラッケンフォードに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ブラッケンフォードに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ハーヴァリーに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ハーヴァリーに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ダーンリー炭田に近い集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ダーンリー炭田に近い集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "街道を外れた小さな農村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "街道を外れた小さな農村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "石橋のたもとの集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "石橋のたもとの集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "低い丘の果樹園集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "低い丘の果樹園集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "草地に囲まれた小さな集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "草地に囲まれた小さな集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ブレドンに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ブレドンに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "トランドに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "トランドに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ペヴェレルに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ペヴェレルに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "アルダーコムに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アルダーコムに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "アスターリーに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アスターリーに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "マーデンに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "マーデンに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "キャロウデンに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "キャロウデンに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ウィットコムに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ウィットコムに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "森に寄り添う小村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "森に寄り添う小村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "野ばらの谷の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "野ばらの谷の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "朝霧のたまる農村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "朝霧のたまる農村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ハロウゲイトに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ハロウゲイトに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "オールド・ブラッケンに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "オールド・ブラッケンに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "モス・ホロウに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "モス・ホロウに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ナイツ・エンドに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ナイツ・エンドに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "古い城地に近い丘の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "古い城地に近い丘の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ダンコムに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ダンコムに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ウェストウォッチに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ウェストウォッチに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "レイヴン・クリフに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "レイヴン・クリフに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "木苺の森の縁の小村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "木苺の森の縁の小村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "谷あいの小さな集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "谷あいの小さな集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "深い森へ続く木工の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "深い森へ続く木工の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ラークフォードに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ラークフォードに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ベルクロスに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ベルクロスに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ウィロウミアに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ウィロウミアに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ストーンブリッジに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ストーンブリッジに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "レッドリーフに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "レッドリーフに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "サンミア湖の入り江の小村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "サンミア湖の入り江の小村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "水路沿いの果樹園の村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "水路沿いの果樹園の村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "なだらかな丘の農家の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "なだらかな丘の農家の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 18,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "渡し場のそばの家並みに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "渡し場のそばの家並みに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "湖の東岸の小さな村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "湖の東岸の小さな村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ハイフェルに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ハイフェルに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ケルドウィックに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ケルドウィックに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "山道の奥の小村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "山道の奥の小村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "冬の湖畔の村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "冬の湖畔の村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "星空の開ける高原の集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "星空の開ける高原の集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "峠の小さな宿場に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "峠の小さな宿場に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "雪深い谷奥の村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "雪深い谷奥の村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "風の強い北方の農家の家並みに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "風の強い北方の農家の家並みに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 19,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "湯治場から離れた小集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "湯治場から離れた小集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 461
+            }
+          ],
+          "single": {
+            "preface": "王国でのあなたが、一匹の猫として\nこの一冊に記されています。",
+            "subjectPadding": "26px 17px 27px",
+            "frameWidth": 495,
+            "title": 50.390625
+          }
+        }
+      }
+    ],
+    "issues": [],
+    "notes": "Typography stress audit. This does not change quiz or population."
+  }
+}
