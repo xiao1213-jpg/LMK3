@@ -1,5 +1,5 @@
 name: LMK v12 visual QA
-# Second pass: verify ceremonial line breaks and compact share disclosure
+# Third pass: verify corrected HTML nesting and Japanese paragraph layout
 on:
   push:
     paths:
