@@ -1,5 +1,5 @@
 name: LMK v14 noble typography QA
-# Re-check one-line royal cypher and nobly centered typography at narrow widths
+# Verify shortened first letter line remains intact at 320px and all layouts
 on:
   push:
     paths:
