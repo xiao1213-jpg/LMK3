@@ -621,7 +621,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 .result-page .guide-story-name{font-size:18px;line-height:1.6}
 .result-page .guide-story-scene{max-width:33em;font-size:13.5px;line-height:1.9}
 @media(max-width:520px){.dossier-place-tag{font-size:11.5px}.result-page .guide-story-scene{font-size:13px}}
-</style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script><script src="assets/kingdom-notes-v11.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
+</style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script><script src="assets/kingdom-notes-v11.js"></script><!-- Open-world birthplace preview: sample localities are not a complete gazetteer. --></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">A STORY BEGINS</div>
 <div class="cat"><svg class="start-cat-emblem" viewBox="0 0 124 92" fill="none" aria-hidden="true"><path d="M26 42 26 16 44 28Q62 22 80 28L98 16 98 42Q103 48 100 60Q93 77 62 78Q31 77 24 60Q21 49 26 42Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M43 48Q48 44 53 48M71 48Q76 44 81 48M57 59l5 4 5-4m-5 4v3m0 0q-6 5-11 0m11 0q6 5 11 0M38 57l-15-4m15 10-15 2m63-8 15-4m-15 10 15 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
 <h1 class="title">もし、あなたが<br>一匹の猫だったら。</h1>
@@ -1237,7 +1237,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     const heirloom = pick(family[2],random);
     const probability = (coatEntry[1]/100) * (region.weight/100) * birthplaceProbability * (family[1]/100) * titleProbability * (1/family[2].length);
     const oneIn = Math.max(1,Math.round(1/probability));
-    const tier = probability >= .000104 ? "ivory" : probability >= .00003168 ? "silver" : probability >= .000006 ? "gold" : "crown";
+    const tier = probability >= .00003811764705882352 ? "ivory" : probability >= .0000108 ? "silver" : probability >= .0000021176470588235296 ? "gold" : "crown";
     return {seed:seed >>> 0,coat,coatEpithet:coatEpithets[coat] || `${coat}の猫`,region:region.name,regionId:region.id,birthplace,birthplaceIndex,placeTag:place.tag,placeScene:place.scene,family:familyName,familyIndex,heirloom,registry:registryNumber(seed),probability,oneIn,tier};
   }
 
