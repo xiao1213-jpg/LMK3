@@ -1190,14 +1190,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
   function readTakeHomeState() {
     const raw = location.hash.slice(1);
     const separator = raw.indexOf("~");
-    const resultId = separator > 0 ? raw.slice(0,separator) : raw;
-    const payload = separator > 0 ? raw.slice(separator + 1) : "";
+    const invited = raw.startsWith("invitation_page~");
+    const fields = invited ? raw.split("~") : null;
+    const resultId = invited ? fields[1] : separator > 0 ? raw.slice(0,separator) : raw;
+    const payload = invited ? fields[2] || "" : separator > 0 ? raw.slice(separator + 1) : "";
     if (payload) {
       const snapshot = decodeTakeHome(resultId,payload);
       if (!snapshot) return null;
       storeCarriedSnapshot(snapshot);
       try { sessionStorage.setItem("littleMewLastResult",JSON.stringify(snapshot)); } catch (_) {}
-      history.replaceState(null,"",location.pathname + location.search + "#" + resultId);
+      history.replaceState(null,"",location.pathname + location.search + "#" + (invited ? "invitation_page" : resultId));
       window.lmkTrack?.("take_home_open",{result_id:resultId});
       return {snapshot,carried:true};
     }
@@ -1213,8 +1215,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     if (!payload) return "";
     const url = new URL(location.pathname.endsWith("/preview-v8.html") ? "preview-v8.html" : "index.html",document.baseURI);
     url.searchParams.set("mode","mobile");
-    url.searchParams.set("v","20261109-v8-preview");
-    url.hash = resultId + "~" + payload;
+    url.searchParams.set("v","20261109-v9-invitation");
+    url.hash = "invitation_page~" + resultId + "~" + payload;
     return url.toString();
   }
 
@@ -1234,15 +1236,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
         <h2 class="take-home-title">この猫を連れてきました</h2>
         <span class="take-home-result">「${title}」</span>
         <div class="take-home-arrived-mark" aria-hidden="true">🐈</div>
-        <p class="take-home-copy">診断結果と回答の濃淡を、<br><strong>このスマホで見返せます。</strong></p>`;
+        <p class="take-home-copy">招待状と二つの記録が、このスマホに届いています。</p>`;
     } else {
       const url = takeHomeUrl(resultId,snapshot);
       card.innerHTML = `
         <span class="take-home-kicker">LITTLE MEW TAKE HOME</span>
-        <h2 class="take-home-title">この猫を連れて帰る</h2>
+        <h2 class="take-home-title">あなたの招待状を持ち帰る</h2>
         <span class="take-home-result">「${title}」</span>
         <div class="take-home-qr-wrap"><div class="take-home-qr" role="img" aria-label="この診断結果をスマホで開くQRコード"></div></div>
-        <p class="take-home-copy">QRコードを読み取ると、<br><strong>診断結果と回答の濃淡</strong>がスマホで開きます。</p>`;
+        <p class="take-home-copy">QRコードから、スマホに同じ招待状が届きます。<br>封を開けば、あなたの記録もそのまま。</p>`;
       const qrTarget = card.querySelector(".take-home-qr");
       try {
         new QRCode(qrTarget,{text:url,width:218,height:218,colorDark:"#392f2b",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.M});
@@ -1258,7 +1260,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
         }
         window.lmkTrack?.("take_home_qr_shown",{result_id:resultId});
       } catch (_) {
-        qrTarget.closest(".take-home-qr-wrap").innerHTML = '<p class="take-home-copy">QRコードを表示できませんでした。下の「結果を共有する」をお試しください。</p>';
+        qrTarget.closest(".take-home-qr-wrap").innerHTML = '<p class="take-home-copy">QRコードを表示できませんでした。スマホのカメラでもう一度お試しください。</p>';
       }
     }
     goods.after(card);
@@ -1447,6 +1449,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     if (!snapshot.provenance?.tier) snapshot.provenance = generateProvenance(snapshot.seed || 0);
     const number = document.getElementById("dossier_number");
     if (number) number.textContent = "REGISTER · " + snapshot.provenance.registry;
+    document.getElementById("dossier_subject_coat").textContent = snapshot.provenance.coat;
+    document.getElementById("dossier_subject_origin").textContent = snapshot.provenance.birthplace + "生まれ";
+    document.getElementById("dossier_subject_portrait").textContent = "《" + resultTitle(snapshot.resultId) + "》";
+    if (!isStoreMode) void drawInvitationArtwork(snapshot);
     document.getElementById("open_portrait").onclick = () => {
       decorateResult(snapshot.resultId,snapshot,{carried:isCarriedView});
       location.hash = snapshot.resultId;
@@ -1454,7 +1460,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     };
     document.getElementById("open_registration").onclick = () => openProvenance(snapshot);
     renderTakeHomeCard(document.getElementById("result_portal"),snapshot.resultId,snapshot,isCarriedView);
-    document.getElementById("dossier_share").onclick = () => shareResult(snapshot.resultId);
+    document.getElementById("dossier_share").onclick = () => shareInvitation(snapshot);
+    document.getElementById("dossier_save").onclick = () => saveInvitationArtwork(snapshot);
   }
 
   function openResultPortal(snapshot) {
