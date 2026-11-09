@@ -435,6 +435,17 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
 .provenance-page .card{padding:23px 19px!important}
 }
 @media(prefers-reduced-motion:reduce){.envelope,.wax-seal{animation:none!important;transition:none!important}}
+
+/* One transfer point, on the dossier cover */
+.dossier-actions{display:grid;justify-items:center;margin:26px auto 2px}
+.dossier-actions .quiet-action{width:min(100%,330px);border-color:#705b43;color:#fff;background:#564737;min-height:54px}
+.dossier-cover .take-home-card{max-width:410px;margin:25px auto 0;background:#fffaf0;border-color:#d5c2a1;border-radius:8px;box-shadow:none}
+.dossier-cover .take-home-card::before{display:none}
+.dossier-cover .take-home-title{font:600 23px/1.5 var(--lmk-serif);color:#4d4033}
+.dossier-cover .take-home-result{display:none}
+.dossier-cover .take-home-copy{font-size:13px}
+.mode-store .dossier-actions{display:none}
+.mode-mobile .dossier-cover .take-home-card{display:none}
 </style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">LITTLE MEW</div>
 <div class="cat">🐈</div>
@@ -478,6 +489,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
 <button class="dossier-entry" id="open_registration" type="button"><span class="dossier-numeral">Ⅱ</span><span class="dossier-entry-text"><small>GENERAL REGISTER OFFICE</small><strong>王国来歴証</strong><em>毛並み、生まれ、家に残るもの。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
 </div>
 <p class="dossier-footnote">いずれも、あなたのために綴じられた記録です。</p>
+<div class="dossier-actions"><button type="button" id="dossier_share" class="quiet-action primary">結果を共有する</button><p class="share-status" id="dossier_share_status" aria-live="polite"></p></div>
 <a class="portal-restart" href="#start_page">最初から診断する</a>
 </div></section>
 <section id="provenance_page" class="page provenance-page tier-ivory"><div class="card provenance-sheet">
@@ -1122,9 +1134,9 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
   function takeHomeUrl(resultId,snapshot) {
     const payload = encodeTakeHome(snapshot);
     if (!payload) return "";
-    const url = new URL("index.html",document.baseURI);
+    const url = new URL(location.pathname.endsWith("/preview-v8.html") ? "preview-v8.html" : "index.html",document.baseURI);
     url.searchParams.set("mode","mobile");
-    url.searchParams.set("v","20261109-v11");
+    url.searchParams.set("v","20261109-v8-preview");
     url.hash = resultId + "~" + payload;
     return url.toString();
   }
@@ -1133,7 +1145,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
     page.querySelector(".take-home-card")?.remove();
     if (!isStoreMode) return;
     if (!snapshot) return;
-    const goods = page.querySelector(".goods");
+    const goods = page.querySelector(".goods") || page.querySelector(".dossier-index");
     if (!goods) return;
     const title = resultTitle(resultId);
     const card = document.createElement("aside");
@@ -1364,6 +1376,8 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
       window.scrollTo({top:0,behavior:"auto"});
     };
     document.getElementById("open_registration").onclick = () => openProvenance(snapshot);
+    renderTakeHomeCard(document.getElementById("result_portal"),snapshot.resultId,snapshot,isCarriedView);
+    document.getElementById("dossier_share").onclick = () => shareResult(snapshot.resultId);
   }
 
   function openResultPortal(snapshot) {
@@ -1553,7 +1567,8 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
       </details>`;
     const desc = card.querySelector(".desc");
     desc.after(section);
-    renderTakeHomeForResult(resultId,snapshot,options.carried === true);
+    // The single transfer/QR card belongs to the dossier cover, not the portrait.
+    page.querySelector(".take-home-card")?.remove();
 
     let actions = card.querySelector(".result-actions");
     if (!actions) {
@@ -1586,7 +1601,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
     const url = new URL(`share/${resultId}.html`, location.href);
     url.searchParams.set("v", "20261101-3");
     const data = {title:"リトル・ミュー診断", text:`私は「${title}」でした。あなたはリトル・ミューのどの猫？`, url:url.toString()};
-    const status = document.querySelector(`#${resultId} .share-status`);
+    const status = location.hash === "#result_portal" ? document.getElementById("dossier_share_status") : document.querySelector(`#${resultId} .share-status`);
     try {
       if (navigator.share) {
         status.textContent = "共有メニューを開いています";
