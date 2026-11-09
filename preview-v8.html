@@ -325,9 +325,9 @@ body:has(#start_page:target) #start_page{display:block!important}
 <h1 class="title">王国で、あなたはどの猫？</h1>
 <p class="intro"><span>古い時計。秘密の手紙。</span>
 <span>午後のお茶会。月明かりの路地。</span>
-<span class="intro-prompt">九つの扉を選び終えると、<br>あなたの猫の肖像と、王国に記される姿がひらかれます。</span></p>
+<span class="intro-prompt">九つの選択の先に、王国から一通の手紙。</span></p>
 <a class="start" id="start_quiz" href="#quiz_page">王国への扉をひらく</a>
-<div class="note">全9問・すべて2択</div><p class="scope-note">問いから描かれる「猫の肖像」と、王室から授けられる「猫としての記録」。二つを重ねて、王国でのあなたを見つけます。</p>
+<div class="note">9つの問い · すべて二択</div>
 </div></section><section id="quiz_page" class="page"><div class="card" id="quiz_card">
 <div class="quiz-top"><div class="progress" id="quiz_progress">1 / 9</div><button class="back-button" id="quiz_back" type="button" hidden>← ひとつ戻る</button></div>
 <div class="progress-track" aria-hidden="true"><span class="progress-fill" id="quiz_progress_fill"></span></div>
@@ -335,52 +335,46 @@ body:has(#start_page:target) #start_page{display:block!important}
 <div class="q" id="quiz_question"></div>
 <div id="quiz_answers" aria-live="polite"></div>
 </div></section><section id="invitation_page" class="page"><div class="card invitation-card" id="invitation_card">
-<div class="arrival-kicker">POST FROM LITTLE MEW</div>
-<h1 class="arrival-title">国王陛下から<br>招待状が届きました</h1>
-<p class="arrival-copy">王室の封蝋が押された、正式な招待状です。</p>
-<button class="envelope" id="open_invitation" type="button" aria-label="赤い封蝋を押して招待状を開く"><span class="wax-seal"><svg class="wax-seal-mark" viewBox="0 0 100 50" aria-hidden="true"><path d="M7 18C12 10 21 3 27 8c5 5-2 13-9 11-5-1-4-6 1-10-3 7-5 17-7 25-2 8 11 9 22-1"/><path d="M31 39c2-12 4-24 8-31 2-4 5-1 5 4l2 19c4-9 9-20 14-23 4-2 3 8 1 16l-3 15"/><path d="M66 40c2-12 4-23 7-33M69 27c8-5 14-12 18-18M72 25c4 4 8 10 16 16"/></svg></span></button>
-<p class="office-line"><strong>リトル・ミュー王国 王室侍従長室</strong><em>Office of the Lord Chamberlain</em></p>
+<div class="arrival-kicker">FROM ST. MILK PALACE</div>
+<h1 class="arrival-title">王国から、<br>手紙が届きました。</h1>
+<p class="arrival-copy">赤い封蝋を押して、封をお開きください。</p>
+<button class="envelope" id="open_invitation" type="button" aria-label="封蝋を押して招待状をひらく"><span class="wax-seal"><span class="wax-royal" aria-hidden="true">T<span>Ⅲ</span>R</span></span></button>
+<p class="office-line"><strong>セント・ミルク宮殿</strong><em>St. Milk Palace · Royal Household</em></p>
 <article class="royal-letter" id="royal_letter" aria-live="polite">
-<div class="royal-letter-cypher" aria-hidden="true">T III R</div>
+<div class="royal-letter-cypher" aria-hidden="true">T Ⅲ R</div>
 <span class="royal-letter-command">BY COMMAND OF HIS MAJESTY THE KING</span>
 <h2>国王陛下よりの招待状</h2>
 <p class="royal-letter-salutation">あなたへ</p>
-<p class="royal-letter-body">国王ティボルト三世陛下の御意により、九つの問いを終えたあなたを、ここにリトル・ミュー王国へお招きします。</p>
-<strong class="royal-letter-name" id="royal_letter_name">あなたのための、二つの証</strong>
-<p class="royal-letter-body">ひとつは、心に宿る猫を描いた《猫の肖像》。もうひとつは、その猫が王国でまとう姿を記した《王室来訪者登録証》。</p>
-<p class="royal-letter-closing">二つを重ねたとき、王国でのあなたが、一匹の猫として歩きはじめます。</p>
-<p class="royal-letter-sign">国王陛下の命により<br>セント・ミルク宮殿　王室侍従長室<span class="royal-letter-register" id="royal_letter_register"></span></p>
-<button class="start" id="enter_kingdom" type="button">二つの証を受け取る</button>
-</article>
-</div></section><section id="result_portal" class="page result-portal"><div class="card">
-<span class="portal-kicker">TWO RECORDS FOR YOU</span>
-<div class="portal-seal" aria-hidden="true">LMK</div>
-<h1 class="portal-heading">二つの証を、<br>一匹のあなたへ</h1>
-<p class="portal-intro"><span>九つの問いが描いたのは、あなたの心に宿る猫。</span><span>王国の石畳へ降り立つとき、</span><span>その猫は、もうひとつの姿をまといます。</span></p>
-<div class="portal-documents">
-<button class="portal-document portrait-document" id="open_portrait" type="button">
-<span class="portal-document-number">I</span><span class="portal-document-kicker">CAT PORTRAIT</span>
-<strong>猫の肖像</strong><em id="portal_portrait_name">あなたの心から描かれた猫</em><small>心の輪郭をひらく</small>
-</button>
-<button class="portal-document register-document" id="open_registration" type="button">
-<span class="portal-document-number">II</span><span class="portal-document-kicker">ROYAL REGISTER</span>
-<strong>王室来訪者登録証</strong><em id="portal_coat_hint">王国でまとう猫としての姿</em><small>王国での姿をひらく</small>
-</button>
+<p class="royal-letter-body">ティボルト三世陛下の御意により、ここにあなたをリトル・ミュー王国へお招きします。</p>
+<p class="royal-letter-body">王室侍従長室では、お迎えのための一冊を用意いたしました。どうぞお受け取りください。</p>
+<p class="royal-letter-sign">国王陛下の命により<br>王室侍従長室<span class="royal-letter-register" id="royal_letter_register"></span></p>
+<button class="start" id="enter_kingdom" type="button">一件簿を受け取る</button>
+</article></div></section>
+<section id="result_portal" class="page result-portal"><div class="card dossier-cover">
+<div class="dossier-topline"><span>THE ROYAL HOUSEHOLD</span><span>ST. MILK PALACE</span></div>
+<div class="dossier-emblem" aria-hidden="true">✦</div>
+<p class="dossier-overline">ROYAL VISITOR'S DOSSIER</p>
+<h1 class="portal-heading">王室来訪者一件簿</h1>
+<p class="dossier-number" id="dossier_number">REGISTER · LMK</p>
+<p class="dossier-preface">ひとつの招待に、二通の記録。<br>それぞれ、異なる方法で整えられました。</p>
+<div class="dossier-index" aria-label="同封の記録">
+<button class="dossier-entry" id="open_portrait" type="button"><span class="dossier-numeral">Ⅰ</span><span class="dossier-entry-text"><small>ROYAL PORTRAIT GALLERY</small><strong>心象肖像</strong><em>九つの答えを、一枚の寓意に。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
+<button class="dossier-entry" id="open_registration" type="button"><span class="dossier-numeral">Ⅱ</span><span class="dossier-entry-text"><small>GENERAL REGISTER OFFICE</small><strong>王国来歴証</strong><em>毛並み、生まれ、家に残るもの。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
 </div>
-<div class="portal-union" aria-live="polite"><span class="portal-union-kicker">二つを重ねた、王国でのあなた</span><p><strong id="portal_union_title">心に宿る猫</strong><span class="portal-union-line">の肖像を胸に、</span><b id="portal_union_coat">王国の毛並み</b><span class="portal-union-line">として、王国へ。</span></p></div>
-<a class="portal-restart" href="#start_page">もう一度診断する</a>
-</div></section><section id="provenance_page" class="page provenance-page tier-ivory"><div class="card">
-<nav class="certificate-switcher" aria-label="二つの証">
-<button id="switch_to_portrait" type="button">猫の肖像</button><button class="is-active" type="button" aria-current="page">王室登録証</button>
+<p class="dossier-footnote">いずれも、あなたのために綴じられた記録です。</p>
+<a class="portal-restart" href="#start_page">最初から診断する</a>
+</div></section>
+<section id="provenance_page" class="page provenance-page tier-ivory"><div class="card provenance-sheet">
+<nav class="certificate-switcher" aria-label="記録を切り替える">
+<button id="switch_to_portrait" type="button">心象肖像</button><button class="is-active" type="button" aria-current="page">王国来歴証</button>
 </nav>
-<div class="record-seal" aria-hidden="true">LMK</div>
-<div class="record-rarity" id="record_rarity">アイヴォリー記録</div>
-<h1 class="record-heading">王国に記されたあなた</h1>
-<p class="record-probability" id="record_probability"></p>
-<p class="record-intro">《猫の肖像》を携えて王国の門をくぐったあなたが、ここでまとった姿です。</p>
-<p class="record-tier-note" id="record_tier_note"></p>
+<header class="registry-masthead"><span>GENERAL REGISTER OFFICE</span><span class="registry-crest" aria-hidden="true">✥</span>
+<h1>王国来歴証</h1><p>リトル・ミュー王国 総登記局</p></header>
+<p class="registry-registration" id="registry_registration"></p>
 <div id="provenance_record_mount"></div>
-<button class="start" id="return_portal" type="button">二つの証へ戻る</button>
+<footer class="registry-footer"><div class="record-rarity" id="record_rarity"></div>
+<p id="record_probability"></p><p id="record_tier_note"></p></footer>
+<button class="start" id="return_portal" type="button">一件簿に戻る</button>
 </div></section><section id="result_blood_life_quiet" class="page result-page theme-blood"><div class="card">
 <div class="kicker">YOUR LITTLE MEW TYPE</div><div class="category-mark"><span>気高き血統</span><em>The Crimson Crown</em></div><div class="cat">🐈</div>
 <div class="small">CAT No.23</div><h1 class="title">王家のパティシエ</h1>
@@ -707,30 +701,31 @@ body:has(#start_page:target) #start_page{display:block!important}
   }[`${relation},${expression}`]);
 
   const coatPool = [
-    ["キジトラ",16],["キジ白",12],["茶トラ",11],["茶白",6],["サバトラ",9],["サバ白",6],
-    ["黒",9],["白",8],["灰",5],["灰白",4],["ハチワレ",6],["三毛",4],["サビ",2],
-    ["麦わら",.8],["クリーム",.6],["ポイント",.4],["しみ付き",.15],["淡色の二毛・三毛",.05]
+    ["キジトラ",16],["キジシロ",12],["チャトラ",11],["チャシロ",6],["サバトラ",9],["サバシロ",6],
+    ["クロ",9],["シロ",8],["グレー",5],["グレーシロ",4],["ハチワレ",6],["ミケ",4],["サビ",2],
+    ["ムギワラ",.8],["クリーム",.6],["ポイント",.4],["ブチ",.15],["パステルミケ",.025],["パステルサビ",.025]
   ];
 
   const coatEpithets = {
-    "キジトラ":"茶褐色の縞が美しく重なるキジトラ",
-    "キジ白":"深い縞に、やわらかな白が映えるキジ白",
-    "茶トラ":"陽だまり色の縞をもつ茶トラ",
-    "茶白":"あたたかな茶と、澄んだ白が映える茶白",
-    "サバトラ":"銀青の縞がくっきり走るサバトラ",
-    "サバ白":"銀青の縞に、澄んだ白が映えるサバ白",
-    "黒":"夜の光をつややかに映す黒猫",
-    "白":"朝の光をやわらかく映す白猫",
-    "灰":"薄明の空を思わせる灰猫",
-    "灰白":"淡い灰と白が静かに溶け合う灰白",
-    "ハチワレ":"墨色と白が鮮やかに分かれるハチワレ",
-    "三毛":"三つの色があざやかに重なる三毛猫",
-    "サビ":"琥珀と黒が細やかに混じるサビ猫",
-    "麦わら":"淡い金と墨色が繊細に混じる麦わら猫",
-    "クリーム":"淡いミルク色に光が差すクリーム猫",
-    "ポイント":"淡い毛並みに濃い色が映えるポイント猫",
-    "しみ付き":"白地に小さな色模様をもつ猫",
-    "淡色の二毛・三毛":"淡い色彩が水彩のように重なる二毛・三毛猫"
+    "キジトラ":"茶褐色に、細い縞が幾重にも走る",
+    "キジシロ":"深い縞のあいだに、澄んだ白がのぞく",
+    "チャトラ":"陽だまりのような茶に、柔らかな縞が重なる",
+    "チャシロ":"温かな茶色に、清らかな白が映える",
+    "サバトラ":"銀灰の毛並みを、涼やかな縞がよぎる",
+    "サバシロ":"銀灰の縞と白が、すっきりと際立つ",
+    "クロ":"光を受けるたび、深い黒に艶が浮かぶ",
+    "シロ":"朝の光を、やわらかく返す白",
+    "グレー":"薄明の空のように、穏やかな灰色",
+    "グレーシロ":"淡い灰色と白が、静かに寄り添う",
+    "ハチワレ":"額の模様がくっきりと分かれる",
+    "ミケ":"白地に、茶と黒の色模様が散る",
+    "サビ":"黒と赤褐色が、細やかに入り交じる",
+    "ムギワラ":"淡い茶と黒が、繊細な縞を描く",
+    "クリーム":"淡い金色が、毛先にふんわり広がる",
+    "ポイント":"明るい毛色に、顔や先端の濃淡が映える",
+    "ブチ":"明るい毛並みに、小さな色模様が散る",
+    "パステルミケ":"淡い三色が、水彩のように重なる",
+    "パステルサビ":"柔らかな灰と薄茶が、細やかに混じる"
   };
 
   const titlePool = [
