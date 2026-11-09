@@ -613,6 +613,14 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 .provenance-page .rarity-ledger .rarity-overline{letter-spacing:.11em}
 .provenance-page .rarity-ledger .record-rarity{font-weight:600}
 @media(prefers-reduced-motion:reduce){.provenance-page .rarity-ledger{animation:none!important;will-change:auto}}
+
+.dossier-place-tag{display:block;color:#a18b70;font:400 12px/1.7 var(--lmk-sans);margin:5px auto 0;letter-spacing:.015em}
+.dossier-subject-origin{line-height:1.65}
+.dossier-subject{padding-top:28px;padding-bottom:26px}
+.result-page .guide-story-heading{font-size:12px;line-height:1.6}
+.result-page .guide-story-name{font-size:18px;line-height:1.6}
+.result-page .guide-story-scene{max-width:33em;font-size:13.5px;line-height:1.9}
+@media(max-width:520px){.dossier-place-tag{font-size:11.5px}.result-page .guide-story-scene{font-size:13px}}
 </style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script><script src="assets/kingdom-notes-v10.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">A STORY BEGINS</div>
 <div class="cat"><svg class="start-cat-emblem" viewBox="0 0 124 92" fill="none" aria-hidden="true"><path d="M26 42 26 16 44 28Q62 22 80 28L98 16 98 42Q103 48 100 60Q93 77 62 78Q31 77 24 60Q21 49 26 42Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M43 48Q48 44 53 48M71 48Q76 44 81 48M57 59l5 4 5-4m-5 4v3m0 0q-6 5-11 0m11 0q6 5 11 0M38 57l-15-4m15 10-15 2m63-8 15-4m-15 10 15 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -649,7 +657,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 <h1 class="portal-heading">王室来訪者一件簿</h1>
 <p class="dossier-number" id="dossier_number">REGISTER · LMK</p>
 <p class="dossier-preface">王国でのあなたが、一匹の猫として<br>この一冊に記されています。</p>
-<div class="dossier-subject" aria-label="王国に招かれた猫"><span class="dossier-subject-kicker">THE INVITED CAT</span><strong id="dossier_subject_coat"></strong><span class="dossier-subject-origin" id="dossier_subject_origin"></span><span class="dossier-subject-separator" aria-hidden="true">✦</span><span class="dossier-subject-caption">この猫の肖像に与えられた題</span><b id="dossier_subject_portrait"></b></div>
+<div class="dossier-subject" aria-label="王国に招かれた猫"><span class="dossier-subject-kicker">THE INVITED CAT</span><strong id="dossier_subject_coat"></strong><span class="dossier-subject-origin" id="dossier_subject_origin"></span><small class="dossier-place-tag" id="dossier_place_tag"></small><span class="dossier-subject-separator" aria-hidden="true">✦</span><span class="dossier-subject-caption">この猫の肖像に与えられた題</span><b id="dossier_subject_portrait"></b></div>
 <div class="dossier-index" aria-label="同封の記録">
 <button class="dossier-entry" id="open_portrait" type="button"><span class="dossier-numeral">Ⅰ</span><span class="dossier-entry-text"><small>ROYAL PORTRAIT GALLERY</small><strong>肖像の頁</strong><em>あなたの感性から描かれた肖像題。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
 <button class="dossier-entry" id="open_registration" type="button"><span class="dossier-numeral">Ⅱ</span><span class="dossier-entry-text"><small>GENERAL REGISTER OFFICE</small><strong>来歴の頁</strong><em>この猫の毛並み、生まれ、家の記録。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
@@ -1542,6 +1550,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     if (number) number.textContent = "REGISTER · " + snapshot.provenance.registry;
     document.getElementById("dossier_subject_coat").textContent = snapshot.provenance.coat;
     document.getElementById("dossier_subject_origin").textContent = snapshot.provenance.birthplace + "に生まれた猫";
+    const placeRegion = regionPool.find(r => r.id === snapshot.provenance.regionId);
+    const placeIndex = placeRegion?.births.indexOf(snapshot.provenance.birthplace) ?? -1;
+    const placeTag = window.LMK_KINGDOM_NOTES_V10?.placeTags?.[snapshot.provenance.regionId]?.[placeIndex] || "";
+    document.getElementById("dossier_place_tag").textContent = placeTag;
     document.getElementById("dossier_subject_portrait").textContent = "《" + resultTitle(snapshot.resultId) + "》";
     if (!isStoreMode) void drawInvitationArtwork(snapshot);
     document.getElementById("open_portrait").onclick = () => {
@@ -1657,7 +1669,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     page.className = "page provenance-page tier-" + p.tier;
     const labels = {ivory:"アイヴォリーの記録",silver:"銀葉の記録",gold:"金星の記録",crown:"王冠印の記録"};
     const notes = {
-      ivory:"街角にも、同じ毛色の猫がいるかもしれません。",
+      ivory:"王国の暮らしの中で、親しみ深い組み合わせ。",
       silver:"何冊か帳簿をめくって、ようやく出会える来歴。",
       gold:"登録官が思わずもう一度見返す、珍しい来歴。",
       crown:"王国の長い記録にもめったに現れない、稀な来歴。"
@@ -1667,7 +1679,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     document.getElementById("rarity_stars").textContent = stars[p.tier];
     document.getElementById("rarity_rate").textContent = {ivory:"約70%",silver:"約23%",gold:"約6%",crown:"約1%"}[p.tier] + " の記録";
     document.getElementById("record_tier_note").textContent = notes[p.tier];
-    document.getElementById("record_probability").textContent = "毛色・土地・家・家伝品を合わせた目安は、約" + p.oneIn.toLocaleString("ja-JP") + "匹に1匹。";
+    document.getElementById("record_probability").textContent = "同じ毛色・土地・家・家伝品が抽選で揃う目安は、約" + p.oneIn.toLocaleString("ja-JP") + "回に1回。";
     document.getElementById("registry_registration").textContent = "REGISTRY · " + p.registry;
     const title = resultTitle(snapshot.resultId);
     const legacyCoats = {"キジ白":"キジシロ","茶トラ":"チャトラ","茶白":"チャシロ","サバ白":"サバシロ","黒":"クロ","白":"シロ","灰":"グレー","灰白":"グレーシロ","三毛":"ミケ","麦わら":"ムギワラ","しみ付き":"シミツキ","淡色の二毛・三毛":"パステルトビ","ブチ":"シミツキ","パステルミケ":"パステルトビ","パステルサビ":"パステルトビ"};
