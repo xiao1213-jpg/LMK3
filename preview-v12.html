@@ -711,6 +711,35 @@ main{width:100%;max-width:760px;margin:0 auto;padding:0 12px 24px}
  .provenance-page .locality-scene,.provenance-page .family-scene{font-size:13px}
 }
 @media(prefers-reduced-motion:reduce){.invitation-card.is-opening .envelope,.invitation-card.is-opening .wax-seal,.invitation-card.is-opened .royal-letter{animation:none!important}}
+
+/* ═══ Screen-tested letter composition and compact share drawer ═══ */
+.royal-letter-body.ceremonial-lines{margin:0 auto 18px;max-width:29em;font-family:var(--lmk-font-book);font-size:clamp(13px,3.72vw,15px)!important;line-height:2.08;letter-spacing:0;text-align:left}
+.royal-letter-body.ceremonial-lines span{display:block;white-space:nowrap}
+.royal-letter-body.ceremonial-lines span+span{margin-top:0}
+.royal-letter-body.ceremonial-lines+.royal-letter-body.ceremonial-lines{margin-top:21px}
+.royal-letter-salutation{margin-bottom:22px}
+.royal-letter-sign{margin-top:31px}
+.invitation-share{margin:24px auto 8px!important;padding:0!important;border-top:0!important}
+.invitation-share-disclosure{display:block;border:1px solid #d5c2a5;border-radius:7px;background:linear-gradient(120deg,#fffbf4,#f7efe4);box-shadow:0 3px 14px rgba(55,39,23,.045)}
+.invitation-share-toggle{position:relative;display:grid;gap:5px;padding:21px 46px 21px 23px;min-height:89px;align-content:center;list-style:none;cursor:pointer;text-align:left}
+.invitation-share-toggle::-webkit-details-marker{display:none}
+.invitation-share-toggle:focus-visible{outline:2px solid #9e7a4e;outline-offset:3px}
+.invitation-share-toggle::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);font:400 23px/1 Georgia,serif;color:#947857}
+.invitation-share-disclosure[open] .invitation-share-toggle::after{content:"−"}
+.invitation-share-toggle .invitation-share-label{text-align:left;font:10px/1.5 Georgia,serif;letter-spacing:.1em;color:#a08969}
+.invitation-share-toggle strong{font:600 19px/1.5 var(--lmk-font-book);color:#4c3b31;letter-spacing:0}
+.invitation-share-toggle small{font:400 12px/1.6 var(--lmk-font-ui);color:#86725e}
+.invitation-share-inner{padding:17px 20px 20px;border-top:1px solid #e3d4bf}
+.invitation-share-inner>p{font:400 13px/1.85 var(--lmk-font-ui);margin:0 auto 16px;max-width:32em}
+.invitation-share-inner .invitation-canvas-wrap{margin:14px auto 20px}
+.invitation-share-actions{gap:10px}
+@media(max-width:520px){
+ .royal-letter-body.ceremonial-lines{font-size:clamp(13px,3.68vw,14.7px)!important;line-height:2.03}
+ .invitation-share-toggle{padding:19px 40px 19px 18px;min-height:84px}
+ .invitation-share-toggle strong{font-size:18px}
+ .invitation-share-inner{padding:17px 15px 20px}
+}
+@media(max-width:360px){.royal-letter-body.ceremonial-lines span{white-space:normal}}
 </style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script><script src="assets/kingdom-notes-v12.js"></script><!-- Open-world birthplace preview: sample localities are not a complete gazetteer. --></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">A LITTLE MEW STORY</div>
 <div class="cat"><svg class="start-cat-emblem" viewBox="0 0 124 92" fill="none" aria-hidden="true"><path d="M26 42 26 16 44 28Q62 22 80 28L98 16 98 42Q103 48 100 60Q93 77 62 78Q31 77 24 60Q21 49 26 42Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M43 48Q48 44 53 48M71 48Q76 44 81 48M57 59l5 4 5-4m-5 4v3m0 0q-6 5-11 0m11 0q6 5 11 0M38 57l-15-4m15 10-15 2m63-8 15-4m-15 10 15 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -735,8 +764,8 @@ main{width:100%;max-width:760px;margin:0 auto;padding:0 12px 24px}
 <span class="royal-letter-command">ST. MILK PALACE · BY COMMAND OF THE KING</span>
 <h2>国王陛下よりの招待状</h2>
 <p class="royal-letter-salutation">あなたへ</p>
-<p class="royal-letter-body">国王ティボルト三世陛下の御意により、あなたをリトル・ミュー王国へお招きします。</p>
-<p class="royal-letter-body">宮殿には、あなたのために一冊の来訪者記録が用意されました。そこには、一匹の猫の来歴と、その猫を描く肖像が収められています。</p>
+<p class="royal-letter-body ceremonial-lines"><span>国王ティボルト三世陛下の御意により、</span><span>あなたをリトル・ミュー王国へ</span><span>お招きいたします。</span></p>
+<p class="royal-letter-body ceremonial-lines"><span>宮殿には、あなたのために</span><span>一冊の記録を用意いたしました。</span><span>王国に生まれた猫の来歴と、</span><span>九つの答えから描かれた肖像が</span><span>そこに綴じられています。</span></p>
 <p class="royal-letter-sign">国王陛下の命により<br>王室侍従長室<span class="royal-letter-register" id="royal_letter_register"></span></p>
 <button class="start" id="enter_kingdom" type="button">一件簿を受け取る</button>
 </article></div></section>
@@ -753,7 +782,11 @@ main{width:100%;max-width:760px;margin:0 auto;padding:0 12px 24px}
 <button class="dossier-entry" id="open_registration" type="button"><span class="dossier-numeral">Ⅱ</span><span class="dossier-entry-text"><small>GENERAL REGISTER OFFICE</small><strong>来歴の頁</strong><em>この猫の毛並み、生まれ、家の記録。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
 </div>
 <p class="dossier-footnote">肖像は九つの答えから。来歴は王国の記録から。</p>
-<section class="invitation-share" id="invitation_share_section" aria-label="招待状を持ち帰る"><span class="invitation-share-label">A LETTER TO KEEP</span><h2>招待状を、誰かのもとへ。</h2><p>この招待状には、あなたの猫の記録へ続くQRが添えられています。<br>相手も封を開いて、あなたの一件簿を読めます。</p><div class="invitation-canvas-wrap"><canvas id="invitation_share_canvas" width="1080" height="1350" role="img" aria-label="国王陛下からの招待状を描いた共有画像"></canvas></div><div class="invitation-share-actions"><button type="button" id="dossier_share" class="quiet-action primary">招待状を送る</button><button type="button" id="dossier_save" class="quiet-action">画像を保存</button></div><button type="button" id="dossier_copy" class="invite-copy-button">招待状へのリンクをコピー</button><p class="share-status" id="dossier_share_status" aria-live="polite"></p></section>
+<section class="invitation-share" id="invitation_share_section" aria-label="招待状の共有">
+<details class="invitation-share-disclosure"><summary class="invitation-share-toggle">
+<span class="invitation-share-label">THE ROYAL LETTER · KEEP & SHARE</span>
+<strong>招待状を持ち帰る</strong><small>画像の送信・保存、リンクのコピー</small></summary>
+<div class="invitation-share-inner"><p>この招待状には、あなたの猫の記録へ続くQRが添えられています。<br>相手も封を開いて、あなたの一件簿を読めます。</p><div class="invitation-canvas-wrap"><canvas id="invitation_share_canvas" width="1080" height="1350" role="img" aria-label="国王陛下からの招待状を描いた共有画像"></canvas></div><div class="invitation-share-actions"><button type="button" id="dossier_share" class="quiet-action primary">招待状を送る</button><button type="button" id="dossier_save" class="quiet-action">画像を保存</button></div><button type="button" id="dossier_copy" class="invite-copy-button">招待状へのリンクをコピー</button><p class="share-status" id="dossier_share_status" aria-live="polite"></p></section></div></details></section>
 <a class="portal-restart" href="#start_page">最初から診断する</a>
 </div></section>
 <section id="provenance_page" class="page provenance-page tier-ivory"><div class="card provenance-sheet">
