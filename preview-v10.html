@@ -600,13 +600,18 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 
 .invite-copy-button{border:0;background:transparent;display:block;margin:9px auto 4px;padding:13px 14px;min-height:46px;font:500 13px/1.6 var(--lmk-sans);color:#7f6850;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px;cursor:pointer}
 .invite-copy-button:focus-visible{outline:2px solid #a98d65;outline-offset:2px}
+
+#start_page .cat{width:94px;margin:10px auto 4px;color:#9d815e}
+.start-cat-emblem{display:block;width:100%;height:auto;filter:drop-shadow(0 2px 5px rgba(90,62,41,.08))}
+#start_page .kicker{font:600 10px/1.4 Georgia,serif;letter-spacing:.24em;color:#ae8b60;margin-bottom:5px}
+#start_page .title{margin-top:7px}
 </style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script><script src="assets/kingdom-notes-v10.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
-<div class="kicker">LITTLE MEW</div>
-<div class="cat">🐈</div>
+<div class="kicker">A STORY BEGINS</div>
+<div class="cat"><svg class="start-cat-emblem" viewBox="0 0 124 92" fill="none" aria-hidden="true"><path d="M26 42 26 16 44 28Q62 22 80 28L98 16 98 42Q103 48 100 60Q93 77 62 78Q31 77 24 60Q21 49 26 42Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M43 48Q48 44 53 48M71 48Q76 44 81 48M57 59l5 4 5-4m-5 4v3m0 0q-6 5-11 0m11 0q6 5 11 0M38 57l-15-4m15 10-15 2m63-8 15-4m-15 10 15 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
 <h1 class="title">もし、あなたが<br>一匹の猫だったら。</h1>
 <p class="intro">古い時計の音。午後のお茶の香り。<br>石畳の向こうに、小さな王国があります。<span class="intro-prompt">九つの問いをたどると、<br>あなた宛てに一通の手紙が届きます。</span></p>
 <a class="start" id="start_quiz" href="#quiz_page">九つの問いへ</a>
-<div class="note">9つの問い · すべて二択</div>
+<div class="note">すべて二択</div>
 </div></section><section id="quiz_page" class="page"><div class="card" id="quiz_card">
 <div class="quiz-top"><div class="progress" id="quiz_progress">1 / 9</div><button class="back-button" id="quiz_back" type="button" hidden>← ひとつ戻る</button></div>
 <div class="progress-track" aria-hidden="true"><span class="progress-fill" id="quiz_progress_fill"></span></div>
