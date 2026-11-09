@@ -1,9 +1,605 @@
 {
-  "errors": [
+  "errors": [],
+  "results": [
     {
-      "fatal": "Error: page.evaluate: TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.\n    at eval (eval at evaluate (:370:30), <anonymous>:4:662)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
-      "stack": "page.evaluate: TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.\n    at eval (eval at evaluate (:370:30), <anonymous>:4:662)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at shot (/home/runner/work/LMK3/LMK3/qa/lmk-v14-visual.mjs:16:30)\n    at async run (/home/runner/work/LMK3/LMK3/qa/lmk-v14-visual.mjs:26:3)\n    at async file:///home/runner/work/LMK3/LMK3/qa/lmk-v14-visual.mjs:45:5"
+      "name": "00-start",
+      "width": 320,
+      "height": 640,
+      "mode": "mobile",
+      "route": "#start_page",
+      "viewport": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320,
+      "activeWidth": 300,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 594.90625,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "01-sealed",
+      "width": 320,
+      "height": 640,
+      "mode": "mobile",
+      "route": "#invitation_page",
+      "viewport": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320,
+      "activeWidth": 300,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 414.53125,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "02-letter",
+      "width": 320,
+      "height": 640,
+      "mode": "mobile",
+      "route": "#invitation_page",
+      "viewport": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320,
+      "activeWidth": 300,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 798.78125,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "03-dossier",
+      "width": 320,
+      "height": 640,
+      "mode": "mobile",
+      "route": "#result_portal",
+      "viewport": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320,
+      "activeWidth": 300,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1156.21875,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "04-portrait",
+      "width": 320,
+      "height": 640,
+      "mode": "mobile",
+      "route": "#result_blood_time_quiet",
+      "viewport": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320,
+      "activeWidth": 300,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1480.421875,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "05-provenance",
+      "width": 320,
+      "height": 640,
+      "mode": "mobile",
+      "route": "#provenance_page",
+      "viewport": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320,
+      "activeWidth": 300,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1433.203125,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "center"
+      }
+    },
+    {
+      "name": "00-start",
+      "width": 375,
+      "height": 667,
+      "mode": "mobile",
+      "route": "#start_page",
+      "viewport": 375,
+      "scrollWidth": 375,
+      "bodyWidth": 375,
+      "activeWidth": 355,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 560.40625,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "01-sealed",
+      "width": 375,
+      "height": 667,
+      "mode": "mobile",
+      "route": "#invitation_page",
+      "viewport": 375,
+      "scrollWidth": 375,
+      "bodyWidth": 375,
+      "activeWidth": 355,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 423.515625,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "02-letter",
+      "width": 375,
+      "height": 667,
+      "mode": "mobile",
+      "route": "#invitation_page",
+      "viewport": 375,
+      "scrollWidth": 375,
+      "bodyWidth": 375,
+      "activeWidth": 355,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 791.515625,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "03-dossier",
+      "width": 375,
+      "height": 667,
+      "mode": "mobile",
+      "route": "#result_portal",
+      "viewport": 375,
+      "scrollWidth": 375,
+      "bodyWidth": 375,
+      "activeWidth": 355,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1147.3125,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "04-portrait",
+      "width": 375,
+      "height": 667,
+      "mode": "mobile",
+      "route": "#result_blood_time_quiet",
+      "viewport": 375,
+      "scrollWidth": 375,
+      "bodyWidth": 375,
+      "activeWidth": 355,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1456.109375,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "05-provenance",
+      "width": 375,
+      "height": 667,
+      "mode": "mobile",
+      "route": "#provenance_page",
+      "viewport": 375,
+      "scrollWidth": 375,
+      "bodyWidth": 375,
+      "activeWidth": 355,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1437.203125,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "center"
+      }
+    },
+    {
+      "name": "00-start",
+      "width": 390,
+      "height": 844,
+      "mode": "mobile",
+      "route": "#start_page",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 563.921875,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "01-sealed",
+      "width": 390,
+      "height": 844,
+      "mode": "mobile",
+      "route": "#invitation_page",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 432.78125,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "02-letter",
+      "width": 390,
+      "height": 844,
+      "mode": "mobile",
+      "route": "#invitation_page",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 800.390625,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "03-dossier",
+      "width": 390,
+      "height": 844,
+      "mode": "mobile",
+      "route": "#result_portal",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1147.3125,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "04-portrait",
+      "width": 390,
+      "height": 844,
+      "mode": "mobile",
+      "route": "#result_blood_time_quiet",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1401.390625,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "05-provenance",
+      "width": 390,
+      "height": 844,
+      "mode": "mobile",
+      "route": "#provenance_page",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1388.8125,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "center"
+      }
+    },
+    {
+      "name": "00-start",
+      "width": 768,
+      "height": 1024,
+      "mode": "mobile",
+      "route": "#start_page",
+      "viewport": 768,
+      "scrollWidth": 768,
+      "bodyWidth": 768,
+      "activeWidth": 670,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 597.5,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "01-sealed",
+      "width": 768,
+      "height": 1024,
+      "mode": "mobile",
+      "route": "#invitation_page",
+      "viewport": 768,
+      "scrollWidth": 768,
+      "bodyWidth": 768,
+      "activeWidth": 670,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 519.09375,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "02-letter",
+      "width": 768,
+      "height": 1024,
+      "mode": "mobile",
+      "route": "#invitation_page",
+      "viewport": 768,
+      "scrollWidth": 768,
+      "bodyWidth": 768,
+      "activeWidth": 670,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 869.46875,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "03-dossier",
+      "width": 768,
+      "height": 1024,
+      "mode": "mobile",
+      "route": "#result_portal",
+      "viewport": 768,
+      "scrollWidth": 768,
+      "bodyWidth": 768,
+      "activeWidth": 670,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1222.859375,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "04-portrait",
+      "width": 768,
+      "height": 1024,
+      "mode": "mobile",
+      "route": "#result_blood_time_quiet",
+      "viewport": 768,
+      "scrollWidth": 768,
+      "bodyWidth": 768,
+      "activeWidth": 670,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1443.578125,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "05-provenance",
+      "width": 768,
+      "height": 1024,
+      "mode": "mobile",
+      "route": "#provenance_page",
+      "viewport": 768,
+      "scrollWidth": 768,
+      "bodyWidth": 768,
+      "activeWidth": 670,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1456.046875,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "center"
+      }
+    },
+    {
+      "name": "00-start",
+      "width": 390,
+      "height": 844,
+      "mode": "store",
+      "route": "#start_page",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 563.921875,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "01-sealed",
+      "width": 390,
+      "height": 844,
+      "mode": "store",
+      "route": "#invitation_page",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 432.78125,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "02-letter",
+      "width": 390,
+      "height": 844,
+      "mode": "store",
+      "route": "#invitation_page",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 800.390625,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "03-dossier",
+      "width": 390,
+      "height": 844,
+      "mode": "store",
+      "route": "#result_portal",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1524.6875,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "04-portrait",
+      "width": 390,
+      "height": 844,
+      "mode": "store",
+      "route": "#result_blood_time_quiet",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1401.390625,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "not-rendered"
+      }
+    },
+    {
+      "name": "05-provenance",
+      "width": 390,
+      "height": 844,
+      "mode": "store",
+      "route": "#provenance_page",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "activeWidth": 370,
+      "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
+      "activeHeight": 1414.078125,
+      "align": {
+        "start": "center",
+        "letter": "center",
+        "thesis": "center",
+        "guide": "center",
+        "coat": "center"
+      }
     }
-  ],
-  "results": []
+  ]
 }
