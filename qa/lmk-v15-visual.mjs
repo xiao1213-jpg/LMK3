@@ -54,6 +54,24 @@ async function run(width,height,mode="mobile"){
       b.textContent="王都行きの鉄道沿線の町";
       p.textContent="真夜中の小さな時計職人";
     });
+    const comprehensive=await page.evaluate(()=>{
+      const title=document.getElementById("dossier_subject_portrait");
+      const valid=[...document.querySelectorAll("section.result-page .title")].map(x=>x.textContent.trim());
+      const prev=title.textContent;
+      const overflow=[];
+      let maxLines=0;
+      for(const candidate of valid){
+        title.textContent=candidate;
+        const st=getComputedStyle(title);
+        const lines=Math.ceil(title.getBoundingClientRect().height/parseFloat(st.lineHeight));
+        maxLines=Math.max(maxLines,lines);
+        if(title.scrollWidth>title.clientWidth+1 || lines>3) overflow.push({title:candidate,lines,scrollWidth:title.scrollWidth,clientWidth:title.clientWidth});
+      }
+      title.textContent=prev;
+      return {checkedTitles:valid.length,maxLines,overflow,autoPhrase:CSS.supports("word-break","auto-phrase")};
+    });
+    if(comprehensive.checkedTitles!==24 || comprehensive.overflow.length) errors.push({name:"24-title-stress",width,mode,comprehensive});
+    results.push({name:"03-title-sweep",width,mode,...comprehensive});
     await shot("03-dossier-long");
     await page.evaluate(()=>{
       document.getElementById("dossier_subject_coat").textContent=window.__displayFixture.coat;
