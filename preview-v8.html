@@ -464,14 +464,73 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
 .provenance-page.tier-crown .registry-masthead{background:linear-gradient(145deg,#faf0d8,#fff7e8);border:1px solid #dbb97b;margin:0 -8px;padding:22px 8px 28px}
 .provenance-page.tier-crown .registry-crest{color:#9a6734;font-size:29px}
 @media(max-width:520px){.portrait-medallion{right:15px;bottom:-18px;height:40px;min-width:90px;padding:8px 11px}.portrait-medallion svg{height:21px;width:21px}}
+
+/* ═══ V9 · A SINGLE CAT IN A ROYAL DOSSIER ═══ */
+:root{--page-column:min(660px,100%);--letter-ink:#3e3730;--letter-accent:#907654}
+main{max-width:740px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK JP",sans-serif}
+#start_page .card{padding-top:43px;padding-bottom:36px}
+#start_page .title{font-size:clamp(27px,6vw,35px);max-width:15em;line-height:1.55;white-space:normal}
+#start_page .intro{font-size:15px;line-height:2.05;max-width:30em;text-align:center;margin:19px auto;color:#716358}
+#start_page .intro .intro-prompt{display:block;margin-top:22px;color:#625245;font-family:var(--lmk-serif);font-size:15px;line-height:1.95}
+#start_page .start{margin-top:28px}
+#start_page .note{font-size:11.5px;letter-spacing:.04em}
+#quiz_card .q{font-size:clamp(19px,4.2vw,23px);letter-spacing:0;line-height:1.8}
+#quiz_answers .btn{font-size:15px;line-height:1.75;padding:18px}
+#quiz_card .axis{font-size:12px;letter-spacing:.025em}
+.invitation-card .arrival-title{font-size:clamp(26px,5.6vw,36px);font-weight:600;line-height:1.56}
+.invitation-card .arrival-copy{font-size:13px;line-height:1.95}
+.royal-letter-body{font-family:var(--lmk-serif);font-size:15px;line-height:2.05;letter-spacing:0;max-width:26em}
+.royal-letter-salutation{font-size:16px}
+.royal-letter .start{max-width:320px;min-height:54px}
+.dossier-cover{padding-top:42px!important}
+.dossier-preface{font-size:14px;line-height:1.9;margin:18px auto 21px}
+.dossier-subject{position:relative;max-width:490px;margin:0 auto 30px;padding:30px 16px 26px;background:linear-gradient(150deg,rgba(255,252,246,.86),rgba(249,239,223,.5));border-top:1px solid #c8b69c;border-bottom:1px solid #c8b69c}
+.dossier-subject-kicker{display:block;color:#9d805e;font:10px/1.5 Georgia,serif;letter-spacing:.18em}
+.dossier-subject>strong{display:block;margin:8px 0 0;color:#4c3d2f;font:600 clamp(30px,7vw,40px)/1.42 var(--lmk-serif);letter-spacing:.025em}
+.dossier-subject-origin{display:block;margin:5px auto 0;font-size:13px;line-height:1.7;color:#84725e}
+.dossier-subject-separator{display:block;margin:14px auto 10px;color:#a58a63;font-size:11px}
+.dossier-subject-caption{display:block;color:#947e68;font-size:11px;line-height:1.6}
+.dossier-subject>b{display:block;margin:7px auto 0;color:#653d3b;font:600 clamp(20px,5vw,27px)/1.5 var(--lmk-serif);overflow-wrap:break-word;text-wrap:balance;max-width:16em}
+.dossier-index{max-width:490px}
+.dossier-footnote{font-size:12px;line-height:1.9}
+.invitation-share{position:relative;max-width:520px;margin:35px auto 10px;padding:25px 0 6px;border-top:1px solid #d8c9af;text-align:center}
+.invitation-share-label{font:10px/1.4 Georgia,serif;letter-spacing:.2em;color:#967b57}
+.invitation-share h2{font:600 23px/1.5 var(--lmk-serif);margin:7px auto 4px;color:#4b3a30}
+.invitation-share p{font-size:13px;line-height:1.8;color:#7d6d5c;max-width:30em;margin:6px auto 15px}
+.invitation-canvas-wrap{max-width:290px;margin:16px auto 18px;background:#e7d8c4;padding:7px;box-shadow:0 10px 22px rgba(46,32,26,.14)}
+#invitation_share_canvas{display:block;width:100%;height:auto;aspect-ratio:4/5;background:#493732}
+.invitation-share-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px auto;max-width:420px}
+.invitation-share-actions .quiet-action{min-height:51px;font-size:14px;border-radius:9px}
+.invitation-share-actions .quiet-action.primary{background:#4e4035;color:#fff;border-color:#4e4035}
+.invitation-share-actions .quiet-action:not(.primary){background:#fffcf7;color:#57463a;border-color:#cbb99b}
+.mode-store .invitation-share{display:none}
+.mode-store .dossier-cover .take-home-card{margin-top:30px}
+.mode-mobile .dossier-cover .take-home-card{display:none}
+.result-page .portrait-art{position:relative;overflow:hidden;border:0;padding:0;max-width:550px;height:160px;margin:20px auto 35px;box-shadow:none;background:var(--theme-soft)}
+.result-page .portrait-art img{position:absolute;inset:-13%;width:126%;height:126%;aspect-ratio:auto;object-fit:cover;object-position:center 45%;filter:blur(13px) saturate(.58) brightness(1.12);opacity:.65;transform:scale(1.05);-webkit-mask-image:linear-gradient(to bottom,transparent,black 32%,black 68%,transparent);mask-image:linear-gradient(to bottom,transparent,black 32%,black 68%,transparent)}
+.result-page .portrait-art::after{content:"";pointer-events:none;position:absolute;inset:0;background:linear-gradient(90deg,#fffdf9 0%,rgba(255,253,249,.24) 29%,rgba(255,253,249,.24) 71%,#fffdf9 100%)}
+.result-page .portrait-art .portrait-medallion{z-index:2;bottom:7px;right:12px;opacity:.8;box-shadow:none;background:rgba(255,253,249,.88)}
+.result-page .category-mark{margin:9px auto 0!important}
+.result-page .category-mark span{font-size:11px;letter-spacing:.03em}
+.result-page .title{margin:10px auto 15px;line-height:1.47}
+.result-page .result-thesis{margin:14px auto 20px;font-size:18px;line-height:1.9}
+.result-page .portrait-about{max-width:29em;margin:0 auto 24px}
+.result-page .desc{max-width:31em}
+.result-page .desc p{line-height:2.0;letter-spacing:0;font-size:15px}
+.result-page .goods-item{font-family:var(--lmk-serif);font-weight:600;font-size:18px}
+.provenance-page .visitor-field{padding-top:18px!important;padding-bottom:18px!important}
+.provenance-page .visitor-field b{line-height:1.65}
+.provenance-page .visitor-field .coat-epithet{line-height:1.85!important}
+.provenance-page .registry-masthead h1{font-weight:600;font-size:clamp(27px,6vw,35px);line-height:1.55}
+@media(max-width:520px){#start_page .title{font-size:29px}#start_page .intro{font-size:14px}.dossier-subject{padding:24px 10px}.invitation-share{margin-top:24px}.invitation-share-actions{grid-template-columns:1fr}.invitation-canvas-wrap{max-width:255px}.result-page .portrait-art{height:139px}.result-page .desc p{font-size:14.5px}.result-page .result-thesis{font-size:16.5px}}
+@media(prefers-reduced-motion:reduce){.result-page .portrait-art img{transform:none}}
 </style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">LITTLE MEW</div>
 <div class="cat">🐈</div>
-<h1 class="title">王国で、あなたはどの猫？</h1>
-<p class="intro"><span>古い時計。秘密の手紙。</span>
-<span>午後のお茶会。月明かりの路地。</span>
-<span class="intro-prompt">九つの選択の先に、王国から一通の手紙。</span></p>
-<a class="start" id="start_quiz" href="#quiz_page">王国への扉をひらく</a>
+<h1 class="title">もし、あなたが<br>一匹の猫だったら。</h1>
+<p class="intro">古い時計の音。午後のお茶の香り。<br>この王国では、猫たちにもそれぞれの物語があります。<span class="intro-prompt">九つの小さな問いをたどると、<br>あなた宛ての手紙が届きます。</span></p>
+<a class="start" id="start_quiz" href="#quiz_page">九つの問いへ</a>
 <div class="note">9つの問い · すべて二択</div>
 </div></section><section id="quiz_page" class="page"><div class="card" id="quiz_card">
 <div class="quiz-top"><div class="progress" id="quiz_progress">1 / 9</div><button class="back-button" id="quiz_back" type="button" hidden>← ひとつ戻る</button></div>
@@ -481,8 +540,8 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
 <div id="quiz_answers" aria-live="polite"></div>
 </div></section><section id="invitation_page" class="page"><div class="card invitation-card" id="invitation_card">
 <div class="arrival-kicker">FROM ST. MILK PALACE</div>
-<h1 class="arrival-title">王国から、<br>手紙が届きました。</h1>
-<p class="arrival-copy">赤い封蝋を押して、封をお開きください。</p>
+<h1 class="arrival-title">あなた宛てに、<br>王国から一通。</h1>
+<p class="arrival-copy">セント・ミルク宮殿の赤い封蝋。<br>そっと押すと、手紙がひらきます。</p>
 <button class="envelope" id="open_invitation" type="button" aria-label="封蝋を押して招待状をひらく"><span class="wax-seal"><span class="wax-royal" aria-hidden="true">T<span>Ⅲ</span>R</span></span></button>
 <p class="office-line"><strong>セント・ミルク宮殿</strong><em>St. Milk Palace · Royal Household</em></p>
 <article class="royal-letter" id="royal_letter" aria-live="polite">
@@ -490,8 +549,8 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
 <span class="royal-letter-command">BY COMMAND OF HIS MAJESTY THE KING</span>
 <h2>国王陛下よりの招待状</h2>
 <p class="royal-letter-salutation">あなたへ</p>
-<p class="royal-letter-body">ティボルト三世陛下の御意により、ここにあなたをリトル・ミュー王国へお招きします。</p>
-<p class="royal-letter-body">王室侍従長室では、お迎えのための一冊を用意いたしました。どうぞお受け取りください。</p>
+<p class="royal-letter-body">国王ティボルト三世陛下の御意により、あなたをリトル・ミュー王国へお招きします。</p>
+<p class="royal-letter-body">宮殿には、あなたのために一冊の記録が用意されました。そこには、王国で生まれた一匹の猫の姿と、その猫を描いた肖像が収められています。</p>
 <p class="royal-letter-sign">国王陛下の命により<br>王室侍従長室<span class="royal-letter-register" id="royal_letter_register"></span></p>
 <button class="start" id="enter_kingdom" type="button">一件簿を受け取る</button>
 </article></div></section>
@@ -501,13 +560,14 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
 <p class="dossier-overline">ROYAL VISITOR'S DOSSIER</p>
 <h1 class="portal-heading">王室来訪者一件簿</h1>
 <p class="dossier-number" id="dossier_number">REGISTER · LMK</p>
-<p class="dossier-preface">ひとつの招待に、二通の記録。<br>それぞれ、異なる方法で整えられました。</p>
+<p class="dossier-preface">王室に届いた九つの答えから、<br>一匹の猫の記録が整いました。</p>
+<div class="dossier-subject" aria-label="王国に招かれた猫"><span class="dossier-subject-kicker">THE INVITED CAT</span><strong id="dossier_subject_coat"></strong><span class="dossier-subject-origin" id="dossier_subject_origin"></span><span class="dossier-subject-separator" aria-hidden="true">✦</span><span class="dossier-subject-caption">この猫の肖像に与えられた題</span><b id="dossier_subject_portrait"></b></div>
 <div class="dossier-index" aria-label="同封の記録">
-<button class="dossier-entry" id="open_portrait" type="button"><span class="dossier-numeral">Ⅰ</span><span class="dossier-entry-text"><small>ROYAL PORTRAIT GALLERY</small><strong>心象肖像</strong><em>九つの答えを、一枚の寓意に。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
-<button class="dossier-entry" id="open_registration" type="button"><span class="dossier-numeral">Ⅱ</span><span class="dossier-entry-text"><small>GENERAL REGISTER OFFICE</small><strong>王国来歴証</strong><em>毛並み、生まれ、家に残るもの。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
+<button class="dossier-entry" id="open_portrait" type="button"><span class="dossier-numeral">Ⅰ</span><span class="dossier-entry-text"><small>ROYAL PORTRAIT GALLERY</small><strong>肖像の頁</strong><em>あなたの感性から描かれた肖像題。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
+<button class="dossier-entry" id="open_registration" type="button"><span class="dossier-numeral">Ⅱ</span><span class="dossier-entry-text"><small>GENERAL REGISTER OFFICE</small><strong>来歴の頁</strong><em>この猫の毛並み、生まれ、家の記録。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
 </div>
-<p class="dossier-footnote">いずれも、あなたのために綴じられた記録です。</p>
-<div class="dossier-actions"><button type="button" id="dossier_share" class="quiet-action primary">結果を共有する</button><p class="share-status" id="dossier_share_status" aria-live="polite"></p></div>
+<p class="dossier-footnote">肖像は、あなたが選んだ九つの答えから。<br>来歴は、王国の土地と家々の記録から。</p>
+<section class="invitation-share" id="invitation_share_section" aria-label="招待状を持ち帰る"><span class="invitation-share-label">A LETTER TO KEEP</span><h2>この招待状を、手元に。</h2><p>セント・ミルク宮殿から届いた一通を、画像で残せます。</p><div class="invitation-canvas-wrap"><canvas id="invitation_share_canvas" width="1080" height="1350" role="img" aria-label="国王陛下からの招待状を描いた共有画像"></canvas></div><div class="invitation-share-actions"><button type="button" id="dossier_share" class="quiet-action primary">招待状を共有</button><button type="button" id="dossier_save" class="quiet-action">画像を保存</button></div><p class="share-status" id="dossier_share_status" aria-live="polite"></p></section>
 <a class="portal-restart" href="#start_page">最初から診断する</a>
 </div></section>
 <section id="provenance_page" class="page provenance-page tier-ivory"><div class="card provenance-sheet">
@@ -1518,7 +1578,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
       '<div class="visitor-field"><span>生まれた土地</span><b>' + safe(p.birthplace) + '</b><small>' + safe(p.region) + '</small></div>' +
       '<div class="visitor-field"><span>家の来歴</span><b>' + safe(p.family) + '</b></div>' +
       '<div class="visitor-field"><span>家に伝わるもの</span><b>' + safe(p.heirloom) + '</b></div>' +
-      '<div class="visitor-field portrait-field"><span>同じ一件簿に収められた心象肖像</span><b>《' + safe(title) + '》</b></div>' +
+      '<div class="visitor-field portrait-field"><span>同じ一件簿に収められた肖像</span><b>《' + safe(title) + '》</b></div>' +
       '</div></section>';
     document.getElementById("switch_to_portrait").onclick = () => {
       decorateResult(snapshot.resultId,snapshot,{carried:isCarriedView});
