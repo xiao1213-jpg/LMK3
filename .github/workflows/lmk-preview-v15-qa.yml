@@ -1,4 +1,4 @@
-name: LMK v15 final editorial QA
+name: LMK v15 final polished QA
 # Verify shortened first letter line remains intact at 320px and all layouts
 on:
   push:
