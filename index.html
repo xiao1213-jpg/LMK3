@@ -1,6 +1,6 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>リトル・ミュー診断｜あなたはどの猫？</title>
 <meta name="description" content="9つの問いに答えると、リトル・ミュー王国からあなたへの招待状が届きます。">
-<meta name="lmk-build" content="2026-11-09-weighted-portrait-v5">
+<meta name="lmk-build" content="2026-11-09-two-certificates-v6">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Little Mew Kingdom">
 <meta property="og:title" content="リトル・ミュー診断｜あなたはどの猫？">
@@ -12,7 +12,11 @@
 <meta name="twitter:card" content="summary_large_image"><style>
 *{box-sizing:border-box}
 html{scroll-behavior:auto}
-body{margin:0;background:linear-gradient(160deg,#fffaf2,#f1e3d2);color:#392f2b;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Mincho ProN","Yu Mincho",serif;min-height:100vh}
+:root{--font-serif:"Yu Mincho","YuMincho","Hiragino Mincho ProN","Hiragino Mincho Pro",serif;--font-sans:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic UI","Yu Gothic",sans-serif}
+body{margin:0;background:linear-gradient(160deg,#fffaf2,#f1e3d2);color:#392f2b;font-family:var(--font-sans);min-height:100vh;font-feature-settings:"palt" 1;line-break:strict;word-break:normal;overflow-wrap:break-word}
+h1,h2,h3,.title,.result-thesis,.portal-document strong,.portal-document em{font-family:var(--font-serif);font-feature-settings:"palt" 1}
+h1,h2,h3,.title,.result-thesis,.portal-heading,.portal-document strong,.portal-document em,.coat-epithet{text-wrap:balance;word-break:auto-phrase}
+button,a{font-family:inherit}
 main{width:min(720px,100%);margin:auto;padding:20px 12px 40px}
 .brand{text-align:center;color:#9d7a47;font-size:11px;letter-spacing:.18em;margin:3px 0 24px}
 .page{display:none} .page:first-of-type{display:block} .page:target{display:block}
@@ -20,7 +24,7 @@ body:has(.page:target) .page:first-of-type{display:none}
 body:has(#start_page:target) .page:first-of-type{display:block}
 .card{background:#fffdf8;border:1px solid #e5d7c3;border-radius:26px;box-shadow:0 18px 55px rgba(63,45,34,.12);padding:32px 24px;min-height:540px}
 .cat{text-align:center;font-size:48px} .kicker{text-align:center;color:#9d7a47;font-size:11px;letter-spacing:.15em}
-.title{text-align:center;font-size:30px;line-height:1.5;margin:10px 0} .intro{text-align:center;color:#756963;line-height:1.9}
+.title{text-align:center;font-size:30px;line-height:1.5;margin:10px 0;text-wrap:balance} .intro{text-align:center;color:#756963;line-height:1.9}
 #start_page .title{font-size:clamp(28px,7vw,36px);line-height:1.25;letter-spacing:.02em;margin:14px 0 22px;white-space:nowrap}
 #start_page .intro{max-width:36em;margin:0 auto;text-wrap:balance}
 #start_page .intro span{display:block;white-space:nowrap}
@@ -236,24 +240,39 @@ body:has(#start_page:target) #start_page{display:block!important}
 .invitation-card.is-opened .royal-letter{display:block;animation:letter-arrive .48s ease both}
 @keyframes letter-arrive{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 
-.visitor-record{max-width:560px;margin:25px auto 18px;padding:23px 20px 20px;border:1px solid var(--theme-line);border-radius:23px;background:linear-gradient(145deg,rgba(255,255,255,.96),var(--theme-soft));box-shadow:0 12px 28px rgba(70,55,51,.07)}
+.visitor-record{max-width:560px;margin:25px auto 18px;padding:25px 22px 22px;border:1px solid var(--theme-line);border-radius:23px;background:linear-gradient(145deg,rgba(255,255,255,.96),var(--theme-soft));box-shadow:0 12px 28px rgba(70,55,51,.07)}
 .visitor-record-head{text-align:center;margin-bottom:17px}
 .visitor-record-kicker{display:block;color:var(--theme-accent);font:600 9px/1.5 Georgia,serif;letter-spacing:.18em}
-.visitor-record-title{margin:6px 0 4px;color:var(--theme-deep);font-size:21px;line-height:1.5}
+.visitor-record-title{margin:6px 0 4px;color:var(--theme-deep);font-size:23px;line-height:1.5;text-wrap:balance}
 .visitor-record-note{margin:0;color:#776b64;font-size:12.5px;line-height:1.7}
 .visitor-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.visitor-field{padding:13px 14px;border:1px solid var(--theme-line);border-radius:15px;background:rgba(255,255,255,.72)}
+.visitor-field{display:flex;flex-direction:column;justify-content:center;min-height:86px;padding:14px 15px;border:1px solid var(--theme-line);border-radius:15px;background:rgba(255,255,255,.72)}
 .visitor-field span{display:block;margin-bottom:5px;color:#8a7d76;font-size:10.5px;letter-spacing:.08em}
-.visitor-field b{display:block;color:var(--theme-deep);font-size:14px;line-height:1.65}
-.name-bridge{max-width:560px;margin:0 auto 26px;padding:20px 21px;border-left:3px solid var(--theme-accent);border-radius:4px 18px 18px 4px;background:rgba(255,255,255,.72)}
-.name-bridge-kicker{display:block;margin-bottom:7px;color:var(--theme-accent);font-size:10.5px;font-weight:700;letter-spacing:.11em}
-.name-bridge p{margin:0;color:#574e49;font-size:14px;line-height:1.95}
-.name-bridge strong{color:var(--theme-deep)}
-.portrait-route{max-width:520px;margin:22px auto 26px;padding:20px;border:1px solid var(--theme-line);border-radius:20px;background:linear-gradient(145deg,rgba(255,255,255,.94),var(--theme-soft));text-align:center}
-.portrait-route-kicker{display:block;color:var(--theme-accent);font:600 9px/1.5 Georgia,serif;letter-spacing:.16em}
-.portrait-route h2{margin:7px 0 8px;color:var(--theme-deep);font-size:20px;line-height:1.55}
-.portrait-route p{margin:0 0 15px;color:#6d625c;font-size:13.5px;line-height:1.8}
-.portrait-route button{margin:0 auto}
+.visitor-field b{display:block;color:var(--theme-deep);font-size:14.5px;line-height:1.7;text-wrap:balance}
+.visitor-field small{display:block;margin-top:3px;font-size:11.5px;font-weight:500;line-height:1.6}
+.visitor-field.coat-field{grid-column:1/-1;min-height:104px;padding:18px 20px;background:linear-gradient(145deg,#fff,rgba(255,255,255,.68));text-align:center}
+.result-portal .card{position:relative;overflow:hidden;min-height:620px;padding-top:36px;text-align:center;background:radial-gradient(circle at 50% 0%,#fff 0,transparent 38%),linear-gradient(155deg,#fffdf8,#f2e6d5)}
+.result-portal .card::before{content:"";position:absolute;inset:12px;border:1px solid rgba(157,122,71,.2);border-radius:20px;pointer-events:none}
+.portal-kicker{display:block;color:#9d7a47;font:700 9px/1.5 Georgia,serif;letter-spacing:.22em}
+.portal-seal{display:grid;place-items:center;width:64px;height:64px;margin:15px auto 13px;border:1px solid #b99b70;border-radius:50%;color:#7d6038;font:700 20px/1 Georgia,serif;background:rgba(255,255,255,.42)}
+.portal-heading{max-width:12em;margin:0 auto;color:#3f332e;font-size:clamp(27px,6vw,35px);line-height:1.48;letter-spacing:.025em;text-wrap:balance}
+.portal-intro{max-width:500px;margin:14px auto 25px;color:#6d625b;font-size:14px;line-height:1.95;text-wrap:balance}
+.portal-documents{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:570px;margin:0 auto}
+.portal-document{position:relative;display:flex;flex-direction:column;align-items:center;min-height:245px;padding:25px 18px 20px;border:1px solid #d8c6aa;border-radius:20px;background:rgba(255,255,255,.83);box-shadow:0 10px 26px rgba(64,44,32,.07);color:#40342f;text-align:center;cursor:pointer;transition:transform .16s ease,box-shadow .16s ease}
+.portal-document:hover{transform:translateY(-2px);box-shadow:0 15px 30px rgba(64,44,32,.11)}
+.portal-document:focus-visible{outline:3px solid rgba(157,122,71,.3);outline-offset:3px}
+.portal-document-number{display:grid;place-items:center;width:38px;height:38px;margin-bottom:12px;border:1px solid #c9ae85;border-radius:50%;color:#8a673d;font:700 14px/1 Georgia,serif}
+.portal-document-kicker{color:#9d7a47;font:700 8px/1.5 Georgia,serif;letter-spacing:.17em}
+.portal-document strong{display:block;margin:6px 0 8px;color:#453730;font-size:21px;line-height:1.5;text-wrap:balance}
+.portal-document em{display:block;min-height:3.2em;color:#765045;font-size:15px;font-style:normal;font-weight:700;line-height:1.65;text-wrap:balance;word-break:auto-phrase}
+.portal-document small{display:block;margin-top:auto;padding-top:13px;color:#877970;font-size:11.5px;line-height:1.65}
+.register-document{background:linear-gradient(155deg,rgba(255,255,255,.91),rgba(241,229,210,.9))}
+.portal-restart{display:inline-block;margin-top:22px;color:#74655b;font-size:12.5px;text-underline-offset:4px}
+.certificate-switcher{display:grid;grid-template-columns:1fr 1fr;gap:4px;max-width:390px;margin:0 auto 25px;padding:4px;border:1px solid #decfba;border-radius:999px;background:rgba(255,255,255,.64)}
+.certificate-switcher button{min-height:40px;padding:8px 12px;border:0;border-radius:999px;background:transparent;color:#7b6c63;font-size:12.5px;font-weight:700;cursor:pointer}
+.certificate-switcher button.is-active{background:#fff;color:#4b3b34;box-shadow:0 3px 10px rgba(67,45,31,.09)}
+.result-page .certificate-switcher{border-color:var(--theme-line);background:rgba(255,255,255,.66)}
+.result-page .certificate-switcher button.is-active{color:var(--theme-deep)}
 
 .provenance-page .card{min-height:620px;text-align:center;overflow:hidden;position:relative;isolation:isolate;transition:background .3s ease,color .3s ease}
 .provenance-page .card::before{content:"";position:absolute;inset:0;z-index:-2;opacity:.58;background:radial-gradient(circle at 50% 0%,rgba(255,255,255,.9),transparent 38%)}
@@ -263,11 +282,11 @@ body:has(#start_page:target) #start_page{display:block!important}
 .provenance-page.tier-crown .card{background:radial-gradient(circle at 50% 5%,#874148,#4d2027 48%,#261015);--record-accent:#f1ce7d;--record-line:#b98a3c;--record-deep:#fff3d6;color:#fff3d6;box-shadow:0 22px 70px rgba(55,16,23,.28)}
 .record-seal{display:grid;place-items:center;width:76px;height:76px;margin:0 auto 12px;border:2px double var(--record-line);border-radius:50%;color:var(--record-accent);font:700 23px/1 Georgia,serif}
 .record-rarity{display:inline-block;margin:0 auto 10px;padding:7px 12px;border:1px solid var(--record-line);border-radius:999px;color:var(--record-accent);font-size:11px;font-weight:700;letter-spacing:.1em}
-.record-heading{margin:4px 0 8px;color:var(--record-deep);font-size:clamp(28px,7vw,36px);line-height:1.4}
-.record-probability{margin:0 0 24px;color:var(--record-accent);font-size:13px;line-height:1.8}
-.record-intro{max-width:480px;margin:15px auto 23px;color:#675d57;font-size:14px;line-height:1.95;text-wrap:balance}
+.record-heading{max-width:12em;margin:4px auto 8px;color:var(--record-deep);font-size:clamp(28px,7vw,36px);line-height:1.42;text-wrap:balance}
+.record-probability{margin:0 auto 22px;color:var(--record-accent);font-size:12.5px;line-height:1.75;text-wrap:balance}
+.record-intro{max-width:455px;margin:13px auto 22px;color:#675d57;font-size:14px;line-height:1.9;text-wrap:balance}
 .record-tier-note{max-width:440px;margin:-12px auto 22px;padding:11px 16px;border-top:1px solid var(--record-line);border-bottom:1px solid var(--record-line);color:var(--record-accent);font-size:12.5px;line-height:1.75}
-.coat-epithet{display:block;font-size:17px;line-height:1.6;letter-spacing:.025em}
+.coat-epithet{display:block;max-width:20em;margin:0 auto;font-family:var(--font-serif);font-size:clamp(17px,4.2vw,20px)!important;line-height:1.65!important;letter-spacing:.018em;text-wrap:balance}
 .provenance-page .visitor-record{margin-top:0;border-color:var(--record-line);background:rgba(255,255,255,.82)}
 .provenance-page .visitor-record-title,.provenance-page .visitor-field b{color:var(--record-deep)}
 .provenance-page .visitor-record-kicker{color:var(--record-accent)}
@@ -275,12 +294,13 @@ body:has(#start_page:target) #start_page{display:block!important}
 .provenance-page.tier-crown .visitor-record-title,.provenance-page.tier-crown .visitor-field b{color:#5d342d}
 .provenance-page.tier-crown .visitor-record-note,.provenance-page.tier-crown .visitor-field span{color:#806c61}
 .provenance-page.tier-crown .record-intro{color:#f7e8cf}
-.record-bridge{max-width:540px;margin:18px auto 22px;padding:18px 19px;border:1px solid var(--record-line);border-radius:18px;background:rgba(255,255,255,.72);text-align:left}
-.record-bridge span{display:block;margin-bottom:6px;color:var(--record-accent);font-size:10px;font-weight:700;letter-spacing:.1em}
-.record-bridge p{margin:0;color:#584d46;font-size:14px;line-height:1.9}
 .provenance-page .start{background:var(--record-deep)!important}
 .provenance-page.tier-crown .start{background:#f1ce7d!important;color:#3e2327!important}
-@media(max-width:520px){.envelope{width:94%;margin-top:18px}.wax-seal{width:68px;height:68px}.royal-warrant{padding:17px 14px}.royal-letter{padding:30px 19px 24px}.visitor-record{padding:20px 15px 17px}.visitor-grid{grid-template-columns:1fr}.name-bridge{padding:18px 17px}.provenance-page .card{padding:25px 16px}.record-bridge{padding:16px}}
+@media(max-width:520px){
+  .envelope{width:94%;margin-top:18px}.wax-seal{width:68px;height:68px}.royal-warrant{padding:17px 14px}.royal-letter{padding:30px 19px 24px}
+  .portal-intro br{display:none}.portal-documents{grid-template-columns:1fr;gap:11px}.portal-document{min-height:0;padding:19px 17px}.portal-document-number{margin-bottom:8px}.portal-document em{min-height:0}.portal-document small{margin-top:8px;padding-top:0}.result-portal .card{padding:27px 17px 25px}.portal-heading br{display:none}
+  .certificate-switcher{margin-bottom:20px}.visitor-record{padding:20px 14px 16px}.visitor-grid{grid-template-columns:1fr;gap:8px}.visitor-field.coat-field{grid-column:auto}.visitor-field{min-height:0;padding:14px 13px}.provenance-page .card{padding:22px 14px 25px}.record-intro{font-size:13.5px}.record-tier-note{margin-top:-10px;padding:10px 8px}
+}
 </style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">LITTLE MEW</div>
 <div class="cat">🐈</div>
@@ -310,18 +330,36 @@ body:has(#start_page:target) #start_page{display:block!important}
 <strong class="royal-letter-name" id="royal_letter_name"></strong>
 <p class="royal-letter-body">同封の来訪者記録には、<br>猫としてのあなたの姿と、<br>受け継いだ家の記憶が記されています。</p>
 <p class="royal-letter-sign">国王陛下の命により<br>セント・ミルク宮殿　王室侍従長室<span class="royal-letter-register" id="royal_letter_register"></span></p>
-<button class="start" id="enter_kingdom" type="button">猫の肖像を見る</button>
+<button class="start" id="enter_kingdom" type="button">二つの証を受け取る</button>
 </article>
+</div></section><section id="result_portal" class="page result-portal"><div class="card">
+<span class="portal-kicker">TWO RECORDS FOR YOU</span>
+<div class="portal-seal" aria-hidden="true">LMK</div>
+<h1 class="portal-heading">王国から、<br>二つの証が届きました</h1>
+<p class="portal-intro">ひとつは、九つの問いから描かれた心の肖像。<br>もうひとつは、王国で授けられた猫としての姿。<br>二つは別々に生まれ、並んであなたを物語ります。</p>
+<div class="portal-documents">
+<button class="portal-document portrait-document" id="open_portrait" type="button">
+<span class="portal-document-number">I</span><span class="portal-document-kicker">CAT PORTRAIT</span>
+<strong>猫の肖像</strong><em id="portal_portrait_name">あなたの心から描かれた猫</em><small>九つの答えから届いた証</small>
+</button>
+<button class="portal-document register-document" id="open_registration" type="button">
+<span class="portal-document-number">II</span><span class="portal-document-kicker">ROYAL REGISTER</span>
+<strong>王室来訪者登録証</strong><em id="portal_coat_hint">王国で授けられた猫としての姿</em><small>毛並み・生まれ・家の記憶</small>
+</button>
+</div>
+<a class="portal-restart" href="#start_page">もう一度診断する</a>
 </div></section><section id="provenance_page" class="page provenance-page tier-ivory"><div class="card">
+<nav class="certificate-switcher" aria-label="二つの証">
+<button id="switch_to_portrait" type="button">猫の肖像</button><button class="is-active" type="button" aria-current="page">王室登録証</button>
+</nav>
 <div class="record-seal" aria-hidden="true">LMK</div>
 <div class="record-rarity" id="record_rarity">アイヴォリー記録</div>
 <h1 class="record-heading">王国に記されたあなた</h1>
 <p class="record-probability" id="record_probability"></p>
-<p class="record-intro">国王陛下の招待を受けた一匹として、<br>王室来訪者登録簿に記された、もうひとつのあなたです。</p>
+<p class="record-intro">国王陛下の招待を受けた一匹として、王室来訪者登録簿に記された姿です。</p>
 <p class="record-tier-note" id="record_tier_note"></p>
 <div id="provenance_record_mount"></div>
-<div class="record-bridge" id="record_bridge"></div>
-<button class="start" id="return_portrait" type="button">猫の肖像へ戻る</button>
+<button class="start" id="return_portal" type="button">二つの証へ戻る</button>
 </div></section><section id="result_blood_life_quiet" class="page result-page theme-blood"><div class="card">
 <div class="kicker">YOUR LITTLE MEW TYPE</div><div class="category-mark"><span>気高き血統</span><em>The Crimson Crown</em></div><div class="cat">🐈</div>
 <div class="small">CAT No.23</div><h1 class="title">王家のパティシエ</h1>
@@ -654,24 +692,24 @@ body:has(#start_page:target) #start_page{display:block!important}
   ];
 
   const coatEpithets = {
-    "キジトラ":"森影の縞をまとうキジトラ",
-    "キジ白":"白襟をきりりとまとったキジ白",
-    "茶トラ":"金の陽だまり色の茶トラ",
-    "茶白":"蜂蜜色の背に白襟をもつ茶白",
-    "サバトラ":"銀の波紋をまとうサバトラ",
-    "サバ白":"雪襟に銀縞を重ねたサバ白",
-    "黒":"夜天の艶をまとう黒猫",
-    "白":"朝霧の光をまとう白猫",
-    "灰":"薄明の空色をした灰猫",
-    "灰白":"銀雲と白雪を分けた灰白",
-    "ハチワレ":"燕尾襟を思わせるハチワレ",
-    "三毛":"三つの彩りを継いだ三毛猫",
-    "サビ":"琥珀と夜色が溶け合うサビ猫",
-    "麦わら":"秋穂の細縞をまとう麦わら猫",
-    "クリーム":"ミルク菓子色のクリーム猫",
-    "ポイント":"耳先に夜明け色を宿すポイント猫",
-    "しみ付き":"インクの雫模様をもつ白猫",
-    "淡色の二毛・三毛":"月明かりににじむ淡色の二毛・三毛猫"
+    "キジトラ":"茶褐色の縞が美しく重なるキジトラ",
+    "キジ白":"深い縞に、やわらかな白が映えるキジ白",
+    "茶トラ":"陽だまり色の縞をもつ茶トラ",
+    "茶白":"あたたかな茶と、澄んだ白が映える茶白",
+    "サバトラ":"銀青の縞がくっきり走るサバトラ",
+    "サバ白":"銀青の縞に、澄んだ白が映えるサバ白",
+    "黒":"夜の光をつややかに映す黒猫",
+    "白":"朝の光をやわらかく映す白猫",
+    "灰":"薄明の空を思わせる灰猫",
+    "灰白":"淡い灰と白が静かに溶け合う灰白",
+    "ハチワレ":"墨色と白が鮮やかに分かれるハチワレ",
+    "三毛":"三つの色があざやかに重なる三毛猫",
+    "サビ":"琥珀と黒が細やかに混じるサビ猫",
+    "麦わら":"淡い金と墨色が繊細に混じる麦わら猫",
+    "クリーム":"淡いミルク色に光が差すクリーム猫",
+    "ポイント":"淡い毛並みに濃い色が映えるポイント猫",
+    "しみ付き":"白地に小さな色模様をもつ猫",
+    "淡色の二毛・三毛":"淡い色彩が水彩のように重なる二毛・三毛猫"
   };
 
   const titlePool = [
@@ -863,18 +901,6 @@ body:has(#start_page:target) #start_page{display:block!important}
     return {seed:seed >>> 0,coat,coatEpithet:coatEpithets[coat] || `${coat}の猫`,region:region.name,regionId:region.id,birthplace,family:familyName,heirloom,registry:registryNumber(seed),probability,oneIn,tier};
   }
 
-  function bridgeText(resultId, provenance) {
-    const parts = resultParts(resultId);
-    const title = resultTitle(resultId);
-    const focus = parts.primary === "time"
-      ? `${provenance.heirloom}に残る年月へ、まず目が向くこと。`
-      : parts.primary === "message"
-        ? `${provenance.heirloom}の向こうにいた猫の想いを、自然と思い描くこと。`
-        : `${provenance.heirloom}を、今日の暮らしにつながるものとして感じること。`;
-    const motif = (titleMotifs[resultId] || "その心の向きが、この肖像へつながっています。").replace(/の名に重なります。$/,"という肖像につながります。");
-    return `この王室記録が、<strong>「${title}」</strong>という肖像を決めたのではありません。${focus}${motif}`;
-  }
-
   const scoreKeys = ["time","message","life","inherit","weave","outer","inner","quiet","share"];
   const takeHomeStoragePrefix = "littleMewTakeHome:";
   const takeHomeVersion = "4";
@@ -1040,10 +1066,12 @@ body:has(#start_page:target) #start_page{display:block!important}
     if (!isStoreMode) return;
     if (isCarriedView) return;
     const resultId = location.hash.slice(1);
-    if (!resultId.startsWith("result_")) return;
+    const isResultRoute = resultId.startsWith("result_") || resultId === "result_portal" || resultId === "provenance_page";
+    if (!isResultRoute) return;
     let saved = null;
     try { saved = JSON.parse(sessionStorage.getItem("littleMewLastResult")); } catch (_) {}
-    if (saved?.resultId !== resultId) return;
+    if (!saved?.resultId) return;
+    if (resultId.startsWith("result_") && resultId !== "result_portal" && saved.resultId !== resultId) return;
     kioskResetTimer = setTimeout(resetKiosk,kioskResetDelay);
   }
 
@@ -1178,10 +1206,10 @@ body:has(#start_page:target) #start_page{display:block!important}
       return;
     }
     if (!snapshot.provenance) snapshot.provenance = generateProvenance(snapshot.seed || 0);
-    decorateResult(snapshot.resultId,snapshot);
-    location.hash = snapshot.resultId;
+    renderResultPortal(snapshot);
+    location.hash = "result_portal";
     window.scrollTo({top:0,behavior:"auto"});
-    pendingInvitation = null;
+    pendingInvitation = snapshot;
   }
 
   function resultParts(resultId) {
@@ -1193,6 +1221,29 @@ body:has(#start_page:target) #start_page{display:block!important}
 
   function resultTitle(resultId) {
     return document.querySelector(`#${resultId} .title`)?.textContent.trim() || "もう一匹の猫";
+  }
+
+  function renderResultPortal(snapshot) {
+    if (!snapshot?.resultId) return;
+    if (!snapshot.provenance?.tier) snapshot.provenance = generateProvenance(snapshot.seed || 0);
+    const portraitName = document.getElementById("portal_portrait_name");
+    const coatHint = document.getElementById("portal_coat_hint");
+    if (portraitName) portraitName.textContent = `「${resultTitle(snapshot.resultId)}」`;
+    if (coatHint) coatHint.textContent = snapshot.provenance.coatEpithet || coatEpithets[snapshot.provenance.coat] || `${snapshot.provenance.coat}の猫`;
+    const portraitButton = document.getElementById("open_portrait");
+    const registerButton = document.getElementById("open_registration");
+    portraitButton.onclick = () => {
+      decorateResult(snapshot.resultId,snapshot,{carried:isCarriedView});
+      location.hash = snapshot.resultId;
+      window.scrollTo({top:0,behavior:"auto"});
+    };
+    registerButton.onclick = () => openProvenance(snapshot);
+  }
+
+  function openResultPortal(snapshot) {
+    renderResultPortal(snapshot);
+    location.hash = "result_portal";
+    window.scrollTo({top:0,behavior:"auto"});
   }
 
   function scoreBar(label, value, max, selected) {
@@ -1312,15 +1363,18 @@ body:has(#start_page:target) #start_page{display:block!important}
           <p class="visitor-record-note">登録番号 ${provenance.registry}</p>
         </div>
         <div class="visitor-grid">
-          <div class="visitor-field"><span>授けられた毛並み</span><b class="coat-epithet">${coatEpithet}</b></div>
+          <div class="visitor-field coat-field"><span>授けられた毛並み</span><b class="coat-epithet">${coatEpithet}</b></div>
           <div class="visitor-field"><span>生まれた土地</span><b>${provenance.birthplace}<br><small>${provenance.region}</small></b></div>
           <div class="visitor-field"><span>家の来歴</span><b>${provenance.family}</b></div>
           <div class="visitor-field"><span>家に伝わるもの</span><b>${provenance.heirloom}</b></div>
         </div>
       </section>`;
-    document.getElementById("record_bridge").innerHTML = `<span>猫の肖像と、王国に記された姿</span><p>${bridgeText(snapshot.resultId,provenance)}</p>`;
-    const returnButton = document.getElementById("return_portrait");
-    returnButton.onclick = () => { location.hash = snapshot.resultId; window.scrollTo({top:0,behavior:"auto"}); };
+    document.getElementById("switch_to_portrait").onclick = () => {
+      decorateResult(snapshot.resultId,snapshot,{carried:isCarriedView});
+      location.hash = snapshot.resultId;
+      window.scrollTo({top:0,behavior:"auto"});
+    };
+    document.getElementById("return_portal").onclick = () => openResultPortal(snapshot);
   }
 
   function openProvenance(snapshot) {
@@ -1339,15 +1393,16 @@ body:has(#start_page:target) #start_page{display:block!important}
     if (kicker) kicker.textContent = "YOUR CAT PORTRAIT";
     card.querySelector(".royal-warrant")?.remove();
     card.querySelector(".visitor-record")?.remove();
-    card.querySelector(".name-bridge")?.remove();
     card.querySelector(".portrait-route")?.remove();
+    card.querySelector(".certificate-switcher")?.remove();
     if (snapshot) {
       if (!snapshot.provenance?.tier) snapshot.provenance = generateProvenance(snapshot.seed || 0);
-      const route = document.createElement("section");
-      route.className = "portrait-route";
-      route.innerHTML = `<span class="portrait-route-kicker">A SEALED RECORD AWAITS</span><h2>もう一通、王室から届いています</h2><p>あなたに授けられた毛並みと、生まれ、家に受け継がれた記憶。封じられた登録証を開けば、王国でのもうひとつの姿が明かされます。</p><button class="quiet-action primary" type="button">封印された登録証をひらく</button>`;
-      route.querySelector("button").addEventListener("click",()=>openProvenance(snapshot));
-      card.querySelector(".desc").after(route);
+      const switcher = document.createElement("nav");
+      switcher.className = "certificate-switcher";
+      switcher.setAttribute("aria-label","二つの証");
+      switcher.innerHTML = `<button class="is-active" type="button" aria-current="page">猫の肖像</button><button type="button">王室登録証</button>`;
+      switcher.lastElementChild.addEventListener("click",()=>openProvenance(snapshot));
+      card.prepend(switcher);
     }
     card.querySelector(".result-analysis")?.remove();
     const section = document.createElement("section");
@@ -1368,8 +1423,7 @@ body:has(#start_page:target) #start_page{display:block!important}
           ${nearbyPanel(parts,snapshot)}
         </div>
       </details>`;
-    const routeAnchor = card.querySelector(".portrait-route");
-    (routeAnchor || card.querySelector(".desc")).after(section);
+    card.querySelector(".desc").after(section);
     renderTakeHomeForResult(resultId,snapshot,options.carried === true);
 
     let actions = card.querySelector(".result-actions");
@@ -1447,6 +1501,15 @@ body:has(#start_page:target) #start_page{display:block!important}
   backButton.addEventListener("click", goBackOneQuestion);
   document.getElementById("open_invitation")?.addEventListener("click", openInvitation);
   document.getElementById("enter_kingdom")?.addEventListener("click", enterKingdom);
+  document.querySelector(".portal-restart")?.addEventListener("click", () => {
+    window.lmkTrack?.("restart", {from_result:"result_portal"});
+    index = 0;
+    scores = initialScores();
+    answerHistory = [];
+    tieMode = false;
+    primaryTieUsed = false;
+    pendingInvitation = null;
+  });
   document.querySelectorAll('.result-page a[href="#start_page"]').forEach(link => {
     link.addEventListener("click", () => {
       window.lmkTrack?.("restart", {from_result:link.closest(".result-page")?.id || ""});
@@ -1492,6 +1555,11 @@ body:has(#start_page:target) #start_page{display:block!important}
   if (location.hash === "#provenance_page" && savedResult) {
     if (!savedResult.provenance?.tier) savedResult.provenance = generateProvenance(savedResult.seed || 0);
     renderProvenancePage(savedResult);
+  }
+  if (location.hash === "#result_portal" && savedResult) {
+    if (!savedResult.provenance?.tier) savedResult.provenance = generateProvenance(savedResult.seed || 0);
+    pendingInvitation = savedResult;
+    renderResultPortal(savedResult);
   }
   document.querySelectorAll(".result-page").forEach(page => decorateResult(page.id,savedResult?.resultId === page.id ? savedResult : null,{carried:isCarriedView && savedResult?.resultId === page.id}));
   armKioskReset();
