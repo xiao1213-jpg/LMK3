@@ -18,13 +18,6 @@
       },
       "orphanOrigins": [
         {
-          "v": "セント・ミルク宮殿に近い住宅街に生まれた猫",
-          "lines": [
-            "セント・ミルク宮殿に近い住宅街に生",
-            "まれた猫"
-          ]
-        },
-        {
           "v": "王都ミューミンスターの学術街に生まれた猫",
           "lines": [
             "王都ミューミンスターの学術街に生ま",
@@ -32,17 +25,10 @@
           ]
         },
         {
-          "v": "アヴェル川沿いのロウ・キーズに生まれた猫",
+          "v": "セント・ミルク宮殿に近い住宅街に生まれた猫",
           "lines": [
-            "アヴェル川沿いのロウ・キーズに生ま",
-            "れた猫"
-          ]
-        },
-        {
-          "v": "アヴェル川に近い小さな住宅街に生まれた猫",
-          "lines": [
-            "アヴェル川に近い小さな住宅街に生ま",
-            "れた猫"
+            "セント・ミルク宮殿に近い住宅街に生",
+            "まれた猫"
           ]
         },
         {
@@ -64,6 +50,20 @@
           "lines": [
             "フィッシュベル市場の近くに生まれた",
             "猫"
+          ]
+        },
+        {
+          "v": "アヴェル川沿いのロウ・キーズに生まれた猫",
+          "lines": [
+            "アヴェル川沿いのロウ・キーズに生ま",
+            "れた猫"
+          ]
+        },
+        {
+          "v": "アヴェル川に近い小さな住宅街に生まれた猫",
+          "lines": [
+            "アヴェル川に近い小さな住宅街に生ま",
+            "れた猫"
           ]
         },
         {
@@ -941,18 +941,6 @@
           ],
           "origin": [
             {
-              "value": "セント・ミルク宮殿に近い住宅街に生まれた猫",
-              "fontSize": "13px",
-              "lines": [
-                "セント・ミルク宮殿に近い住宅街に生",
-                "まれた猫"
-              ],
-              "lineCount": 2,
-              "lastLine": 4,
-              "centerOffset": 0,
-              "width": 228
-            },
-            {
               "value": "王都ミューミンスターの学術街に生まれた猫",
               "fontSize": "13px",
               "lines": [
@@ -965,37 +953,267 @@
               "width": 228
             },
             {
-              "value": "アヴェル川沿いのロウ・キーズに生まれた猫",
+              "value": "王都の古い商店街に生まれた猫",
               "fontSize": "13px",
               "lines": [
-                "アヴェル川沿いのロウ・キーズに生ま",
-                "れた猫"
+                "王都の古い商店街に生まれた猫"
               ],
-              "lineCount": 2,
-              "lastLine": 3,
+              "lineCount": 1,
+              "lastLine": 14,
               "centerOffset": 0,
               "width": 228
             },
             {
-              "value": "アヴェル川に近い小さな住宅街に生まれた猫",
+              "value": "王都中央駅に近い街区に生まれた猫",
               "fontSize": "13px",
               "lines": [
-                "アヴェル川に近い小さな住宅街に生ま",
-                "れた猫"
+                "王都中央駅に近い街区に生まれた猫"
               ],
-              "lineCount": 2,
-              "lastLine": 3,
+              "lineCount": 1,
+              "lastLine": 16,
               "centerOffset": 0,
               "width": 228
             },
             {
-              "value": "王都行きの鉄道沿線の町に生まれた猫",
+              "value": "ランタンの灯る劇場街に生まれた猫",
               "fontSize": "13px",
               "lines": [
-                "王都行きの鉄道沿線の町に生まれた猫"
+                "ランタンの灯る劇場街に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "セント・ミルク宮殿に近い住宅街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "セント・ミルク宮殿に近い住宅街に生",
+                "まれた猫"
+              ],
+              "lineCount": 2,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ソルト・ヘイブンに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ソルト・ヘイブンに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "東岸の白い石壁の町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "東岸の白い石壁の町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "キャスタミアに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "キャスタミアに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "葡萄とオリーブの丘に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "葡萄とオリーブの丘に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "海辺の小さな国内港に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "海辺の小さな国内港に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ステイブリッジ近郊に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ステイブリッジ近郊に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "古い街道町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "古い街道町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "寄宿学校のある町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "寄宿学校のある町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "王都近郊の田園に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "王都近郊の田園に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "海辺の国内港に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "海辺の国内港に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ウィッチフォード大学街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ウィッチフォード大学街に生まれた猫"
               ],
               "lineCount": 1,
               "lastLine": 17,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ブライアヒルに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ブライアヒルに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "古い市場町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "古い市場町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "野ばらの丘に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "野ばらの丘に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "森の縁の村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "森の縁の村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "エドマンドウィックに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "エドマンドウィックに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《ドルヴァ》の森の縁に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "《ドルヴァ》の森の縁に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "古城を囲む町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "古城を囲む町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "谷あいの市場町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "谷あいの市場町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "森へ続く街道集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "森へ続く街道集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
               "centerOffset": 0,
               "width": 228
             },
@@ -1008,6 +1226,105 @@
               ],
               "lineCount": 2,
               "lastLine": 1,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "グリーンステッドに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "グリーンステッドに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "イーストバンクに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "イーストバンクに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "農業・園芸カレッジの町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "農業・園芸カレッジの町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "湖畔の市場町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "湖畔の市場町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "コホーリア湯郷に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "コホーリア湯郷に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "エイヴリング高地に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "エイヴリング高地に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "雪深い谷あいの町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "雪深い谷あいの町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "北岸の国内港に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "北岸の国内港に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "山地の大学町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "山地の大学町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
               "centerOffset": 0,
               "width": 228
             },
@@ -1047,6 +1364,18 @@
               "width": 228
             },
             {
+              "value": "アヴェル川沿いのロウ・キーズに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川沿いのロウ・キーズに生ま",
+                "れた猫"
+              ],
+              "lineCount": 2,
+              "lastLine": 3,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
               "value": "ピカデリー・ミューズに生まれた猫",
               "fontSize": "13px",
               "lines": [
@@ -1065,6 +1394,18 @@
               ],
               "lineCount": 1,
               "lastLine": 15,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "アヴェル川に近い小さな住宅街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川に近い小さな住宅街に生ま",
+                "れた猫"
+              ],
+              "lineCount": 2,
+              "lastLine": 3,
               "centerOffset": 0,
               "width": 228
             },
@@ -1233,6 +1574,17 @@
               ],
               "lineCount": 1,
               "lastLine": 15,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "王都行きの鉄道沿線の町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "王都行きの鉄道沿線の町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
               "centerOffset": 0,
               "width": 228
             },
@@ -1971,17 +2323,6 @@
           ],
           "proposedOrigin": [
             {
-              "value": "セント・ミルク宮殿に近い住宅街",
-              "fontSize": "13px",
-              "lines": [
-                "セント・ミルク宮殿に近い住宅街"
-              ],
-              "lineCount": 1,
-              "lastLine": 15,
-              "centerOffset": 0,
-              "width": 228
-            },
-            {
               "value": "王都ミューミンスターの学術街",
               "fontSize": "13px",
               "lines": [
@@ -1993,35 +2334,266 @@
               "width": 228
             },
             {
-              "value": "アヴェル川沿いのロウ・キーズ",
+              "value": "王都の古い商店街",
               "fontSize": "13px",
               "lines": [
-                "アヴェル川沿いのロウ・キーズ"
+                "王都の古い商店街"
               ],
               "lineCount": 1,
-              "lastLine": 14,
+              "lastLine": 8,
               "centerOffset": 0,
               "width": 228
             },
             {
-              "value": "アヴェル川に近い小さな住宅街",
+              "value": "王都中央駅に近い街区",
               "fontSize": "13px",
               "lines": [
-                "アヴェル川に近い小さな住宅街"
+                "王都中央駅に近い街区"
               ],
               "lineCount": 1,
-              "lastLine": 14,
+              "lastLine": 10,
               "centerOffset": 0,
               "width": 228
             },
             {
-              "value": "王都行きの鉄道沿線の町",
+              "value": "ランタンの灯る劇場街",
               "fontSize": "13px",
               "lines": [
-                "王都行きの鉄道沿線の町"
+                "ランタンの灯る劇場街"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "セント・ミルク宮殿に近い住宅街",
+              "fontSize": "13px",
+              "lines": [
+                "セント・ミルク宮殿に近い住宅街"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ソルト・ヘイブン",
+              "fontSize": "13px",
+              "lines": [
+                "ソルト・ヘイブン"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "東岸の白い石壁の町",
+              "fontSize": "13px",
+              "lines": [
+                "東岸の白い石壁の町"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "キャスタミア",
+              "fontSize": "13px",
+              "lines": [
+                "キャスタミア"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "葡萄とオリーブの丘",
+              "fontSize": "13px",
+              "lines": [
+                "葡萄とオリーブの丘"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "海辺の小さな国内港",
+              "fontSize": "13px",
+              "lines": [
+                "海辺の小さな国内港"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ステイブリッジ近郊",
+              "fontSize": "13px",
+              "lines": [
+                "ステイブリッジ近郊"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "古い街道町",
+              "fontSize": "13px",
+              "lines": [
+                "古い街道町"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "寄宿学校のある町",
+              "fontSize": "13px",
+              "lines": [
+                "寄宿学校のある町"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "王都近郊の田園",
+              "fontSize": "13px",
+              "lines": [
+                "王都近郊の田園"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "海辺の国内港",
+              "fontSize": "13px",
+              "lines": [
+                "海辺の国内港"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ウィッチフォード大学街",
+              "fontSize": "13px",
+              "lines": [
+                "ウィッチフォード大学街"
               ],
               "lineCount": 1,
               "lastLine": 11,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ブライアヒル",
+              "fontSize": "13px",
+              "lines": [
+                "ブライアヒル"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "古い市場町",
+              "fontSize": "13px",
+              "lines": [
+                "古い市場町"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "野ばらの丘",
+              "fontSize": "13px",
+              "lines": [
+                "野ばらの丘"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "森の縁の村",
+              "fontSize": "13px",
+              "lines": [
+                "森の縁の村"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "エドマンドウィック",
+              "fontSize": "13px",
+              "lines": [
+                "エドマンドウィック"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "《ドルヴァ》の森の縁",
+              "fontSize": "13px",
+              "lines": [
+                "《ドルヴァ》の森の縁"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "古城を囲む町",
+              "fontSize": "13px",
+              "lines": [
+                "古城を囲む町"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "谷あいの市場町",
+              "fontSize": "13px",
+              "lines": [
+                "谷あいの市場町"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "森へ続く街道集落",
+              "fontSize": "13px",
+              "lines": [
+                "森へ続く街道集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
               "centerOffset": 0,
               "width": 228
             },
@@ -2033,6 +2605,105 @@
               ],
               "lineCount": 1,
               "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "グリーンステッド",
+              "fontSize": "13px",
+              "lines": [
+                "グリーンステッド"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "イーストバンク",
+              "fontSize": "13px",
+              "lines": [
+                "イーストバンク"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "農業・園芸カレッジの町",
+              "fontSize": "13px",
+              "lines": [
+                "農業・園芸カレッジの町"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "湖畔の市場町",
+              "fontSize": "13px",
+              "lines": [
+                "湖畔の市場町"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "コホーリア湯郷",
+              "fontSize": "13px",
+              "lines": [
+                "コホーリア湯郷"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "エイヴリング高地",
+              "fontSize": "13px",
+              "lines": [
+                "エイヴリング高地"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "雪深い谷あいの町",
+              "fontSize": "13px",
+              "lines": [
+                "雪深い谷あいの町"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "北岸の国内港",
+              "fontSize": "13px",
+              "lines": [
+                "北岸の国内港"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "山地の大学町",
+              "fontSize": "13px",
+              "lines": [
+                "山地の大学町"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
               "centerOffset": 0,
               "width": 228
             },
@@ -2070,6 +2741,17 @@
               "width": 228
             },
             {
+              "value": "アヴェル川沿いのロウ・キーズ",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川沿いのロウ・キーズ"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
               "value": "ピカデリー・ミューズ",
               "fontSize": "13px",
               "lines": [
@@ -2088,6 +2770,17 @@
               ],
               "lineCount": 1,
               "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "アヴェル川に近い小さな住宅街",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川に近い小さな住宅街"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
               "centerOffset": 0,
               "width": 228
             },
@@ -2253,6 +2946,17 @@
               ],
               "lineCount": 1,
               "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "王都行きの鉄道沿線の町",
+              "fontSize": "13px",
+              "lines": [
+                "王都行きの鉄道沿線の町"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
               "centerOffset": 0,
               "width": 228
             },
@@ -3198,17 +3902,6 @@
           ],
           "origin": [
             {
-              "value": "セント・ミルク宮殿に近い住宅街に生まれた猫",
-              "fontSize": "13px",
-              "lines": [
-                "セント・ミルク宮殿に近い住宅街に生まれた猫"
-              ],
-              "lineCount": 1,
-              "lastLine": 21,
-              "centerOffset": 0,
-              "width": 281.75
-            },
-            {
               "value": "王都ミューミンスターの学術街に生まれた猫",
               "fontSize": "13px",
               "lines": [
@@ -3220,35 +3913,266 @@
               "width": 281.75
             },
             {
-              "value": "アヴェル川沿いのロウ・キーズに生まれた猫",
+              "value": "王都の古い商店街に生まれた猫",
               "fontSize": "13px",
               "lines": [
-                "アヴェル川沿いのロウ・キーズに生まれた猫"
+                "王都の古い商店街に生まれた猫"
               ],
               "lineCount": 1,
-              "lastLine": 20,
+              "lastLine": 14,
               "centerOffset": 0,
               "width": 281.75
             },
             {
-              "value": "アヴェル川に近い小さな住宅街に生まれた猫",
+              "value": "王都中央駅に近い街区に生まれた猫",
               "fontSize": "13px",
               "lines": [
-                "アヴェル川に近い小さな住宅街に生まれた猫"
+                "王都中央駅に近い街区に生まれた猫"
               ],
               "lineCount": 1,
-              "lastLine": 20,
+              "lastLine": 16,
               "centerOffset": 0,
               "width": 281.75
             },
             {
-              "value": "王都行きの鉄道沿線の町に生まれた猫",
+              "value": "ランタンの灯る劇場街に生まれた猫",
               "fontSize": "13px",
               "lines": [
-                "王都行きの鉄道沿線の町に生まれた猫"
+                "ランタンの灯る劇場街に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "セント・ミルク宮殿に近い住宅街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "セント・ミルク宮殿に近い住宅街に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 21,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ソルト・ヘイブンに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ソルト・ヘイブンに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "東岸の白い石壁の町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "東岸の白い石壁の町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "キャスタミアに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "キャスタミアに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "葡萄とオリーブの丘に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "葡萄とオリーブの丘に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "海辺の小さな国内港に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "海辺の小さな国内港に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ステイブリッジ近郊に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ステイブリッジ近郊に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "古い街道町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "古い街道町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "寄宿学校のある町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "寄宿学校のある町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "王都近郊の田園に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "王都近郊の田園に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "海辺の国内港に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "海辺の国内港に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ウィッチフォード大学街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ウィッチフォード大学街に生まれた猫"
               ],
               "lineCount": 1,
               "lastLine": 17,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ブライアヒルに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ブライアヒルに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "古い市場町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "古い市場町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "野ばらの丘に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "野ばらの丘に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "森の縁の村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "森の縁の村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "エドマンドウィックに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "エドマンドウィックに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《ドルヴァ》の森の縁に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "《ドルヴァ》の森の縁に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "古城を囲む町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "古城を囲む町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "谷あいの市場町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "谷あいの市場町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "森へ続く街道集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "森へ続く街道集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
               "centerOffset": 0,
               "width": 281.75
             },
@@ -3260,6 +4184,105 @@
               ],
               "lineCount": 1,
               "lastLine": 18,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "グリーンステッドに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "グリーンステッドに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "イーストバンクに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "イーストバンクに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "農業・園芸カレッジの町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "農業・園芸カレッジの町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "湖畔の市場町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "湖畔の市場町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "コホーリア湯郷に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "コホーリア湯郷に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "エイヴリング高地に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "エイヴリング高地に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "雪深い谷あいの町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "雪深い谷あいの町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "北岸の国内港に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "北岸の国内港に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "山地の大学町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "山地の大学町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
               "centerOffset": 0,
               "width": 281.75
             },
@@ -3297,6 +4320,17 @@
               "width": 281.75
             },
             {
+              "value": "アヴェル川沿いのロウ・キーズに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川沿いのロウ・キーズに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 20,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
               "value": "ピカデリー・ミューズに生まれた猫",
               "fontSize": "13px",
               "lines": [
@@ -3315,6 +4349,17 @@
               ],
               "lineCount": 1,
               "lastLine": 15,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "アヴェル川に近い小さな住宅街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川に近い小さな住宅街に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 20,
               "centerOffset": 0,
               "width": 281.75
             },
@@ -3480,6 +4525,17 @@
               ],
               "lineCount": 1,
               "lastLine": 15,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "王都行きの鉄道沿線の町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "王都行きの鉄道沿線の町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
               "centerOffset": 0,
               "width": 281.75
             },
@@ -4214,17 +5270,6 @@
           ],
           "proposedOrigin": [
             {
-              "value": "セント・ミルク宮殿に近い住宅街",
-              "fontSize": "13px",
-              "lines": [
-                "セント・ミルク宮殿に近い住宅街"
-              ],
-              "lineCount": 1,
-              "lastLine": 15,
-              "centerOffset": 0,
-              "width": 281.75
-            },
-            {
               "value": "王都ミューミンスターの学術街",
               "fontSize": "13px",
               "lines": [
@@ -4236,35 +5281,266 @@
               "width": 281.75
             },
             {
-              "value": "アヴェル川沿いのロウ・キーズ",
+              "value": "王都の古い商店街",
               "fontSize": "13px",
               "lines": [
-                "アヴェル川沿いのロウ・キーズ"
+                "王都の古い商店街"
               ],
               "lineCount": 1,
-              "lastLine": 14,
+              "lastLine": 8,
               "centerOffset": 0,
               "width": 281.75
             },
             {
-              "value": "アヴェル川に近い小さな住宅街",
+              "value": "王都中央駅に近い街区",
               "fontSize": "13px",
               "lines": [
-                "アヴェル川に近い小さな住宅街"
+                "王都中央駅に近い街区"
               ],
               "lineCount": 1,
-              "lastLine": 14,
+              "lastLine": 10,
               "centerOffset": 0,
               "width": 281.75
             },
             {
-              "value": "王都行きの鉄道沿線の町",
+              "value": "ランタンの灯る劇場街",
               "fontSize": "13px",
               "lines": [
-                "王都行きの鉄道沿線の町"
+                "ランタンの灯る劇場街"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "セント・ミルク宮殿に近い住宅街",
+              "fontSize": "13px",
+              "lines": [
+                "セント・ミルク宮殿に近い住宅街"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ソルト・ヘイブン",
+              "fontSize": "13px",
+              "lines": [
+                "ソルト・ヘイブン"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "東岸の白い石壁の町",
+              "fontSize": "13px",
+              "lines": [
+                "東岸の白い石壁の町"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "キャスタミア",
+              "fontSize": "13px",
+              "lines": [
+                "キャスタミア"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "葡萄とオリーブの丘",
+              "fontSize": "13px",
+              "lines": [
+                "葡萄とオリーブの丘"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "海辺の小さな国内港",
+              "fontSize": "13px",
+              "lines": [
+                "海辺の小さな国内港"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ステイブリッジ近郊",
+              "fontSize": "13px",
+              "lines": [
+                "ステイブリッジ近郊"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "古い街道町",
+              "fontSize": "13px",
+              "lines": [
+                "古い街道町"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "寄宿学校のある町",
+              "fontSize": "13px",
+              "lines": [
+                "寄宿学校のある町"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "王都近郊の田園",
+              "fontSize": "13px",
+              "lines": [
+                "王都近郊の田園"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "海辺の国内港",
+              "fontSize": "13px",
+              "lines": [
+                "海辺の国内港"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ウィッチフォード大学街",
+              "fontSize": "13px",
+              "lines": [
+                "ウィッチフォード大学街"
               ],
               "lineCount": 1,
               "lastLine": 11,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ブライアヒル",
+              "fontSize": "13px",
+              "lines": [
+                "ブライアヒル"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "古い市場町",
+              "fontSize": "13px",
+              "lines": [
+                "古い市場町"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "野ばらの丘",
+              "fontSize": "13px",
+              "lines": [
+                "野ばらの丘"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "森の縁の村",
+              "fontSize": "13px",
+              "lines": [
+                "森の縁の村"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "エドマンドウィック",
+              "fontSize": "13px",
+              "lines": [
+                "エドマンドウィック"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "《ドルヴァ》の森の縁",
+              "fontSize": "13px",
+              "lines": [
+                "《ドルヴァ》の森の縁"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "古城を囲む町",
+              "fontSize": "13px",
+              "lines": [
+                "古城を囲む町"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "谷あいの市場町",
+              "fontSize": "13px",
+              "lines": [
+                "谷あいの市場町"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "森へ続く街道集落",
+              "fontSize": "13px",
+              "lines": [
+                "森へ続く街道集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
               "centerOffset": 0,
               "width": 281.75
             },
@@ -4276,6 +5552,105 @@
               ],
               "lineCount": 1,
               "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "グリーンステッド",
+              "fontSize": "13px",
+              "lines": [
+                "グリーンステッド"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "イーストバンク",
+              "fontSize": "13px",
+              "lines": [
+                "イーストバンク"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "農業・園芸カレッジの町",
+              "fontSize": "13px",
+              "lines": [
+                "農業・園芸カレッジの町"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "湖畔の市場町",
+              "fontSize": "13px",
+              "lines": [
+                "湖畔の市場町"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "コホーリア湯郷",
+              "fontSize": "13px",
+              "lines": [
+                "コホーリア湯郷"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "エイヴリング高地",
+              "fontSize": "13px",
+              "lines": [
+                "エイヴリング高地"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "雪深い谷あいの町",
+              "fontSize": "13px",
+              "lines": [
+                "雪深い谷あいの町"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "北岸の国内港",
+              "fontSize": "13px",
+              "lines": [
+                "北岸の国内港"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "山地の大学町",
+              "fontSize": "13px",
+              "lines": [
+                "山地の大学町"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
               "centerOffset": 0,
               "width": 281.75
             },
@@ -4313,6 +5688,17 @@
               "width": 281.75
             },
             {
+              "value": "アヴェル川沿いのロウ・キーズ",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川沿いのロウ・キーズ"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
               "value": "ピカデリー・ミューズ",
               "fontSize": "13px",
               "lines": [
@@ -4331,6 +5717,17 @@
               ],
               "lineCount": 1,
               "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "アヴェル川に近い小さな住宅街",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川に近い小さな住宅街"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
               "centerOffset": 0,
               "width": 281.75
             },
@@ -4496,6 +5893,17 @@
               ],
               "lineCount": 1,
               "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "王都行きの鉄道沿線の町",
+              "fontSize": "13px",
+              "lines": [
+                "王都行きの鉄道沿線の町"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
               "centerOffset": 0,
               "width": 281.75
             },
@@ -5441,17 +6849,6 @@
           ],
           "origin": [
             {
-              "value": "セント・ミルク宮殿に近い住宅街に生まれた猫",
-              "fontSize": "13px",
-              "lines": [
-                "セント・ミルク宮殿に近い住宅街に生まれた猫"
-              ],
-              "lineCount": 1,
-              "lastLine": 21,
-              "centerOffset": 0,
-              "width": 294.875
-            },
-            {
               "value": "王都ミューミンスターの学術街に生まれた猫",
               "fontSize": "13px",
               "lines": [
@@ -5463,35 +6860,266 @@
               "width": 294.875
             },
             {
-              "value": "アヴェル川沿いのロウ・キーズに生まれた猫",
+              "value": "王都の古い商店街に生まれた猫",
               "fontSize": "13px",
               "lines": [
-                "アヴェル川沿いのロウ・キーズに生まれた猫"
+                "王都の古い商店街に生まれた猫"
               ],
               "lineCount": 1,
-              "lastLine": 20,
+              "lastLine": 14,
               "centerOffset": 0,
               "width": 294.875
             },
             {
-              "value": "アヴェル川に近い小さな住宅街に生まれた猫",
+              "value": "王都中央駅に近い街区に生まれた猫",
               "fontSize": "13px",
               "lines": [
-                "アヴェル川に近い小さな住宅街に生まれた猫"
+                "王都中央駅に近い街区に生まれた猫"
               ],
               "lineCount": 1,
-              "lastLine": 20,
+              "lastLine": 16,
               "centerOffset": 0,
               "width": 294.875
             },
             {
-              "value": "王都行きの鉄道沿線の町に生まれた猫",
+              "value": "ランタンの灯る劇場街に生まれた猫",
               "fontSize": "13px",
               "lines": [
-                "王都行きの鉄道沿線の町に生まれた猫"
+                "ランタンの灯る劇場街に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "セント・ミルク宮殿に近い住宅街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "セント・ミルク宮殿に近い住宅街に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 21,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ソルト・ヘイブンに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ソルト・ヘイブンに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "東岸の白い石壁の町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "東岸の白い石壁の町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "キャスタミアに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "キャスタミアに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "葡萄とオリーブの丘に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "葡萄とオリーブの丘に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "海辺の小さな国内港に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "海辺の小さな国内港に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ステイブリッジ近郊に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ステイブリッジ近郊に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "古い街道町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "古い街道町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "寄宿学校のある町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "寄宿学校のある町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "王都近郊の田園に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "王都近郊の田園に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "海辺の国内港に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "海辺の国内港に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ウィッチフォード大学街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ウィッチフォード大学街に生まれた猫"
               ],
               "lineCount": 1,
               "lastLine": 17,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ブライアヒルに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ブライアヒルに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "古い市場町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "古い市場町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "野ばらの丘に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "野ばらの丘に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "森の縁の村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "森の縁の村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "エドマンドウィックに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "エドマンドウィックに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《ドルヴァ》の森の縁に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "《ドルヴァ》の森の縁に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "古城を囲む町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "古城を囲む町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "谷あいの市場町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "谷あいの市場町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "森へ続く街道集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "森へ続く街道集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
               "centerOffset": 0,
               "width": 294.875
             },
@@ -5503,6 +7131,105 @@
               ],
               "lineCount": 1,
               "lastLine": 18,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "グリーンステッドに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "グリーンステッドに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "イーストバンクに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "イーストバンクに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "農業・園芸カレッジの町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "農業・園芸カレッジの町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "湖畔の市場町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "湖畔の市場町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "コホーリア湯郷に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "コホーリア湯郷に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "エイヴリング高地に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "エイヴリング高地に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "雪深い谷あいの町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "雪深い谷あいの町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "北岸の国内港に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "北岸の国内港に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "山地の大学町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "山地の大学町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
               "centerOffset": 0,
               "width": 294.875
             },
@@ -5540,6 +7267,17 @@
               "width": 294.875
             },
             {
+              "value": "アヴェル川沿いのロウ・キーズに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川沿いのロウ・キーズに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 20,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
               "value": "ピカデリー・ミューズに生まれた猫",
               "fontSize": "13px",
               "lines": [
@@ -5558,6 +7296,17 @@
               ],
               "lineCount": 1,
               "lastLine": 15,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "アヴェル川に近い小さな住宅街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川に近い小さな住宅街に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 20,
               "centerOffset": 0,
               "width": 294.875
             },
@@ -5723,6 +7472,17 @@
               ],
               "lineCount": 1,
               "lastLine": 15,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "王都行きの鉄道沿線の町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "王都行きの鉄道沿線の町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
               "centerOffset": 0,
               "width": 294.875
             },
@@ -6457,17 +8217,6 @@
           ],
           "proposedOrigin": [
             {
-              "value": "セント・ミルク宮殿に近い住宅街",
-              "fontSize": "13px",
-              "lines": [
-                "セント・ミルク宮殿に近い住宅街"
-              ],
-              "lineCount": 1,
-              "lastLine": 15,
-              "centerOffset": 0,
-              "width": 294.875
-            },
-            {
               "value": "王都ミューミンスターの学術街",
               "fontSize": "13px",
               "lines": [
@@ -6479,35 +8228,266 @@
               "width": 294.875
             },
             {
-              "value": "アヴェル川沿いのロウ・キーズ",
+              "value": "王都の古い商店街",
               "fontSize": "13px",
               "lines": [
-                "アヴェル川沿いのロウ・キーズ"
+                "王都の古い商店街"
               ],
               "lineCount": 1,
-              "lastLine": 14,
+              "lastLine": 8,
               "centerOffset": 0,
               "width": 294.875
             },
             {
-              "value": "アヴェル川に近い小さな住宅街",
+              "value": "王都中央駅に近い街区",
               "fontSize": "13px",
               "lines": [
-                "アヴェル川に近い小さな住宅街"
+                "王都中央駅に近い街区"
               ],
               "lineCount": 1,
-              "lastLine": 14,
+              "lastLine": 10,
               "centerOffset": 0,
               "width": 294.875
             },
             {
-              "value": "王都行きの鉄道沿線の町",
+              "value": "ランタンの灯る劇場街",
               "fontSize": "13px",
               "lines": [
-                "王都行きの鉄道沿線の町"
+                "ランタンの灯る劇場街"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "セント・ミルク宮殿に近い住宅街",
+              "fontSize": "13px",
+              "lines": [
+                "セント・ミルク宮殿に近い住宅街"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ソルト・ヘイブン",
+              "fontSize": "13px",
+              "lines": [
+                "ソルト・ヘイブン"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "東岸の白い石壁の町",
+              "fontSize": "13px",
+              "lines": [
+                "東岸の白い石壁の町"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "キャスタミア",
+              "fontSize": "13px",
+              "lines": [
+                "キャスタミア"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "葡萄とオリーブの丘",
+              "fontSize": "13px",
+              "lines": [
+                "葡萄とオリーブの丘"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "海辺の小さな国内港",
+              "fontSize": "13px",
+              "lines": [
+                "海辺の小さな国内港"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ステイブリッジ近郊",
+              "fontSize": "13px",
+              "lines": [
+                "ステイブリッジ近郊"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "古い街道町",
+              "fontSize": "13px",
+              "lines": [
+                "古い街道町"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "寄宿学校のある町",
+              "fontSize": "13px",
+              "lines": [
+                "寄宿学校のある町"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "王都近郊の田園",
+              "fontSize": "13px",
+              "lines": [
+                "王都近郊の田園"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "海辺の国内港",
+              "fontSize": "13px",
+              "lines": [
+                "海辺の国内港"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ウィッチフォード大学街",
+              "fontSize": "13px",
+              "lines": [
+                "ウィッチフォード大学街"
               ],
               "lineCount": 1,
               "lastLine": 11,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ブライアヒル",
+              "fontSize": "13px",
+              "lines": [
+                "ブライアヒル"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "古い市場町",
+              "fontSize": "13px",
+              "lines": [
+                "古い市場町"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "野ばらの丘",
+              "fontSize": "13px",
+              "lines": [
+                "野ばらの丘"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "森の縁の村",
+              "fontSize": "13px",
+              "lines": [
+                "森の縁の村"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "エドマンドウィック",
+              "fontSize": "13px",
+              "lines": [
+                "エドマンドウィック"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "《ドルヴァ》の森の縁",
+              "fontSize": "13px",
+              "lines": [
+                "《ドルヴァ》の森の縁"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "古城を囲む町",
+              "fontSize": "13px",
+              "lines": [
+                "古城を囲む町"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "谷あいの市場町",
+              "fontSize": "13px",
+              "lines": [
+                "谷あいの市場町"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "森へ続く街道集落",
+              "fontSize": "13px",
+              "lines": [
+                "森へ続く街道集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
               "centerOffset": 0,
               "width": 294.875
             },
@@ -6519,6 +8499,105 @@
               ],
               "lineCount": 1,
               "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "グリーンステッド",
+              "fontSize": "13px",
+              "lines": [
+                "グリーンステッド"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "イーストバンク",
+              "fontSize": "13px",
+              "lines": [
+                "イーストバンク"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "農業・園芸カレッジの町",
+              "fontSize": "13px",
+              "lines": [
+                "農業・園芸カレッジの町"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "湖畔の市場町",
+              "fontSize": "13px",
+              "lines": [
+                "湖畔の市場町"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "コホーリア湯郷",
+              "fontSize": "13px",
+              "lines": [
+                "コホーリア湯郷"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "エイヴリング高地",
+              "fontSize": "13px",
+              "lines": [
+                "エイヴリング高地"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "雪深い谷あいの町",
+              "fontSize": "13px",
+              "lines": [
+                "雪深い谷あいの町"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "北岸の国内港",
+              "fontSize": "13px",
+              "lines": [
+                "北岸の国内港"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "山地の大学町",
+              "fontSize": "13px",
+              "lines": [
+                "山地の大学町"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
               "centerOffset": 0,
               "width": 294.875
             },
@@ -6556,6 +8635,17 @@
               "width": 294.875
             },
             {
+              "value": "アヴェル川沿いのロウ・キーズ",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川沿いのロウ・キーズ"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
               "value": "ピカデリー・ミューズ",
               "fontSize": "13px",
               "lines": [
@@ -6574,6 +8664,17 @@
               ],
               "lineCount": 1,
               "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "アヴェル川に近い小さな住宅街",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川に近い小さな住宅街"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
               "centerOffset": 0,
               "width": 294.875
             },
@@ -6739,6 +8840,17 @@
               ],
               "lineCount": 1,
               "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "王都行きの鉄道沿線の町",
+              "fontSize": "13px",
+              "lines": [
+                "王都行きの鉄道沿線の町"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
               "centerOffset": 0,
               "width": 294.875
             },
@@ -7684,17 +9796,6 @@
           ],
           "origin": [
             {
-              "value": "セント・ミルク宮殿に近い住宅街に生まれた猫",
-              "fontSize": "13px",
-              "lines": [
-                "セント・ミルク宮殿に近い住宅街に生まれた猫"
-              ],
-              "lineCount": 1,
-              "lastLine": 21,
-              "centerOffset": 0,
-              "width": 461
-            },
-            {
               "value": "王都ミューミンスターの学術街に生まれた猫",
               "fontSize": "13px",
               "lines": [
@@ -7706,35 +9807,266 @@
               "width": 461
             },
             {
-              "value": "アヴェル川沿いのロウ・キーズに生まれた猫",
+              "value": "王都の古い商店街に生まれた猫",
               "fontSize": "13px",
               "lines": [
-                "アヴェル川沿いのロウ・キーズに生まれた猫"
+                "王都の古い商店街に生まれた猫"
               ],
               "lineCount": 1,
-              "lastLine": 20,
+              "lastLine": 14,
               "centerOffset": 0,
               "width": 461
             },
             {
-              "value": "アヴェル川に近い小さな住宅街に生まれた猫",
+              "value": "王都中央駅に近い街区に生まれた猫",
               "fontSize": "13px",
               "lines": [
-                "アヴェル川に近い小さな住宅街に生まれた猫"
+                "王都中央駅に近い街区に生まれた猫"
               ],
               "lineCount": 1,
-              "lastLine": 20,
+              "lastLine": 16,
               "centerOffset": 0,
               "width": 461
             },
             {
-              "value": "王都行きの鉄道沿線の町に生まれた猫",
+              "value": "ランタンの灯る劇場街に生まれた猫",
               "fontSize": "13px",
               "lines": [
-                "王都行きの鉄道沿線の町に生まれた猫"
+                "ランタンの灯る劇場街に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "セント・ミルク宮殿に近い住宅街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "セント・ミルク宮殿に近い住宅街に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 21,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ソルト・ヘイブンに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ソルト・ヘイブンに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "東岸の白い石壁の町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "東岸の白い石壁の町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "キャスタミアに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "キャスタミアに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "葡萄とオリーブの丘に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "葡萄とオリーブの丘に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "海辺の小さな国内港に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "海辺の小さな国内港に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ステイブリッジ近郊に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ステイブリッジ近郊に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "古い街道町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "古い街道町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "寄宿学校のある町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "寄宿学校のある町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "王都近郊の田園に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "王都近郊の田園に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "海辺の国内港に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "海辺の国内港に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ウィッチフォード大学街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ウィッチフォード大学街に生まれた猫"
               ],
               "lineCount": 1,
               "lastLine": 17,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ブライアヒルに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "ブライアヒルに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "古い市場町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "古い市場町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "野ばらの丘に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "野ばらの丘に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "森の縁の村に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "森の縁の村に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "エドマンドウィックに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "エドマンドウィックに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "《ドルヴァ》の森の縁に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "《ドルヴァ》の森の縁に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 16,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "古城を囲む町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "古城を囲む町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "谷あいの市場町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "谷あいの市場町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "森へ続く街道集落に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "森へ続く街道集落に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
               "centerOffset": 0,
               "width": 461
             },
@@ -7746,6 +10078,105 @@
               ],
               "lineCount": 1,
               "lastLine": 18,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "グリーンステッドに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "グリーンステッドに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "イーストバンクに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "イーストバンクに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "農業・園芸カレッジの町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "農業・園芸カレッジの町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "湖畔の市場町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "湖畔の市場町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "コホーリア湯郷に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "コホーリア湯郷に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "エイヴリング高地に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "エイヴリング高地に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "雪深い谷あいの町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "雪深い谷あいの町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "北岸の国内港に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "北岸の国内港に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "山地の大学町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "山地の大学町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
               "centerOffset": 0,
               "width": 461
             },
@@ -7783,6 +10214,17 @@
               "width": 461
             },
             {
+              "value": "アヴェル川沿いのロウ・キーズに生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川沿いのロウ・キーズに生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 20,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
               "value": "ピカデリー・ミューズに生まれた猫",
               "fontSize": "13px",
               "lines": [
@@ -7801,6 +10243,17 @@
               ],
               "lineCount": 1,
               "lastLine": 15,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "アヴェル川に近い小さな住宅街に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川に近い小さな住宅街に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 20,
               "centerOffset": 0,
               "width": 461
             },
@@ -7966,6 +10419,17 @@
               ],
               "lineCount": 1,
               "lastLine": 15,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "王都行きの鉄道沿線の町に生まれた猫",
+              "fontSize": "13px",
+              "lines": [
+                "王都行きの鉄道沿線の町に生まれた猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 17,
               "centerOffset": 0,
               "width": 461
             },
@@ -8700,17 +11164,6 @@
           ],
           "proposedOrigin": [
             {
-              "value": "セント・ミルク宮殿に近い住宅街",
-              "fontSize": "13px",
-              "lines": [
-                "セント・ミルク宮殿に近い住宅街"
-              ],
-              "lineCount": 1,
-              "lastLine": 15,
-              "centerOffset": 0,
-              "width": 461
-            },
-            {
               "value": "王都ミューミンスターの学術街",
               "fontSize": "13px",
               "lines": [
@@ -8722,35 +11175,266 @@
               "width": 461
             },
             {
-              "value": "アヴェル川沿いのロウ・キーズ",
+              "value": "王都の古い商店街",
               "fontSize": "13px",
               "lines": [
-                "アヴェル川沿いのロウ・キーズ"
+                "王都の古い商店街"
               ],
               "lineCount": 1,
-              "lastLine": 14,
+              "lastLine": 8,
               "centerOffset": 0,
               "width": 461
             },
             {
-              "value": "アヴェル川に近い小さな住宅街",
+              "value": "王都中央駅に近い街区",
               "fontSize": "13px",
               "lines": [
-                "アヴェル川に近い小さな住宅街"
+                "王都中央駅に近い街区"
               ],
               "lineCount": 1,
-              "lastLine": 14,
+              "lastLine": 10,
               "centerOffset": 0,
               "width": 461
             },
             {
-              "value": "王都行きの鉄道沿線の町",
+              "value": "ランタンの灯る劇場街",
               "fontSize": "13px",
               "lines": [
-                "王都行きの鉄道沿線の町"
+                "ランタンの灯る劇場街"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "セント・ミルク宮殿に近い住宅街",
+              "fontSize": "13px",
+              "lines": [
+                "セント・ミルク宮殿に近い住宅街"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ソルト・ヘイブン",
+              "fontSize": "13px",
+              "lines": [
+                "ソルト・ヘイブン"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "東岸の白い石壁の町",
+              "fontSize": "13px",
+              "lines": [
+                "東岸の白い石壁の町"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "キャスタミア",
+              "fontSize": "13px",
+              "lines": [
+                "キャスタミア"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "葡萄とオリーブの丘",
+              "fontSize": "13px",
+              "lines": [
+                "葡萄とオリーブの丘"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "海辺の小さな国内港",
+              "fontSize": "13px",
+              "lines": [
+                "海辺の小さな国内港"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ステイブリッジ近郊",
+              "fontSize": "13px",
+              "lines": [
+                "ステイブリッジ近郊"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "古い街道町",
+              "fontSize": "13px",
+              "lines": [
+                "古い街道町"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "寄宿学校のある町",
+              "fontSize": "13px",
+              "lines": [
+                "寄宿学校のある町"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "王都近郊の田園",
+              "fontSize": "13px",
+              "lines": [
+                "王都近郊の田園"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "海辺の国内港",
+              "fontSize": "13px",
+              "lines": [
+                "海辺の国内港"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ウィッチフォード大学街",
+              "fontSize": "13px",
+              "lines": [
+                "ウィッチフォード大学街"
               ],
               "lineCount": 1,
               "lastLine": 11,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ブライアヒル",
+              "fontSize": "13px",
+              "lines": [
+                "ブライアヒル"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "古い市場町",
+              "fontSize": "13px",
+              "lines": [
+                "古い市場町"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "野ばらの丘",
+              "fontSize": "13px",
+              "lines": [
+                "野ばらの丘"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "森の縁の村",
+              "fontSize": "13px",
+              "lines": [
+                "森の縁の村"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "エドマンドウィック",
+              "fontSize": "13px",
+              "lines": [
+                "エドマンドウィック"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "《ドルヴァ》の森の縁",
+              "fontSize": "13px",
+              "lines": [
+                "《ドルヴァ》の森の縁"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "古城を囲む町",
+              "fontSize": "13px",
+              "lines": [
+                "古城を囲む町"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "谷あいの市場町",
+              "fontSize": "13px",
+              "lines": [
+                "谷あいの市場町"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "森へ続く街道集落",
+              "fontSize": "13px",
+              "lines": [
+                "森へ続く街道集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
               "centerOffset": 0,
               "width": 461
             },
@@ -8762,6 +11446,105 @@
               ],
               "lineCount": 1,
               "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "グリーンステッド",
+              "fontSize": "13px",
+              "lines": [
+                "グリーンステッド"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "イーストバンク",
+              "fontSize": "13px",
+              "lines": [
+                "イーストバンク"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "農業・園芸カレッジの町",
+              "fontSize": "13px",
+              "lines": [
+                "農業・園芸カレッジの町"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "湖畔の市場町",
+              "fontSize": "13px",
+              "lines": [
+                "湖畔の市場町"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "コホーリア湯郷",
+              "fontSize": "13px",
+              "lines": [
+                "コホーリア湯郷"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "エイヴリング高地",
+              "fontSize": "13px",
+              "lines": [
+                "エイヴリング高地"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "雪深い谷あいの町",
+              "fontSize": "13px",
+              "lines": [
+                "雪深い谷あいの町"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "北岸の国内港",
+              "fontSize": "13px",
+              "lines": [
+                "北岸の国内港"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "山地の大学町",
+              "fontSize": "13px",
+              "lines": [
+                "山地の大学町"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
               "centerOffset": 0,
               "width": 461
             },
@@ -8799,6 +11582,17 @@
               "width": 461
             },
             {
+              "value": "アヴェル川沿いのロウ・キーズ",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川沿いのロウ・キーズ"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
               "value": "ピカデリー・ミューズ",
               "fontSize": "13px",
               "lines": [
@@ -8817,6 +11611,17 @@
               ],
               "lineCount": 1,
               "lastLine": 9,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "アヴェル川に近い小さな住宅街",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川に近い小さな住宅街"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
               "centerOffset": 0,
               "width": 461
             },
@@ -8982,6 +11787,17 @@
               ],
               "lineCount": 1,
               "lastLine": 9,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "王都行きの鉄道沿線の町",
+              "fontSize": "13px",
+              "lines": [
+                "王都行きの鉄道沿線の町"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
               "centerOffset": 0,
               "width": 461
             },
