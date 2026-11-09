@@ -72,7 +72,7 @@
       "bodyWidth": 320,
       "activeWidth": 300,
       "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
-      "activeHeight": 1156.21875,
+      "activeHeight": 1179.609375,
       "align": {
         "start": "center",
         "letter": "center",
@@ -232,7 +232,7 @@
       "bodyWidth": 375,
       "activeWidth": 355,
       "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
-      "activeHeight": 1437.203125,
+      "activeHeight": 1363.546875,
       "align": {
         "start": "center",
         "letter": "center",
@@ -352,7 +352,7 @@
       "bodyWidth": 390,
       "activeWidth": 370,
       "font": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", \"Noto Sans JP\", sans-serif",
-      "activeHeight": 1388.8125,
+      "activeHeight": 1363.546875,
       "align": {
         "start": "center",
         "letter": "center",
