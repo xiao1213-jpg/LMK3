@@ -1,4 +1,5 @@
 name: LMK v12 visual QA
+# Second pass: verify ceremonial line breaks and compact share disclosure
 on:
   push:
     paths:
