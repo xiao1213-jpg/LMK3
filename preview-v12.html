@@ -621,7 +621,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 .result-page .guide-story-name{font-size:18px;line-height:1.6}
 .result-page .guide-story-scene{max-width:33em;font-size:13.5px;line-height:1.9}
 @media(max-width:520px){.dossier-place-tag{font-size:11.5px}.result-page .guide-story-scene{font-size:13px}}
-</style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script><script src="assets/kingdom-notes-v11.js"></script><!-- Open-world birthplace preview: sample localities are not a complete gazetteer. --></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
+</style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script><script src="assets/kingdom-notes-v12.js"></script><!-- Open-world birthplace preview: sample localities are not a complete gazetteer. --></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">A STORY BEGINS</div>
 <div class="cat"><svg class="start-cat-emblem" viewBox="0 0 124 92" fill="none" aria-hidden="true"><path d="M26 42 26 16 44 28Q62 22 80 28L98 16 98 42Q103 48 100 60Q93 77 62 78Q31 77 24 60Q21 49 26 42Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M43 48Q48 44 53 48M71 48Q76 44 81 48M57 59l5 4 5-4m-5 4v3m0 0q-6 5-11 0m11 0q6 5 11 0M38 57l-15-4m15 10-15 2m63-8 15-4m-15 10 15 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
 <h1 class="title">もし、あなたが<br>一匹の猫だったら。</h1>
@@ -1139,7 +1139,20 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 
   // The catalogue is an expandable sample of places: it is NOT a complete map of the Kingdom.
   // Canonical place names are preserved; unnamed villages are described without inventing proper names.
-  const birthplaceWorld = window.LMK_KINGDOM_NOTES_V11 || {};
+  const birthplaceWorld = window.LMK_KINGDOM_NOTES_V12 || {};
+
+  // Region weights remain canonical; family wording and inherited objects are independent
+  // of any contemporary occupation of the resulting cat.
+  for (const region of regionPool) {
+    const profiles = birthplaceWorld.familyProfiles?.[region.id];
+    if (!profiles || profiles.length !== region.families.length) throw Error("Incomplete family catalogue for " + region.id);
+    for (let i = 1; i < region.families.length; i++) {
+      const profile = profiles[i];
+      const original = region.families[i];
+      region.families[i] = [profile[0],original[1],[profile[1],profile[2]],original[3]];
+    }
+  }
+
   const birthplaceCatalog = Object.fromEntries(regionPool.map(region => {
     const correction = birthplaceWorld.baseCorrections?.[region.id] || {};
     const base = region.births.map((name,index) => ({
@@ -1225,8 +1238,20 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     const birthplace = place.name;
     const birthplaceIndex = places.indexOf(place);
     const birthplaceProbability = place.weight / birthplaceWeightSums[region.id];
-    const family = weightedPick(region.families,random);
-    const familyIndex = region.families.indexOf(family);
+    const eligibility = birthplaceWorld.familyAllowedBirthIndexes?.[region.id];
+    const eligible = region.families.map((f,i) => ({family:f,index:i}))
+      .filter(item => item.index > 0 && eligibility?.[item.index]?.includes(birthplaceIndex));
+    if (!eligible.length) throw Error("No family compatible with " + region.id + ":" + birthplaceIndex);
+    const nobleProbability = region.families[0][1] / 100;
+    const chosen = random() < nobleProbability
+      ? {family:region.families[0],index:0}
+      : weightedPick(eligible,random,item => item.family[1]);
+    const family = chosen.family;
+    const familyIndex = chosen.index;
+    const nonNobleTotal = eligible.reduce((total,item)=> total + item.family[1],0);
+    const familyProbability = familyIndex === 0
+      ? nobleProbability
+      : (1 - nobleProbability) * family[1] / nonNobleTotal;
     let familyName = family[0];
     let titleProbability = 1;
     if (family[3] === "titled") {
@@ -1235,10 +1260,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
       titleProbability = title[1] / 100;
     }
     const heirloom = pick(family[2],random);
-    const probability = (coatEntry[1]/100) * (region.weight/100) * birthplaceProbability * (family[1]/100) * titleProbability * (1/family[2].length);
+    const probability = (coatEntry[1]/100) * (region.weight/100) * birthplaceProbability * familyProbability * titleProbability * (1/family[2].length);
     const oneIn = Math.max(1,Math.round(1/probability));
     const tier = probability >= .00003811764705882352 ? "ivory" : probability >= .0000108 ? "silver" : probability >= .0000021176470588235296 ? "gold" : "crown";
-    return {seed:seed >>> 0,coat,coatEpithet:coatEpithets[coat] || `${coat}の猫`,region:region.name,regionId:region.id,birthplace,birthplaceIndex,placeTag:place.tag,placeScene:place.scene,family:familyName,familyIndex,heirloom,registry:registryNumber(seed),probability,oneIn,tier};
+    return {seed:seed >>> 0,coat,coatEpithet:coatEpithets[coat] || `${coat}の猫`,region:region.name,regionId:region.id,birthplace,birthplaceIndex,placeTag:place.tag,placeScene:place.scene,family:familyName,familyIndex,dataVersion:12,heirloom,registry:registryNumber(seed),probability,oneIn,tier};
   }
 
   const scoreKeys = ["time","message","life","inherit","weave","outer","inner","quiet","share"];
@@ -1336,7 +1361,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     const pageFile = /^preview-v\d+\.html$/.test(pathFile) ? pathFile : "index.html";
     const url = new URL(pageFile,document.baseURI);
     url.searchParams.set("mode","mobile");
-    url.searchParams.set("v","20261109-v11-geography");
+    url.searchParams.set("v","20261109-v12-consistent-lives");
     url.hash = "invitation_page~" + resultId + "~" + payload;
     return url.toString();
   }
@@ -1567,14 +1592,14 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 
   function renderResultPortal(snapshot) {
     if (!snapshot?.resultId) return;
-    if (!snapshot.provenance?.tier) snapshot.provenance = generateProvenance(snapshot.seed || 0);
+    if (snapshot.provenance?.dataVersion !== 12) snapshot.provenance = generateProvenance(snapshot.seed || 0);
     const number = document.getElementById("dossier_number");
     if (number) number.textContent = "REGISTER · " + snapshot.provenance.registry;
     document.getElementById("dossier_subject_coat").textContent = snapshot.provenance.coat;
     document.getElementById("dossier_subject_origin").textContent = snapshot.provenance.birthplace + "に生まれた猫";
     const placeRegion = regionPool.find(r => r.id === snapshot.provenance.regionId);
     const placeIndex = placeRegion?.births.indexOf(snapshot.provenance.birthplace) ?? -1;
-    const placeTag = snapshot.provenance.placeTag || window.LMK_KINGDOM_NOTES_V11?.placeTags?.[snapshot.provenance.regionId]?.[placeIndex] || "";
+    const placeTag = snapshot.provenance.placeTag || window.LMK_KINGDOM_NOTES_V12?.placeTags?.[snapshot.provenance.regionId]?.[placeIndex] || "";
     document.getElementById("dossier_place_tag").textContent = placeTag;
     document.getElementById("dossier_subject_portrait").textContent = "《" + resultTitle(snapshot.resultId) + "》";
     if (!isStoreMode) void drawInvitationArtwork(snapshot);
@@ -1685,7 +1710,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 
   function renderProvenancePage(snapshot) {
     if (!snapshot?.resultId) return;
-    const p = snapshot.provenance?.tier ? snapshot.provenance : generateProvenance(snapshot.seed || 0);
+    const p = snapshot.provenance?.dataVersion === 12 ? snapshot.provenance : generateProvenance(snapshot.seed || 0);
     snapshot.provenance = p;
     const page = document.getElementById("provenance_page");
     page.className = "page provenance-page tier-" + p.tier;
@@ -1710,10 +1735,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     const sourceRegion = regionPool.find(r => r.id === p.regionId);
     const placeIndex = Number.isInteger(p.birthplaceIndex) ? p.birthplaceIndex : sourceRegion?.births.indexOf(p.birthplace);
     const familyIndex = Number.isInteger(p.familyIndex) ? p.familyIndex : generateProvenance(p.seed || snapshot.seed || 0).familyIndex;
-    const world = window.LMK_KINGDOM_NOTES_V11 || {};
+    const world = window.LMK_KINGDOM_NOTES_V12 || {};
     const placeScene = p.placeScene || world.placeScenes?.[p.regionId]?.[placeIndex] || "";
+    const familyProfile = world.familyProfiles?.[p.regionId]?.[familyIndex];
     const familyInfo = world.families?.[p.regionId]?.[familyIndex] || [];
-    const familyName = familyInfo[0] || p.family;
+    const familyName = p.family;
     const titleScenes = {
       "公爵家の分家につながる家":"公爵家から伸びた一枝が、古い家系図に記されています。",
       "侯爵家の分家につながる家":"侯爵家ゆかりの手紙が、今も薄紙に包まれています。",
@@ -1721,7 +1747,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
       "子爵家の分家につながる家":"古い家印を見れば、子爵家と縁を結んだ日の話が始まります。",
       "男爵家の分家につながる家":"祝祭の日だけ取り出す、小さな家印の思い出があります。"
     };
-    const familyScene = (titleScenes[p.family] ? titleScenes[p.family] : "") + (familyInfo[1] || "");
+    const familyScene = titleScenes[p.family] || familyProfile?.[3] || familyInfo[1] || "";
     const safe = text => String(text).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
     document.getElementById("provenance_record_mount").innerHTML =
       '<section class="visitor-record" aria-label="猫としての来歴"><div class="visitor-grid">' +
@@ -1776,7 +1802,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
       if (cat) cat.replaceWith(illustration); else kicker?.after(illustration);
     }
     if (snapshot) {
-      if (!snapshot.provenance?.tier) snapshot.provenance = generateProvenance(snapshot.seed || 0);
+      if (snapshot.provenance?.dataVersion !== 12) snapshot.provenance = generateProvenance(snapshot.seed || 0);
       const switcher = document.createElement("nav");
       switcher.className = "certificate-switcher";
       switcher.setAttribute("aria-label","二つの証");
@@ -1806,7 +1832,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     const guide = card.querySelector(".guide-cat");
     if (guide && !guide.classList.contains("story-guide")) {
       const guideName = guide.querySelector(".guide-cat-name")?.lastChild?.textContent?.trim() || "王国の猫";
-      const guideScene = window.LMK_KINGDOM_NOTES_V11?.guides?.[resultId] || "";
+      const guideScene = window.LMK_KINGDOM_NOTES_V12?.guides?.[resultId] || "";
       guide.classList.add("story-guide");
       guide.innerHTML = '<span class="guide-story-kicker">A CAT TO MEET</span>' +
         '<h3 class="guide-story-heading">この肖像にゆかりのある猫</h3>' +
