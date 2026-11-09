@@ -621,7 +621,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 .result-page .guide-story-name{font-size:18px;line-height:1.6}
 .result-page .guide-story-scene{max-width:33em;font-size:13.5px;line-height:1.9}
 @media(max-width:520px){.dossier-place-tag{font-size:11.5px}.result-page .guide-story-scene{font-size:13px}}
-</style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script><script src="assets/kingdom-notes-v10.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
+</style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script><script src="assets/kingdom-notes-v11.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">A STORY BEGINS</div>
 <div class="cat"><svg class="start-cat-emblem" viewBox="0 0 124 92" fill="none" aria-hidden="true"><path d="M26 42 26 16 44 28Q62 22 80 28L98 16 98 42Q103 48 100 60Q93 77 62 78Q31 77 24 60Q21 49 26 42Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M43 48Q48 44 53 48M71 48Q76 44 81 48M57 59l5 4 5-4m-5 4v3m0 0q-6 5-11 0m11 0q6 5 11 0M38 57l-15-4m15 10-15 2m63-8 15-4m-15 10 15 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
 <h1 class="title">もし、あなたが<br>一匹の猫だったら。</h1>
@@ -1137,6 +1137,25 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     }
   ];
 
+  // The catalogue is an expandable sample of places: it is NOT a complete map of the Kingdom.
+  // Canonical place names are preserved; unnamed villages are described without inventing proper names.
+  const birthplaceWorld = window.LMK_KINGDOM_NOTES_V11 || {};
+  const birthplaceCatalog = Object.fromEntries(regionPool.map(region => {
+    const correction = birthplaceWorld.baseCorrections?.[region.id] || {};
+    const base = region.births.map((name,index) => ({
+      name: correction[index] || name,
+      tag: birthplaceWorld.placeTags?.[region.id]?.[index] || "",
+      scene: birthplaceWorld.placeScenes?.[region.id]?.[index] || "",
+      weight: birthplaceWorld.baseBirthWeights?.[index] || 1
+    }));
+    const additions = (birthplaceWorld.additionalBirthplaces?.[region.id] || []).map(place => ({
+      name:place[0],tag:place[1],scene:place[2],weight:place[3]
+    }));
+    return [region.id,[...base,...additions]];
+  }));
+  const birthplaceWeightSums = Object.fromEntries(Object.entries(birthplaceCatalog).map(([id,items]) =>
+    [id,items.reduce((total,place)=>total+place.weight,0)]));
+
   const titleMotifs = {
     result_rebel_time_quiet:"残された時間を自分の目で読み替え、答えを急いで外へ渡さない。その姿が、月影の小径を選ぶ反逆者に重なります。",
     result_rebel_time_share:"古い時間にまだ見ぬ続きを見つけ、その発見を誰かと確かめたい。その動きが、時計を抱いて歩く猫の名に重なります。",
@@ -1201,8 +1220,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     const coatEntry = weightedPick(coatPool,random);
     const coat = coatEntry[0];
     const region = weightedPick(regionPool,random,item => item.weight);
-    const birthplace = pick(region.births,random);
-    const birthplaceIndex = region.births.indexOf(birthplace);
+    const places = birthplaceCatalog[region.id];
+    const place = weightedPick(places,random,item=>item.weight);
+    const birthplace = place.name;
+    const birthplaceIndex = places.indexOf(place);
+    const birthplaceProbability = place.weight / birthplaceWeightSums[region.id];
     const family = weightedPick(region.families,random);
     const familyIndex = region.families.indexOf(family);
     let familyName = family[0];
@@ -1213,10 +1235,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
       titleProbability = title[1] / 100;
     }
     const heirloom = pick(family[2],random);
-    const probability = (coatEntry[1]/100) * (region.weight/100) * (1/region.births.length) * (family[1]/100) * titleProbability * (1/family[2].length);
+    const probability = (coatEntry[1]/100) * (region.weight/100) * birthplaceProbability * (family[1]/100) * titleProbability * (1/family[2].length);
     const oneIn = Math.max(1,Math.round(1/probability));
     const tier = probability >= .000104 ? "ivory" : probability >= .00003168 ? "silver" : probability >= .000006 ? "gold" : "crown";
-    return {seed:seed >>> 0,coat,coatEpithet:coatEpithets[coat] || `${coat}の猫`,region:region.name,regionId:region.id,birthplace,birthplaceIndex,family:familyName,familyIndex,heirloom,registry:registryNumber(seed),probability,oneIn,tier};
+    return {seed:seed >>> 0,coat,coatEpithet:coatEpithets[coat] || `${coat}の猫`,region:region.name,regionId:region.id,birthplace,birthplaceIndex,placeTag:place.tag,placeScene:place.scene,family:familyName,familyIndex,heirloom,registry:registryNumber(seed),probability,oneIn,tier};
   }
 
   const scoreKeys = ["time","message","life","inherit","weave","outer","inner","quiet","share"];
@@ -1314,7 +1336,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     const pageFile = /^preview-v\d+\.html$/.test(pathFile) ? pathFile : "index.html";
     const url = new URL(pageFile,document.baseURI);
     url.searchParams.set("mode","mobile");
-    url.searchParams.set("v","20261109-v10-stories");
+    url.searchParams.set("v","20261109-v11-geography");
     url.hash = "invitation_page~" + resultId + "~" + payload;
     return url.toString();
   }
@@ -1552,7 +1574,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     document.getElementById("dossier_subject_origin").textContent = snapshot.provenance.birthplace + "に生まれた猫";
     const placeRegion = regionPool.find(r => r.id === snapshot.provenance.regionId);
     const placeIndex = placeRegion?.births.indexOf(snapshot.provenance.birthplace) ?? -1;
-    const placeTag = window.LMK_KINGDOM_NOTES_V10?.placeTags?.[snapshot.provenance.regionId]?.[placeIndex] || "";
+    const placeTag = snapshot.provenance.placeTag || window.LMK_KINGDOM_NOTES_V11?.placeTags?.[snapshot.provenance.regionId]?.[placeIndex] || "";
     document.getElementById("dossier_place_tag").textContent = placeTag;
     document.getElementById("dossier_subject_portrait").textContent = "《" + resultTitle(snapshot.resultId) + "》";
     if (!isStoreMode) void drawInvitationArtwork(snapshot);
@@ -1688,8 +1710,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     const sourceRegion = regionPool.find(r => r.id === p.regionId);
     const placeIndex = Number.isInteger(p.birthplaceIndex) ? p.birthplaceIndex : sourceRegion?.births.indexOf(p.birthplace);
     const familyIndex = Number.isInteger(p.familyIndex) ? p.familyIndex : generateProvenance(p.seed || snapshot.seed || 0).familyIndex;
-    const world = window.LMK_KINGDOM_NOTES_V10 || {};
-    const placeScene = world.placeScenes?.[p.regionId]?.[placeIndex] || "";
+    const world = window.LMK_KINGDOM_NOTES_V11 || {};
+    const placeScene = p.placeScene || world.placeScenes?.[p.regionId]?.[placeIndex] || "";
     const familyInfo = world.families?.[p.regionId]?.[familyIndex] || [];
     const familyName = familyInfo[0] || p.family;
     const titleScenes = {
@@ -1784,7 +1806,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     const guide = card.querySelector(".guide-cat");
     if (guide && !guide.classList.contains("story-guide")) {
       const guideName = guide.querySelector(".guide-cat-name")?.lastChild?.textContent?.trim() || "王国の猫";
-      const guideScene = window.LMK_KINGDOM_NOTES_V10?.guides?.[resultId] || "";
+      const guideScene = window.LMK_KINGDOM_NOTES_V11?.guides?.[resultId] || "";
       guide.classList.add("story-guide");
       guide.innerHTML = '<span class="guide-story-kicker">A CAT TO MEET</span>' +
         '<h3 class="guide-story-heading">この肖像にゆかりのある猫</h3>' +
