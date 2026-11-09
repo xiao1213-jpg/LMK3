@@ -12,7 +12,9 @@
       "wrapCounts": {
         "coat": 0,
         "title": 4,
-        "origin": 14
+        "origin": 14,
+        "proposedTitle": 0,
+        "proposedOrigin": 0
       },
       "orphanOrigins": [
         {
@@ -203,7 +205,9 @@
       "wrapCounts": {
         "coat": 0,
         "title": 0,
-        "origin": 0
+        "origin": 0,
+        "proposedTitle": 0,
+        "proposedOrigin": 0
       },
       "orphanOrigins": [],
       "maxOriginLines": 1,
@@ -291,7 +295,9 @@
       "wrapCounts": {
         "coat": 0,
         "title": 0,
-        "origin": 0
+        "origin": 0,
+        "proposedTitle": 0,
+        "proposedOrigin": 0
       },
       "orphanOrigins": [],
       "maxOriginLines": 1,
@@ -379,7 +385,9 @@
       "wrapCounts": {
         "coat": 0,
         "title": 0,
-        "origin": 0
+        "origin": 0,
+        "proposedTitle": 0,
+        "proposedOrigin": 0
       },
       "orphanOrigins": [],
       "maxOriginLines": 1,
@@ -1695,6 +1703,1022 @@
               "width": 228
             }
           ],
+          "proposedTitle": [
+            {
+              "value": "王家のパティシエ",
+              "fontSize": "24px",
+              "lines": [
+                "王家のパティシエ"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "晩餐会の猫",
+              "fontSize": "24px",
+              "lines": [
+                "晩餐会の猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "冬布を継ぐ猫",
+              "fontSize": "24px",
+              "lines": [
+                "冬布を継ぐ猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "祝宴の女主人",
+              "fontSize": "24px",
+              "lines": [
+                "祝宴の女主人"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "時を継ぐ猫",
+              "fontSize": "24px",
+              "lines": [
+                "時を継ぐ猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "暦を守る猫",
+              "fontSize": "24px",
+              "lines": [
+                "暦を守る猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "午後三時の令嬢",
+              "fontSize": "24px",
+              "lines": [
+                "午後三時の令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ケーキ屋通りの令嬢",
+              "fontSize": "24px",
+              "lines": [
+                "ケーキ屋通りの令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "便箋を選ぶ令嬢",
+              "fontSize": "24px",
+              "lines": [
+                "便箋を選ぶ令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "客間を開く令嬢",
+              "fontSize": "24px",
+              "lines": [
+                "客間を開く令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "蕾の庭の令嬢",
+              "fontSize": "24px",
+              "lines": [
+                "蕾の庭の令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "星暦をめくる令嬢",
+              "fontSize": "24px",
+              "lines": [
+                "星暦をめくる令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "夜咲きの園丁",
+              "fontSize": "24px",
+              "lines": [
+                "夜咲きの園丁"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "果樹園のいたずら猫",
+              "fontSize": "24px",
+              "lines": [
+                "果樹園のいたずら猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "名もなき贈り主",
+              "fontSize": "24px",
+              "lines": [
+                "名もなき贈り主"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "気まぐれ郵便猫",
+              "fontSize": "24px",
+              "lines": [
+                "気まぐれ郵便猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "月影の反逆者",
+              "fontSize": "24px",
+              "lines": [
+                "月影の反逆者"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "放浪する時計師",
+              "fontSize": "24px",
+              "lines": [
+                "放浪する時計師"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "最後の一灯",
+              "fontSize": "24px",
+              "lines": [
+                "最後の一灯"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "秘密のお茶会",
+              "fontSize": "24px",
+              "lines": [
+                "秘密のお茶会"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "冬支度の灯り",
+              "fontSize": "24px",
+              "lines": [
+                "冬支度の灯り"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "サロンの聞き手",
+              "fontSize": "24px",
+              "lines": [
+                "サロンの聞き手"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "古書室の猫",
+              "fontSize": "24px",
+              "lines": [
+                "古書室の猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "星図を囲む夜",
+              "fontSize": "24px",
+              "lines": [
+                "星図を囲む夜"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            }
+          ],
+          "proposedOrigin": [
+            {
+              "value": "セント・ミルク宮殿に近い住宅街",
+              "fontSize": "13px",
+              "lines": [
+                "セント・ミルク宮殿に近い住宅街"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "王都ミューミンスターの学術街",
+              "fontSize": "13px",
+              "lines": [
+                "王都ミューミンスターの学術街"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "アヴェル川沿いのロウ・キーズ",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川沿いのロウ・キーズ"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "アヴェル川に近い小さな住宅街",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川に近い小さな住宅街"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "王都行きの鉄道沿線の町",
+              "fontSize": "13px",
+              "lines": [
+                "王都行きの鉄道沿線の町"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "サンミア湖畔の果樹園地帯",
+              "fontSize": "13px",
+              "lines": [
+                "サンミア湖畔の果樹園地帯"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "オールド・ミンスター",
+              "fontSize": "13px",
+              "lines": [
+                "オールド・ミンスター"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ベルグレイヴ・ガーデンズ",
+              "fontSize": "13px",
+              "lines": [
+                "ベルグレイヴ・ガーデンズ"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "フィッシュベル市場の近く",
+              "fontSize": "13px",
+              "lines": [
+                "フィッシュベル市場の近く"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ピカデリー・ミューズ",
+              "fontSize": "13px",
+              "lines": [
+                "ピカデリー・ミューズ"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "王都の静かな裏通り",
+              "fontSize": "13px",
+              "lines": [
+                "王都の静かな裏通り"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "白い丘のふもとの小さな町",
+              "fontSize": "13px",
+              "lines": [
+                "白い丘のふもとの小さな町"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "白い断崖のふもとの集落",
+              "fontSize": "13px",
+              "lines": [
+                "白い断崖のふもとの集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "海霧のかかる小さな漁村",
+              "fontSize": "13px",
+              "lines": [
+                "海霧のかかる小さな漁村"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "オリーブ畑に囲まれた小村",
+              "fontSize": "13px",
+              "lines": [
+                "オリーブ畑に囲まれた小村"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "港から離れた市場町",
+              "fontSize": "13px",
+              "lines": [
+                "港から離れた市場町"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "波の静かな入り江の集落",
+              "fontSize": "13px",
+              "lines": [
+                "波の静かな入り江の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "東岸の葡萄農家の家並み",
+              "fontSize": "13px",
+              "lines": [
+                "東岸の葡萄農家の家並み"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "海沿いの細い路地",
+              "fontSize": "13px",
+              "lines": [
+                "海沿いの細い路地"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "フォックスリー",
+              "fontSize": "13px",
+              "lines": [
+                "フォックスリー"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ブラッケンフォード",
+              "fontSize": "13px",
+              "lines": [
+                "ブラッケンフォード"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ハーヴァリー",
+              "fontSize": "13px",
+              "lines": [
+                "ハーヴァリー"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ダーンリー炭田に近い集落",
+              "fontSize": "13px",
+              "lines": [
+                "ダーンリー炭田に近い集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "街道を外れた小さな農村",
+              "fontSize": "13px",
+              "lines": [
+                "街道を外れた小さな農村"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "石橋のたもとの集落",
+              "fontSize": "13px",
+              "lines": [
+                "石橋のたもとの集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "低い丘の果樹園集落",
+              "fontSize": "13px",
+              "lines": [
+                "低い丘の果樹園集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "草地に囲まれた小さな集落",
+              "fontSize": "13px",
+              "lines": [
+                "草地に囲まれた小さな集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ブレドン",
+              "fontSize": "13px",
+              "lines": [
+                "ブレドン"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "トランド",
+              "fontSize": "13px",
+              "lines": [
+                "トランド"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ペヴェレル",
+              "fontSize": "13px",
+              "lines": [
+                "ペヴェレル"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "アルダーコム",
+              "fontSize": "13px",
+              "lines": [
+                "アルダーコム"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "アスターリー",
+              "fontSize": "13px",
+              "lines": [
+                "アスターリー"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "マーデン",
+              "fontSize": "13px",
+              "lines": [
+                "マーデン"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "キャロウデン",
+              "fontSize": "13px",
+              "lines": [
+                "キャロウデン"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ウィットコム",
+              "fontSize": "13px",
+              "lines": [
+                "ウィットコム"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "森に寄り添う小村",
+              "fontSize": "13px",
+              "lines": [
+                "森に寄り添う小村"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "野ばらの谷の集落",
+              "fontSize": "13px",
+              "lines": [
+                "野ばらの谷の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "朝霧のたまる農村",
+              "fontSize": "13px",
+              "lines": [
+                "朝霧のたまる農村"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ハロウゲイト",
+              "fontSize": "13px",
+              "lines": [
+                "ハロウゲイト"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "オールド・ブラッケン",
+              "fontSize": "13px",
+              "lines": [
+                "オールド・ブラッケン"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "モス・ホロウ",
+              "fontSize": "13px",
+              "lines": [
+                "モス・ホロウ"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ナイツ・エンド",
+              "fontSize": "13px",
+              "lines": [
+                "ナイツ・エンド"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "古い城地に近い丘の集落",
+              "fontSize": "13px",
+              "lines": [
+                "古い城地に近い丘の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ダンコム",
+              "fontSize": "13px",
+              "lines": [
+                "ダンコム"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ウェストウォッチ",
+              "fontSize": "13px",
+              "lines": [
+                "ウェストウォッチ"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "レイヴン・クリフ",
+              "fontSize": "13px",
+              "lines": [
+                "レイヴン・クリフ"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "木苺の森の縁の小村",
+              "fontSize": "13px",
+              "lines": [
+                "木苺の森の縁の小村"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "谷あいの小さな集落",
+              "fontSize": "13px",
+              "lines": [
+                "谷あいの小さな集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "深い森へ続く木工の集落",
+              "fontSize": "13px",
+              "lines": [
+                "深い森へ続く木工の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ラークフォード",
+              "fontSize": "13px",
+              "lines": [
+                "ラークフォード"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ベルクロス",
+              "fontSize": "13px",
+              "lines": [
+                "ベルクロス"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ウィロウミア",
+              "fontSize": "13px",
+              "lines": [
+                "ウィロウミア"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ストーンブリッジ",
+              "fontSize": "13px",
+              "lines": [
+                "ストーンブリッジ"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "レッドリーフ",
+              "fontSize": "13px",
+              "lines": [
+                "レッドリーフ"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "サンミア湖の入り江の小村",
+              "fontSize": "13px",
+              "lines": [
+                "サンミア湖の入り江の小村"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "水路沿いの果樹園の村",
+              "fontSize": "13px",
+              "lines": [
+                "水路沿いの果樹園の村"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "なだらかな丘の農家の集落",
+              "fontSize": "13px",
+              "lines": [
+                "なだらかな丘の農家の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "渡し場のそばの家並み",
+              "fontSize": "13px",
+              "lines": [
+                "渡し場のそばの家並み"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "湖の東岸の小さな村",
+              "fontSize": "13px",
+              "lines": [
+                "湖の東岸の小さな村"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ハイフェル",
+              "fontSize": "13px",
+              "lines": [
+                "ハイフェル"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "ケルドウィック",
+              "fontSize": "13px",
+              "lines": [
+                "ケルドウィック"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "山道の奥の小村",
+              "fontSize": "13px",
+              "lines": [
+                "山道の奥の小村"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "冬の湖畔の村",
+              "fontSize": "13px",
+              "lines": [
+                "冬の湖畔の村"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "星空の開ける高原の集落",
+              "fontSize": "13px",
+              "lines": [
+                "星空の開ける高原の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "峠の小さな宿場",
+              "fontSize": "13px",
+              "lines": [
+                "峠の小さな宿場"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "雪深い谷奥の村",
+              "fontSize": "13px",
+              "lines": [
+                "雪深い谷奥の村"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "風の強い北方の農家の家並み",
+              "fontSize": "13px",
+              "lines": [
+                "風の強い北方の農家の家並み"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 228
+            },
+            {
+              "value": "湯治場から離れた小集落",
+              "fontSize": "13px",
+              "lines": [
+                "湯治場から離れた小集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 228
+            }
+          ],
           "single": {
             "preface": "王国でのあなたが、一匹の猫として\nこの一冊に記されています。",
             "subjectPadding": "25px 12px",
@@ -2918,6 +3942,1022 @@
               ],
               "lineCount": 1,
               "lastLine": 17,
+              "centerOffset": 0,
+              "width": 281.75
+            }
+          ],
+          "proposedTitle": [
+            {
+              "value": "王家のパティシエ",
+              "fontSize": "24px",
+              "lines": [
+                "王家のパティシエ"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "晩餐会の猫",
+              "fontSize": "24px",
+              "lines": [
+                "晩餐会の猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "冬布を継ぐ猫",
+              "fontSize": "24px",
+              "lines": [
+                "冬布を継ぐ猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "祝宴の女主人",
+              "fontSize": "24px",
+              "lines": [
+                "祝宴の女主人"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "時を継ぐ猫",
+              "fontSize": "24px",
+              "lines": [
+                "時を継ぐ猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "暦を守る猫",
+              "fontSize": "24px",
+              "lines": [
+                "暦を守る猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "午後三時の令嬢",
+              "fontSize": "24px",
+              "lines": [
+                "午後三時の令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ケーキ屋通りの令嬢",
+              "fontSize": "24px",
+              "lines": [
+                "ケーキ屋通りの令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "便箋を選ぶ令嬢",
+              "fontSize": "24px",
+              "lines": [
+                "便箋を選ぶ令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "客間を開く令嬢",
+              "fontSize": "24px",
+              "lines": [
+                "客間を開く令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "蕾の庭の令嬢",
+              "fontSize": "24px",
+              "lines": [
+                "蕾の庭の令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "星暦をめくる令嬢",
+              "fontSize": "24px",
+              "lines": [
+                "星暦をめくる令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "夜咲きの園丁",
+              "fontSize": "24px",
+              "lines": [
+                "夜咲きの園丁"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "果樹園のいたずら猫",
+              "fontSize": "24px",
+              "lines": [
+                "果樹園のいたずら猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "名もなき贈り主",
+              "fontSize": "24px",
+              "lines": [
+                "名もなき贈り主"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "気まぐれ郵便猫",
+              "fontSize": "24px",
+              "lines": [
+                "気まぐれ郵便猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "月影の反逆者",
+              "fontSize": "24px",
+              "lines": [
+                "月影の反逆者"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "放浪する時計師",
+              "fontSize": "24px",
+              "lines": [
+                "放浪する時計師"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "最後の一灯",
+              "fontSize": "24px",
+              "lines": [
+                "最後の一灯"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "秘密のお茶会",
+              "fontSize": "24px",
+              "lines": [
+                "秘密のお茶会"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "冬支度の灯り",
+              "fontSize": "24px",
+              "lines": [
+                "冬支度の灯り"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "サロンの聞き手",
+              "fontSize": "24px",
+              "lines": [
+                "サロンの聞き手"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "古書室の猫",
+              "fontSize": "24px",
+              "lines": [
+                "古書室の猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "星図を囲む夜",
+              "fontSize": "24px",
+              "lines": [
+                "星図を囲む夜"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            }
+          ],
+          "proposedOrigin": [
+            {
+              "value": "セント・ミルク宮殿に近い住宅街",
+              "fontSize": "13px",
+              "lines": [
+                "セント・ミルク宮殿に近い住宅街"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "王都ミューミンスターの学術街",
+              "fontSize": "13px",
+              "lines": [
+                "王都ミューミンスターの学術街"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "アヴェル川沿いのロウ・キーズ",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川沿いのロウ・キーズ"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "アヴェル川に近い小さな住宅街",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川に近い小さな住宅街"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "王都行きの鉄道沿線の町",
+              "fontSize": "13px",
+              "lines": [
+                "王都行きの鉄道沿線の町"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "サンミア湖畔の果樹園地帯",
+              "fontSize": "13px",
+              "lines": [
+                "サンミア湖畔の果樹園地帯"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "オールド・ミンスター",
+              "fontSize": "13px",
+              "lines": [
+                "オールド・ミンスター"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ベルグレイヴ・ガーデンズ",
+              "fontSize": "13px",
+              "lines": [
+                "ベルグレイヴ・ガーデンズ"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "フィッシュベル市場の近く",
+              "fontSize": "13px",
+              "lines": [
+                "フィッシュベル市場の近く"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ピカデリー・ミューズ",
+              "fontSize": "13px",
+              "lines": [
+                "ピカデリー・ミューズ"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "王都の静かな裏通り",
+              "fontSize": "13px",
+              "lines": [
+                "王都の静かな裏通り"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "白い丘のふもとの小さな町",
+              "fontSize": "13px",
+              "lines": [
+                "白い丘のふもとの小さな町"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "白い断崖のふもとの集落",
+              "fontSize": "13px",
+              "lines": [
+                "白い断崖のふもとの集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "海霧のかかる小さな漁村",
+              "fontSize": "13px",
+              "lines": [
+                "海霧のかかる小さな漁村"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "オリーブ畑に囲まれた小村",
+              "fontSize": "13px",
+              "lines": [
+                "オリーブ畑に囲まれた小村"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "港から離れた市場町",
+              "fontSize": "13px",
+              "lines": [
+                "港から離れた市場町"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "波の静かな入り江の集落",
+              "fontSize": "13px",
+              "lines": [
+                "波の静かな入り江の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "東岸の葡萄農家の家並み",
+              "fontSize": "13px",
+              "lines": [
+                "東岸の葡萄農家の家並み"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "海沿いの細い路地",
+              "fontSize": "13px",
+              "lines": [
+                "海沿いの細い路地"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "フォックスリー",
+              "fontSize": "13px",
+              "lines": [
+                "フォックスリー"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ブラッケンフォード",
+              "fontSize": "13px",
+              "lines": [
+                "ブラッケンフォード"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ハーヴァリー",
+              "fontSize": "13px",
+              "lines": [
+                "ハーヴァリー"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ダーンリー炭田に近い集落",
+              "fontSize": "13px",
+              "lines": [
+                "ダーンリー炭田に近い集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "街道を外れた小さな農村",
+              "fontSize": "13px",
+              "lines": [
+                "街道を外れた小さな農村"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "石橋のたもとの集落",
+              "fontSize": "13px",
+              "lines": [
+                "石橋のたもとの集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "低い丘の果樹園集落",
+              "fontSize": "13px",
+              "lines": [
+                "低い丘の果樹園集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "草地に囲まれた小さな集落",
+              "fontSize": "13px",
+              "lines": [
+                "草地に囲まれた小さな集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ブレドン",
+              "fontSize": "13px",
+              "lines": [
+                "ブレドン"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "トランド",
+              "fontSize": "13px",
+              "lines": [
+                "トランド"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ペヴェレル",
+              "fontSize": "13px",
+              "lines": [
+                "ペヴェレル"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "アルダーコム",
+              "fontSize": "13px",
+              "lines": [
+                "アルダーコム"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "アスターリー",
+              "fontSize": "13px",
+              "lines": [
+                "アスターリー"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "マーデン",
+              "fontSize": "13px",
+              "lines": [
+                "マーデン"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "キャロウデン",
+              "fontSize": "13px",
+              "lines": [
+                "キャロウデン"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ウィットコム",
+              "fontSize": "13px",
+              "lines": [
+                "ウィットコム"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "森に寄り添う小村",
+              "fontSize": "13px",
+              "lines": [
+                "森に寄り添う小村"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "野ばらの谷の集落",
+              "fontSize": "13px",
+              "lines": [
+                "野ばらの谷の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "朝霧のたまる農村",
+              "fontSize": "13px",
+              "lines": [
+                "朝霧のたまる農村"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ハロウゲイト",
+              "fontSize": "13px",
+              "lines": [
+                "ハロウゲイト"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "オールド・ブラッケン",
+              "fontSize": "13px",
+              "lines": [
+                "オールド・ブラッケン"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "モス・ホロウ",
+              "fontSize": "13px",
+              "lines": [
+                "モス・ホロウ"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ナイツ・エンド",
+              "fontSize": "13px",
+              "lines": [
+                "ナイツ・エンド"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "古い城地に近い丘の集落",
+              "fontSize": "13px",
+              "lines": [
+                "古い城地に近い丘の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ダンコム",
+              "fontSize": "13px",
+              "lines": [
+                "ダンコム"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ウェストウォッチ",
+              "fontSize": "13px",
+              "lines": [
+                "ウェストウォッチ"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "レイヴン・クリフ",
+              "fontSize": "13px",
+              "lines": [
+                "レイヴン・クリフ"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "木苺の森の縁の小村",
+              "fontSize": "13px",
+              "lines": [
+                "木苺の森の縁の小村"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "谷あいの小さな集落",
+              "fontSize": "13px",
+              "lines": [
+                "谷あいの小さな集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "深い森へ続く木工の集落",
+              "fontSize": "13px",
+              "lines": [
+                "深い森へ続く木工の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ラークフォード",
+              "fontSize": "13px",
+              "lines": [
+                "ラークフォード"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ベルクロス",
+              "fontSize": "13px",
+              "lines": [
+                "ベルクロス"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ウィロウミア",
+              "fontSize": "13px",
+              "lines": [
+                "ウィロウミア"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ストーンブリッジ",
+              "fontSize": "13px",
+              "lines": [
+                "ストーンブリッジ"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "レッドリーフ",
+              "fontSize": "13px",
+              "lines": [
+                "レッドリーフ"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "サンミア湖の入り江の小村",
+              "fontSize": "13px",
+              "lines": [
+                "サンミア湖の入り江の小村"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "水路沿いの果樹園の村",
+              "fontSize": "13px",
+              "lines": [
+                "水路沿いの果樹園の村"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "なだらかな丘の農家の集落",
+              "fontSize": "13px",
+              "lines": [
+                "なだらかな丘の農家の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "渡し場のそばの家並み",
+              "fontSize": "13px",
+              "lines": [
+                "渡し場のそばの家並み"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "湖の東岸の小さな村",
+              "fontSize": "13px",
+              "lines": [
+                "湖の東岸の小さな村"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ハイフェル",
+              "fontSize": "13px",
+              "lines": [
+                "ハイフェル"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "ケルドウィック",
+              "fontSize": "13px",
+              "lines": [
+                "ケルドウィック"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "山道の奥の小村",
+              "fontSize": "13px",
+              "lines": [
+                "山道の奥の小村"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "冬の湖畔の村",
+              "fontSize": "13px",
+              "lines": [
+                "冬の湖畔の村"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "星空の開ける高原の集落",
+              "fontSize": "13px",
+              "lines": [
+                "星空の開ける高原の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "峠の小さな宿場",
+              "fontSize": "13px",
+              "lines": [
+                "峠の小さな宿場"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "雪深い谷奥の村",
+              "fontSize": "13px",
+              "lines": [
+                "雪深い谷奥の村"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "風の強い北方の農家の家並み",
+              "fontSize": "13px",
+              "lines": [
+                "風の強い北方の農家の家並み"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 281.75
+            },
+            {
+              "value": "湯治場から離れた小集落",
+              "fontSize": "13px",
+              "lines": [
+                "湯治場から離れた小集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
               "centerOffset": 0,
               "width": 281.75
             }
@@ -4149,6 +6189,1022 @@
               "width": 294.875
             }
           ],
+          "proposedTitle": [
+            {
+              "value": "王家のパティシエ",
+              "fontSize": "24px",
+              "lines": [
+                "王家のパティシエ"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "晩餐会の猫",
+              "fontSize": "24px",
+              "lines": [
+                "晩餐会の猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "冬布を継ぐ猫",
+              "fontSize": "24px",
+              "lines": [
+                "冬布を継ぐ猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "祝宴の女主人",
+              "fontSize": "24px",
+              "lines": [
+                "祝宴の女主人"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "時を継ぐ猫",
+              "fontSize": "24px",
+              "lines": [
+                "時を継ぐ猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "暦を守る猫",
+              "fontSize": "24px",
+              "lines": [
+                "暦を守る猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "午後三時の令嬢",
+              "fontSize": "24px",
+              "lines": [
+                "午後三時の令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ケーキ屋通りの令嬢",
+              "fontSize": "24px",
+              "lines": [
+                "ケーキ屋通りの令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "便箋を選ぶ令嬢",
+              "fontSize": "24px",
+              "lines": [
+                "便箋を選ぶ令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "客間を開く令嬢",
+              "fontSize": "24px",
+              "lines": [
+                "客間を開く令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "蕾の庭の令嬢",
+              "fontSize": "24px",
+              "lines": [
+                "蕾の庭の令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "星暦をめくる令嬢",
+              "fontSize": "24px",
+              "lines": [
+                "星暦をめくる令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "夜咲きの園丁",
+              "fontSize": "24px",
+              "lines": [
+                "夜咲きの園丁"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "果樹園のいたずら猫",
+              "fontSize": "24px",
+              "lines": [
+                "果樹園のいたずら猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "名もなき贈り主",
+              "fontSize": "24px",
+              "lines": [
+                "名もなき贈り主"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "気まぐれ郵便猫",
+              "fontSize": "24px",
+              "lines": [
+                "気まぐれ郵便猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "月影の反逆者",
+              "fontSize": "24px",
+              "lines": [
+                "月影の反逆者"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "放浪する時計師",
+              "fontSize": "24px",
+              "lines": [
+                "放浪する時計師"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "最後の一灯",
+              "fontSize": "24px",
+              "lines": [
+                "最後の一灯"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "秘密のお茶会",
+              "fontSize": "24px",
+              "lines": [
+                "秘密のお茶会"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "冬支度の灯り",
+              "fontSize": "24px",
+              "lines": [
+                "冬支度の灯り"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "サロンの聞き手",
+              "fontSize": "24px",
+              "lines": [
+                "サロンの聞き手"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "古書室の猫",
+              "fontSize": "24px",
+              "lines": [
+                "古書室の猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "星図を囲む夜",
+              "fontSize": "24px",
+              "lines": [
+                "星図を囲む夜"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            }
+          ],
+          "proposedOrigin": [
+            {
+              "value": "セント・ミルク宮殿に近い住宅街",
+              "fontSize": "13px",
+              "lines": [
+                "セント・ミルク宮殿に近い住宅街"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "王都ミューミンスターの学術街",
+              "fontSize": "13px",
+              "lines": [
+                "王都ミューミンスターの学術街"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "アヴェル川沿いのロウ・キーズ",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川沿いのロウ・キーズ"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "アヴェル川に近い小さな住宅街",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川に近い小さな住宅街"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "王都行きの鉄道沿線の町",
+              "fontSize": "13px",
+              "lines": [
+                "王都行きの鉄道沿線の町"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "サンミア湖畔の果樹園地帯",
+              "fontSize": "13px",
+              "lines": [
+                "サンミア湖畔の果樹園地帯"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "オールド・ミンスター",
+              "fontSize": "13px",
+              "lines": [
+                "オールド・ミンスター"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ベルグレイヴ・ガーデンズ",
+              "fontSize": "13px",
+              "lines": [
+                "ベルグレイヴ・ガーデンズ"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "フィッシュベル市場の近く",
+              "fontSize": "13px",
+              "lines": [
+                "フィッシュベル市場の近く"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ピカデリー・ミューズ",
+              "fontSize": "13px",
+              "lines": [
+                "ピカデリー・ミューズ"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "王都の静かな裏通り",
+              "fontSize": "13px",
+              "lines": [
+                "王都の静かな裏通り"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "白い丘のふもとの小さな町",
+              "fontSize": "13px",
+              "lines": [
+                "白い丘のふもとの小さな町"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "白い断崖のふもとの集落",
+              "fontSize": "13px",
+              "lines": [
+                "白い断崖のふもとの集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "海霧のかかる小さな漁村",
+              "fontSize": "13px",
+              "lines": [
+                "海霧のかかる小さな漁村"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "オリーブ畑に囲まれた小村",
+              "fontSize": "13px",
+              "lines": [
+                "オリーブ畑に囲まれた小村"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "港から離れた市場町",
+              "fontSize": "13px",
+              "lines": [
+                "港から離れた市場町"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "波の静かな入り江の集落",
+              "fontSize": "13px",
+              "lines": [
+                "波の静かな入り江の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "東岸の葡萄農家の家並み",
+              "fontSize": "13px",
+              "lines": [
+                "東岸の葡萄農家の家並み"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "海沿いの細い路地",
+              "fontSize": "13px",
+              "lines": [
+                "海沿いの細い路地"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "フォックスリー",
+              "fontSize": "13px",
+              "lines": [
+                "フォックスリー"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ブラッケンフォード",
+              "fontSize": "13px",
+              "lines": [
+                "ブラッケンフォード"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ハーヴァリー",
+              "fontSize": "13px",
+              "lines": [
+                "ハーヴァリー"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ダーンリー炭田に近い集落",
+              "fontSize": "13px",
+              "lines": [
+                "ダーンリー炭田に近い集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "街道を外れた小さな農村",
+              "fontSize": "13px",
+              "lines": [
+                "街道を外れた小さな農村"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "石橋のたもとの集落",
+              "fontSize": "13px",
+              "lines": [
+                "石橋のたもとの集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "低い丘の果樹園集落",
+              "fontSize": "13px",
+              "lines": [
+                "低い丘の果樹園集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "草地に囲まれた小さな集落",
+              "fontSize": "13px",
+              "lines": [
+                "草地に囲まれた小さな集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ブレドン",
+              "fontSize": "13px",
+              "lines": [
+                "ブレドン"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "トランド",
+              "fontSize": "13px",
+              "lines": [
+                "トランド"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ペヴェレル",
+              "fontSize": "13px",
+              "lines": [
+                "ペヴェレル"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "アルダーコム",
+              "fontSize": "13px",
+              "lines": [
+                "アルダーコム"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "アスターリー",
+              "fontSize": "13px",
+              "lines": [
+                "アスターリー"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "マーデン",
+              "fontSize": "13px",
+              "lines": [
+                "マーデン"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "キャロウデン",
+              "fontSize": "13px",
+              "lines": [
+                "キャロウデン"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ウィットコム",
+              "fontSize": "13px",
+              "lines": [
+                "ウィットコム"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "森に寄り添う小村",
+              "fontSize": "13px",
+              "lines": [
+                "森に寄り添う小村"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "野ばらの谷の集落",
+              "fontSize": "13px",
+              "lines": [
+                "野ばらの谷の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "朝霧のたまる農村",
+              "fontSize": "13px",
+              "lines": [
+                "朝霧のたまる農村"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ハロウゲイト",
+              "fontSize": "13px",
+              "lines": [
+                "ハロウゲイト"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "オールド・ブラッケン",
+              "fontSize": "13px",
+              "lines": [
+                "オールド・ブラッケン"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "モス・ホロウ",
+              "fontSize": "13px",
+              "lines": [
+                "モス・ホロウ"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ナイツ・エンド",
+              "fontSize": "13px",
+              "lines": [
+                "ナイツ・エンド"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "古い城地に近い丘の集落",
+              "fontSize": "13px",
+              "lines": [
+                "古い城地に近い丘の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ダンコム",
+              "fontSize": "13px",
+              "lines": [
+                "ダンコム"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ウェストウォッチ",
+              "fontSize": "13px",
+              "lines": [
+                "ウェストウォッチ"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "レイヴン・クリフ",
+              "fontSize": "13px",
+              "lines": [
+                "レイヴン・クリフ"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "木苺の森の縁の小村",
+              "fontSize": "13px",
+              "lines": [
+                "木苺の森の縁の小村"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "谷あいの小さな集落",
+              "fontSize": "13px",
+              "lines": [
+                "谷あいの小さな集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "深い森へ続く木工の集落",
+              "fontSize": "13px",
+              "lines": [
+                "深い森へ続く木工の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ラークフォード",
+              "fontSize": "13px",
+              "lines": [
+                "ラークフォード"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ベルクロス",
+              "fontSize": "13px",
+              "lines": [
+                "ベルクロス"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ウィロウミア",
+              "fontSize": "13px",
+              "lines": [
+                "ウィロウミア"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ストーンブリッジ",
+              "fontSize": "13px",
+              "lines": [
+                "ストーンブリッジ"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "レッドリーフ",
+              "fontSize": "13px",
+              "lines": [
+                "レッドリーフ"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "サンミア湖の入り江の小村",
+              "fontSize": "13px",
+              "lines": [
+                "サンミア湖の入り江の小村"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "水路沿いの果樹園の村",
+              "fontSize": "13px",
+              "lines": [
+                "水路沿いの果樹園の村"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "なだらかな丘の農家の集落",
+              "fontSize": "13px",
+              "lines": [
+                "なだらかな丘の農家の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "渡し場のそばの家並み",
+              "fontSize": "13px",
+              "lines": [
+                "渡し場のそばの家並み"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "湖の東岸の小さな村",
+              "fontSize": "13px",
+              "lines": [
+                "湖の東岸の小さな村"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ハイフェル",
+              "fontSize": "13px",
+              "lines": [
+                "ハイフェル"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "ケルドウィック",
+              "fontSize": "13px",
+              "lines": [
+                "ケルドウィック"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "山道の奥の小村",
+              "fontSize": "13px",
+              "lines": [
+                "山道の奥の小村"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "冬の湖畔の村",
+              "fontSize": "13px",
+              "lines": [
+                "冬の湖畔の村"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "星空の開ける高原の集落",
+              "fontSize": "13px",
+              "lines": [
+                "星空の開ける高原の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "峠の小さな宿場",
+              "fontSize": "13px",
+              "lines": [
+                "峠の小さな宿場"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "雪深い谷奥の村",
+              "fontSize": "13px",
+              "lines": [
+                "雪深い谷奥の村"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "風の強い北方の農家の家並み",
+              "fontSize": "13px",
+              "lines": [
+                "風の強い北方の農家の家並み"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 294.875
+            },
+            {
+              "value": "湯治場から離れた小集落",
+              "fontSize": "13px",
+              "lines": [
+                "湯治場から離れた小集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 294.875
+            }
+          ],
           "single": {
             "preface": "王国でのあなたが、一匹の猫として\nこの一冊に記されています。",
             "subjectPadding": "25px 12px",
@@ -5372,6 +8428,1022 @@
               ],
               "lineCount": 1,
               "lastLine": 17,
+              "centerOffset": 0,
+              "width": 461
+            }
+          ],
+          "proposedTitle": [
+            {
+              "value": "王家のパティシエ",
+              "fontSize": "29px",
+              "lines": [
+                "王家のパティシエ"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "晩餐会の猫",
+              "fontSize": "29px",
+              "lines": [
+                "晩餐会の猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "冬布を継ぐ猫",
+              "fontSize": "29px",
+              "lines": [
+                "冬布を継ぐ猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "祝宴の女主人",
+              "fontSize": "29px",
+              "lines": [
+                "祝宴の女主人"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "時を継ぐ猫",
+              "fontSize": "29px",
+              "lines": [
+                "時を継ぐ猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "暦を守る猫",
+              "fontSize": "29px",
+              "lines": [
+                "暦を守る猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "午後三時の令嬢",
+              "fontSize": "29px",
+              "lines": [
+                "午後三時の令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "ケーキ屋通りの令嬢",
+              "fontSize": "29px",
+              "lines": [
+                "ケーキ屋通りの令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "便箋を選ぶ令嬢",
+              "fontSize": "29px",
+              "lines": [
+                "便箋を選ぶ令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "客間を開く令嬢",
+              "fontSize": "29px",
+              "lines": [
+                "客間を開く令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "蕾の庭の令嬢",
+              "fontSize": "29px",
+              "lines": [
+                "蕾の庭の令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "星暦をめくる令嬢",
+              "fontSize": "29px",
+              "lines": [
+                "星暦をめくる令嬢"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "夜咲きの園丁",
+              "fontSize": "29px",
+              "lines": [
+                "夜咲きの園丁"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "果樹園のいたずら猫",
+              "fontSize": "29px",
+              "lines": [
+                "果樹園のいたずら猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "名もなき贈り主",
+              "fontSize": "29px",
+              "lines": [
+                "名もなき贈り主"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "気まぐれ郵便猫",
+              "fontSize": "29px",
+              "lines": [
+                "気まぐれ郵便猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "月影の反逆者",
+              "fontSize": "29px",
+              "lines": [
+                "月影の反逆者"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "放浪する時計師",
+              "fontSize": "29px",
+              "lines": [
+                "放浪する時計師"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "最後の一灯",
+              "fontSize": "29px",
+              "lines": [
+                "最後の一灯"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "秘密のお茶会",
+              "fontSize": "29px",
+              "lines": [
+                "秘密のお茶会"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "冬支度の灯り",
+              "fontSize": "29px",
+              "lines": [
+                "冬支度の灯り"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "サロンの聞き手",
+              "fontSize": "29px",
+              "lines": [
+                "サロンの聞き手"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "古書室の猫",
+              "fontSize": "29px",
+              "lines": [
+                "古書室の猫"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 406
+            },
+            {
+              "value": "星図を囲む夜",
+              "fontSize": "29px",
+              "lines": [
+                "星図を囲む夜"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 406
+            }
+          ],
+          "proposedOrigin": [
+            {
+              "value": "セント・ミルク宮殿に近い住宅街",
+              "fontSize": "13px",
+              "lines": [
+                "セント・ミルク宮殿に近い住宅街"
+              ],
+              "lineCount": 1,
+              "lastLine": 15,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "王都ミューミンスターの学術街",
+              "fontSize": "13px",
+              "lines": [
+                "王都ミューミンスターの学術街"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "アヴェル川沿いのロウ・キーズ",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川沿いのロウ・キーズ"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "アヴェル川に近い小さな住宅街",
+              "fontSize": "13px",
+              "lines": [
+                "アヴェル川に近い小さな住宅街"
+              ],
+              "lineCount": 1,
+              "lastLine": 14,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "王都行きの鉄道沿線の町",
+              "fontSize": "13px",
+              "lines": [
+                "王都行きの鉄道沿線の町"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "サンミア湖畔の果樹園地帯",
+              "fontSize": "13px",
+              "lines": [
+                "サンミア湖畔の果樹園地帯"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "オールド・ミンスター",
+              "fontSize": "13px",
+              "lines": [
+                "オールド・ミンスター"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ベルグレイヴ・ガーデンズ",
+              "fontSize": "13px",
+              "lines": [
+                "ベルグレイヴ・ガーデンズ"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "フィッシュベル市場の近く",
+              "fontSize": "13px",
+              "lines": [
+                "フィッシュベル市場の近く"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ピカデリー・ミューズ",
+              "fontSize": "13px",
+              "lines": [
+                "ピカデリー・ミューズ"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "王都の静かな裏通り",
+              "fontSize": "13px",
+              "lines": [
+                "王都の静かな裏通り"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "白い丘のふもとの小さな町",
+              "fontSize": "13px",
+              "lines": [
+                "白い丘のふもとの小さな町"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "白い断崖のふもとの集落",
+              "fontSize": "13px",
+              "lines": [
+                "白い断崖のふもとの集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "海霧のかかる小さな漁村",
+              "fontSize": "13px",
+              "lines": [
+                "海霧のかかる小さな漁村"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "オリーブ畑に囲まれた小村",
+              "fontSize": "13px",
+              "lines": [
+                "オリーブ畑に囲まれた小村"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "港から離れた市場町",
+              "fontSize": "13px",
+              "lines": [
+                "港から離れた市場町"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "波の静かな入り江の集落",
+              "fontSize": "13px",
+              "lines": [
+                "波の静かな入り江の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "東岸の葡萄農家の家並み",
+              "fontSize": "13px",
+              "lines": [
+                "東岸の葡萄農家の家並み"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "海沿いの細い路地",
+              "fontSize": "13px",
+              "lines": [
+                "海沿いの細い路地"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "フォックスリー",
+              "fontSize": "13px",
+              "lines": [
+                "フォックスリー"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ブラッケンフォード",
+              "fontSize": "13px",
+              "lines": [
+                "ブラッケンフォード"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ハーヴァリー",
+              "fontSize": "13px",
+              "lines": [
+                "ハーヴァリー"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ダーンリー炭田に近い集落",
+              "fontSize": "13px",
+              "lines": [
+                "ダーンリー炭田に近い集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "街道を外れた小さな農村",
+              "fontSize": "13px",
+              "lines": [
+                "街道を外れた小さな農村"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "石橋のたもとの集落",
+              "fontSize": "13px",
+              "lines": [
+                "石橋のたもとの集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "低い丘の果樹園集落",
+              "fontSize": "13px",
+              "lines": [
+                "低い丘の果樹園集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "草地に囲まれた小さな集落",
+              "fontSize": "13px",
+              "lines": [
+                "草地に囲まれた小さな集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ブレドン",
+              "fontSize": "13px",
+              "lines": [
+                "ブレドン"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "トランド",
+              "fontSize": "13px",
+              "lines": [
+                "トランド"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ペヴェレル",
+              "fontSize": "13px",
+              "lines": [
+                "ペヴェレル"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "アルダーコム",
+              "fontSize": "13px",
+              "lines": [
+                "アルダーコム"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "アスターリー",
+              "fontSize": "13px",
+              "lines": [
+                "アスターリー"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "マーデン",
+              "fontSize": "13px",
+              "lines": [
+                "マーデン"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "キャロウデン",
+              "fontSize": "13px",
+              "lines": [
+                "キャロウデン"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ウィットコム",
+              "fontSize": "13px",
+              "lines": [
+                "ウィットコム"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "森に寄り添う小村",
+              "fontSize": "13px",
+              "lines": [
+                "森に寄り添う小村"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "野ばらの谷の集落",
+              "fontSize": "13px",
+              "lines": [
+                "野ばらの谷の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "朝霧のたまる農村",
+              "fontSize": "13px",
+              "lines": [
+                "朝霧のたまる農村"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ハロウゲイト",
+              "fontSize": "13px",
+              "lines": [
+                "ハロウゲイト"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "オールド・ブラッケン",
+              "fontSize": "13px",
+              "lines": [
+                "オールド・ブラッケン"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "モス・ホロウ",
+              "fontSize": "13px",
+              "lines": [
+                "モス・ホロウ"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ナイツ・エンド",
+              "fontSize": "13px",
+              "lines": [
+                "ナイツ・エンド"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "古い城地に近い丘の集落",
+              "fontSize": "13px",
+              "lines": [
+                "古い城地に近い丘の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ダンコム",
+              "fontSize": "13px",
+              "lines": [
+                "ダンコム"
+              ],
+              "lineCount": 1,
+              "lastLine": 4,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ウェストウォッチ",
+              "fontSize": "13px",
+              "lines": [
+                "ウェストウォッチ"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "レイヴン・クリフ",
+              "fontSize": "13px",
+              "lines": [
+                "レイヴン・クリフ"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "木苺の森の縁の小村",
+              "fontSize": "13px",
+              "lines": [
+                "木苺の森の縁の小村"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "谷あいの小さな集落",
+              "fontSize": "13px",
+              "lines": [
+                "谷あいの小さな集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "深い森へ続く木工の集落",
+              "fontSize": "13px",
+              "lines": [
+                "深い森へ続く木工の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ラークフォード",
+              "fontSize": "13px",
+              "lines": [
+                "ラークフォード"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ベルクロス",
+              "fontSize": "13px",
+              "lines": [
+                "ベルクロス"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ウィロウミア",
+              "fontSize": "13px",
+              "lines": [
+                "ウィロウミア"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ストーンブリッジ",
+              "fontSize": "13px",
+              "lines": [
+                "ストーンブリッジ"
+              ],
+              "lineCount": 1,
+              "lastLine": 8,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "レッドリーフ",
+              "fontSize": "13px",
+              "lines": [
+                "レッドリーフ"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "サンミア湖の入り江の小村",
+              "fontSize": "13px",
+              "lines": [
+                "サンミア湖の入り江の小村"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "水路沿いの果樹園の村",
+              "fontSize": "13px",
+              "lines": [
+                "水路沿いの果樹園の村"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "なだらかな丘の農家の集落",
+              "fontSize": "13px",
+              "lines": [
+                "なだらかな丘の農家の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 12,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "渡し場のそばの家並み",
+              "fontSize": "13px",
+              "lines": [
+                "渡し場のそばの家並み"
+              ],
+              "lineCount": 1,
+              "lastLine": 10,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "湖の東岸の小さな村",
+              "fontSize": "13px",
+              "lines": [
+                "湖の東岸の小さな村"
+              ],
+              "lineCount": 1,
+              "lastLine": 9,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ハイフェル",
+              "fontSize": "13px",
+              "lines": [
+                "ハイフェル"
+              ],
+              "lineCount": 1,
+              "lastLine": 5,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "ケルドウィック",
+              "fontSize": "13px",
+              "lines": [
+                "ケルドウィック"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "山道の奥の小村",
+              "fontSize": "13px",
+              "lines": [
+                "山道の奥の小村"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "冬の湖畔の村",
+              "fontSize": "13px",
+              "lines": [
+                "冬の湖畔の村"
+              ],
+              "lineCount": 1,
+              "lastLine": 6,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "星空の開ける高原の集落",
+              "fontSize": "13px",
+              "lines": [
+                "星空の開ける高原の集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "峠の小さな宿場",
+              "fontSize": "13px",
+              "lines": [
+                "峠の小さな宿場"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "雪深い谷奥の村",
+              "fontSize": "13px",
+              "lines": [
+                "雪深い谷奥の村"
+              ],
+              "lineCount": 1,
+              "lastLine": 7,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "風の強い北方の農家の家並み",
+              "fontSize": "13px",
+              "lines": [
+                "風の強い北方の農家の家並み"
+              ],
+              "lineCount": 1,
+              "lastLine": 13,
+              "centerOffset": 0,
+              "width": 461
+            },
+            {
+              "value": "湯治場から離れた小集落",
+              "fontSize": "13px",
+              "lines": [
+                "湯治場から離れた小集落"
+              ],
+              "lineCount": 1,
+              "lastLine": 11,
               "centerOffset": 0,
               "width": 461
             }
