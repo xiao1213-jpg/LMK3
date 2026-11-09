@@ -541,6 +541,62 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 .result-page .portrait-art::after{background:linear-gradient(90deg,#fffdf9 0%,rgba(255,253,249,.43) 31%,rgba(255,253,249,.43) 69%,#fffdf9 100%)}
 .result-page .portrait-art .portrait-medallion{bottom:12px;opacity:.77}
 @media(max-width:520px){.result-page .portrait-art{height:130px}}
+
+/* ═══ Rarity, readable provenance and 24 intimate guide scenes — v10 ═══ */
+.provenance-page .card{background:#fffdf8!important}
+.registry-masthead{padding-bottom:20px}
+.registry-registration{margin:14px auto 20px;font-size:11px}
+.rarity-ledger{position:relative;max-width:525px;margin:0 auto 26px;padding:21px 17px 19px;background:linear-gradient(152deg,#fffef8,#f6eddf);border:1px solid var(--record-line);border-top:3px solid var(--record-accent);border-radius:4px;text-align:center;box-shadow:0 4px 18px rgba(61,43,28,.055)}
+.rarity-overline{display:block;font:10px/1.5 Georgia,serif;letter-spacing:.17em;color:var(--record-accent);margin-bottom:13px}
+.rarity-stars{display:block;white-space:nowrap;margin:2px auto 7px;color:var(--record-accent);font:600 clamp(24px,5.2vw,32px)/1.35 Georgia,serif;letter-spacing:.14em}
+.rarity-ledger .record-rarity{display:block;max-width:100%;width:max-content;margin:4px auto 5px;padding:0;border:0;background:none!important;font:600 20px/1.55 var(--lmk-serif);color:var(--record-deep);letter-spacing:0}
+.rarity-rate{display:block;font:11px/1.6 var(--lmk-sans);color:var(--record-accent);letter-spacing:.08em}
+.rarity-ledger>p{max-width:31em;margin:12px auto 0;color:#6e6053;font-size:13px;line-height:1.8}
+.rarity-probability{max-width:370px;margin:16px auto 0;padding-top:9px;border-top:1px solid rgba(153,124,86,.24);text-align:center}
+.rarity-probability summary{cursor:pointer;list-style:none;color:#8c775e;display:block;padding:7px;font:12px/1.6 var(--lmk-sans)}
+.rarity-probability summary::-webkit-details-marker{display:none}
+.rarity-probability summary:after{content:" ＋"}
+.rarity-probability[open] summary:after{content:" −"}
+.rarity-probability p{font-size:12px;line-height:1.75;color:#716153;margin:8px auto 0}
+.provenance-page.tier-ivory .rarity-ledger{--record-accent:#957a58;--record-line:#ddcbb0;--record-deep:#634b37;background:linear-gradient(155deg,#fffef9,#f7efe3)}
+.provenance-page.tier-silver .rarity-ledger{--record-accent:#637f90;--record-line:#a7bfca;--record-deep:#425e6c;background:linear-gradient(155deg,#fbfdfd,#e5edf0)}
+.provenance-page.tier-gold .rarity-ledger{--record-accent:#a77a2c;--record-line:#cfb37b;--record-deep:#75531b;background:linear-gradient(155deg,#fffdf4,#f8eccb)}
+.provenance-page.tier-crown .rarity-ledger{--record-accent:#d8b278;--record-line:#d4b37e;--record-deep:#f9e4c2;background:radial-gradient(circle at 50% 0%,#83464b,#552d34 70%,#3c242d)}
+.provenance-page.tier-crown .rarity-ledger>p,.provenance-page.tier-crown .rarity-probability summary,.provenance-page.tier-crown .rarity-probability p,.provenance-page.tier-crown .rarity-rate{color:#f2dbba}
+.provenance-page.tier-crown .rarity-probability{border-color:rgba(255,229,178,.27)}
+.provenance-page .visitor-grid{max-width:520px;margin:0 auto}
+.provenance-page .visitor-field{padding:20px 7px!important}
+.provenance-page .visitor-field span{font-size:11px;letter-spacing:.055em;margin-bottom:6px}
+.provenance-page .visitor-field b{font-size:16.5px;line-height:1.7}
+.provenance-page .coat-field .coat-name{font-size:clamp(26px,6vw,34px)!important;letter-spacing:.02em;margin-top:3px!important;margin-bottom:4px!important}
+.provenance-page .coat-epithet{font:400 14px/1.75 var(--lmk-sans)!important;color:#78685b!important;max-width:31em}
+.provenance-page .birthplace-field>b{font-family:var(--lmk-serif);font-size:19px}
+.provenance-page .birthplace-field .land-region{display:block;margin-top:5px;color:#9b815e;font-size:12px;letter-spacing:.05em}
+.provenance-page .family-field>b{font-family:var(--lmk-serif);font-size:18px;line-height:1.65;letter-spacing:0}
+.provenance-page .locality-scene,.provenance-page .family-scene{margin:11px 0 0;max-width:32em;font-size:13.5px;line-height:1.95;color:#77685a;letter-spacing:0;overflow-wrap:break-word;text-wrap:pretty}
+.provenance-page .family-scene{color:#6e594a}
+.provenance-page .heirloom-field>b{font-family:var(--lmk-serif);font-size:16.5px;font-weight:600}
+.provenance-page .portrait-field{padding-top:22px!important;padding-bottom:10px!important}
+.provenance-page .portrait-field>b{font-size:16px!important}
+.provenance-page .visitor-field.portrait-field span{text-align:right}
+.result-page .guide-cat.story-guide{max-width:31em;display:block;text-align:left;padding:23px 4px!important;margin:23px auto 28px!important;border-top:1px solid var(--theme-line)!important;border-bottom:1px solid var(--theme-line)!important;background:transparent!important;box-shadow:none!important}
+.guide-story-kicker{display:block;color:var(--theme-accent);font:10px/1.5 Georgia,serif;letter-spacing:.15em;margin-bottom:9px}
+.guide-story-heading{color:#8b7970;font:500 12px/1.5 var(--lmk-sans);letter-spacing:.06em;margin:0 0 5px}
+.guide-story-name{display:block;color:var(--theme-deep);font:600 19px/1.55 var(--lmk-serif);letter-spacing:0;margin:0}
+.guide-story-scene{color:#5e514b;font:400 14px/1.9 var(--lmk-sans);margin:12px 0 0;max-width:31em;letter-spacing:0;text-wrap:pretty}
+.invitation-share h2{font-size:22px}
+.invitation-share p{line-height:1.9}
+@media(max-width:520px){
+.rarity-ledger{padding:19px 12px 16px;margin-bottom:20px}
+.rarity-stars{font-size:25px}
+.rarity-ledger .record-rarity{font-size:19px}
+.rarity-ledger>p{font-size:12.5px}
+.provenance-page .visitor-field{padding:17px 3px!important}
+.provenance-page .birthplace-field>b{font-size:18px}
+.provenance-page .family-field>b{font-size:17px}
+.provenance-page .locality-scene,.provenance-page .family-scene{font-size:13px}
+.guide-story-scene{font-size:13.5px}
+}
 </style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script><script src="assets/kingdom-notes-v10.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">LITTLE MEW</div>
 <div class="cat">🐈</div>
@@ -593,7 +649,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 <header class="registry-masthead"><span>GENERAL REGISTER OFFICE</span><span class="registry-crest" aria-hidden="true">✥</span>
 <h1>王国来歴証</h1><p>リトル・ミュー王国 総登記局</p></header>
 <p class="registry-registration" id="registry_registration"></p>
-<section class="rarity-ledger" aria-label="王国での記録の希少度"><span class="rarity-overline">RARITY OF THIS RECORD</span><span class="rarity-stars" id="rarity_stars">★☆☆☆</span><strong class="record-rarity" id="record_rarity">アイヴォリーの記録</strong><p id="record_tier_note"></p><details class="rarity-probability"><summary>この組み合わせの出現目安</summary><p id="record_probability"></p></details></section>
+<section class="rarity-ledger" aria-label="王国での記録の希少度"><span class="rarity-overline">RARITY OF THIS RECORD</span><span class="rarity-stars" id="rarity_stars">★☆☆☆</span><strong class="record-rarity" id="record_rarity">アイヴォリーの記録</strong><span class="rarity-rate" id="rarity_rate">約70%</span><p id="record_tier_note"></p><details class="rarity-probability"><summary>この組み合わせの出現目安</summary><p id="record_probability"></p></details></section>
 <div id="provenance_record_mount"></div>
 <button class="start" id="return_portal" type="button">一件簿に戻る</button>
 </div></section><section id="result_blood_life_quiet" class="page result-page theme-blood"><div class="card">
@@ -1584,14 +1640,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     page.className = "page provenance-page tier-" + p.tier;
     const labels = {ivory:"アイヴォリーの記録",silver:"銀葉の記録",gold:"金星の記録",crown:"王冠印の記録"};
     const notes = {
-      ivory:"街角にも親しみのある、この王国の日々の記録。〈およそ70%〉",
-      silver:"ときどき出会う、少し珍しい来歴。〈およそ23%〉",
-      gold:"古い帳簿をめくっても、なかなか出会えない来歴。〈およそ6%〉",
-      crown:"王室の記録にもめったに現れない、稀な来歴。〈およそ1%〉"
+      ivory:"街角にも、同じ毛色の猫がいるかもしれません。",
+      silver:"何冊か帳簿をめくって、ようやく出会える来歴。",
+      gold:"登録官が思わずもう一度見返す、珍しい来歴。",
+      crown:"王国の長い記録にもめったに現れない、稀な来歴。"
     };
     const stars = {ivory:"★☆☆☆",silver:"★★☆☆",gold:"★★★☆",crown:"★★★★"};
     document.getElementById("record_rarity").textContent = labels[p.tier];
     document.getElementById("rarity_stars").textContent = stars[p.tier];
+    document.getElementById("rarity_rate").textContent = {ivory:"約70%",silver:"約23%",gold:"約6%",crown:"約1%"}[p.tier] + " の記録";
     document.getElementById("record_tier_note").textContent = notes[p.tier];
     document.getElementById("record_probability").textContent = "毛色・土地・家・家伝品を合わせた目安は、約" + p.oneIn.toLocaleString("ja-JP") + "匹に1匹。";
     document.getElementById("registry_registration").textContent = "REGISTRY · " + p.registry;
