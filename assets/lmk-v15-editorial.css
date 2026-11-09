@@ -309,6 +309,7 @@ body{
   text-align:center;
   letter-spacing:.018em;
   text-wrap:balance;
+  word-break:auto-phrase; /* graceful phrasal Japanese wrap where supported */
   overflow-wrap:break-word;
 }
 #result_portal .dossier-index{
