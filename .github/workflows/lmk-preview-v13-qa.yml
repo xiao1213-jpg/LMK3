@@ -1,4 +1,5 @@
 name: LMK v13 noble typography QA
+# Confirm 320px optical line breaks after final v13 copy polish
 on:
   push:
     paths:
