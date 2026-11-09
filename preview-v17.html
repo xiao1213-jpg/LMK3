@@ -987,6 +987,12 @@ body{color:var(--noble-ink);font-family:var(--noble-sans);font-feature-settings:
 .dossier-v17 .portal-restart{display:block;width:max-content;margin:22px auto 0;font:400 12px/1.7 var(--noble-sans);color:#9b8167}
 @media(max-width:520px){.dossier-cover.dossier-v17{padding:28px 21px 30px!important}.dossier-v17 .dossier-topline{margin-bottom:21px;font-size:8px}.dossier-v17 .dossier-document-head{padding-bottom:19px}.dossier-v17 .dossier-number{font-size:9.5px}.dossier-v17-identity{padding:16px 4px 13px}.dossier-v17-eyebrow{margin-bottom:12px;font-size:11.5px}.dossier-v17-row{grid-template-columns:82px minmax(0,1fr);gap:8px;padding:10px 3px}.dossier-v17-row dt{font-size:10.5px}.dossier-v17-row dd{font-size:13.5px}.dossier-v17 #dossier_subject_coat{font-size:23px}.dossier-v17-toc{margin-top:23px}.dossier-v17 .dossier-entry{min-height:88px;padding:15px 5px;grid-template-columns:22px minmax(0,1fr) 12px;gap:10px}.dossier-v17 .dossier-entry-text strong{font-size:18px}.dossier-v17 .dossier-v17-entry-subtitle{font-size:12.5px}.dossier-v17 #dossier_subject_portrait{font-size:15px}}
 @media(max-width:350px){.dossier-cover.dossier-v17{padding:26px 17px!important}.dossier-v17-row{grid-template-columns:70px minmax(0,1fr);gap:6px}.dossier-v17 #dossier_subject_coat{font-size:21px}.dossier-v17 #dossier_subject_portrait{font-size:14px}}
+
+/* Store QR belongs to the leave-with-your-invitation area, never in a record index. */
+.dossier-v17 .take-home-card{max-width:490px;margin:21px auto 7px!important;box-shadow:none;border:1px solid #dac7a9;border-radius:7px;background:#fffaf1}
+.dossier-v17 .take-home-card::before{display:none}
+.dossier-v17 .take-home-title{font:600 22px/1.55 var(--noble-serif);text-align:center}
+.dossier-v17 .take-home-copy{font:400 13px/1.85 var(--noble-sans);max-width:29em;margin-inline:auto}
 </style>
 <link rel="stylesheet" href="assets/lmk-v15-editorial.css"><link rel="stylesheet" href="assets/typography-v13.css?v=20261109-13"><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script><script src="assets/kingdom-notes-v12.js"></script><!-- Open-world birthplace preview: sample localities are not a complete gazetteer. --></head><body><main><div class="brand">LITTLE MEW KINGDOM</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">A LITTLE MEW STORY</div>
@@ -1759,7 +1765,7 @@ body{color:var(--noble-ink);font-family:var(--noble-sans);font-feature-settings:
     const pageFile = /^preview-v\d+\.html$/.test(pathFile) ? pathFile : "index.html";
     const url = new URL(pageFile,document.baseURI);
     url.searchParams.set("mode","mobile");
-    url.searchParams.set("v","20261109-v13-noble");
+    url.searchParams.set("v","20261109-v17-folio");
     url.hash = "invitation_page~" + resultId + "~" + payload;
     return url.toString();
   }
@@ -1768,7 +1774,7 @@ body{color:var(--noble-ink);font-family:var(--noble-sans);font-feature-settings:
     page.querySelector(".take-home-card")?.remove();
     if (!isStoreMode) return;
     if (!snapshot) return;
-    const goods = page.querySelector(".goods") || page.querySelector(".dossier-index");
+    const goods = page.querySelector(".goods") || page.querySelector(".invitation-share") || page.querySelector(".dossier-index");
     if (!goods) return;
     const title = resultTitle(resultId);
     const card = document.createElement("aside");
