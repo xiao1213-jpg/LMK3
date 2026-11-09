@@ -621,13 +621,103 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 .result-page .guide-story-name{font-size:18px;line-height:1.6}
 .result-page .guide-story-scene{max-width:33em;font-size:13.5px;line-height:1.9}
 @media(max-width:520px){.dossier-place-tag{font-size:11.5px}.result-page .guide-story-scene{font-size:13px}}
+
+/* ══ V12 / editorial Japanese typesetting and visual hierarchy ══ */
+:root{
+ --lmk-font-ui:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Noto Sans JP",sans-serif;
+ --lmk-font-book:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;
+ --lmk-text:#443b33;
+ --lmk-subtext:#6d6054;
+ --lmk-accent:#786044;
+ --lmk-paper:#fffcf5;
+ --lmk-hairline:#d8c9b4;
+}
+body{font-family:var(--lmk-font-ui);color:var(--lmk-text);-webkit-text-size-adjust:100%;text-size-adjust:100%;font-synthesis:none;line-break:strict;word-break:normal;overflow-wrap:normal}
+h1,h2,h3,.title,.result-thesis{font-family:var(--lmk-font-book)}
+main{width:100%;max-width:760px;margin:0 auto;padding:0 12px 24px}
+.page{max-width:680px;margin:0 auto}
+.page .card{box-sizing:border-box;max-width:100%;overflow-wrap:normal;word-break:normal}
+.page p,.page .desc p,.page .intro,.page .dossier-preface,.page .royal-letter-body,.page .locality-scene,.page .family-scene{letter-spacing:0;word-break:normal;overflow-wrap:break-word;line-break:strict;text-wrap:wrap;hyphens:none}
+.page h1,.page h2,.page .title{word-break:normal;line-break:strict;letter-spacing:0}
+.page h1,.page .title{text-wrap:balance}
+.page .start,.page .quiet-action{font-family:var(--lmk-font-ui);min-height:50px}
+.brand{letter-spacing:.17em;line-height:1.5;font-weight:400}
+#start_page .card{max-width:580px;margin:0 auto;padding:clamp(35px,7vw,58px) clamp(24px,6.5vw,52px) clamp(30px,6vw,45px);background:linear-gradient(150deg,#fffdf8,#f7f0e4)!important;box-shadow:0 9px 30px rgba(67,47,31,.055);border:1px solid #ddcdb6;border-radius:8px}
+#start_page .card::before{opacity:.62}
+#start_page .kicker{font:400 10px/1.5 Georgia,serif;letter-spacing:.2em;color:#9b815f}
+#start_page .cat{width:105px;margin:13px auto 8px}
+#start_page .title{font:600 clamp(27px,6.8vw,37px)/1.48 var(--lmk-font-book);max-width:17em;margin:17px auto 13px;letter-spacing:0}
+#start_page .intro{font:400 14.5px/2 var(--lmk-font-ui);color:var(--lmk-subtext);max-width:30em;margin:17px auto 0;text-align:left}
+#start_page .intro .intro-prompt{display:block;font:400 14.5px/1.9 var(--lmk-font-ui);color:var(--lmk-text);margin-top:19px}
+#start_page .start{margin:30px auto 0;width:min(100%,330px);font-size:15px;font-weight:600;line-height:1.5}
+#start_page .note{margin:12px auto 0;color:#9b8b79;font:400 12px/1.5 var(--lmk-font-ui)}
+#quiz_card{background:#fffdf8!important}
+#quiz_card .q{font:600 clamp(20px,4.7vw,26px)/1.72 var(--lmk-font-book);color:var(--lmk-text);max-width:26em;letter-spacing:0}
+#quiz_answers .btn{font-size:15px;font-weight:500;line-height:1.75;padding:18px 17px;min-height:66px}
+#quiz_card .axis{font-size:12px;color:var(--lmk-subtext);letter-spacing:0;line-height:1.65}
+.invitation-card{padding:clamp(31px,6vw,48px) clamp(22px,6vw,40px) 34px;background:linear-gradient(145deg,#fffdf7,#f4e9d8)!important;box-shadow:0 10px 31px rgba(62,40,22,.065)}
+.invitation-card .arrival-kicker{font:400 10px/1.5 Georgia,serif;letter-spacing:.2em;color:#927655}
+.invitation-card .arrival-title{font:600 clamp(27px,6.2vw,37px)/1.48 var(--lmk-font-book);color:#46382e;letter-spacing:0;margin:16px auto 9px}
+.invitation-card .arrival-copy{max-width:27em;font:400 14px/1.8 var(--lmk-font-ui);color:#796855;margin:4px auto 23px}
+.invitation-card .envelope{width:min(390px,100%);border-radius:4px;box-shadow:0 12px 30px rgba(65,46,28,.14);margin:18px auto 6px}
+.invitation-card .office-line{display:none!important}
+.royal-letter{padding:clamp(34px,6vw,47px) clamp(23px,6vw,46px) 35px!important;max-width:510px;box-shadow:0 8px 26px rgba(54,38,28,.07)!important;border-radius:2px}
+.royal-letter-cypher{margin-top:2px}
+.royal-letter-command{display:block;max-width:29em;margin:14px auto 0;font:10px/1.6 Georgia,serif;letter-spacing:.10em;color:#907655}
+.royal-letter h2{font:600 clamp(23px,5.6vw,29px)/1.5 var(--lmk-font-book);margin:16px auto 29px}
+.royal-letter-salutation{text-align:left;font:500 15px/1.65 var(--lmk-font-book);margin:0 auto 13px;max-width:28em}
+.royal-letter-body{text-align:left!important;font:400 15px/2.06 var(--lmk-font-book)!important;max-width:28em;letter-spacing:0!important;color:#55483c}
+.royal-letter-sign{margin-top:27px;color:#786756;font-size:12px;line-height:1.85}
+.royal-letter .start{max-width:340px;margin-top:26px}
+.result-portal .dossier-cover{max-width:640px;padding:clamp(27px,5.5vw,43px) clamp(22px,5.8vw,43px)!important}
+.dossier-cover .portal-heading{font:600 clamp(26px,5.8vw,36px)/1.45 var(--lmk-font-book);letter-spacing:0}
+.dossier-preface{max-width:27em;margin:22px auto 20px;font-size:13.5px;line-height:1.95}
+.dossier-subject{max-width:505px;border-color:#d4bea3;background:linear-gradient(145deg,#fffdf8,#faf3e9)}
+.dossier-subject>strong{font-family:var(--lmk-font-book);font-size:clamp(29px,6.5vw,37px);font-weight:600;line-height:1.4}
+.dossier-subject-origin{font-size:12.5px;line-height:1.8}
+.dossier-subject>b{font:600 clamp(21px,5vw,28px)/1.45 var(--lmk-font-book)}
+.dossier-entry-text strong{font-family:var(--lmk-font-book);font-weight:600}
+.dossier-footnote{font-size:12.5px;line-height:1.9;text-wrap:pretty}
+.result-page .card{padding:clamp(23px,5.5vw,39px) clamp(22px,5.5vw,38px)!important}
+.result-page .title{font:600 clamp(27px,6vw,36px)/1.5 var(--lmk-font-book);max-width:16em;letter-spacing:0}
+.result-page .result-thesis{font:600 clamp(16px,3.8vw,19px)/1.9 var(--lmk-font-book);max-width:28em;letter-spacing:0}
+.result-page .desc{max-width:32em}
+.result-page .desc p{font:400 15px/2 var(--lmk-font-ui);color:#54483f;letter-spacing:0;text-align:left}
+.result-page .story-guide .guide-story-name{font:600 18px/1.6 var(--lmk-font-book)}
+.result-page .story-guide .guide-story-scene{font:400 13.5px/1.92 var(--lmk-font-ui);color:#61564e;max-width:32em}
+.result-page .portrait-art{position:relative;height:132px!important;margin:16px auto 32px!important;padding:0!important;border:0!important;box-shadow:none!important;overflow:hidden;background:#f6f0e6!important}
+.result-page .portrait-art img{inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;aspect-ratio:auto!important;filter:saturate(.82) contrast(.90) brightness(1.14)!important;opacity:.15!important;transform:none!important;mix-blend-mode:multiply;mask-image:linear-gradient(90deg,transparent,black 20%,black 80%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,black 20%,black 80%,transparent)}
+.result-page .portrait-art::after{background:linear-gradient(90deg,#fffdf9,rgba(255,253,249,.24) 27%,rgba(255,253,249,.24) 73%,#fffdf9)}
+.result-page .portrait-art .portrait-medallion{bottom:8px;right:14px;background:rgba(255,253,249,.94);opacity:.9}
+.provenance-page .card{max-width:650px}
+.provenance-page .visitor-grid{max-width:530px}
+.provenance-page .visitor-field b{line-height:1.6;font-weight:600}
+.provenance-page .locality-scene,.provenance-page .family-scene{font:400 13.5px/1.9 var(--lmk-font-ui);color:#635950;text-align:left;letter-spacing:0}
+.provenance-page .family-field>b{font:600 clamp(17px,4.2vw,19px)/1.62 var(--lmk-font-book);max-width:28em}
+.provenance-page .coat-field .coat-name{letter-spacing:0!important}
+.provenance-page .rarity-probability p{font-size:12px;line-height:1.8}
+@media(max-width:520px){
+ main{padding:0 10px 22px}
+ #start_page .card{padding:36px 22px 34px}
+ #start_page .title{font-size:29px;line-height:1.5}
+ #start_page .intro{font-size:14px;line-height:1.93;max-width:27em}
+ #start_page .intro .intro-prompt{font-size:14px}
+ .invitation-card{padding:29px 18px 27px}
+ .royal-letter{padding:31px 22px 27px!important}
+ .royal-letter h2{font-size:24px}
+ .royal-letter-body{font-size:14.5px!important;line-height:2!important}
+ .result-page .portrait-art{height:116px!important}
+ .result-page .desc p{font-size:14.5px}
+ .provenance-page .locality-scene,.provenance-page .family-scene{font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){.invitation-card.is-opening .envelope,.invitation-card.is-opening .wax-seal,.invitation-card.is-opened .royal-letter{animation:none!important}}
 </style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script><script src="assets/kingdom-notes-v12.js"></script><!-- Open-world birthplace preview: sample localities are not a complete gazetteer. --></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
-<div class="kicker">A STORY BEGINS</div>
+<div class="kicker">A LITTLE MEW STORY</div>
 <div class="cat"><svg class="start-cat-emblem" viewBox="0 0 124 92" fill="none" aria-hidden="true"><path d="M26 42 26 16 44 28Q62 22 80 28L98 16 98 42Q103 48 100 60Q93 77 62 78Q31 77 24 60Q21 49 26 42Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M43 48Q48 44 53 48M71 48Q76 44 81 48M57 59l5 4 5-4m-5 4v3m0 0q-6 5-11 0m11 0q6 5 11 0M38 57l-15-4m15 10-15 2m63-8 15-4m-15 10 15 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-<h1 class="title">もし、あなたが<br>一匹の猫だったら。</h1>
-<p class="intro">古い時計の音。午後のお茶の香り。<br>石畳の向こうに、小さな王国があります。<span class="intro-prompt">九つの問いをたどると、<br>あなた宛てに一通の手紙が届きます。</span></p>
-<a class="start" id="start_quiz" href="#quiz_page">九つの問いへ</a>
-<div class="note">すべて二択</div>
+<h1 class="title">猫になって、王国へ。</h1>
+<p class="intro">石畳の町に、森の古城。湖のほとりには果樹園。ここは、猫たちが暮らすリトル・ミュー王国。<span class="intro-prompt">九つの問いを終えると、王室からあなた宛ての手紙が届きます。</span></p>
+<a class="start" id="start_quiz" href="#quiz_page">診断をはじめる</a>
+<div class="note">全9問 · すべて2択</div>
 </div></section><section id="quiz_page" class="page"><div class="card" id="quiz_card">
 <div class="quiz-top"><div class="progress" id="quiz_progress">1 / 9</div><button class="back-button" id="quiz_back" type="button" hidden>← ひとつ戻る</button></div>
 <div class="progress-track" aria-hidden="true"><span class="progress-fill" id="quiz_progress_fill"></span></div>
@@ -635,14 +725,14 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 <div class="q" id="quiz_question"></div>
 <div id="quiz_answers" aria-live="polite"></div>
 </div></section><section id="invitation_page" class="page"><div class="card invitation-card" id="invitation_card">
-<div class="arrival-kicker">FROM ST. MILK PALACE</div>
-<h1 class="arrival-title">あなた宛てに、<br>王国から一通。</h1>
-<p class="arrival-copy">セント・ミルク宮殿の赤い封蝋。<br>そっと押すと、手紙がひらきます。</p>
+<div class="arrival-kicker">LITTLE MEW · ROYAL POST</div>
+<h1 class="arrival-title">王国から、<br>あなた宛ての手紙。</h1>
+<p class="arrival-copy">紅い王室印に触れて、封をお開きください。</p>
 <button class="envelope" id="open_invitation" type="button" aria-label="封蝋を押して招待状をひらく"><span class="wax-seal"><span class="wax-royal" aria-hidden="true">T<span>Ⅲ</span>R</span></span></button>
-<p class="office-line"><strong>セント・ミルク宮殿</strong><em>St. Milk Palace · Royal Household</em></p>
+
 <article class="royal-letter" id="royal_letter" aria-live="polite">
 <div class="royal-letter-cypher" aria-hidden="true">T Ⅲ R</div>
-<span class="royal-letter-command">BY COMMAND OF HIS MAJESTY THE KING</span>
+<span class="royal-letter-command">ST. MILK PALACE · BY COMMAND OF THE KING</span>
 <h2>国王陛下よりの招待状</h2>
 <p class="royal-letter-salutation">あなたへ</p>
 <p class="royal-letter-body">国王ティボルト三世陛下の御意により、あなたをリトル・ミュー王国へお招きします。</p>
