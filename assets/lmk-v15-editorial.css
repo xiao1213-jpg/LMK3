@@ -96,7 +96,7 @@ body{
   color:var(--royal-ink);
   text-wrap:balance;
 }
-#quiz_card .axis{font:400 12px/1.6 var(--royal-sans);color:#8c7862}
+#quiz_card .axis{font:400 12px/1.6 var(--royal-sans);color:#806b50}
 #quiz_answers .btn{
   min-height:70px;
   background:#fffdf9;
@@ -160,14 +160,14 @@ body{
 #result_portal .dossier-topline{
   font:400 9px/1.6 Georgia,serif;
   letter-spacing:.1em;
-  color:#998264;
+  color:#806b50;
 }
 #result_portal .dossier-emblem{display:none}
 #result_portal .dossier-overline{
   margin:24px auto 9px;
   font:400 9.5px/1.6 Georgia,serif;
   letter-spacing:.18em;
-  color:#9d815f;
+  color:#806b50;
 }
 #result_portal .portal-heading{
   font:600 clamp(26px,5.8vw,33px)/1.48 var(--royal-serif);
@@ -178,7 +178,7 @@ body{
 }
 #result_portal .dossier-number{
   font:400 10px/1.6 Georgia,serif;
-  color:#978165;
+  color:#806b50;
   letter-spacing:.08em;
   margin:7px auto 0;
 }
@@ -211,7 +211,7 @@ body{
 #result_portal .dossier-subject-kicker{
   display:block;
   margin:0 auto 15px;
-  color:#a08a71;
+  color:#806b50;
   font:400 9.5px/1.6 Georgia,serif;
   letter-spacing:.17em;
 }
@@ -229,7 +229,7 @@ body{
   flex:none;
   font:500 11px/1.7 var(--royal-sans);
   letter-spacing:.06em;
-  color:#968472;
+  color:#806b50;
 }
 #result_portal #dossier_subject_coat{
   display:block;
@@ -296,7 +296,7 @@ body{
 }
 #result_portal .dossier-portrait-label{
   font:500 11px/1.75 var(--royal-sans);
-  color:#95785b;
+  color:#806b50;
   letter-spacing:.08em;
   margin:0 auto 10px;
   text-align:center;
@@ -330,11 +330,11 @@ body{
   border-top:1px solid #e7dccd;
 }
 #result_portal .dossier-numeral{
-  color:#9d815f;
+  color:#806b50;
   font:400 20px/1.5 Georgia,serif;
 }
 #result_portal .dossier-entry-text small{
-  color:#a08865;
+  color:#806b50;
   font:400 9px/1.5 Georgia,serif;
   letter-spacing:.09em;
 }
@@ -346,14 +346,14 @@ body{
 }
 #result_portal .dossier-entry-text em{
   font:400 12px/1.7 var(--royal-sans);
-  color:#827264;
+  color:#726252;
 }
 #result_portal .dossier-chevron{font:300 26px/1.4 var(--royal-sans);color:#b09878}
 #result_portal .dossier-footnote{
   max-width:35em;
   margin:17px auto 2px;
   font:400 11.5px/1.87 var(--royal-serif);
-  color:#8a7867;
+  color:#766652;
   text-align:center;
   letter-spacing:0;
 }
@@ -383,7 +383,7 @@ body{
 }
 .result-page .kicker,.result-page .portrait-file-code{
   text-align:center;
-  color:#9d886c;
+  color:#806b50;
 }
 .result-page .category-mark{
   margin:14px auto 4px!important;
