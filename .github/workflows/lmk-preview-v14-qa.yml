@@ -1,5 +1,5 @@
 name: LMK v14 noble typography QA
-# Validate noble typography, Japanese centering and layout from 320px to iPad
+# Validate center alignment without relying on unmounted dynamic result fields
 on:
   push:
     paths:
