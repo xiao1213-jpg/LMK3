@@ -1582,28 +1582,40 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     snapshot.provenance = p;
     const page = document.getElementById("provenance_page");
     page.className = "page provenance-page tier-" + p.tier;
-    const labels = {ivory:"アイヴォリー",silver:"銀葉",gold:"金星",crown:"王冠印"};
+    const labels = {ivory:"アイヴォリーの記録",silver:"銀葉の記録",gold:"金星の記録",crown:"王冠印の記録"};
     const notes = {
-      ivory:"王国でよく見かける、親しみ深い組み合わせ。",
-      silver:"ときおり出会う、少し珍しい組み合わせ。",
-      gold:"王国でも数少ない、特別な組み合わせ。",
-      crown:"王室の記録にも稀な、とても珍しい組み合わせ。"
+      ivory:"街角にも親しみのある、この王国の日々の記録。〈およそ70%〉",
+      silver:"ときどき出会う、少し珍しい来歴。〈およそ23%〉",
+      gold:"古い帳簿をめくっても、なかなか出会えない来歴。〈およそ6%〉",
+      crown:"王室の記録にもめったに現れない、稀な来歴。〈およそ1%〉"
     };
-    document.getElementById("record_rarity").textContent = labels[p.tier] + "の記録";
-    document.getElementById("record_probability").textContent = "出現の目安　約" + p.oneIn.toLocaleString("ja-JP") + "分の1";
+    const stars = {ivory:"★☆☆☆",silver:"★★☆☆",gold:"★★★☆",crown:"★★★★"};
+    document.getElementById("record_rarity").textContent = labels[p.tier];
+    document.getElementById("rarity_stars").textContent = stars[p.tier];
     document.getElementById("record_tier_note").textContent = notes[p.tier];
+    document.getElementById("record_probability").textContent = "毛色・土地・家・家伝品を合わせた目安は、約" + p.oneIn.toLocaleString("ja-JP") + "匹に1匹。";
     document.getElementById("registry_registration").textContent = "REGISTRY · " + p.registry;
     const title = resultTitle(snapshot.resultId);
     const legacyCoats = {"キジ白":"キジシロ","茶トラ":"チャトラ","茶白":"チャシロ","サバ白":"サバシロ","黒":"クロ","白":"シロ","灰":"グレー","灰白":"グレーシロ","三毛":"ミケ","麦わら":"ムギワラ","しみ付き":"シミツキ","淡色の二毛・三毛":"パステルトビ","ブチ":"シミツキ","パステルミケ":"パステルトビ","パステルサビ":"パステルトビ"};
     const coatName = legacyCoats[p.coat] || p.coat;
     const coat = coatEpithets[coatName] || p.coatEpithet || "";
+    const sourceRegion = regionPool.find(r => r.id === p.regionId);
+    const placeIndex = Number.isInteger(p.birthplaceIndex) ? p.birthplaceIndex : sourceRegion?.births.indexOf(p.birthplace);
+    const familyIndex = Number.isInteger(p.familyIndex) ? p.familyIndex : generateProvenance(p.seed || snapshot.seed || 0).familyIndex;
+    const world = window.LMK_KINGDOM_NOTES_V10 || {};
+    const placeScene = world.placeScenes?.[p.regionId]?.[placeIndex] || "";
+    const familyInfo = world.families?.[p.regionId]?.[familyIndex] || [];
+    const familyName = familyInfo[0] || p.family;
+    const familyScene = familyInfo[1] || "";
     const safe = text => String(text).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
     document.getElementById("provenance_record_mount").innerHTML =
       '<section class="visitor-record" aria-label="猫としての来歴"><div class="visitor-grid">' +
       '<div class="visitor-field coat-field"><span>毛色</span><b class="coat-name">' + safe(coatName) + '</b><small class="coat-epithet">' + safe(coat) + '</small></div>' +
-      '<div class="visitor-field"><span>生まれた土地</span><b>' + safe(p.birthplace) + '</b><small>' + safe(p.region) + '</small></div>' +
-      '<div class="visitor-field"><span>家の来歴</span><b>' + safe(p.family) + '</b></div>' +
-      '<div class="visitor-field"><span>家に伝わるもの</span><b>' + safe(p.heirloom) + '</b></div>' +
+      '<div class="visitor-field birthplace-field"><span>生まれた土地</span><b>' + safe(p.birthplace) + '</b><small class="land-region">' + safe(p.region) + '</small>' +
+      (placeScene ? '<p class="locality-scene">' + safe(placeScene) + '</p>' : '') + '</div>' +
+      '<div class="visitor-field family-field"><span>家の来歴</span><b>' + safe(familyName) + '</b>' +
+      (familyScene ? '<p class="family-scene">' + safe(familyScene) + '</p>' : '') + '</div>' +
+      '<div class="visitor-field heirloom-field"><span>家に伝わるもの</span><b>' + safe(p.heirloom) + '</b></div>' +
       '<div class="visitor-field portrait-field"><span>同じ一件簿に収められた肖像</span><b>《' + safe(title) + '》</b></div>' +
       '</div></section>';
     document.getElementById("switch_to_portrait").onclick = () => {
@@ -1676,6 +1688,17 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
           ${nearbyPanel(parts,snapshot)}
         </div>
       </details>`;
+    const guide = card.querySelector(".guide-cat");
+    if (guide && !guide.classList.contains("story-guide")) {
+      const guideName = guide.querySelector(".guide-cat-name")?.lastChild?.textContent?.trim() || "王国の猫";
+      const guideScene = window.LMK_KINGDOM_NOTES_V10?.guides?.[resultId] || "";
+      guide.classList.add("story-guide");
+      guide.innerHTML = '<span class="guide-story-kicker">A CAT TO MEET</span>' +
+        '<h3 class="guide-story-heading">王国で出会う猫</h3>' +
+        '<strong class="guide-story-name"></strong><p class="guide-story-scene"></p>';
+      guide.querySelector(".guide-story-name").textContent = guideName;
+      guide.querySelector(".guide-story-scene").textContent = guideScene;
+    }
     const desc = card.querySelector(".desc");
     if (!card.querySelector(".portrait-about")) {
       const about = document.createElement("details");
