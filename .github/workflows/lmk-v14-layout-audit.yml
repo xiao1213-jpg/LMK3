@@ -1,4 +1,5 @@
 name: LMK v14 layout stress audit
+# Compare short birthplace fields and unbracketed portrait titles
 on:
   push:
     paths:
