@@ -1,0 +1,453 @@
+/* LITTLE MEW KINGDOM — Noble typography and editorial layout / v13
+   A single stylesheet layered over the preserved v12 quiz and lore logic.
+   Center ceremonial statements; left-align longer prose and archival facts. */
+
+:root {
+  --type-jp-serif: "Hiragino Mincho ProN","Hiragino Mincho Pro","Yu Mincho","YuMincho","Noto Serif JP","Noto Serif CJK JP",serif;
+  --type-jp-sans: -apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",sans-serif;
+  --type-roman: "Baskerville","Georgia","Times New Roman",serif;
+  --noble-ink:#43382f;
+  --noble-copy:#5e5146;
+  --noble-muted:#8e7b66;
+  --noble-gold:#ae9167;
+  --noble-rule:#ddcdb8;
+  --noble-parchment:#fffdf8;
+}
+html {text-size-adjust:100%; -webkit-text-size-adjust:100%}
+body {
+  color:var(--noble-ink);
+  font-family:var(--type-jp-sans);
+  font-feature-settings:"kern" 1;
+  line-break:strict;
+  word-break:normal;
+  overflow-wrap:break-word;
+  background:linear-gradient(155deg,#f8f3e9 0%,#f3e8d8 100%);
+}
+main {max-width:730px; padding:16px 12px 29px}
+.brand {
+  margin:3px 0 19px;
+  color:#927657;
+  text-align:center;
+  font:400 10px/1.6 var(--type-roman);
+  letter-spacing:.19em;
+}
+.page {max-width:670px}
+.page .card {
+  border-radius:9px!important;
+  border-color:#d9c6ad;
+  box-shadow:0 12px 32px rgba(61,42,29,.065);
+}
+.page h1,.page h2,.page h3,.page .title,.result-page .result-thesis {
+  font-family:var(--type-jp-serif);
+  font-feature-settings:"palt" 1,"kern" 1;
+  font-optical-sizing:auto;
+}
+.page h1,.page .title {letter-spacing:.018em; text-wrap:balance; overflow-wrap:break-word}
+.page p {font-feature-settings:"kern" 1}
+.page button,.page a { -webkit-tap-highlight-color:rgba(147,116,74,.12)}
+.page .start,.page .quiet-action.primary {
+  border-radius:10px!important;
+  box-shadow:0 7px 17px rgba(69,52,39,.12)!important;
+  letter-spacing:.035em!important;
+  font-weight:600!important;
+}
+.page .start:active,.page .quiet-action.primary:active{transform:translateY(1px)}
+.page button:focus-visible,.page a:focus-visible,.page summary:focus-visible{
+  outline:2px solid #ad8558;outline-offset:3px
+}
+.page .note,.page .kicker {letter-spacing:.04em}
+.page .kicker,.page .goods-kicker,.dossier-overline,.dossier-topline,
+.dossier-entry-text small,.registry-masthead>span:first-child,
+.invitation-share-label,.rarity-overline,.result-page .portrait-file-code {
+  font-family:var(--type-roman)!important;
+}
+
+/* 1. A measured, perfectly centered opening */
+#start_page .card{
+  max-width:575px;
+  padding:clamp(37px,7vw,57px) clamp(23px,6vw,44px) 37px!important;
+  background:linear-gradient(145deg,#fffdf9,#f8f1e8)!important;
+  border:1px solid #d8c3a8;
+}
+#start_page .kicker {
+  color:#947858;
+  font:400 10px/1.6 var(--type-roman);
+  letter-spacing:.16em;
+}
+#start_page .cat {margin:17px auto 6px;max-width:95px;opacity:.86}
+#start_page .title {
+  margin:18px auto 16px;
+  max-width:15em;
+  font:600 clamp(28px,6.6vw,36px)/1.52 var(--type-jp-serif);
+  text-align:center;
+  letter-spacing:.025em;
+}
+#start_page .title::after{
+  content:"";display:block;width:47px;height:1px;margin:21px auto 0;
+  background:linear-gradient(90deg,transparent,#a58a61 22%,#a58a61 78%,transparent)
+}
+#start_page .intro {
+  display:block;
+  width:100%;
+  max-width:29em;
+  margin:0 auto;
+  color:var(--noble-copy);
+  text-align:center!important;
+  font:400 14.5px/1.95 var(--type-jp-sans);
+  letter-spacing:0;
+  text-wrap:wrap;
+}
+#start_page .intro .intro-scene,
+#start_page .intro .intro-prompt {display:block!important;white-space:normal!important;max-width:none}
+#start_page .intro .intro-scene>span,
+#start_page .intro .intro-prompt>span {
+  display:block;
+  margin:0;
+  font-size:inherit;
+  white-space:normal;
+  text-wrap:balance;
+}
+#start_page .intro .intro-scene {color:#716052}
+#start_page .intro .intro-prompt {
+  margin:23px auto 0!important;
+  color:#4c4137;
+  font-family:var(--type-jp-serif);
+  font-size:15px;
+  font-weight:500;
+  line-height:1.85;
+}
+#start_page .start {
+  margin:30px auto 0!important;
+  min-height:53px;
+  width:min(100%,312px);
+  font:600 15px/1.6 var(--type-jp-sans);
+  background:#4a3b33;
+}
+#start_page .note {margin:13px auto 0;font-size:11.5px;color:#94816e}
+
+/* 2. Quiet, noble questions */
+#quiz_page .card {background:#fffdf8!important;max-width:615px;margin-inline:auto;padding:clamp(29px,5.5vw,43px) clamp(20px,5.5vw,38px)!important}
+#quiz_card .q {font:600 clamp(20px,5vw,25px)/1.68 var(--type-jp-serif);text-align:center;text-wrap:balance;max-width:27em;margin:20px auto 29px;letter-spacing:0}
+#quiz_card .progress,.axis {color:#977d5c}
+#quiz_card .axis {text-align:center;line-height:1.6;font-size:12px}
+#quiz_answers .btn {
+  border-radius:9px!important;
+  min-height:65px;
+  padding:17px 18px;
+  border-color:#dfd0bd;
+  background:#fffefa;
+  color:var(--noble-ink);
+  font:500 14.5px/1.78 var(--type-jp-sans);
+  text-align:left;
+}
+#quiz_answers .btn:active {border-color:#b59b7a;background:#f9f1e6}
+#quiz_answers .letter {background:#f2e9df;color:#82684d}
+
+/* 3. The letter: ceremonial sentences, centered without arbitrary text fragments */
+.invitation-card {max-width:615px;margin-inline:auto;border-radius:14px!important}
+.invitation-card .arrival-kicker {font:400 10px/1.55 var(--type-roman);letter-spacing:.17em}
+.invitation-card .arrival-title {
+  max-width:13em;margin:15px auto 10px;
+  font:600 clamp(27px,6vw,36px)/1.47 var(--type-jp-serif);
+  letter-spacing:.025em;
+  text-align:center;
+}
+.invitation-card .arrival-copy {text-align:center;max-width:28em;margin:5px auto 19px;font:400 13.5px/1.85 var(--type-jp-sans)}
+.invitation-card .envelope {border-radius:3px!important}
+.royal-letter {
+  border-radius:2px!important;
+  max-width:520px;
+  padding:clamp(32px,6vw,46px) clamp(24px,6vw,43px) 34px!important;
+}
+.royal-letter .royal-letter-cypher{margin:0 auto 16px;font-family:var(--type-roman)}
+.royal-letter-command {font:400 10px/1.65 var(--type-roman);letter-spacing:.075em;color:#927453;text-align:center}
+.royal-letter h2 {
+  font:600 clamp(23px,5.8vw,29px)/1.5 var(--type-jp-serif);
+  max-width:17em;margin:17px auto 27px;
+  text-align:center;letter-spacing:.02em;
+}
+.royal-letter h2::after {
+  content:"";display:block;width:37px;height:1px;background:#bfa986;margin:18px auto 0
+}
+.royal-letter-salutation {
+  text-align:center!important;
+  max-width:30em;
+  margin:0 auto 17px!important;
+  font:500 15px/1.7 var(--type-jp-serif)
+}
+.royal-letter-body.ceremonial-lines {
+  max-width:29em;
+  text-align:center!important;
+  margin:0 auto 16px;
+  font:400 clamp(13px,3.55vw,15px)/2.03 var(--type-jp-serif)!important;
+  letter-spacing:.012em!important;
+}
+.royal-letter-body.ceremonial-lines span {
+  display:block;
+  text-align:center;
+  white-space:nowrap;
+}
+.royal-letter-body.ceremonial-lines + .royal-letter-body.ceremonial-lines {margin-top:22px}
+.royal-letter-sign {
+  margin:29px auto 0;
+  font-size:12px;
+  line-height:1.9;
+  color:#84715c;
+  text-align:center
+}
+.royal-letter-register {display:block;font:11px/1.8 var(--type-roman);letter-spacing:.04em}
+.royal-letter .start {margin-top:26px!important;max-width:304px;min-height:52px}
+
+/* 4. Dossier: one symmetrical cover, two quieter index entries */
+.result-portal .dossier-cover {
+  max-width:635px;
+  padding:clamp(31px,6vw,46px) clamp(23px,6.3vw,43px)!important;
+  border-radius:6px!important;
+}
+.dossier-cover::before {border-color:#e0d1ba}
+.dossier-topline {font:400 9px/1.5 var(--type-roman);letter-spacing:.105em}
+.dossier-emblem {font-size:23px;margin:28px auto 16px;color:#ad8f62}
+.dossier-overline {font:400 10px/1.65 var(--type-roman);letter-spacing:.16em}
+.dossier-cover .portal-heading {
+  font:600 clamp(27px,6vw,35px)/1.44 var(--type-jp-serif);
+  margin:12px auto 7px;
+  letter-spacing:.018em;
+  text-align:center;
+}
+.dossier-number {font:400 11px/1.8 var(--type-roman);letter-spacing:.055em}
+.dossier-preface {
+  max-width:25em;
+  margin:24px auto 27px;
+  font:400 14px/1.95 var(--type-jp-serif);
+  text-align:center;
+  text-wrap:balance;
+  color:#6e5d4a;
+}
+.dossier-subject {
+  max-width:495px;
+  margin:0 auto 27px;
+  padding:26px 17px 27px;
+  border-color:#d8c6ab;
+  background:linear-gradient(145deg,#fffef9,#f9f1e4);
+  text-align:center;
+}
+.dossier-subject-kicker {font:400 10px/1.55 var(--type-roman);letter-spacing:.14em}
+.dossier-subject>strong {font:600 clamp(31px,6.6vw,38px)/1.42 var(--type-jp-serif);letter-spacing:.03em;margin:12px auto 6px}
+.dossier-subject-origin {font-size:13px;line-height:1.8}
+.dossier-place-tag {font-size:11.8px;line-height:1.65}
+.dossier-subject-separator {color:#af9471;margin:17px auto 13px}
+.dossier-subject-caption {font-size:11.5px;line-height:1.7}
+.dossier-subject>b {font:600 clamp(22px,5.4vw,29px)/1.48 var(--type-jp-serif);text-wrap:balance;margin:8px auto 0;max-width:14em}
+.dossier-index {max-width:495px;border-color:#d9c6aa}
+.dossier-entry {
+  grid-template-columns:32px minmax(0,1fr) 13px;
+  gap:12px;
+  padding:24px 6px;
+  border-radius:0;
+  min-height:111px;
+}
+.dossier-entry-text small {font:400 9.5px/1.55 var(--type-roman);letter-spacing:.08em}
+.dossier-entry-text strong {font:600 21px/1.46 var(--type-jp-serif);letter-spacing:.01em}
+.dossier-entry-text em {font:400 12.8px/1.7 var(--type-jp-sans);color:#75695d}
+.dossier-numeral {font:400 23px/1.35 var(--type-roman);color:#9d815e}
+.dossier-chevron {font-size:24px;color:#a28b6a}
+.dossier-footnote {
+  margin:24px auto 25px;
+  max-width:29em;
+  text-align:center;
+  font:400 12.5px/1.8 var(--type-jp-sans);
+  color:#857665;
+  text-wrap:balance;
+}
+.invitation-share-disclosure {
+  border-radius:6px!important;
+  border-color:#d8c3a3;
+  background:#fffaf2;
+}
+.invitation-share-toggle strong {font:600 19px/1.5 var(--type-jp-serif)}
+.invitation-share-toggle small {letter-spacing:0}
+.portal-restart {font-size:12px;color:#907b60;line-height:1.7}
+
+/* 5. Portrait gallery: beautiful centered front matter, readable left-aligned narrative */
+.result-page .card {max-width:635px;margin-inline:auto;border-radius:13px!important}
+.result-page .certificate-switcher,.provenance-page .certificate-switcher {max-width:340px;margin:0 auto 23px}
+.certificate-switcher button {font:500 13px/1.5 var(--type-jp-sans);letter-spacing:.01em;min-height:45px}
+.result-page .kicker {font:400 10px/1.55 var(--type-roman);letter-spacing:.16em;color:var(--theme-accent)}
+.result-page .portrait-file-code {font:400 10px/1.6 var(--type-roman);letter-spacing:.065em;color:#97846d}
+.result-page .category-mark {text-align:center;padding-top:8px!important}
+.result-page .category-mark span {font:500 12px/1.7 var(--type-jp-serif);letter-spacing:.025em}
+.result-page .portrait-art {margin:20px auto 33px!important}
+.result-page .title {
+  font:600 clamp(29px,6.8vw,40px)/1.5 var(--type-jp-serif);
+  margin:18px auto 18px;
+  text-align:center;
+  text-wrap:balance!important;
+  max-width:14em;
+  letter-spacing:.025em;
+}
+.result-page .result-thesis {
+  margin:17px auto 24px;
+  max-width:24em;
+  padding:0 4px;
+  text-align:center;
+  text-wrap:balance!important;
+  font:500 clamp(16px,4vw,18px)/1.9 var(--type-jp-serif);
+  letter-spacing:0;
+  color:var(--theme-deep);
+}
+.result-page .portrait-about {max-width:29em;margin:0 auto 26px}
+.result-page .portrait-about summary {font:400 12px/1.8 var(--type-jp-sans)}
+.result-page .portrait-about p {font:400 13px/1.9 var(--type-jp-sans);text-align:left;color:#76695d}
+.result-page .desc {
+  max-width:31em;
+  margin:29px auto;
+  text-align:left;
+}
+.result-page .desc p {
+  font:400 14.8px/2.04 var(--type-jp-sans);
+  color:#554b42;
+  letter-spacing:0;
+  text-align:left!important;
+  text-wrap:pretty;
+}
+.result-page .desc p + p {margin-top:18px}
+.result-page .result-analysis {max-width:33em;margin:34px auto}
+.result-page .analysis-heading {font:500 17px/1.7 var(--type-jp-serif)}
+.result-page .analysis-lead {text-align:center;max-width:30em;margin:7px auto 15px;font-size:13px;line-height:1.9;text-wrap:balance}
+.result-page .guide-cat.story-guide {
+  max-width:33em;
+  text-align:center!important;
+  padding:28px 7px!important;
+  margin:32px auto!important;
+  border-top:1px solid var(--theme-line);
+  border-bottom:1px solid var(--theme-line);
+}
+.result-page .guide-story-kicker {font:400 10px/1.55 var(--type-roman);letter-spacing:.17em}
+.result-page .guide-story-heading {font:400 12px/1.75 var(--type-jp-sans);text-align:center;color:#8e7b68;margin:5px auto 12px}
+.result-page .guide-story-name {display:block;text-align:center;margin:7px auto 11px;font:600 19px/1.6 var(--type-jp-serif);color:var(--theme-deep)}
+.result-page .guide-story-scene {
+  max-width:29em;
+  margin:0 auto;
+  text-align:center!important;
+  font:400 13.5px/1.95 var(--type-jp-sans);
+  text-wrap:balance;
+  letter-spacing:0;
+}
+.result-page .goods {max-width:33em;padding:23px 7px!important;margin:29px auto!important}
+.result-page .goods-kicker {font:400 9.5px/1.6 var(--type-roman);letter-spacing:.14em}
+.result-page .goods b {font:400 12px/1.65 var(--type-jp-sans);letter-spacing:.04em}
+.result-page .goods-item {font:600 18px/1.7 var(--type-jp-serif);letter-spacing:.015em;text-align:center}
+.result-page .goods ~ p.intro {display:none!important}
+.result-page .result-actions {margin:25px auto 0}
+.result-page .result-actions .quiet-action {border-radius:9px;max-width:310px}
+
+/* 6. Registry: center seals and headings; align archival values and stories consistently */
+.provenance-page .card {
+  max-width:635px;
+  padding:clamp(26px,6vw,42px) clamp(23px,6.1vw,43px)!important;
+  background:#fffdf8!important;
+  border-radius:9px!important;
+}
+.provenance-page .registry-masthead {
+  padding:18px 0 27px;
+  text-align:center;
+  border-color:#d4c2a8;
+}
+.registry-masthead>span:first-child {font:400 10px/1.6 var(--type-roman);letter-spacing:.17em}
+.registry-masthead .registry-crest {margin:18px auto 9px}
+.registry-masthead h1 {
+  font:600 clamp(28px,6.4vw,37px)/1.44 var(--type-jp-serif);
+  text-align:center;
+  letter-spacing:.025em;
+  margin:10px auto;
+}
+.registry-masthead p {font:400 12px/1.75 var(--type-jp-sans);letter-spacing:.025em}
+.registry-registration {font:400 11px/1.7 var(--type-roman);letter-spacing:.05em;margin:18px 0}
+.provenance-page .rarity-ledger {
+  border-radius:5px;
+  padding:23px 17px 20px;
+  box-shadow:none;
+  text-align:center;
+}
+.provenance-page .rarity-overline {font:400 9.5px/1.55 var(--type-roman);letter-spacing:.14em}
+.provenance-page .rarity-stars {letter-spacing:.06em}
+.provenance-page .rarity-ledger .record-rarity {font:600 19px/1.55 var(--type-jp-serif)}
+.provenance-page .rarity-ledger #record_tier_note {font:400 12.5px/1.85 var(--type-jp-sans);text-wrap:balance;max-width:25em;margin-inline:auto}
+.provenance-page .rarity-probability summary {font-size:12px}
+.provenance-page .visitor-grid {max-width:515px;margin-inline:auto}
+.provenance-page .visitor-field {
+  padding:22px 4px!important;
+  border-color:#e6dace!important;
+}
+.provenance-page .visitor-field span {
+  color:#927e68;
+  font:400 11.5px/1.6 var(--type-jp-sans);
+  letter-spacing:.045em;
+  margin-bottom:8px;
+}
+.provenance-page .visitor-field b {color:var(--noble-ink);font:600 18px/1.65 var(--type-jp-serif);letter-spacing:0}
+.provenance-page .visitor-field.coat-field b.coat-name {font:600 clamp(26px,6vw,33px)/1.5 var(--type-jp-serif);letter-spacing:.015em}
+.provenance-page .visitor-field .coat-epithet {font:400 14px/1.88 var(--type-jp-sans)!important;letter-spacing:0}
+.provenance-page .visitor-field small {font-size:12px;letter-spacing:0}
+.provenance-page .locality-scene,.provenance-page .family-scene {
+  max-width:32em;
+  margin:10px 0 0;
+  text-align:left!important;
+  color:#63594e;
+  font:400 13.6px/1.93 var(--type-jp-sans);
+  letter-spacing:0;
+  text-wrap:balance;
+}
+.provenance-page .family-field>b {font:600 18px/1.7 var(--type-jp-serif)}
+.provenance-page .heirloom-field>b {font:600 17px/1.7 var(--type-jp-serif)}
+.provenance-page .portrait-field {text-align:right!important;padding:23px 4px!important}
+.provenance-page .portrait-field>b {font:600 16px/1.65 var(--type-jp-serif)}
+.provenance-page .start {margin-top:28px;max-width:300px}
+
+/* Fine screens. Do not force unbreakable lines in translated/localized copy. */
+@media(max-width:520px){
+ main{padding:13px 10px 23px}
+ .brand{margin:3px 0 17px}
+ #start_page .card{padding:40px 23px 35px!important}
+ #start_page .title{font-size:29px}
+ #start_page .intro{font-size:14px;line-height:1.87}
+ #start_page .intro .intro-prompt{font-size:14px;line-height:1.9}
+ #start_page .start{min-height:53px}
+ #quiz_page .card{padding:28px 20px!important}
+ #quiz_card .q{font-size:20px}
+ #quiz_answers .btn{font-size:14.4px}
+ .royal-letter{padding:30px 18px 28px!important}
+ .royal-letter h2{font-size:24px}
+ .royal-letter-body.ceremonial-lines{font-size:clamp(12.8px,3.6vw,14.1px)!important;line-height:2.03}
+ .dossier-topline{font-size:8.7px}
+ .dossier-cover .portal-heading{font-size:28px}
+ .dossier-preface{font-size:13.6px}
+ .dossier-subject{padding:25px 12px}
+ .dossier-subject>strong{font-size:33px}
+ .dossier-subject>b{font-size:24px}
+ .dossier-entry{padding:22px 3px}
+ .dossier-entry-text strong{font-size:20px}
+ .dossier-entry-text em{font-size:12.5px}
+ .result-page .card{padding:26px 23px!important}
+ .result-page .title{font-size:31px}
+ .result-page .result-thesis{font-size:16.5px;line-height:1.85}
+ .result-page .desc p{font-size:14.4px;line-height:2}
+ .result-page .guide-story-name{font-size:17px}
+ .result-page .guide-story-scene{font-size:13.1px;line-height:1.9}
+ .provenance-page .card{padding:27px 22px!important}
+ .provenance-page .visitor-field{padding:20px 3px!important}
+ .provenance-page .visitor-field b{font-size:17px}
+ .provenance-page .locality-scene,.provenance-page .family-scene{font-size:13.1px;line-height:1.93}
+}
+@media(max-width:365px){
+ .royal-letter-body.ceremonial-lines span{white-space:normal;text-wrap:balance}
+ .royal-letter h2{font-size:22px}
+ #start_page .intro .intro-scene>span,
+ #start_page .intro .intro-prompt>span{white-space:normal;text-wrap:balance}
+ .dossier-cover .portal-heading{font-size:26px}
+ .result-page .title{font-size:28px}
+ .provenance-page .card{padding:25px 18px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .page .start:active{transform:none}
+}
