@@ -1301,10 +1301,8 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
   }
 
   function renderRoyalLetter(snapshot) {
-    const name = document.getElementById("royal_letter_name");
     const register = document.getElementById("royal_letter_register");
-    if (name) name.textContent = "あなたのための、二つの証";
-    if (register) register.textContent = `王室来訪者登録　第 ${snapshot.provenance?.registry || registryNumber(snapshot.seed || 0)} 号`;
+    if (register) register.textContent = "来訪者記録　" + (snapshot.provenance?.registry || registryNumber(snapshot.seed || 0));
   }
 
   function openInvitation() {
@@ -1358,24 +1356,14 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
   function renderResultPortal(snapshot) {
     if (!snapshot?.resultId) return;
     if (!snapshot.provenance?.tier) snapshot.provenance = generateProvenance(snapshot.seed || 0);
-    const portraitName = document.getElementById("portal_portrait_name");
-    const coatHint = document.getElementById("portal_coat_hint");
-    const unionTitle = document.getElementById("portal_union_title");
-    const unionCoat = document.getElementById("portal_union_coat");
-    const title = resultTitle(snapshot.resultId);
-    const coat = snapshot.provenance.coatEpithet || coatEpithets[snapshot.provenance.coat] || `${snapshot.provenance.coat}の猫`;
-    if (portraitName) portraitName.textContent = `「${title}」`;
-    if (coatHint) coatHint.textContent = coat;
-    if (unionTitle) unionTitle.textContent = `「${title}」`;
-    if (unionCoat) unionCoat.textContent = coat;
-    const portraitButton = document.getElementById("open_portrait");
-    const registerButton = document.getElementById("open_registration");
-    portraitButton.onclick = () => {
+    const number = document.getElementById("dossier_number");
+    if (number) number.textContent = "REGISTER · " + snapshot.provenance.registry;
+    document.getElementById("open_portrait").onclick = () => {
       decorateResult(snapshot.resultId,snapshot,{carried:isCarriedView});
       location.hash = snapshot.resultId;
       window.scrollTo({top:0,behavior:"auto"});
     };
-    registerButton.onclick = () => openProvenance(snapshot);
+    document.getElementById("open_registration").onclick = () => openProvenance(snapshot);
   }
 
   function openResultPortal(snapshot) {
@@ -1395,7 +1383,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
     }
     const primaryKeys = ["time","message","life"];
     const primaryTotal = primaryKeys.reduce((sum,key) => sum + snapshot.scores[key],0);
-    const primaryMaximum = 3;
+    const primaryMaximum = primaryTotal === 4 ? 4 : 3;
     const primaryRows = primaryKeys.map(key => scoreBar(axisShort[key], snapshot.scores[key], primaryMaximum, key === parts.primary)).join("");
     const pairs = [
       ["受け継ぎ方", parts.relation, parts.relation === "inherit" ? "weave" : "inherit"],
@@ -1473,42 +1461,34 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
 
   function renderProvenancePage(snapshot) {
     if (!snapshot?.resultId) return;
-    const provenance = snapshot.provenance?.tier ? snapshot.provenance : generateProvenance(snapshot.seed || 0);
-    snapshot.provenance = provenance;
+    const p = snapshot.provenance?.tier ? snapshot.provenance : generateProvenance(snapshot.seed || 0);
+    snapshot.provenance = p;
     const page = document.getElementById("provenance_page");
-    const tierLabels = {
-      ivory:"希少度　★☆☆☆　アイヴォリー記録",
-      silver:"希少度　★★☆☆　銀葉の記録",
-      gold:"希少度　★★★☆　金星の記録",
-      crown:"希少度　★★★★　王冠印の記録"
+    page.className = "page provenance-page tier-" + p.tier;
+    const labels = {ivory:"アイヴォリー",silver:"銀葉",gold:"金星",crown:"王冠印"};
+    const notes = {
+      ivory:"王国でよく見かける、親しみ深い組み合わせ。",
+      silver:"ときおり出会う、少し珍しい組み合わせ。",
+      gold:"王国でも数少ない、特別な組み合わせ。",
+      crown:"王室の記録にも稀な、とても珍しい組み合わせ。"
     };
-    const tierNotes = {
-      ivory:"王国の街角に、すっと馴染む親しみ深い組み合わせです。",
-      silver:"王国を歩いていても、ときおりしか出会えない組み合わせです。",
-      gold:"登録官が思わず頁を戻すほど、珍しい組み合わせです。",
-      crown:"王冠印を添えて保管される、ごく稀な組み合わせです。"
-    };
-    page.className = `page provenance-page tier-${provenance.tier}`;
-    document.getElementById("record_rarity").textContent = tierLabels[provenance.tier];
-    document.getElementById("record_probability").textContent = `王国でおよそ ${provenance.oneIn.toLocaleString("ja-JP")}匹に一匹の組み合わせ`;
-    document.getElementById("record_tier_note").textContent = tierNotes[provenance.tier];
-    const coatEpithet = provenance.coatEpithet || coatEpithets[provenance.coat] || `${provenance.coat}の猫`;
-    const portraitTitle = resultTitle(snapshot.resultId);
-    document.getElementById("provenance_record_mount").innerHTML = `
-      <section class="visitor-record" aria-label="王国に記された猫としての姿">
-        <div class="visitor-record-head">
-          <span class="visitor-record-kicker">ROYAL VISITORS’ REGISTER</span>
-          <h2 class="visitor-record-title">王室来訪者登録証</h2>
-          <p class="visitor-record-note">登録番号 ${provenance.registry}</p>
-        </div>
-        <div class="visitor-grid">
-          <div class="visitor-field portrait-field"><span>心に宿る猫の肖像</span><b>「${portraitTitle}」</b></div>
-          <div class="visitor-field coat-field"><span>王国でまとう毛並み</span><b class="coat-epithet">${coatEpithet}</b></div>
-          <div class="visitor-field"><span>生まれた土地</span><b>${provenance.birthplace}<br><small>${provenance.region}</small></b></div>
-          <div class="visitor-field"><span>家の来歴</span><b>${provenance.family}</b></div>
-          <div class="visitor-field"><span>家に伝わるもの</span><b>${provenance.heirloom}</b></div>
-        </div>
-      </section>`;
+    document.getElementById("record_rarity").textContent = labels[p.tier] + "の記録";
+    document.getElementById("record_probability").textContent = "出現の目安　約" + p.oneIn.toLocaleString("ja-JP") + "分の1";
+    document.getElementById("record_tier_note").textContent = notes[p.tier];
+    document.getElementById("registry_registration").textContent = "REGISTRY · " + p.registry;
+    const title = resultTitle(snapshot.resultId);
+    const legacyCoats = {"キジ白":"キジシロ","茶トラ":"チャトラ","茶白":"チャシロ","サバ白":"サバシロ","黒":"クロ","白":"シロ","灰":"グレー","灰白":"グレーシロ","三毛":"ミケ","麦わら":"ムギワラ","しみ付き":"ブチ","淡色の二毛・三毛":"パステルミケ"};
+    const coatName = legacyCoats[p.coat] || p.coat;
+    const coat = coatEpithets[coatName] || p.coatEpithet || "";
+    const safe = text => String(text).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+    document.getElementById("provenance_record_mount").innerHTML =
+      '<section class="visitor-record" aria-label="猫としての来歴"><div class="visitor-grid">' +
+      '<div class="visitor-field coat-field"><span>毛色</span><b class="coat-name">' + safe(coatName) + '</b><small class="coat-epithet">' + safe(coat) + '</small></div>' +
+      '<div class="visitor-field"><span>生まれた土地</span><b>' + safe(p.birthplace) + '</b><small>' + safe(p.region) + '</small></div>' +
+      '<div class="visitor-field"><span>家の来歴</span><b>' + safe(p.family) + '</b></div>' +
+      '<div class="visitor-field"><span>家に伝わるもの</span><b>' + safe(p.heirloom) + '</b></div>' +
+      '<div class="visitor-field portrait-field"><span>同じ一件簿に収められた心象肖像</span><b>《' + safe(title) + '》</b></div>' +
+      '</div></section>';
     document.getElementById("switch_to_portrait").onclick = () => {
       decorateResult(snapshot.resultId,snapshot,{carried:isCarriedView});
       location.hash = snapshot.resultId;
@@ -1530,31 +1510,38 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
     if (!page || !parts) return;
     const card = page.querySelector(".card");
     const kicker = card.querySelector(".kicker");
-    if (kicker) kicker.textContent = "YOUR CAT PORTRAIT";
+    if (kicker) kicker.textContent = "ROYAL PORTRAIT GALLERY";
     card.querySelector(".royal-warrant")?.remove();
     card.querySelector(".visitor-record")?.remove();
     card.querySelector(".portrait-route")?.remove();
     card.querySelector(".certificate-switcher")?.remove();
     card.querySelector(".portrait-incarnation")?.remove();
+    if (!card.querySelector(".portrait-art")) {
+      const illustration = document.createElement("figure");
+      illustration.className = "portrait-art";
+      illustration.innerHTML = '<img src="assets/' + parts.series + '.webp" alt="肖像画集を彩る挿絵" loading="lazy"><figcaption>THE LITTLE MEW PORTRAIT COLLECTION</figcaption>';
+      const cat = card.querySelector(".cat");
+      if (cat) cat.replaceWith(illustration); else kicker?.after(illustration);
+    }
     if (snapshot) {
       if (!snapshot.provenance?.tier) snapshot.provenance = generateProvenance(snapshot.seed || 0);
       const switcher = document.createElement("nav");
       switcher.className = "certificate-switcher";
       switcher.setAttribute("aria-label","二つの証");
-      switcher.innerHTML = `<button class="is-active" type="button" aria-current="page">猫の肖像</button><button type="button">王室登録証</button>`;
+      switcher.innerHTML = `<button class="is-active" type="button" aria-current="page">心象肖像</button><button type="button">王国来歴証</button>`;
       switcher.lastElementChild.addEventListener("click",()=>openProvenance(snapshot));
       card.prepend(switcher);
     }
     card.querySelector(".result-analysis")?.remove();
     const section = document.createElement("section");
     section.className = "result-analysis";
-    section.setAttribute("aria-label", "猫の肖像の詳しい読み解き");
+    section.setAttribute("aria-label", "心象肖像の読み解き");
     section.innerHTML = `
       <details class="analysis-disclosure">
-        <summary>この結果をつくる3つの要素を見る</summary>
+        <summary>肖像の構成を読む</summary>
         <div class="analysis-content">
-          <h2 class="analysis-heading">この肖像が描かれるまで</h2>
-          <p class="analysis-lead">三つの感性がどう重なり、この猫になったのかを読み解きます。</p>
+          <h2 class="analysis-heading">肖像の構成</h2>
+          <p class="analysis-lead">九つの答えから、どのような感性が描かれたかを記しています。</p>
           <div class="logic-path" aria-label="判定の道筋">
             <div class="path-step"><span>1</span><div><span class="path-label">心が向くもの</span><b>${axisShort[parts.primary]}</b><p>${primaryLogic[parts.primary]}</p></div></div>
             <div class="path-step"><span>2</span><div><span class="path-label">シリーズを決める二つの軸</span><b><span class="path-value-part">${axisShort[parts.relation]}</span><span class="path-times">×</span><span class="path-value-part">${axisShort[parts.expression]}</span></b><p>${seriesLogic[parts.series]}</p></div></div>
@@ -1565,16 +1552,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
         </div>
       </details>`;
     const desc = card.querySelector(".desc");
-    if (snapshot) {
-      const coat = snapshot.provenance.coatEpithet || coatEpithets[snapshot.provenance.coat] || `${snapshot.provenance.coat}の猫`;
-      const incarnation = document.createElement("p");
-      incarnation.className = "portrait-incarnation";
-      incarnation.innerHTML = `<span>この肖像を宿す猫が、王国でまとう姿</span><strong>${coat}</strong>`;
-      desc.after(incarnation);
-      incarnation.after(section);
-    } else {
-      desc.after(section);
-    }
+    desc.after(section);
     renderTakeHomeForResult(resultId,snapshot,options.carried === true);
 
     let actions = card.querySelector(".result-actions");
