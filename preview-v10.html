@@ -541,7 +541,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 .result-page .portrait-art::after{background:linear-gradient(90deg,#fffdf9 0%,rgba(255,253,249,.43) 31%,rgba(255,253,249,.43) 69%,#fffdf9 100%)}
 .result-page .portrait-art .portrait-medallion{bottom:12px;opacity:.77}
 @media(max-width:520px){.result-page .portrait-art{height:130px}}
-</style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
+</style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script><script src="assets/kingdom-notes-v10.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">LITTLE MEW</div>
 <div class="cat">🐈</div>
 <h1 class="title">もし、あなたが<br>一匹の猫だったら。</h1>
@@ -583,7 +583,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 <button class="dossier-entry" id="open_registration" type="button"><span class="dossier-numeral">Ⅱ</span><span class="dossier-entry-text"><small>GENERAL REGISTER OFFICE</small><strong>来歴の頁</strong><em>この猫の毛並み、生まれ、家の記録。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
 </div>
 <p class="dossier-footnote">肖像は九つの答えから。来歴は王国の記録から。</p>
-<section class="invitation-share" id="invitation_share_section" aria-label="招待状を持ち帰る"><span class="invitation-share-label">A LETTER TO KEEP</span><h2>この招待状を、手元に。</h2><p>セント・ミルク宮殿から届いた一通を、画像で残せます。</p><div class="invitation-canvas-wrap"><canvas id="invitation_share_canvas" width="1080" height="1350" role="img" aria-label="国王陛下からの招待状を描いた共有画像"></canvas></div><div class="invitation-share-actions"><button type="button" id="dossier_share" class="quiet-action primary">招待状を共有</button><button type="button" id="dossier_save" class="quiet-action">画像を保存</button></div><p class="share-status" id="dossier_share_status" aria-live="polite"></p></section>
+<section class="invitation-share" id="invitation_share_section" aria-label="招待状を持ち帰る"><span class="invitation-share-label">A LETTER TO KEEP</span><h2>招待状を、誰かのもとへ。</h2><p>この招待状には、あなたの猫の記録へ続くQRが添えられています。<br>相手も封を開いて、あなたの一件簿を読めます。</p><div class="invitation-canvas-wrap"><canvas id="invitation_share_canvas" width="1080" height="1350" role="img" aria-label="国王陛下からの招待状を描いた共有画像"></canvas></div><div class="invitation-share-actions"><button type="button" id="dossier_share" class="quiet-action primary">招待状を送る</button><button type="button" id="dossier_save" class="quiet-action">画像を保存</button></div><p class="share-status" id="dossier_share_status" aria-live="polite"></p></section>
 <a class="portal-restart" href="#start_page">最初から診断する</a>
 </div></section>
 <section id="provenance_page" class="page provenance-page tier-ivory"><div class="card provenance-sheet">
@@ -593,9 +593,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 <header class="registry-masthead"><span>GENERAL REGISTER OFFICE</span><span class="registry-crest" aria-hidden="true">✥</span>
 <h1>王国来歴証</h1><p>リトル・ミュー王国 総登記局</p></header>
 <p class="registry-registration" id="registry_registration"></p>
+<section class="rarity-ledger" aria-label="王国での記録の希少度"><span class="rarity-overline">RARITY OF THIS RECORD</span><span class="rarity-stars" id="rarity_stars">★☆☆☆</span><strong class="record-rarity" id="record_rarity">アイヴォリーの記録</strong><p id="record_tier_note"></p><details class="rarity-probability"><summary>この組み合わせの出現目安</summary><p id="record_probability"></p></details></section>
 <div id="provenance_record_mount"></div>
-<footer class="registry-footer"><div class="record-rarity" id="record_rarity"></div>
-<p id="record_probability"></p><p id="record_tier_note"></p></footer>
 <button class="start" id="return_portal" type="button">一件簿に戻る</button>
 </div></section><section id="result_blood_life_quiet" class="page result-page theme-blood"><div class="card">
 <div class="kicker">YOUR LITTLE MEW TYPE</div><div class="category-mark"><span>気高き血統</span><em>The Crimson Crown</em></div><div class="cat">🐈</div>
@@ -1123,7 +1122,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     const coat = coatEntry[0];
     const region = weightedPick(regionPool,random,item => item.weight);
     const birthplace = pick(region.births,random);
+    const birthplaceIndex = region.births.indexOf(birthplace);
     const family = weightedPick(region.families,random);
+    const familyIndex = region.families.indexOf(family);
     let familyName = family[0];
     let titleProbability = 1;
     if (family[3] === "titled") {
@@ -1135,7 +1136,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     const probability = (coatEntry[1]/100) * (region.weight/100) * (1/region.births.length) * (family[1]/100) * titleProbability * (1/family[2].length);
     const oneIn = Math.max(1,Math.round(1/probability));
     const tier = probability >= .000104 ? "ivory" : probability >= .00003168 ? "silver" : probability >= .000006 ? "gold" : "crown";
-    return {seed:seed >>> 0,coat,coatEpithet:coatEpithets[coat] || `${coat}の猫`,region:region.name,regionId:region.id,birthplace,family:familyName,heirloom,registry:registryNumber(seed),probability,oneIn,tier};
+    return {seed:seed >>> 0,coat,coatEpithet:coatEpithets[coat] || `${coat}の猫`,region:region.name,regionId:region.id,birthplace,birthplaceIndex,family:familyName,familyIndex,heirloom,registry:registryNumber(seed),probability,oneIn,tier};
   }
 
   const scoreKeys = ["time","message","life","inherit","weave","outer","inner","quiet","share"];
