@@ -1,0 +1,535 @@
+/* Little Mew Kingdom · Royal Editorial System v15
+   Hierarchy: dossier identity (secondary) → symbolic portrait title (primary).
+   Japanese typography: centered display matter; narrow, left-aligned extended reading.
+   This independent layer supersedes old experimental inline overrides. */
+
+:root{
+  --royal-ink:#40362f;
+  --royal-ink-soft:#62544a;
+  --royal-muted:#897766;
+  --royal-burgundy:#753f45;
+  --royal-gold:#9b805d;
+  --royal-hairline:#d9cbb9;
+  --royal-paper:#fffcf6;
+  --royal-frost:#faf5ed;
+  --royal-serif:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;
+  --royal-sans:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP","Yu Gothic",sans-serif;
+}
+body{
+  font-family:var(--royal-sans);
+  color:var(--royal-ink);
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+  font-synthesis:none;
+  line-break:strict;
+  word-break:normal;
+}
+.page .card{
+  box-sizing:border-box;
+  max-width:100%;
+}
+.page h1,.page h2,.page h3,.page .title{
+  font-family:var(--royal-serif);
+  font-weight:600;
+  font-feature-settings:normal;
+  font-optical-sizing:auto;
+}
+.page p,.page span,.page small{
+  overflow-wrap:break-word;
+  word-break:normal;
+  line-break:strict;
+}
+.page .start,.page .quiet-action{
+  min-height:48px;
+  touch-action:manipulation;
+}
+.page button:focus-visible,.page a:focus-visible,.page summary:focus-visible{
+  outline:2px solid #a18457;
+  outline-offset:3px;
+}
+@media (prefers-reduced-motion:reduce){
+  .page *, .page *::before,.page *::after{
+    scroll-behavior:auto!important;
+  }
+}
+/* 01 · A quiet title page */
+#start_page .card{
+  background:linear-gradient(155deg,#fffdf9,#f8f1e6)!important;
+  border:1px solid #ddcfbc;
+  box-shadow:0 11px 32px rgba(67,47,31,.055);
+}
+#start_page .title{
+  font:600 clamp(28px,6.7vw,37px)/1.5 var(--royal-serif);
+  letter-spacing:.015em;
+  color:var(--royal-ink);
+  text-align:center;
+}
+#start_page .intro{max-width:27.5em;margin-inline:auto;text-align:center!important}
+#start_page .intro .intro-scene{
+  font:400 clamp(13px,3.5vw,14.5px)/2.08 var(--royal-serif);
+  color:#766756;
+  letter-spacing:0;
+}
+#start_page .intro .intro-prompt{
+  font:500 clamp(13px,3.5vw,14.5px)/1.98 var(--royal-serif);
+  margin-top:25px;
+  color:#5d5044;
+}
+#start_page .start{
+  background:#4b3c33;
+  border-radius:7px;
+  min-height:54px;
+  box-shadow:0 6px 17px rgba(53,38,29,.10);
+  font-size:14.5px;
+  letter-spacing:.035em;
+}
+#start_page .note{
+  font:400 11.5px/1.6 var(--royal-sans);
+  letter-spacing:.025em;
+  color:#9b8b77;
+}
+/* 02 · Questions: clear but not bureaucratic */
+#quiz_card .q{
+  max-width:23em;
+  font:600 clamp(19px,4.55vw,25px)/1.72 var(--royal-serif);
+  letter-spacing:0;
+  color:var(--royal-ink);
+  text-wrap:balance;
+}
+#quiz_card .axis{font:400 12px/1.6 var(--royal-sans);color:#8c7862}
+#quiz_answers .btn{
+  min-height:70px;
+  background:#fffdf9;
+  border:1px solid #dbccb8;
+  border-radius:9px;
+  font:500 15px/1.75 var(--royal-sans);
+  color:#473b31;
+}
+#quiz_answers .btn:active{background:#f5ecde}
+/* 03 · Royal letter. The text is ritual, not a social card. */
+.invitation-card .arrival-title{
+  font:600 clamp(27px,5.9vw,35px)/1.5 var(--royal-serif);
+  letter-spacing:.01em;
+}
+.invitation-card .arrival-copy{
+  font:400 13.5px/1.85 var(--royal-serif);
+  letter-spacing:0;
+}
+.royal-letter{
+  background:var(--royal-paper)!important;
+  box-shadow:0 8px 23px rgba(67,45,24,.07)!important;
+}
+.royal-letter h2{
+  font:600 clamp(23px,5.3vw,29px)/1.52 var(--royal-serif);
+  letter-spacing:.012em;
+  margin:17px auto 30px;
+}
+.royal-letter-cypher{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-width:88px;
+  width:88px;
+  height:42px;
+  font:600 16px/1 Georgia,serif;
+  letter-spacing:.035em;
+  white-space:nowrap;
+  color:var(--royal-gold);
+}
+.royal-letter-body.ceremonial-lines{
+  font:400 clamp(13px,3.6vw,15px)/2.1 var(--royal-serif)!important;
+  color:#574b40;
+  text-align:center!important;
+  letter-spacing:0!important;
+}
+.royal-letter-body.ceremonial-lines span{display:block;text-align:center;white-space:nowrap}
+.royal-letter-sign{font:400 12px/1.9 var(--royal-serif);color:#766653}
+.royal-letter .start{max-width:310px;min-height:53px;border-radius:7px}
+/* 04 · The cover has ONE hero: the allegorical portrait title */
+#result_portal .dossier-cover{
+  background:linear-gradient(150deg,#fffdf9,#faf5ec)!important;
+  border:1px solid #d5c2a6!important;
+  box-shadow:0 13px 40px rgba(63,45,28,.07)!important;
+  padding:clamp(28px,5vw,47px) clamp(22px,6vw,45px) 35px!important;
+}
+#result_portal .dossier-cover::before{
+  inset:11px;
+  border:1px solid rgba(179,150,110,.21);
+  pointer-events:none;
+}
+#result_portal .dossier-topline{
+  font:400 9px/1.6 Georgia,serif;
+  letter-spacing:.1em;
+  color:#998264;
+}
+#result_portal .dossier-emblem{display:none}
+#result_portal .dossier-overline{
+  margin:24px auto 9px;
+  font:400 9.5px/1.6 Georgia,serif;
+  letter-spacing:.18em;
+  color:#9d815f;
+}
+#result_portal .portal-heading{
+  font:600 clamp(26px,5.8vw,33px)/1.48 var(--royal-serif);
+  text-align:center;
+  color:#45392f;
+  margin:9px auto 7px;
+  letter-spacing:.025em;
+}
+#result_portal .dossier-number{
+  font:400 10px/1.6 Georgia,serif;
+  color:#978165;
+  letter-spacing:.08em;
+  margin:7px auto 0;
+}
+#result_portal .dossier-preface{
+  max-width:29em;
+  font:400 clamp(13px,3.5vw,14px)/1.96 var(--royal-serif);
+  color:#7c6b5b;
+  margin:23px auto 19px;
+  text-align:center;
+  letter-spacing:0;
+}
+#result_portal .dossier-subject{
+  display:block;
+  max-width:495px;
+  width:100%;
+  margin:0 auto 24px;
+  padding:23px clamp(9px,3vw,19px) 29px;
+  border:0;
+  border-top:1px solid #d3c0a4;
+  border-bottom:1px solid #d3c0a4;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+  text-align:center;
+}
+#result_portal .dossier-subject-identity{
+  text-align:center;
+  max-width:100%;
+}
+#result_portal .dossier-subject-kicker{
+  display:block;
+  margin:0 auto 15px;
+  color:#a08a71;
+  font:400 9.5px/1.6 Georgia,serif;
+  letter-spacing:.17em;
+}
+#result_portal .dossier-coat{
+  display:flex;
+  gap:13px;
+  justify-content:center;
+  align-items:baseline;
+  flex-wrap:wrap;
+  max-width:100%;
+  margin:0 auto 10px;
+}
+#result_portal .dossier-field-label{
+  display:block;
+  flex:none;
+  font:500 11px/1.7 var(--royal-sans);
+  letter-spacing:.06em;
+  color:#968472;
+}
+#result_portal #dossier_subject_coat{
+  display:block;
+  min-width:0;
+  max-width:100%;
+  margin:0;
+  color:#4e453c;
+  font:500 clamp(23px,5.25vw,26px)/1.42 var(--royal-serif);
+  letter-spacing:.018em;
+  text-align:center;
+  text-wrap:balance;
+  overflow-wrap:break-word;
+}
+#result_portal .dossier-birth-line{
+  display:grid;
+  grid-template-columns:max-content minmax(0,1fr);
+  width:fit-content;
+  max-width:min(100%,365px);
+  gap:9px;
+  align-items:baseline;
+  justify-items:start;
+  margin:0 auto;
+  padding:0;
+  text-align:left;
+}
+#result_portal .dossier-birth-line .dossier-field-label{
+  font:500 11px/1.8 var(--royal-sans);
+  white-space:nowrap;
+}
+#result_portal .dossier-subject-origin{
+  display:block;
+  margin:0;
+  max-width:100%;
+  font:400 12.5px/1.83 var(--royal-serif);
+  color:#74665b;
+  text-align:left;
+  text-wrap:pretty;
+}
+#result_portal .dossier-subject-divider{
+  display:flex;
+  gap:15px;
+  align-items:center;
+  justify-content:center;
+  max-width:240px;
+  margin:26px auto 21px;
+  color:#b49b7a;
+  font:400 14px/1 Georgia,serif;
+}
+#result_portal .dossier-subject-divider::before,
+#result_portal .dossier-subject-divider::after{
+  content:"";
+  display:block;
+  flex:1;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#d9cbb7);
+}
+#result_portal .dossier-subject-divider::after{
+  background:linear-gradient(90deg,#d9cbb7,transparent);
+}
+#result_portal .dossier-subject-divider span{
+  flex:none;
+  font-size:14px;
+  color:#b49d80;
+}
+#result_portal .dossier-portrait-label{
+  font:500 11px/1.75 var(--royal-sans);
+  color:#95785b;
+  letter-spacing:.08em;
+  margin:0 auto 10px;
+  text-align:center;
+}
+#result_portal .dossier-portrait-name{
+  max-width:13.5em;
+  margin:0 auto;
+  color:var(--royal-burgundy);
+  font:600 clamp(29px,6.6vw,36px)/1.47 var(--royal-serif);
+  text-align:center;
+  letter-spacing:.018em;
+  text-wrap:balance;
+  overflow-wrap:break-word;
+}
+#result_portal .dossier-index{
+  max-width:495px;
+  margin:0 auto;
+  border-top:0;
+  border-bottom:1px solid #d3c1a8;
+}
+#result_portal .dossier-entry{
+  display:grid;
+  grid-template-columns:29px minmax(0,1fr) 14px;
+  gap:13px;
+  min-height:99px;
+  padding:18px 5px;
+  text-align:left;
+}
+#result_portal .dossier-entry+.dossier-entry{
+  border-top:1px solid #e7dccd;
+}
+#result_portal .dossier-numeral{
+  color:#9d815f;
+  font:400 20px/1.5 Georgia,serif;
+}
+#result_portal .dossier-entry-text small{
+  color:#a08865;
+  font:400 9px/1.5 Georgia,serif;
+  letter-spacing:.09em;
+}
+#result_portal .dossier-entry-text strong{
+  display:block;
+  margin:4px 0 3px;
+  font:600 19px/1.5 var(--royal-serif);
+  color:#4b4036;
+}
+#result_portal .dossier-entry-text em{
+  font:400 12px/1.7 var(--royal-sans);
+  color:#827264;
+}
+#result_portal .dossier-chevron{font:300 26px/1.4 var(--royal-sans);color:#b09878}
+#result_portal .dossier-footnote{
+  max-width:35em;
+  margin:17px auto 2px;
+  font:400 11.5px/1.87 var(--royal-serif);
+  color:#8a7867;
+  text-align:center;
+  letter-spacing:0;
+}
+#result_portal .invitation-share{margin-top:27px!important}
+#result_portal .invitation-share-disclosure{
+  box-shadow:none;
+  border:1px solid #dac9b1;
+  background:#fffdf8;
+}
+#result_portal .invitation-share-toggle strong{
+  font:600 18px/1.55 var(--royal-serif);
+  color:#493c32;
+}
+#result_portal .invitation-share-toggle small{
+  font:400 12px/1.6 var(--royal-sans);
+  color:#887662;
+}
+#result_portal .portal-restart{
+  margin:23px auto 0;
+  font:400 12px/1.8 var(--royal-sans);
+  color:#998472;
+  text-decoration-color:#c8b69b;
+}
+/* 05 · Portrait: title and one opening idea, then breathable reading */
+.result-page .card{
+  background:var(--royal-paper)!important;
+}
+.result-page .kicker,.result-page .portrait-file-code{
+  text-align:center;
+  color:#9d886c;
+}
+.result-page .category-mark{
+  margin:14px auto 4px!important;
+}
+.result-page .title{
+  max-width:15em;
+  margin:12px auto 19px;
+  color:#563838;
+  font:600 clamp(28px,6.2vw,36px)/1.5 var(--royal-serif);
+  letter-spacing:.016em;
+  text-align:center;
+  text-wrap:balance;
+}
+.result-page .result-thesis{
+  max-width:25em;
+  margin:16px auto 24px;
+  font:500 clamp(16.5px,4vw,19px)/1.89 var(--royal-serif);
+  color:#584d43;
+  text-align:center;
+  letter-spacing:0;
+  text-wrap:pretty;
+}
+.result-page .desc{
+  width:100%;
+  max-width:30em;
+  margin:0 auto 30px;
+  padding:0 7px;
+  text-align:left;
+}
+.result-page .desc p{
+  font:400 14.5px/2.03 var(--royal-sans);
+  color:#544b42;
+  letter-spacing:0;
+  text-align:left;
+  text-wrap:pretty;
+}
+.result-page .guide-cat.story-guide{
+  max-width:30em;
+  margin:31px auto!important;
+  padding:24px 13px!important;
+  text-align:center;
+}
+.result-page .guide-story-name{
+  font:600 clamp(17px,4.5vw,19px)/1.68 var(--royal-serif);
+  color:#554337;
+  text-align:center;
+}
+.result-page .guide-story-scene{
+  max-width:26.5em;
+  margin:14px auto 0;
+  font:400 13.2px/1.95 var(--royal-sans);
+  text-align:center;
+  color:#706157;
+  text-wrap:pretty;
+}
+.result-page .portrait-art img{
+  filter:saturate(.83) contrast(.91) brightness(1.1)!important;
+  opacity:.16!important;
+  transform:none!important;
+}
+/* 06 · Register: hierarchy must differ from the portrait. */
+.provenance-page .registry-masthead h1{
+  font:600 clamp(26px,5.8vw,33px)/1.52 var(--royal-serif);
+  color:#40372e;
+  letter-spacing:.02em;
+}
+.provenance-page .rarity-ledger{
+  background:linear-gradient(160deg,#fffdf8,#fcf6eb);
+  box-shadow:none;
+}
+.provenance-page .rarity-ledger .record-rarity{
+  font:600 19px/1.57 var(--royal-serif);
+}
+.provenance-page .rarity-ledger .rarity-rate{
+  font:400 12px/1.7 var(--royal-sans);
+}
+.provenance-page .visitor-grid{
+  max-width:30em;
+  margin:0 auto;
+}
+.provenance-page .visitor-field{
+  padding:20px 3px!important;
+}
+.provenance-page .visitor-field.coat-field{
+  text-align:center!important;
+}
+.provenance-page .visitor-field.coat-field .coat-name{
+  font:500 clamp(25px,5.6vw,31px)/1.52 var(--royal-serif);
+  color:#4e443b!important;
+  letter-spacing:.01em;
+}
+.provenance-page .visitor-field .coat-epithet{
+  font:400 13.5px/1.9 var(--royal-serif)!important;
+  color:#766656!important;
+}
+.provenance-page .birthplace-field>b,
+.provenance-page .family-field>b{
+  font:600 clamp(17px,4.2vw,20px)/1.66 var(--royal-serif);
+  letter-spacing:0;
+}
+.provenance-page .locality-scene,.provenance-page .family-scene{
+  max-width:30em;
+  font:400 13.2px/1.94 var(--royal-sans);
+  color:#6b6054;
+  text-align:left;
+  text-wrap:pretty;
+}
+/* Accessibility and narrow layouts */
+@media(max-width:520px){
+ #result_portal .dossier-cover{
+  padding:31px 23px 30px!important;
+ }
+ #result_portal .dossier-topline{font-size:8px;letter-spacing:.04em}
+ #result_portal .dossier-overline{margin-top:17px}
+ #result_portal .dossier-preface{margin:19px auto 15px}
+ #result_portal .dossier-subject{padding:20px 6px 24px;margin-bottom:18px}
+ #result_portal #dossier_subject_coat{font-size:clamp(22px,6.3vw,25px)}
+ #result_portal .dossier-subject-origin{font-size:12px}
+ #result_portal .dossier-subject-divider{margin:19px auto 18px;max-width:190px}
+ #result_portal .dossier-portrait-name{font-size:clamp(27px,7.3vw,32px)}
+ #result_portal .dossier-entry{grid-template-columns:24px minmax(0,1fr) 13px;gap:10px;padding:16px 4px;min-height:96px}
+ #result_portal .dossier-entry-text strong{font-size:18px}
+ #result_portal .dossier-entry-text em{font-size:11.8px}
+ #result_portal .dossier-footnote{font-size:11.2px}
+ .result-page .title{font-size:clamp(27px,7vw,33px)}
+ .result-page .result-thesis{font-size:clamp(16px,4.4vw,18px)}
+ .result-page .desc p{font-size:14px}
+ .provenance-page .locality-scene,.provenance-page .family-scene{font-size:13px}
+}
+@media(max-width:360px){
+ #result_portal .dossier-cover{padding:28px 19px!important}
+ #result_portal .dossier-subject{padding-inline:2px}
+ #result_portal .dossier-birth-line{gap:7px}
+ #result_portal .dossier-portrait-name{font-size:26px;max-width:10em}
+ #result_portal .dossier-topline{font-size:7.5px}
+ .royal-letter-body.ceremonial-lines span{white-space:normal}
+}
+@media(min-width:680px){
+ #result_portal .dossier-cover{padding-bottom:43px!important}
+ #result_portal .dossier-subject{padding-top:29px;padding-bottom:34px}
+ #result_portal .dossier-portrait-name{font-size:35px}
+ #result_portal .dossier-entry{min-height:107px}
+}
+@supports(text-wrap:pretty){
+ #result_portal .dossier-subject-origin,
+ .result-page .desc p,
+ .result-page .guide-story-scene,
+ .provenance-page .locality-scene,
+ .provenance-page .family-scene{ text-wrap:pretty }
+}
