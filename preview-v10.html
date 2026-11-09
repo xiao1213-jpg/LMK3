@@ -605,6 +605,14 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 .start-cat-emblem{display:block;width:100%;height:auto;filter:drop-shadow(0 2px 5px rgba(90,62,41,.08))}
 #start_page .kicker{font:600 10px/1.4 Georgia,serif;letter-spacing:.24em;color:#ae8b60;margin-bottom:5px}
 #start_page .title{margin-top:7px}
+
+/* A restrained rarity reveal, not an overwhelming full-screen animation. */
+@keyframes lmk-register-unseal{from{opacity:.15;transform:translateY(7px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+.provenance-page .rarity-ledger{animation:lmk-register-unseal .55s cubic-bezier(.2,.7,.2,1) both;will-change:transform,opacity}
+.provenance-page .rarity-stars{font-variant-numeric:tabular-nums}
+.provenance-page .rarity-ledger .rarity-overline{letter-spacing:.11em}
+.provenance-page .rarity-ledger .record-rarity{font-weight:600}
+@media(prefers-reduced-motion:reduce){.provenance-page .rarity-ledger{animation:none!important;will-change:auto}}
 </style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script><script src="assets/kingdom-notes-v10.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">A STORY BEGINS</div>
 <div class="cat"><svg class="start-cat-emblem" viewBox="0 0 124 92" fill="none" aria-hidden="true"><path d="M26 42 26 16 44 28Q62 22 80 28L98 16 98 42Q103 48 100 60Q93 77 62 78Q31 77 24 60Q21 49 26 42Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M43 48Q48 44 53 48M71 48Q76 44 81 48M57 59l5 4 5-4m-5 4v3m0 0q-6 5-11 0m11 0q6 5 11 0M38 57l-15-4m15 10-15 2m63-8 15-4m-15 10 15 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -1672,7 +1680,14 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     const placeScene = world.placeScenes?.[p.regionId]?.[placeIndex] || "";
     const familyInfo = world.families?.[p.regionId]?.[familyIndex] || [];
     const familyName = familyInfo[0] || p.family;
-    const familyScene = familyInfo[1] || "";
+    const titleScenes = {
+      "公爵家の分家につながる家":"公爵家から伸びた一枝が、古い家系図に記されています。",
+      "侯爵家の分家につながる家":"侯爵家ゆかりの手紙が、今も薄紙に包まれています。",
+      "伯爵家の分家につながる家":"遠い親戚の肖像画には、伯爵家との縁が小さく書かれています。",
+      "子爵家の分家につながる家":"古い家印を見れば、子爵家と縁を結んだ日の話が始まります。",
+      "男爵家の分家につながる家":"祝祭の日だけ取り出す、小さな家印の思い出があります。"
+    };
+    const familyScene = (titleScenes[p.family] ? titleScenes[p.family] : "") + (familyInfo[1] || "");
     const safe = text => String(text).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
     document.getElementById("provenance_record_mount").innerHTML =
       '<section class="visitor-record" aria-label="猫としての来歴"><div class="visitor-grid">' +
