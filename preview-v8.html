@@ -1,6 +1,6 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>リトル・ミュー診断｜あなたはどの猫？</title>
 <meta name="description" content="9つの問いに答えると、リトル・ミュー王国からあなたへの招待状が届きます。">
-<meta name="lmk-build" content="2026-11-09-invitation-v9">
+<meta name="lmk-build" content="2026-11-09-royal-dossier-v8">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Little Mew Kingdom">
 <meta property="og:title" content="リトル・ミュー診断｜あなたはどの猫？">
@@ -464,89 +464,14 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
 .provenance-page.tier-crown .registry-masthead{background:linear-gradient(145deg,#faf0d8,#fff7e8);border:1px solid #dbb97b;margin:0 -8px;padding:22px 8px 28px}
 .provenance-page.tier-crown .registry-crest{color:#9a6734;font-size:29px}
 @media(max-width:520px){.portrait-medallion{right:15px;bottom:-18px;height:40px;min-width:90px;padding:8px 11px}.portrait-medallion svg{height:21px;width:21px}}
-
-/* ═══ V9 · A SINGLE CAT IN A ROYAL DOSSIER ═══ */
-:root{--page-column:min(660px,100%);--letter-ink:#3e3730;--letter-accent:#907654}
-main{max-width:740px}
-body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK JP",sans-serif}
-#start_page .card{padding-top:43px;padding-bottom:36px}
-#start_page .title{font-size:clamp(27px,6vw,35px);max-width:15em;line-height:1.55;white-space:normal}
-#start_page .intro{font-size:15px;line-height:2.05;max-width:30em;text-align:center;margin:19px auto;color:#716358}
-#start_page .intro .intro-prompt{display:block;margin-top:22px;color:#625245;font-family:var(--lmk-serif);font-size:15px;line-height:1.95}
-#start_page .start{margin-top:28px}
-#start_page .note{font-size:11.5px;letter-spacing:.04em}
-#quiz_card .q{font-size:clamp(19px,4.2vw,23px);letter-spacing:0;line-height:1.8}
-#quiz_answers .btn{font-size:15px;line-height:1.75;padding:18px}
-#quiz_card .axis{font-size:12px;letter-spacing:.025em}
-.invitation-card .arrival-title{font-size:clamp(26px,5.6vw,36px);font-weight:600;line-height:1.56}
-.invitation-card .arrival-copy{font-size:13px;line-height:1.95}
-.royal-letter-body{font-family:var(--lmk-serif);font-size:15px;line-height:2.05;letter-spacing:0;max-width:26em}
-.royal-letter-salutation{font-size:16px}
-.royal-letter .start{max-width:320px;min-height:54px}
-.dossier-cover{padding-top:42px!important}
-.dossier-preface{font-size:14px;line-height:1.9;margin:18px auto 21px}
-.dossier-subject{position:relative;max-width:490px;margin:0 auto 30px;padding:30px 16px 26px;background:linear-gradient(150deg,rgba(255,252,246,.86),rgba(249,239,223,.5));border-top:1px solid #c8b69c;border-bottom:1px solid #c8b69c}
-.dossier-subject-kicker{display:block;color:#9d805e;font:10px/1.5 Georgia,serif;letter-spacing:.18em}
-.dossier-subject>strong{display:block;margin:8px 0 0;color:#4c3d2f;font:600 clamp(30px,7vw,40px)/1.42 var(--lmk-serif);letter-spacing:.025em}
-.dossier-subject-origin{display:block;margin:5px auto 0;font-size:13px;line-height:1.7;color:#84725e}
-.dossier-subject-separator{display:block;margin:14px auto 10px;color:#a58a63;font-size:11px}
-.dossier-subject-caption{display:block;color:#947e68;font-size:11px;line-height:1.6}
-.dossier-subject>b{display:block;margin:7px auto 0;color:#653d3b;font:600 clamp(20px,5vw,27px)/1.5 var(--lmk-serif);overflow-wrap:break-word;text-wrap:balance;max-width:16em}
-.dossier-index{max-width:490px}
-.dossier-footnote{font-size:12px;line-height:1.9}
-.invitation-share{position:relative;max-width:520px;margin:35px auto 10px;padding:25px 0 6px;border-top:1px solid #d8c9af;text-align:center}
-.invitation-share-label{font:10px/1.4 Georgia,serif;letter-spacing:.2em;color:#967b57}
-.invitation-share h2{font:600 23px/1.5 var(--lmk-serif);margin:7px auto 4px;color:#4b3a30}
-.invitation-share p{font-size:13px;line-height:1.8;color:#7d6d5c;max-width:30em;margin:6px auto 15px}
-.invitation-canvas-wrap{max-width:290px;margin:16px auto 18px;background:#e7d8c4;padding:7px;box-shadow:0 10px 22px rgba(46,32,26,.14)}
-#invitation_share_canvas{display:block;width:100%;height:auto;aspect-ratio:4/5;background:#493732}
-.invitation-share-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px auto;max-width:420px}
-.invitation-share-actions .quiet-action{min-height:51px;font-size:14px;border-radius:9px}
-.invitation-share-actions .quiet-action.primary{background:#4e4035;color:#fff;border-color:#4e4035}
-.invitation-share-actions .quiet-action:not(.primary){background:#fffcf7;color:#57463a;border-color:#cbb99b}
-.mode-store .invitation-share{display:none}
-.mode-store .dossier-cover .take-home-card{margin-top:30px}
-.mode-mobile .dossier-cover .take-home-card{display:none}
-.result-page .portrait-art{position:relative;overflow:hidden;border:0;padding:0;max-width:550px;height:160px;margin:20px auto 35px;box-shadow:none;background:var(--theme-soft)}
-.result-page .portrait-art img{position:absolute;inset:-13%;width:126%;height:126%;aspect-ratio:auto;object-fit:cover;object-position:center 45%;filter:blur(13px) saturate(.58) brightness(1.12);opacity:.65;transform:scale(1.05);-webkit-mask-image:linear-gradient(to bottom,transparent,black 32%,black 68%,transparent);mask-image:linear-gradient(to bottom,transparent,black 32%,black 68%,transparent)}
-.result-page .portrait-art::after{content:"";pointer-events:none;position:absolute;inset:0;background:linear-gradient(90deg,#fffdf9 0%,rgba(255,253,249,.24) 29%,rgba(255,253,249,.24) 71%,#fffdf9 100%)}
-.result-page .portrait-art .portrait-medallion{z-index:2;bottom:7px;right:12px;opacity:.8;box-shadow:none;background:rgba(255,253,249,.88)}
-.result-page .category-mark{margin:9px auto 0!important}
-.result-page .category-mark span{font-size:11px;letter-spacing:.03em}
-.result-page .title{margin:10px auto 15px;line-height:1.47}
-.result-page .result-thesis{margin:14px auto 20px;font-size:18px;line-height:1.9}
-.result-page .portrait-about{max-width:29em;margin:0 auto 24px}
-.result-page .desc{max-width:31em}
-.result-page .desc p{line-height:2.0;letter-spacing:0;font-size:15px}
-.result-page .goods-item{font-family:var(--lmk-serif);font-weight:600;font-size:18px}
-.provenance-page .visitor-field{padding-top:18px!important;padding-bottom:18px!important}
-.provenance-page .visitor-field b{line-height:1.65}
-.provenance-page .visitor-field .coat-epithet{line-height:1.85!important}
-.provenance-page .registry-masthead h1{font-weight:600;font-size:clamp(27px,6vw,35px);line-height:1.55}
-@media(max-width:520px){#start_page .title{font-size:29px}#start_page .intro{font-size:14px}.dossier-subject{padding:24px 10px}.invitation-share{margin-top:24px}.invitation-share-actions{grid-template-columns:1fr}.invitation-canvas-wrap{max-width:255px}.result-page .portrait-art{height:139px}.result-page .desc p{font-size:14.5px}.result-page .result-thesis{font-size:16.5px}}
-@media(prefers-reduced-motion:reduce){.result-page .portrait-art img{transform:none}}
-
-.invitation-share-actions button:disabled{opacity:.48;cursor:wait}
-.result-page .portrait-file-code{font-size:10px;letter-spacing:.04em;line-height:1.6;overflow-wrap:break-word}
-.result-page .portrait-about summary{font-size:12px}
-.result-page .result-analysis{max-width:550px}
-.result-page .analysis-disclosure>summary{line-height:1.7;letter-spacing:0;min-height:52px}
-.result-page .insight-text,.result-page .score-note{line-height:1.85;letter-spacing:0}
-.result-page .path-step b{line-height:1.6}
-@supports(text-wrap:pretty){.royal-letter-body,.result-page .desc p,.dossier-preface{text-wrap:pretty}}
-
-/* The original gallery illustration is a hazy atmosphere, never a literal cat portrait. */
-.result-page .portrait-art{height:149px;margin-bottom:31px}
-.result-page .portrait-art img{filter:blur(21px) saturate(.52) brightness(1.10)!important;opacity:.39!important;transform:scale(1.14)}
-.result-page .portrait-art::after{background:linear-gradient(90deg,#fffdf9 0%,rgba(255,253,249,.43) 31%,rgba(255,253,249,.43) 69%,#fffdf9 100%)}
-.result-page .portrait-art .portrait-medallion{bottom:12px;opacity:.77}
-@media(max-width:520px){.result-page .portrait-art{height:130px}}
 </style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">LITTLE MEW</div>
 <div class="cat">🐈</div>
-<h1 class="title">もし、あなたが<br>一匹の猫だったら。</h1>
-<p class="intro">古い時計の音。午後のお茶の香り。<br>石畳の向こうに、小さな王国があります。<span class="intro-prompt">九つの問いをたどると、<br>あなた宛てに一通の手紙が届きます。</span></p>
-<a class="start" id="start_quiz" href="#quiz_page">九つの問いへ</a>
+<h1 class="title">王国で、あなたはどの猫？</h1>
+<p class="intro"><span>古い時計。秘密の手紙。</span>
+<span>午後のお茶会。月明かりの路地。</span>
+<span class="intro-prompt">九つの選択の先に、王国から一通の手紙。</span></p>
+<a class="start" id="start_quiz" href="#quiz_page">王国への扉をひらく</a>
 <div class="note">9つの問い · すべて二択</div>
 </div></section><section id="quiz_page" class="page"><div class="card" id="quiz_card">
 <div class="quiz-top"><div class="progress" id="quiz_progress">1 / 9</div><button class="back-button" id="quiz_back" type="button" hidden>← ひとつ戻る</button></div>
@@ -556,8 +481,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 <div id="quiz_answers" aria-live="polite"></div>
 </div></section><section id="invitation_page" class="page"><div class="card invitation-card" id="invitation_card">
 <div class="arrival-kicker">FROM ST. MILK PALACE</div>
-<h1 class="arrival-title">あなた宛てに、<br>王国から一通。</h1>
-<p class="arrival-copy">セント・ミルク宮殿の赤い封蝋。<br>そっと押すと、手紙がひらきます。</p>
+<h1 class="arrival-title">王国から、<br>手紙が届きました。</h1>
+<p class="arrival-copy">赤い封蝋を押して、封をお開きください。</p>
 <button class="envelope" id="open_invitation" type="button" aria-label="封蝋を押して招待状をひらく"><span class="wax-seal"><span class="wax-royal" aria-hidden="true">T<span>Ⅲ</span>R</span></span></button>
 <p class="office-line"><strong>セント・ミルク宮殿</strong><em>St. Milk Palace · Royal Household</em></p>
 <article class="royal-letter" id="royal_letter" aria-live="polite">
@@ -565,8 +490,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 <span class="royal-letter-command">BY COMMAND OF HIS MAJESTY THE KING</span>
 <h2>国王陛下よりの招待状</h2>
 <p class="royal-letter-salutation">あなたへ</p>
-<p class="royal-letter-body">国王ティボルト三世陛下の御意により、あなたをリトル・ミュー王国へお招きします。</p>
-<p class="royal-letter-body">宮殿には、あなたのために一冊の来訪者記録が用意されました。そこには、一匹の猫の来歴と、その猫を描く肖像が収められています。</p>
+<p class="royal-letter-body">ティボルト三世陛下の御意により、ここにあなたをリトル・ミュー王国へお招きします。</p>
+<p class="royal-letter-body">王室侍従長室では、お迎えのための一冊を用意いたしました。どうぞお受け取りください。</p>
 <p class="royal-letter-sign">国王陛下の命により<br>王室侍従長室<span class="royal-letter-register" id="royal_letter_register"></span></p>
 <button class="start" id="enter_kingdom" type="button">一件簿を受け取る</button>
 </article></div></section>
@@ -576,14 +501,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 <p class="dossier-overline">ROYAL VISITOR'S DOSSIER</p>
 <h1 class="portal-heading">王室来訪者一件簿</h1>
 <p class="dossier-number" id="dossier_number">REGISTER · LMK</p>
-<p class="dossier-preface">王国でのあなたが、一匹の猫として<br>この一冊に記されています。</p>
-<div class="dossier-subject" aria-label="王国に招かれた猫"><span class="dossier-subject-kicker">THE INVITED CAT</span><strong id="dossier_subject_coat"></strong><span class="dossier-subject-origin" id="dossier_subject_origin"></span><span class="dossier-subject-separator" aria-hidden="true">✦</span><span class="dossier-subject-caption">この猫の肖像に与えられた題</span><b id="dossier_subject_portrait"></b></div>
+<p class="dossier-preface">ひとつの招待に、二通の記録。<br>それぞれ、異なる方法で整えられました。</p>
 <div class="dossier-index" aria-label="同封の記録">
-<button class="dossier-entry" id="open_portrait" type="button"><span class="dossier-numeral">Ⅰ</span><span class="dossier-entry-text"><small>ROYAL PORTRAIT GALLERY</small><strong>肖像の頁</strong><em>あなたの感性から描かれた肖像題。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
-<button class="dossier-entry" id="open_registration" type="button"><span class="dossier-numeral">Ⅱ</span><span class="dossier-entry-text"><small>GENERAL REGISTER OFFICE</small><strong>来歴の頁</strong><em>この猫の毛並み、生まれ、家の記録。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
+<button class="dossier-entry" id="open_portrait" type="button"><span class="dossier-numeral">Ⅰ</span><span class="dossier-entry-text"><small>ROYAL PORTRAIT GALLERY</small><strong>心象肖像</strong><em>九つの答えを、一枚の寓意に。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
+<button class="dossier-entry" id="open_registration" type="button"><span class="dossier-numeral">Ⅱ</span><span class="dossier-entry-text"><small>GENERAL REGISTER OFFICE</small><strong>王国来歴証</strong><em>毛並み、生まれ、家に残るもの。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
 </div>
-<p class="dossier-footnote">肖像は九つの答えから。来歴は王国の記録から。</p>
-<section class="invitation-share" id="invitation_share_section" aria-label="招待状を持ち帰る"><span class="invitation-share-label">A LETTER TO KEEP</span><h2>この招待状を、手元に。</h2><p>セント・ミルク宮殿から届いた一通を、画像で残せます。</p><div class="invitation-canvas-wrap"><canvas id="invitation_share_canvas" width="1080" height="1350" role="img" aria-label="国王陛下からの招待状を描いた共有画像"></canvas></div><div class="invitation-share-actions"><button type="button" id="dossier_share" class="quiet-action primary">招待状を共有</button><button type="button" id="dossier_save" class="quiet-action">画像を保存</button></div><p class="share-status" id="dossier_share_status" aria-live="polite"></p></section>
+<p class="dossier-footnote">いずれも、あなたのために綴じられた記録です。</p>
+<div class="dossier-actions"><button type="button" id="dossier_share" class="quiet-action primary">結果を共有する</button><p class="share-status" id="dossier_share_status" aria-live="polite"></p></div>
 <a class="portal-restart" href="#start_page">最初から診断する</a>
 </div></section>
 <section id="provenance_page" class="page provenance-page tier-ivory"><div class="card provenance-sheet">
@@ -1206,16 +1130,14 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
   function readTakeHomeState() {
     const raw = location.hash.slice(1);
     const separator = raw.indexOf("~");
-    const invited = raw.startsWith("invitation_page~");
-    const fields = invited ? raw.split("~") : null;
-    const resultId = invited ? fields[1] : separator > 0 ? raw.slice(0,separator) : raw;
-    const payload = invited ? fields[2] || "" : separator > 0 ? raw.slice(separator + 1) : "";
+    const resultId = separator > 0 ? raw.slice(0,separator) : raw;
+    const payload = separator > 0 ? raw.slice(separator + 1) : "";
     if (payload) {
       const snapshot = decodeTakeHome(resultId,payload);
       if (!snapshot) return null;
       storeCarriedSnapshot(snapshot);
       try { sessionStorage.setItem("littleMewLastResult",JSON.stringify(snapshot)); } catch (_) {}
-      history.replaceState(null,"",location.pathname + location.search + "#" + (invited ? "invitation_page" : resultId));
+      history.replaceState(null,"",location.pathname + location.search + "#" + resultId);
       window.lmkTrack?.("take_home_open",{result_id:resultId});
       return {snapshot,carried:true};
     }
@@ -1229,12 +1151,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
   function takeHomeUrl(resultId,snapshot) {
     const payload = encodeTakeHome(snapshot);
     if (!payload) return "";
-    const pathFile = location.pathname.split("/").pop();
-    const pageFile = /^preview-v\d+\.html$/.test(pathFile) ? pathFile : "index.html";
-    const url = new URL(pageFile,document.baseURI);
+    const url = new URL(location.pathname.endsWith("/preview-v8.html") ? "preview-v8.html" : "index.html",document.baseURI);
     url.searchParams.set("mode","mobile");
-    url.searchParams.set("v","20261109-v9-invitation");
-    url.hash = "invitation_page~" + resultId + "~" + payload;
+    url.searchParams.set("v","20261109-v8-preview");
+    url.hash = resultId + "~" + payload;
     return url.toString();
   }
 
@@ -1254,15 +1174,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
         <h2 class="take-home-title">この猫を連れてきました</h2>
         <span class="take-home-result">「${title}」</span>
         <div class="take-home-arrived-mark" aria-hidden="true">🐈</div>
-        <p class="take-home-copy">招待状と二つの記録が、このスマホに届いています。</p>`;
+        <p class="take-home-copy">診断結果と回答の濃淡を、<br><strong>このスマホで見返せます。</strong></p>`;
     } else {
       const url = takeHomeUrl(resultId,snapshot);
       card.innerHTML = `
         <span class="take-home-kicker">LITTLE MEW TAKE HOME</span>
-        <h2 class="take-home-title">あなたの招待状を持ち帰る</h2>
+        <h2 class="take-home-title">この猫を連れて帰る</h2>
         <span class="take-home-result">「${title}」</span>
         <div class="take-home-qr-wrap"><div class="take-home-qr" role="img" aria-label="この診断結果をスマホで開くQRコード"></div></div>
-        <p class="take-home-copy">QRコードから、スマホに同じ招待状が届きます。<br>封を開けば、あなたの記録もそのまま。</p>`;
+        <p class="take-home-copy">QRコードを読み取ると、<br><strong>診断結果と回答の濃淡</strong>がスマホで開きます。</p>`;
       const qrTarget = card.querySelector(".take-home-qr");
       try {
         new QRCode(qrTarget,{text:url,width:218,height:218,colorDark:"#392f2b",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.M});
@@ -1278,7 +1198,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
         }
         window.lmkTrack?.("take_home_qr_shown",{result_id:resultId});
       } catch (_) {
-        qrTarget.closest(".take-home-qr-wrap").innerHTML = '<p class="take-home-copy">QRコードを表示できませんでした。スマホのカメラでもう一度お試しください。</p>';
+        qrTarget.closest(".take-home-qr-wrap").innerHTML = '<p class="take-home-copy">QRコードを表示できませんでした。下の「結果を共有する」をお試しください。</p>';
       }
     }
     goods.after(card);
@@ -1467,10 +1387,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     if (!snapshot.provenance?.tier) snapshot.provenance = generateProvenance(snapshot.seed || 0);
     const number = document.getElementById("dossier_number");
     if (number) number.textContent = "REGISTER · " + snapshot.provenance.registry;
-    document.getElementById("dossier_subject_coat").textContent = snapshot.provenance.coat;
-    document.getElementById("dossier_subject_origin").textContent = snapshot.provenance.birthplace + "に生まれた猫";
-    document.getElementById("dossier_subject_portrait").textContent = "《" + resultTitle(snapshot.resultId) + "》";
-    if (!isStoreMode) void drawInvitationArtwork(snapshot);
     document.getElementById("open_portrait").onclick = () => {
       decorateResult(snapshot.resultId,snapshot,{carried:isCarriedView});
       location.hash = snapshot.resultId;
@@ -1478,8 +1394,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     };
     document.getElementById("open_registration").onclick = () => openProvenance(snapshot);
     renderTakeHomeCard(document.getElementById("result_portal"),snapshot.resultId,snapshot,isCarriedView);
-    document.getElementById("dossier_share").onclick = () => shareInvitation(snapshot);
-    document.getElementById("dossier_save").onclick = () => saveInvitationArtwork(snapshot);
+    document.getElementById("dossier_share").onclick = () => shareResult(snapshot.resultId);
   }
 
   function openResultPortal(snapshot) {
@@ -1603,7 +1518,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
       '<div class="visitor-field"><span>生まれた土地</span><b>' + safe(p.birthplace) + '</b><small>' + safe(p.region) + '</small></div>' +
       '<div class="visitor-field"><span>家の来歴</span><b>' + safe(p.family) + '</b></div>' +
       '<div class="visitor-field"><span>家に伝わるもの</span><b>' + safe(p.heirloom) + '</b></div>' +
-      '<div class="visitor-field portrait-field"><span>同じ一件簿に収められた肖像</span><b>《' + safe(title) + '》</b></div>' +
+      '<div class="visitor-field portrait-field"><span>同じ一件簿に収められた心象肖像</span><b>《' + safe(title) + '》</b></div>' +
       '</div></section>';
     document.getElementById("switch_to_portrait").onclick = () => {
       decorateResult(snapshot.resultId,snapshot,{carried:isCarriedView});
@@ -1686,193 +1601,63 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     if (snapshot?.provenance?.registry) {
       const fileRef = document.createElement("div");
       fileRef.className = "portrait-file-code";
-      fileRef.textContent = "FILE · " + snapshot.provenance.registry + "　/　" + snapshot.provenance.coat;
+      fileRef.textContent = "FILE · " + snapshot.provenance.registry;
       card.querySelector(".category-mark")?.before(fileRef);
     }
     desc.after(section);
     // The single transfer/QR card belongs to the dossier cover, not the portrait.
     page.querySelector(".take-home-card")?.remove();
 
-    card.querySelector(".result-actions")?.remove();
     let actions = card.querySelector(".result-actions");
     if (!actions) {
       actions = document.createElement("div");
       actions.className = "result-actions";
-      const back = document.createElement("button");
-      back.type = "button";
-      back.className = "quiet-action primary";
-      back.textContent = "一件簿に戻る";
-      back.addEventListener("click", () => {
-        let current = snapshot;
-        if (!current) {
-          try { current = JSON.parse(sessionStorage.getItem("littleMewLastResult")); } catch (_) {}
-        }
-        if (current?.resultId) openResultPortal(current);
-        else location.hash = "start_page";
-      });
-      actions.append(back);
+      const restart = card.querySelector('a[href="#start_page"]');
+      restart.className = "quiet-action";
+      restart.textContent = "もう一度診断する";
+      if (isStoreMode) {
+        restart.classList.add("primary");
+        actions.append(restart);
+      } else {
+        const share = document.createElement("button");
+        share.type = "button";
+        share.className = "quiet-action primary share-primary";
+        share.textContent = "結果を共有する";
+        share.addEventListener("click", () => shareResult(resultId));
+        actions.append(share,restart);
+      }
       card.append(actions);
+      const status = document.createElement("p");
+      status.className = "share-status";
+      status.setAttribute("aria-live","polite");
+      card.append(status);
     }
-    card.querySelector('a[href="#start_page"]')?.remove();
-    card.querySelector(".share-status")?.remove();
   }
 
-  function textOnCanvas(ctx, text, x, y, font, color = "#45392f", align = "center") {
-    ctx.font = font;
-    ctx.fillStyle = color;
-    ctx.textAlign = align;
-    ctx.fillText(text,x,y);
-  }
-
-  function invitationFile() {
-    const canvas = document.getElementById("invitation_share_canvas");
-    if (!canvas || canvas.dataset.ready !== "yes") return null;
-    const encoded = canvas.toDataURL("image/png").split(",")[1];
-    const binary = atob(encoded);
-    const bytes = new Uint8Array(binary.length);
-    for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
-    return new File([bytes],"LittleMew_RoyalInvitation.png",{type:"image/png"});
-  }
-
-  function drawRectLine(ctx,x,y,w,h,color="#c6b49b",lw=2) {
-    ctx.strokeStyle=color;ctx.lineWidth=lw;ctx.strokeRect(x,y,w,h);
-  }
-
-  async function drawInvitationArtwork(snapshot) {
-    const canvas = document.getElementById("invitation_share_canvas");
-    const share = document.getElementById("dossier_share");
-    const save = document.getElementById("dossier_save");
-    if (!canvas || !snapshot?.resultId) return;
-    if(canvas.dataset.ready === "yes" && canvas.dataset.seed === String(snapshot.seed)) return;
-    canvas.dataset.ready = "no";
-    canvas.dataset.seed = String(snapshot.seed);
-    if(share) share.disabled = true;
-    if(save) save.disabled = true;
+  async function shareResult(resultId) {
+    const title = resultTitle(resultId);
+    const url = new URL(`share/${resultId}.html`, location.href);
+    url.searchParams.set("v", "20261101-3");
+    const data = {title:"リトル・ミュー診断", text:`私は「${title}」でした。あなたはリトル・ミューのどの猫？`, url:url.toString()};
+    const status = location.hash === "#result_portal" ? document.getElementById("dossier_share_status") : document.querySelector(`#${resultId} .share-status`);
     try {
-      if (document.fonts?.ready) await document.fonts.ready;
-      const ctx=canvas.getContext("2d");
-      if(!ctx)throw Error("No canvas context");
-      const W=1080,H=1350;
-      ctx.clearRect(0,0,W,H);
-      const bg=ctx.createLinearGradient(0,0,W,H);
-      bg.addColorStop(0,"#263238");bg.addColorStop(.55,"#534341");bg.addColorStop(1,"#222c31");
-      ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
-      const image = new Image();
-      image.src = "assets/" + resultParts(snapshot.resultId).series + ".webp";
-      try {
-        await new Promise((resolve,reject) => {
-          if(image.complete && image.naturalWidth) return resolve();
-          image.onload=resolve;
-          image.onerror=reject;
-        });
-        ctx.save();ctx.filter="blur(43px) saturate(0.48) brightness(0.75)";
-        ctx.globalAlpha=.45;
-        ctx.drawImage(image,-100,-90,1280,1500);
-        ctx.restore();
-      }catch(_){}
-      ctx.fillStyle="rgba(23,30,33,.52)";ctx.fillRect(0,0,W,H);
-      drawRectLine(ctx,48,48,984,1254,"rgba(221,199,164,.47)",2);
-      const paper=ctx.createLinearGradient(128,130,975,1200);
-      paper.addColorStop(0,"#fffdf7");paper.addColorStop(1,"#f5e9d4");
-      ctx.fillStyle=paper;ctx.fillRect(120,122,840,1096);
-      drawRectLine(ctx,133,135,814,1070,"#cfbea0",2);
-      drawRectLine(ctx,153,155,774,1030,"rgba(167,139,99,.28)",1);
-      const wax=ctx.createRadialGradient(523,250,8,540,260,64);
-      wax.addColorStop(0,"#aa5955");wax.addColorStop(.65,"#813432");wax.addColorStop(1,"#522425");
-      ctx.fillStyle=wax;ctx.beginPath();ctx.arc(540,261,59,0,Math.PI*2);ctx.fill();
-      ctx.strokeStyle="rgba(247,213,173,.6)";ctx.lineWidth=2;ctx.beginPath();ctx.arc(540,261,49,0,Math.PI*2);ctx.stroke();
-      textOnCanvas(ctx,"T Ⅲ R",540,275,'600 34px Georgia,serif',"#f0d9bc");
-      textOnCanvas(ctx,"BY COMMAND OF HIS MAJESTY THE KING",540,365,'23px Georgia,serif',"#977c57");
-      textOnCanvas(ctx,"国王陛下よりの招待状",540,448,'600 56px "Hiragino Mincho ProN","Yu Mincho",serif');
-      ctx.strokeStyle="#cab596";ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(225,484);ctx.lineTo(855,484);ctx.stroke();
-      textOnCanvas(ctx,"あなたへ",222,570,'35px "Hiragino Mincho ProN","Yu Mincho",serif',"#4a3f36","left");
-      const f='31px "Hiragino Mincho ProN","Yu Mincho",serif';
-      const lines=[
-        "国王ティボルト三世陛下の御意により、",
-        "あなたをリトル・ミュー王国へ",
-        "お招きいたします。",
-        "宮殿には、あなたのための",
-        "来訪者記録が用意されました。"
-      ];
-      lines.forEach((t,i)=>textOnCanvas(ctx,t,222,638+i*63,f,"#52483e","left"));
-      ctx.strokeStyle="#cdbb9d";ctx.beginPath();ctx.moveTo(222,953);ctx.lineTo(858,953);ctx.stroke();
-      textOnCanvas(ctx,"王室侍従長室",222,1002,'27px "Hiragino Mincho ProN","Yu Mincho",serif',"#655747","left");
-      textOnCanvas(ctx,"REGISTER  " + snapshot.provenance.registry,222,1042,'21px Georgia,serif',"#937954","left");
-      textOnCanvas(ctx,"封を開くと、この猫の記録が届きます。",220,1113,'21px "Hiragino Sans",sans-serif',"#81705f","left");
-      textOnCanvas(ctx,"ST. MILK PALACE  ·  LITTLE MEW KINGDOM",540,1182,'20px Georgia,serif',"#9b825e");
-      try {
-        if(typeof QRCode==="function"){
-          const qrDiv=document.createElement("div");
-          qrDiv.style.cssText="position:absolute;left:-9999px;width:198px;height:198px;overflow:hidden";
-          document.body.append(qrDiv);
-          try {
-            new QRCode(qrDiv,{text:takeHomeUrl(snapshot.resultId,snapshot),width:196,height:196,colorDark:"#413930",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.M});
-            const qrCanvas=qrDiv.querySelector("canvas");
-            const qrImg=qrDiv.querySelector("img");
-            let source=qrCanvas;
-            if(!source && qrImg){
-              if(!qrImg.complete) await new Promise(ok=>{qrImg.onload=ok;qrImg.onerror=ok;});
-              if(qrImg.naturalWidth)source=qrImg;
-            }
-            if(source){
-              ctx.fillStyle="#fff";ctx.fillRect(709,973,205,205);
-              ctx.drawImage(source,715,979,193,193);
-            }
-          }finally{qrDiv.remove();}
-        }
-      }catch(_){}
-      if(canvas.dataset.seed===String(snapshot.seed)){
-        canvas.dataset.ready="yes";
-        if(share)share.disabled=false;
-        if(save)save.disabled=false;
+      if (navigator.share) {
+        status.textContent = "共有メニューを開いています";
+        await navigator.share(data);
+        status.textContent = "共有メニューを開きました";
+        window.lmkTrack?.("share", {method:"native", result_id:resultId, result_name:title});
+      } else {
+        await navigator.clipboard.writeText(`${data.text}\n${data.url}`);
+        status.textContent = "結果とリンクをコピーしました";
+        window.lmkTrack?.("share", {method:"copy", result_id:resultId, result_name:title});
       }
-    }catch(err){
-      const status=document.getElementById("dossier_share_status");
-      if(status)status.textContent="招待状の画像を作成できませんでした。もう一度お試しください。";
-      if(share)share.disabled=false;
-      if(save)save.disabled=false;
+    } catch (error) {
+      if (error?.name === "AbortError") status.textContent = "";
+      else status.textContent = "共有できませんでした。もう一度お試しください";
     }
   }
 
-  function saveInvitationArtwork(snapshot) {
-    const canvas=document.getElementById("invitation_share_canvas");
-    const status=document.getElementById("dossier_share_status");
-    if(!canvas || canvas.dataset.ready!=="yes"){
-      if(status)status.textContent="招待状の画像がまだ用意できていません。";
-      return;
-    }
-    const a=document.createElement("a");
-    a.href=canvas.toDataURL("image/png");
-    a.download="LittleMew_RoyalInvitation.png";
-    document.body.append(a);a.click();a.remove();
-    if(status)status.textContent="招待状の画像を保存できます。";
-    window.lmkTrack?.("invitation_saved",{result_id:snapshot.resultId});
-  }
-
-  async function shareInvitation(snapshot) {
-    const status=document.getElementById("dossier_share_status");
-    const url=takeHomeUrl(snapshot.resultId,snapshot);
-    try {
-      const file=invitationFile();
-      if(!file){
-        if(status)status.textContent="招待状の画像がまだ用意できていません。";
-        return;
-      }
-      if(navigator.share && (!navigator.canShare || navigator.canShare({files:[file]}))){
-        if(status)status.textContent="招待状の共有メニューを開きます。";
-        await navigator.share({title:"リトル・ミュー王国からの招待状",text:"王国から招待状が届きました。封を開いてみてください。\n"+url,files:[file]});
-        if(status)status.textContent="共有メニューを開きました。";
-        window.lmkTrack?.("invitation_shared",{result_id:snapshot.resultId,method:"image"});
-      }else{
-        if(status)status.textContent="この端末では画像を直接共有できません。「画像を保存」をお使いください。";
-      }
-    }catch(error){
-      if(error?.name==="AbortError"){if(status)status.textContent="";}
-      else if(status)status.textContent="画像の共有に失敗しました。「画像を保存」をお試しください。";
-    }
-  }
-
-    function goBackOneQuestion() {
+  function goBackOneQuestion() {
     if (!answerHistory.length) return;
     const previous = answerHistory.pop();
     scores[previous.key] -= previous.weight;
