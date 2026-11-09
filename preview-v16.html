@@ -926,6 +926,26 @@ body{color:var(--noble-ink);font-family:var(--noble-sans);font-feature-settings:
  .dossier-v16 .dossier-entry{min-height:67px;padding:11px 3px}
 }
 @media(max-width:350px){.dossier-v16 .dossier-v16-row{grid-template-columns:1fr;gap:2px}.dossier-v16 .dossier-entry-text strong{font-size:16px}}
+
+/* V16 / rarity seal has presence without eclipsing the registered cat */
+.provenance-page .rarity-ledger{display:grid;grid-template-columns:minmax(82px,.27fr) minmax(0,1fr);align-items:center;column-gap:12px;row-gap:2px;text-align:left;padding:17px 19px 14px!important;max-width:490px;margin:20px auto 15px!important;min-height:0!important;border-radius:5px;box-shadow:none!important}
+.provenance-page .rarity-ledger .rarity-overline{grid-column:1/-1;display:block;text-align:left;margin:0 0 10px;font:400 9px/1.55 Georgia,serif;letter-spacing:.13em}
+.provenance-page .rarity-ledger .rarity-stars{grid-column:1;grid-row:2/4;display:block;margin:0;align-self:center;text-align:center;font:600 clamp(18px,4.4vw,22px)/1.5 Georgia,serif;letter-spacing:.03em;white-space:nowrap}
+.provenance-page .rarity-ledger .record-rarity{grid-column:2;grid-row:2;text-align:left!important;display:block;max-width:none;width:auto;margin:0;padding:0;font:600 clamp(17px,4.4vw,20px)/1.5 var(--noble-serif);letter-spacing:.01em}
+.provenance-page .rarity-ledger .rarity-rate{grid-column:2;grid-row:3;text-align:left;font:400 11px/1.65 var(--noble-sans);letter-spacing:.01em;margin:0}
+.provenance-page .rarity-ledger>p{grid-column:1/-1;margin:10px auto 0;max-width:29em;font:400 12px/1.85 var(--noble-sans);text-align:center}
+.provenance-page .rarity-ledger .rarity-probability{grid-column:1/-1;margin:11px 0 0;padding:7px 0 0;border-top:1px solid var(--record-line);max-width:100%;text-align:center}
+.provenance-page .rarity-ledger .rarity-probability summary{font-size:11.5px;line-height:1.6}
+.provenance-page .rarity-ledger .rarity-probability p{margin:8px auto 3px;font-size:12px;line-height:1.8}
+.provenance-page .visitor-field{padding:18px 3px!important}
+.provenance-page .visitor-field.coat-field{padding:21px 3px!important}
+.provenance-page .visitor-field .locality-scene,.provenance-page .visitor-field .family-scene{margin:8px 0 0;font:400 13.5px/1.92 var(--noble-sans);text-align:left;text-wrap:pretty}
+@media(max-width:520px){
+ .provenance-page .rarity-ledger{grid-template-columns:minmax(75px,.28fr) minmax(0,1fr);padding:16px 14px 13px!important;column-gap:9px}
+ .provenance-page .rarity-ledger .rarity-stars{font-size:18px}
+ .provenance-page .rarity-ledger .record-rarity{font-size:17px}
+ .provenance-page .visitor-field{padding:16px 2px!important}
+}
 </style>
 <link rel="stylesheet" href="assets/lmk-v15-editorial.css"><link rel="stylesheet" href="assets/typography-v13.css?v=20261109-13"><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script><script src="assets/kingdom-notes-v12.js"></script><!-- Open-world birthplace preview: sample localities are not a complete gazetteer. --></head><body><main><div class="brand">LITTLE MEW KINGDOM</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">A LITTLE MEW STORY</div>
