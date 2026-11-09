@@ -1,0 +1,67 @@
+/* LMK XVI · FINAL EDITORIAL LAYER
+   Applied AFTER previous experimental styles. One dossier subject, one portrait title.
+   The CSS below intentionally avoids altering quiz logic or lore data. */
+#result_portal .dossier-cover.dossier-v16{
+ background:linear-gradient(151deg,#fffdf9,#faf4e9)!important;
+ padding:clamp(26px,5.4vw,41px) clamp(21px,5.8vw,40px)!important;
+ min-height:0!important;
+}
+#result_portal .dossier-v16 .dossier-document-head{padding-bottom:20px}
+#result_portal .dossier-v16 .dossier-topline{display:flex;justify-content:space-between;margin:0 auto 23px;gap:10px;text-align:left;font:400 9px/1.5 Georgia,serif;letter-spacing:.09em;color:#958062}
+#result_portal .dossier-v16 .dossier-crest{display:block;color:#b49b75;font-size:20px;line-height:1;margin:0 auto 16px}
+#result_portal .dossier-v16 .dossier-overline{margin:0 auto 8px;font:400 10px/1.55 Georgia,serif;letter-spacing:.17em;color:#968064}
+#result_portal .dossier-v16 .portal-heading{font:600 clamp(27px,6vw,33px)/1.48 var(--royal-serif);letter-spacing:.017em;max-width:none;margin:6px auto 9px;color:#42362e}
+#result_portal .dossier-v16 .dossier-number{margin:0 auto;font:400 10px/1.6 Georgia,serif;letter-spacing:.09em;color:#a18c70}
+#result_portal .dossier-v16 .dossier-v16-identity{max-width:490px;padding:21px 6px 0;margin:0 auto;border-top:1px solid #d3c0a5}
+#result_portal .dossier-v16 .dossier-v16-eyebrow{margin:0 auto 14px;font:400 12px/1.7 var(--royal-serif);letter-spacing:.02em;color:#90775d}
+#result_portal .dossier-v16 .dossier-v16-record{display:block;max-width:425px;margin:0 auto;padding:0}
+#result_portal .dossier-v16 .dossier-v16-row{display:grid;grid-template-columns:92px minmax(0,1fr);gap:12px;align-items:baseline;padding:11px 1px;text-align:left}
+#result_portal .dossier-v16 .dossier-v16-row+.dossier-v16-row{border-top:1px solid rgba(209,190,163,.58)}
+#result_portal .dossier-v16 .dossier-v16-row dt{font:500 11px/1.7 var(--royal-sans);letter-spacing:0;color:#96826d}
+#result_portal .dossier-v16 .dossier-v16-row dd{margin:0;min-width:0;max-width:100%;font:400 14.5px/1.7 var(--royal-serif);color:#483a31;text-align:left;letter-spacing:0;word-break:normal;overflow-wrap:break-word;text-wrap:pretty}
+#result_portal .dossier-v16 #dossier_subject_coat{display:block;width:auto;max-width:100%;margin:0;font:600 17px/1.62 var(--royal-serif)!important;letter-spacing:.01em!important;color:#483a31!important;text-align:left!important}
+#result_portal .dossier-v16 #dossier_subject_origin{display:block;font:400 14px/1.77 var(--royal-serif)!important;color:#594c40;text-align:left!important}
+#result_portal .dossier-v16 .dossier-v16-portrait{display:block;max-width:490px;margin:15px auto 0;padding:23px 9px 26px;border-top:1px solid #d3c0a5;border-bottom:1px solid #d3c0a5;background:transparent;text-align:center}
+#result_portal .dossier-v16 .dossier-v16-portrait p{margin:0 auto 11px;color:#90775d;font:400 12px/1.72 var(--royal-serif);letter-spacing:0;text-align:center}
+#result_portal .dossier-v16 .dossier-v16-portrait h2{max-width:19em;margin:0 auto;font:600 clamp(24px,5.5vw,28px)/1.51 var(--royal-serif)!important;color:#7a4a4c!important;letter-spacing:.017em!important;text-align:center;word-break:normal;overflow-wrap:break-word;text-wrap:balance}
+#result_portal .dossier-v16 .dossier-index{max-width:490px;margin:15px auto 0;border:0!important}
+#result_portal .dossier-v16 .dossier-entry{display:grid;grid-template-columns:26px minmax(0,1fr) 16px;gap:13px;align-items:center;min-height:72px;padding:12px 4px;border:0;background:none;text-align:left}
+#result_portal .dossier-v16 .dossier-entry+.dossier-entry{border-top:1px solid #e2d4c0}
+#result_portal .dossier-v16 .dossier-numeral{align-self:center;color:#a58a64;font:400 20px/1 Georgia,serif}
+#result_portal .dossier-v16 .dossier-entry-text small{display:block;color:#a18a6c;font:400 9px/1.6 Georgia,serif;letter-spacing:.15em}
+#result_portal .dossier-v16 .dossier-entry-text strong{display:block;margin:3px auto 0;color:#514235;font:500 17px/1.55 var(--royal-serif)}
+#result_portal .dossier-v16 .dossier-chevron{color:#ac9474;font-size:23px}
+#result_portal .dossier-v16 .invitation-share{max-width:490px;margin:15px auto 0!important}
+#result_portal .dossier-v16 .invitation-share-toggle{padding:17px 41px 17px 19px;min-height:76px}
+#result_portal .dossier-v16 .invitation-share-toggle strong{font:600 17px/1.53 var(--royal-serif)}
+#result_portal .dossier-v16 .invitation-share-toggle small{font-size:11px}
+#result_portal .dossier-v16 .portal-restart{display:inline-block;margin:23px auto 0;font:400 12px/1.7 var(--royal-sans);color:#987c5b}
+.provenance-page .rarity-ledger{display:grid!important;grid-template-columns:minmax(82px,.27fr) minmax(0,1fr);align-items:center;column-gap:11px;row-gap:3px;max-width:490px;margin:17px auto 15px!important;padding:16px 19px 13px!important;min-height:0!important;text-align:left!important;border-radius:5px;box-shadow:none!important}
+.provenance-page .rarity-ledger .rarity-overline{grid-column:1/-1;display:block;margin:0 0 9px;text-align:left;font:400 9px/1.5 Georgia,serif;letter-spacing:.14em}
+.provenance-page .rarity-ledger .rarity-stars{grid-column:1;grid-row:2/4;margin:0;font:600 20px/1.5 Georgia,serif;letter-spacing:.02em;text-align:center;white-space:nowrap}
+.provenance-page .rarity-ledger .record-rarity{grid-column:2;grid-row:2;width:auto;max-width:none;margin:0;padding:0;font:600 18px/1.5 var(--royal-serif);text-align:left!important}
+.provenance-page .rarity-ledger .rarity-rate{grid-column:2;grid-row:3;margin:0;font:400 11px/1.65 var(--royal-sans);text-align:left!important;letter-spacing:0}
+.provenance-page .rarity-ledger>p{grid-column:1/-1;max-width:32em;margin:8px auto 0;font:400 12px/1.86 var(--royal-sans);text-align:center}
+.provenance-page .rarity-ledger .rarity-probability{grid-column:1/-1;margin:9px 0 0;padding:6px 0 0;border-top:1px solid var(--record-line);text-align:center}
+.provenance-page .rarity-ledger .rarity-probability summary{font-size:11.5px;padding:5px;line-height:1.5}
+@media(max-width:520px){
+ #result_portal .dossier-cover.dossier-v16{padding:26px 20px 27px!important}
+ #result_portal .dossier-v16 .dossier-topline{font-size:8px;letter-spacing:.055em;margin-bottom:21px}
+ #result_portal .dossier-v16 .portal-heading{font-size:clamp(25px,6.7vw,29px)}
+ #result_portal .dossier-v16 .dossier-v16-identity{padding:20px 3px 0}
+ #result_portal .dossier-v16 .dossier-v16-eyebrow{font-size:11.5px;margin-bottom:10px}
+ #result_portal .dossier-v16 .dossier-v16-row{grid-template-columns:88px minmax(0,1fr);gap:11px;padding:10px 1px}
+ #result_portal .dossier-v16 .dossier-v16-row dt{font-size:10.5px}
+ #result_portal .dossier-v16 .dossier-v16-row dd{font-size:14px}
+ #result_portal .dossier-v16 #dossier_subject_coat{font-size:17px!important}
+ #result_portal .dossier-v16 .dossier-v16-portrait{margin-top:13px;padding:20px 7px 23px}
+ #result_portal .dossier-v16 .dossier-v16-portrait h2{font-size:clamp(22px,5.6vw,25px)!important}
+ #result_portal .dossier-v16 .dossier-entry{min-height:68px;padding:11px 3px}
+ .provenance-page .rarity-ledger{grid-template-columns:minmax(73px,.28fr) minmax(0,1fr);padding:15px 13px 12px!important;column-gap:9px}
+ .provenance-page .rarity-ledger .rarity-stars{font-size:18px}
+ .provenance-page .rarity-ledger .record-rarity{font-size:17px}
+}
+@media(max-width:350px){
+ #result_portal .dossier-v16 .dossier-v16-row{grid-template-columns:1fr;gap:1px}
+ #result_portal .dossier-v16 .dossier-entry-text strong{font-size:16px}
+}
