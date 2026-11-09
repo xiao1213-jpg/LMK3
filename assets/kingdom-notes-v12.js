@@ -1378,7 +1378,8 @@ window.LMK_KINGDOM_NOTES_V12 = {
         10,
         11,
         14,
-        15
+        15,
+        12
       ],
       [
         1,
