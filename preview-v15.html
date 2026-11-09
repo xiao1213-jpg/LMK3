@@ -2198,8 +2198,8 @@ body{color:var(--noble-ink);font-family:var(--noble-sans);font-feature-settings:
           image.onload=resolve;
           image.onerror=reject;
         });
-        ctx.save();ctx.filter="blur(43px) saturate(0.48) brightness(0.75)";
-        ctx.globalAlpha=.45;
+        ctx.save();ctx.filter="saturate(0.68) contrast(0.91) brightness(0.96)";
+        ctx.globalAlpha=.22;
         ctx.drawImage(image,-100,-90,1280,1500);
         ctx.restore();
       }catch(_){}
