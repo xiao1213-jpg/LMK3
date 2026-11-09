@@ -534,6 +534,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 .result-page .insight-text,.result-page .score-note{line-height:1.85;letter-spacing:0}
 .result-page .path-step b{line-height:1.6}
 @supports(text-wrap:pretty){.royal-letter-body,.result-page .desc p,.dossier-preface{text-wrap:pretty}}
+
+/* The original gallery illustration is a hazy atmosphere, never a literal cat portrait. */
+.result-page .portrait-art{height:149px;margin-bottom:31px}
+.result-page .portrait-art img{filter:blur(21px) saturate(.52) brightness(1.10)!important;opacity:.39!important;transform:scale(1.14)}
+.result-page .portrait-art::after{background:linear-gradient(90deg,#fffdf9 0%,rgba(255,253,249,.43) 31%,rgba(255,253,249,.43) 69%,#fffdf9 100%)}
+.result-page .portrait-art .portrait-medallion{bottom:12px;opacity:.77}
+@media(max-width:520px){.result-page .portrait-art{height:130px}}
 </style><script src="assets/qrcode.min.js"></script><script src="assets/config.js"></script><script src="assets/analytics.js"></script></head><body><main><div class="brand">LITTLE MEW DIAGNOSIS</div><section id="start_page" class="page "><div class="card">
 <div class="kicker">LITTLE MEW</div>
 <div class="cat">🐈</div>
@@ -569,13 +576,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
 <p class="dossier-overline">ROYAL VISITOR'S DOSSIER</p>
 <h1 class="portal-heading">王室来訪者一件簿</h1>
 <p class="dossier-number" id="dossier_number">REGISTER · LMK</p>
-<p class="dossier-preface">王室に届いた九つの答えから、<br>一匹の猫の記録が整いました。</p>
+<p class="dossier-preface">王国でのあなたが、一匹の猫として<br>この一冊に記されています。</p>
 <div class="dossier-subject" aria-label="王国に招かれた猫"><span class="dossier-subject-kicker">THE INVITED CAT</span><strong id="dossier_subject_coat"></strong><span class="dossier-subject-origin" id="dossier_subject_origin"></span><span class="dossier-subject-separator" aria-hidden="true">✦</span><span class="dossier-subject-caption">この猫の肖像に与えられた題</span><b id="dossier_subject_portrait"></b></div>
 <div class="dossier-index" aria-label="同封の記録">
 <button class="dossier-entry" id="open_portrait" type="button"><span class="dossier-numeral">Ⅰ</span><span class="dossier-entry-text"><small>ROYAL PORTRAIT GALLERY</small><strong>肖像の頁</strong><em>あなたの感性から描かれた肖像題。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
 <button class="dossier-entry" id="open_registration" type="button"><span class="dossier-numeral">Ⅱ</span><span class="dossier-entry-text"><small>GENERAL REGISTER OFFICE</small><strong>来歴の頁</strong><em>この猫の毛並み、生まれ、家の記録。</em></span><span class="dossier-chevron" aria-hidden="true">›</span></button>
 </div>
-<p class="dossier-footnote">肖像は、あなたが選んだ九つの答えから。<br>来歴は、王国の土地と家々の記録から。</p>
+<p class="dossier-footnote">肖像は九つの答えから。来歴は王国の記録から。</p>
 <section class="invitation-share" id="invitation_share_section" aria-label="招待状を持ち帰る"><span class="invitation-share-label">A LETTER TO KEEP</span><h2>この招待状を、手元に。</h2><p>セント・ミルク宮殿から届いた一通を、画像で残せます。</p><div class="invitation-canvas-wrap"><canvas id="invitation_share_canvas" width="1080" height="1350" role="img" aria-label="国王陛下からの招待状を描いた共有画像"></canvas></div><div class="invitation-share-actions"><button type="button" id="dossier_share" class="quiet-action primary">招待状を共有</button><button type="button" id="dossier_save" class="quiet-action">画像を保存</button></div><p class="share-status" id="dossier_share_status" aria-live="polite"></p></section>
 <a class="portal-restart" href="#start_page">最初から診断する</a>
 </div></section>
@@ -1461,7 +1468,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     const number = document.getElementById("dossier_number");
     if (number) number.textContent = "REGISTER · " + snapshot.provenance.registry;
     document.getElementById("dossier_subject_coat").textContent = snapshot.provenance.coat;
-    document.getElementById("dossier_subject_origin").textContent = snapshot.provenance.birthplace + "生まれ";
+    document.getElementById("dossier_subject_origin").textContent = snapshot.provenance.birthplace + "に生まれた猫";
     document.getElementById("dossier_subject_portrait").textContent = "《" + resultTitle(snapshot.resultId) + "》";
     if (!isStoreMode) void drawInvitationArtwork(snapshot);
     document.getElementById("open_portrait").onclick = () => {
@@ -1686,6 +1693,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     // The single transfer/QR card belongs to the dossier cover, not the portrait.
     page.querySelector(".take-home-card")?.remove();
 
+    card.querySelector(".result-actions")?.remove();
     let actions = card.querySelector(".result-actions");
     if (!actions) {
       actions = document.createElement("div");
