@@ -1262,7 +1262,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans CJK
     const heirloom = pick(family[2],random);
     const probability = (coatEntry[1]/100) * (region.weight/100) * birthplaceProbability * familyProbability * titleProbability * (1/family[2].length);
     const oneIn = Math.max(1,Math.round(1/probability));
-    const tier = probability >= .00003811764705882352 ? "ivory" : probability >= .0000108 ? "silver" : probability >= .0000021176470588235296 ? "gold" : "crown";
+    const tier = probability >= .00008012903225806451 ? "ivory" : probability >= .00001689171974522293 ? "silver" : probability >= .0000027547826086956524 ? "gold" : "crown";
     return {seed:seed >>> 0,coat,coatEpithet:coatEpithets[coat] || `${coat}の猫`,region:region.name,regionId:region.id,birthplace,birthplaceIndex,placeTag:place.tag,placeScene:place.scene,family:familyName,familyIndex,dataVersion:12,heirloom,registry:registryNumber(seed),probability,oneIn,tier};
   }
 
