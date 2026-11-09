@@ -1,5 +1,5 @@
 name: LMK v14 noble typography QA
-# Validate center alignment without relying on unmounted dynamic result fields
+# Re-check one-line royal cypher and nobly centered typography at narrow widths
 on:
   push:
     paths:
