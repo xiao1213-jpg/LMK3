@@ -1,0 +1,9 @@
+{
+  "errors": [
+    {
+      "fatal": "Error: page.evaluate: TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.\n    at eval (eval at evaluate (:370:30), <anonymous>:4:662)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "stack": "page.evaluate: TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.\n    at eval (eval at evaluate (:370:30), <anonymous>:4:662)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at shot (/home/runner/work/LMK3/LMK3/qa/lmk-v14-visual.mjs:16:30)\n    at async run (/home/runner/work/LMK3/LMK3/qa/lmk-v14-visual.mjs:26:3)\n    at async file:///home/runner/work/LMK3/LMK3/qa/lmk-v14-visual.mjs:45:5"
+    }
+  ],
+  "results": []
+}
