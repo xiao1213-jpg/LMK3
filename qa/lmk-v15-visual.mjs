@@ -79,6 +79,16 @@ async function run(width,height,mode="mobile"){
       document.getElementById("dossier_subject_portrait").textContent=window.__displayFixture.portrait;
     });
   }
+  if(mode==="mobile" && width===390){
+    await page.locator(".invitation-share-toggle").click();
+    await page.waitForFunction(()=>document.querySelector("#invitation_share_canvas")?.dataset.ready==="yes",null,{timeout:12000});
+    await shot("03-share");
+    const data=await page.evaluate(()=>{
+      const c=document.getElementById("invitation_share_canvas");
+      return {ready:c.dataset.ready,width:c.width,height:c.height,disabled:document.getElementById("dossier_share").disabled};
+    });
+    if(!data.ready || data.width!==1080 || data.height!==1350 || data.disabled) errors.push({name:"03-share",reason:"invitation image unavailable",data});
+  }
   await page.locator("#open_portrait").click();
   await shot("04-portrait");
   await page.goto(url.replace("#start_page","#result_portal"),{waitUntil:"domcontentloaded",timeout:30000});
