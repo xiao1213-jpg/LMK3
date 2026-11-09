@@ -15,8 +15,9 @@ async function run(width,height,mode="mobile"){
     await page.waitForTimeout(250);
     const metrics=await page.evaluate(()=>{
        const active=document.querySelector(location.hash);
+       const alignment=selector=>{const el=document.querySelector(selector);return el?getComputedStyle(el).textAlign:"not-rendered";};
        const visible=active?.getBoundingClientRect();
-       return {route:location.hash,viewport:innerWidth,scrollWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,activeWidth:visible?.width,font:getComputedStyle(document.body).fontFamily,activeHeight:visible?.height,align:{start:getComputedStyle(document.querySelector("#start_page .intro")).textAlign,letter:getComputedStyle(document.querySelector(".royal-letter-body.ceremonial-lines")).textAlign,thesis:getComputedStyle(document.querySelector(".result-page .result-thesis")).textAlign,guide:getComputedStyle(document.querySelector(".result-page .guide-story-scene")||document.querySelector(".guide-story-heading")).textAlign,coat:getComputedStyle(document.querySelector(".provenance-page .coat-field")).textAlign}};
+       return {route:location.hash,viewport:innerWidth,scrollWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,activeWidth:visible?.width,font:getComputedStyle(document.body).fontFamily,activeHeight:visible?.height,align:{start:alignment("#start_page .intro"),letter:alignment(".royal-letter-body.ceremonial-lines"),thesis:alignment(".result-page .result-thesis"),guide:alignment(".result-page .guide-story-scene"),coat:alignment(".provenance-page .coat-field")}};
     });
     results.push({name,width,height,mode,...metrics});
     if(metrics.scrollWidth>metrics.viewport+1) errors.push({name,width,mode,reason:"horizontal overflow",metrics});
