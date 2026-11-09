@@ -849,7 +849,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
   const coatPool = [
     ["キジトラ",16],["キジシロ",12],["チャトラ",11],["チャシロ",6],["サバトラ",9],["サバシロ",6],
     ["クロ",9],["シロ",8],["グレー",5],["グレーシロ",4],["ハチワレ",6],["ミケ",4],["サビ",2],
-    ["ムギワラ",.8],["クリーム",.6],["ポイント",.4],["ブチ",.15],["パステルミケ",.025],["パステルサビ",.025]
+    ["ムギワラ",.8],["クリーム",.6],["ポイント",.4],["シミツキ",.15],["パステルトビ",.05]
   ];
 
   const coatEpithets = {
@@ -869,9 +869,8 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
     "ムギワラ":"淡い茶と黒が、繊細な縞を描く",
     "クリーム":"淡い金色が、毛先にふんわり広がる",
     "ポイント":"明るい毛色に、顔や先端の濃淡が映える",
-    "ブチ":"明るい毛並みに、小さな色模様が散る",
-    "パステルミケ":"淡い三色が、水彩のように重なる",
-    "パステルサビ":"柔らかな灰と薄茶が、細やかに混じる"
+    "シミツキ":"白い毛並みに、小さな斑点がぽつりと浮かぶ",
+    "パステルトビ":"淡い色模様が、白い毛並みにやさしく浮かぶ"
   };
 
   const titlePool = [
@@ -1509,7 +1508,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #bb9563;outline-offset:3p
     document.getElementById("record_tier_note").textContent = notes[p.tier];
     document.getElementById("registry_registration").textContent = "REGISTRY · " + p.registry;
     const title = resultTitle(snapshot.resultId);
-    const legacyCoats = {"キジ白":"キジシロ","茶トラ":"チャトラ","茶白":"チャシロ","サバ白":"サバシロ","黒":"クロ","白":"シロ","灰":"グレー","灰白":"グレーシロ","三毛":"ミケ","麦わら":"ムギワラ","しみ付き":"ブチ","淡色の二毛・三毛":"パステルミケ"};
+    const legacyCoats = {"キジ白":"キジシロ","茶トラ":"チャトラ","茶白":"チャシロ","サバ白":"サバシロ","黒":"クロ","白":"シロ","灰":"グレー","灰白":"グレーシロ","三毛":"ミケ","麦わら":"ムギワラ","しみ付き":"シミツキ","淡色の二毛・三毛":"パステルトビ","ブチ":"シミツキ","パステルミケ":"パステルトビ","パステルサビ":"パステルトビ"};
     const coatName = legacyCoats[p.coat] || p.coat;
     const coat = coatEpithets[coatName] || p.coatEpithet || "";
     const safe = text => String(text).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
