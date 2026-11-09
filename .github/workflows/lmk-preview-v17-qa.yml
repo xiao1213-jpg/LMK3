@@ -1,5 +1,5 @@
 name: LMK v17 noble typography QA
-# Test the single-cover headline, portrait in folio index and long names at 320–768px
+# Verify the kiosk QR after moving it outside the two-record folio index
 on:
   push:
     paths:
