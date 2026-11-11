@@ -1,5 +1,5 @@
 import {seriesSeal} from './ornaments.js';
-import {esc,button,startTemplate,envelopeTemplate,letterTemplate,dossierTemplate,historyTemplate} from './templates.js?v=20261111-mystique';
+import {esc,button,startTemplate,envelopeTemplate,letterTemplate,dossierTemplate,historyTemplate} from './templates.js?v=20261112-record-seal';
 import {questionAt} from './questions.js?v=20261110-editorial';
 import {classify,encode,decode,presentedOrder,isLegacyRecord} from './engine.js?v=20261111-independent-draw';
 import {freshSeed} from './random.js?v=20261111-independent-draw';

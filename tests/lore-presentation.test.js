@@ -31,6 +31,8 @@ const portrait={series:'rebel',title:'月影の反逆者'};
 const dossier=dossierTemplate(ordinary,portrait,false);
 assert.ok(dossier.includes('六つの答えから、あなたに重なった一枚'));
 assert.ok(dossier.includes('王国から届いた、ひとつきりの生まれの記録'));
+assert.ok(dossier.includes('provenance-seal'));
+assert.ok(!dossier.includes('record-number">Ⅱ'));
 assert.ok(!dossier.includes('回答の振り返り'));
 const letter=letterTemplate();
 assert.ok(letter.includes('六つの答えから'));

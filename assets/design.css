@@ -81,7 +81,8 @@ footer {text-align:center;font-size:11px;color:var(--muted);padding:24px 12px 34
 .record-heading {display:flex;align-items:center;gap:12px}
 .record-heading .series-seal {width:30px;height:30px;flex:none}
 .record-heading .series-seal .ornament {width:20px;height:20px}
-.record-number {font:19px Georgia,serif;color:#998966;flex:none;min-width:18px}
+.provenance-seal {display:inline-grid;place-items:center;width:30px;height:30px;flex:none;border:1px solid #d8c9aa;border-radius:50%;background:#f7f1e4;color:#8d7850}
+.provenance-ornament {display:block;width:20px;height:20px;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
 .record-name {font-size:12px;letter-spacing:.045em;color:var(--muted)}
 .record-arrow {margin-left:auto;font:22px Georgia,serif;color:#a39170;flex:none}
 .record-intro {display:block;font-size:12px;line-height:1.8;color:var(--muted);margin:10px 0 0 30px}
