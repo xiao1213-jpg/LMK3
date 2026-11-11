@@ -2,9 +2,9 @@
 // occupation, wealth, address, noble rank or the rarity of the full combination.
 export const rarity={
   story:{stars:'★☆☆☆',count:1,label:'王国の小さな物語',note:'不思議はまだ、日々の暮らしのすぐそばにあります。'},
-  whisper:{stars:'★★☆☆',count:2,label:'不思議の気配',note:'毛並みや土地、家の記憶のどこかに、古い気配が残っています。'},
+  whisper:{stars:'★★☆☆',count:2,label:'不思議の気配',note:'毛色や土地、家の記憶のどこかに、古い気配が残っています。'},
   legend:{stars:'★★★☆',count:3,label:'古い伝承との縁',note:'いくつものしるしが重なり、王国の伝承へ近づいています。'},
-  chronicle:{stars:'★★★★',count:4,label:'王国に残る奇譚',note:'毛並み、土地、家の記憶が深く響き合う、まれな来歴です。'}
+  chronicle:{stars:'★★★★',count:4,label:'王国に残る奇譚',note:'毛色、土地、家の記憶が深く響き合う、まれな来歴です。'}
 };
 
 const tierByCount={1:'story',2:'whisper',3:'legend',4:'chronicle'};
@@ -17,7 +17,7 @@ export function coatMystique(rate){
 }
 
 function signForCoat(points){
-  return ['', '少し珍しい毛並み', '珍しい毛並み', '王国でもめったに見ない毛並み'][points];
+  return ['', '少し珍しい毛色', '珍しい毛色', '王国でもめったに見ない毛色'][points];
 }
 function signForPlace(points){
   return ['', '土地に残る言い伝え', '王国の深層に触れる土地'][points];

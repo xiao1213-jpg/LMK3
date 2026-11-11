@@ -33,10 +33,12 @@ assert.ok(dossier.includes('六つの答えから、あなたに重なった一�
 assert.ok(dossier.includes('王国から届いた、ひとつきりの生まれの記録'));
 assert.ok(dossier.includes('provenance-seal'));
 assert.ok(!dossier.includes('record-number">Ⅱ'));
+assert.ok(dossier.includes('<span class="origin-label">毛色</span>'));
 assert.ok(!dossier.includes('回答の振り返り'));
 const letter=letterTemplate();
 assert.ok(letter.includes('六つの答えから'));
 assert.ok(letter.includes('そして王国は、もうひとつの記録を'));
+assert.ok(letter.includes('毛色や故郷'));
 const start=startTemplate();
 assert.ok(start.includes('国王陛下から、あなた宛ての招待状'));
 assert.ok(start.includes('招待状を受け取りにゆく'));
