@@ -145,6 +145,10 @@ details[open]>summary:after {content:' −'}
 .local-legend {margin-top:17px;padding:14px 15px 15px;border-left:2px solid #cdbd9f;background:#faf7ef}
 .local-legend>span {display:block;font-size:10px;line-height:1.8;letter-spacing:.045em;color:#827052}
 .history .local-legend p {margin-top:6px;font:13px/2 var(--serif);color:#5f5548}
+.history .special-birthplace>b {color:#675979}
+.history .special-birthplace .place-region {color:#827290}
+.history .special-birthplace .local-legend {border-left-color:#aa96b5;background:linear-gradient(135deg,#fbf8fc,#f6f2f8)}
+.history .special-birthplace .local-legend>span {color:#796486}
 .registrar-note .fine {text-align:left;font-size:12px}
 .standing-card {position:relative;padding:22px 17px 21px;margin:22px 0 16px;text-align:center;border:1px solid #d9cfbd;background:linear-gradient(145deg,#fffdf8,#f7f2e7);border-radius:4px}
 .standing-card:before {content:'';position:absolute;inset:6px;border:1px solid #e8dfcf;pointer-events:none}

@@ -21,6 +21,8 @@ for(const [regionId,records] of Object.entries(NON_NOBLE_MYSTIQUE)){
 
 const rareCoatAlone=assessMystique({coatRate:.05,place:{mystique:0,tags:[]},familyMeta:{level:0,itemLevel:0,tags:[],itemTags:[]}});
 assert.equal(rareCoatAlone.count,2,'One rare trait alone must never become a top record');
+const deepLandAlone=assessMystique({coatRate:40,place:{mystique:2,tags:['境界']},familyMeta:{level:0,itemLevel:0,tags:[],itemTags:[]}});
+assert.equal(deepLandAlone.count,2,'A P2 birthplace must not be presented as an ordinary one-star record');
 const allFour=assessMystique({coatRate:.4,place:{mystique:2,tags:['境界']},familyMeta:{level:1,itemLevel:1,tags:['境界'],itemTags:[]}});
 assert.equal(allFour.count,4);
 
@@ -39,7 +41,7 @@ for(let seed=0;seed<draws;seed++){
     assert.ok(rank);
     ranks[rank]??={n:0,sum:0};ranks[rank].n++;ranks[rank].sum+=stars;
   }
-  if(result.birthplace==='ベルグレイブ・ガーデンズ')bellgrave.add(stars);
+  if(result.birthplace==='ベルグレイヴ・ガーデンズ')bellgrave.add(stars);
   if(stars===4){
     assert.equal(result.mystiqueSources,4);
     assert.ok(result.mystiqueScore>=6);
@@ -50,10 +52,10 @@ for(let seed=0;seed<draws;seed++){
 }
 
 const ratios=Object.fromEntries(Object.entries(counts).map(([stars,count])=>[stars,count/draws]));
-assert.ok(ratios[1]>.34&&ratios[1]<.48,ratios);
-assert.ok(ratios[2]>.34&&ratios[2]<.48,ratios);
-assert.ok(ratios[3]>.10&&ratios[3]<.18,ratios);
-assert.ok(ratios[4]>.03&&ratios[4]<.07,ratios);
+assert.ok(ratios[1]>.47&&ratios[1]<.52,ratios);
+assert.ok(ratios[2]>.39&&ratios[2]<.45,ratios);
+assert.ok(ratios[3]>.05&&ratios[3]<.08,ratios);
+assert.ok(ratios[4]>.015&&ratios[4]<.03,ratios);
 assert.deepEqual([...bellgrave].sort(),[1,2,3],'A prestigious address must not force or permit four stars without land mystique');
 assert.ok(rareButQuiet,'Full-combination rarity must remain separate from the stars');
 

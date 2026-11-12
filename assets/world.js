@@ -1,8 +1,8 @@
-import {BIRTHPLACES_BY_REGION,REGION_GEOGRAPHY} from './geography.js?v=20261111-v6';
+import {BIRTHPLACES_BY_REGION,REGION_GEOGRAPHY,SPECIAL_BIRTHPLACE} from './geography.js?v=20261112-v12';
 import {describeLineage} from './heritage.js?v=20261110-lineage-records';
 import {HOUSEHOLD_PROFILES} from './households.js?v=20261111-extracted';
 import {mystiqueForHouse,mystiqueForNonNoble} from './mystique-data.js?v=20261111-mystique';
-import {assessMystique,combinationNote} from './rarity.js?v=20261111-mystique';
+import {assessMystique,combinationNote} from './rarity.js?v=20261112-geography-v12';
 
 const coatPool=[
   ['キジトラ',16],['キジシロ',12],['チャトラ',11],['チャシロ',6],['サバトラ',9],['サバシロ',6],
@@ -71,7 +71,12 @@ function generateProvenance(seed){
   const region=weightedPick(regionPool,random,item=>item.weight);
   const regionGeography=REGION_GEOGRAPHY[region.id];
   const places=BIRTHPLACES_BY_REGION[region.id];
-  const place=pick(places,random),birthplaceIndex=places.indexOf(place);
+  const ordinaryPlace=pick(places,random);
+  // The exceptional birthplace uses an independent roll so adding it does not
+  // perturb the coat, household or heirloom attached to an existing seed.
+  const specialBirthplace=mulberry32((normalized^0x4b4f484f)>>>0)()<SPECIAL_BIRTHPLACE.replacementRate;
+  const place=specialBirthplace?SPECIAL_BIRTHPLACE:ordinaryPlace;
+  const birthplaceIndex=specialBirthplace?-1:places.indexOf(ordinaryPlace);
   const familyChoice=weightedPick(region.families.map((weight,index)=>({weight,index})),random,item=>item.weight);
   const familyIndex=familyChoice.index;
   const profile=HOUSEHOLD_PROFILES[region.id]?.[familyIndex];
@@ -97,14 +102,18 @@ function generateProvenance(seed){
     detailProbability=.5;
   }
 
-  const probability=(coatRate/100)*(region.weight/100)*(1/places.length)*(familyChoice.weight/100)*detailProbability;
+  const placeRate=specialBirthplace?SPECIAL_BIRTHPLACE.replacementRate:(1-SPECIAL_BIRTHPLACE.replacementRate)/places.length;
+  const probability=(coatRate/100)*(region.weight/100)*placeRate*(familyChoice.weight/100)*detailProbability;
   const oneIn=Math.max(1,Math.round(1/probability));
   const mystique=assessMystique({coatRate,place,familyMeta});
   return {
-    seed:normalized,registry:registryNumber(normalized),dataVersion:13,
+    seed:normalized,registry:registryNumber(normalized),dataVersion:14,
     coat,coatRate,coatEpithet:coatEpithets[coat]||`${coat}の猫`,
-    region:regionGeography.name,regionId:region.id,regionDescription:regionGeography.description,
+    region:specialBirthplace?place.regionName:regionGeography.name,
+    regionId:region.id,householdRegionId:region.id,birthplaceRegionId:place.regionId,
+    regionDescription:specialBirthplace?place.regionDescription:regionGeography.description,
     birthplace:place.name,birthplaceNumber:place.number,birthplaceIndex,
+    specialBirthplace,
     placeLegend:place.legend,placeScene:place.legend,placeMystique:place.mystique,placeTags:[...place.tags],
     family,familyIndex,familyScene,heirloom,itemIndex,houseId:house?.id||null,
     probability,oneIn,combinationNote:combinationNote(oneIn),

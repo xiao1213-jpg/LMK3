@@ -43,7 +43,9 @@ export function assessMystique({coatRate,place,familyMeta}){
   // Four stars require all four independent sources: coat, land, household
   // tradition and inherited object. Resonance strengthens them but is not a
   // fifth source. This prevents one very rare trait from becoming a jackpot.
-  const count=score>=6&&sourceCount===4?4:score>=5?3:score>=3?2:1;
+  // A P2 birthplace is itself a clear encounter with the Kingdom's deep
+  // mysteries, so it can never be presented as an ordinary one-star record.
+  const count=score>=6&&sourceCount===4?4:score>=5?3:(score>=3||land===2)?2:1;
   const foundations=[signForCoat(coat),signForPlace(land),signForFamily(family),signForItem(item)].filter(Boolean);
   const signs=[...foundations];
   if(resonance)signs.push(`土地と家伝に「${shared[0]}」の縁`);
