@@ -3,7 +3,7 @@ import {rarity} from '../assets/rarity.js';
 import {heritageProfiles,describeLineage} from '../assets/heritage.js';
 import {dossierTemplate,historyTemplate,letterTemplate,startTemplate} from '../assets/templates.js';
 import {stories} from '../assets/stories.js';
-import {invitationShare,invitationSharePayload,invitationCopyText} from '../assets/sharing.js';
+import {invitationShare,invitationSharePayload,invitationCopyText,invitationShareSearch} from '../assets/sharing.js';
 
 const {generateProvenance}=await import('../assets/world.js');
 
@@ -50,6 +50,8 @@ assert.ok(!start.includes('心象肖像を見つける'));
 
 const sharedUrl='https://example.test/index.html?mode=mobile#record=example';
 assert.equal(invitationShare.title,'私に届いた、王国からの招待状');
+assert.equal(invitationShare.text,'リトル・ミュー王国から、私宛てにこんな招待状が届きました。よかったら、そっと封を開いてみてください。');
+assert.equal(invitationShareSearch,'?mode=mobile&share=invitation-v2');
 assert.equal(invitationSharePayload(sharedUrl).url,sharedUrl);
 assert.equal(invitationCopyText(sharedUrl),`${invitationShare.text}\n${sharedUrl}`);
 

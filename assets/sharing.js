@@ -1,7 +1,9 @@
 export const invitationShare=Object.freeze({
   title:'私に届いた、王国からの招待状',
-  text:'リトル・ミュー王国から届いた、私への招待状はこれでした。'
+  text:'リトル・ミュー王国から、私宛てにこんな招待状が届きました。よかったら、そっと封を開いてみてください。'
 });
+
+export const invitationShareSearch='?mode=mobile&share=invitation-v2';
 
 export function invitationSharePayload(url){
   return {...invitationShare,url};

@@ -3,7 +3,7 @@ import {esc,button,startTemplate,envelopeTemplate,letterTemplate,dossierTemplate
 import {questionAt} from './questions.js?v=20261112-system-polish';
 import {classify,encode,decode,presentedOrder,isLegacyRecord} from './engine.js?v=20261111-independent-draw';
 import {freshSeed} from './random.js?v=20261111-independent-draw';
-import {invitationSharePayload,invitationCopyText} from './sharing.js?v=20261112-invitation-share';
+import {invitationSharePayload,invitationCopyText,invitationShareSearch} from './sharing.js?v=20261112-invitation-share-2';
 const app=document.querySelector('#app'),storeMode=new URLSearchParams(location.search).get('mode')==='store';
 
 let worldLoader,portraitLoader,diagnosisLoader,storyLoader,heritageLoader,rarityLoader;
@@ -32,7 +32,7 @@ function result(){return classify(record.answers,record.seed);}
 function portrait(portraits){return portraits.find(p=>p.id===result().id);}
 function openedLetter(){shell(letterTemplate(),'royal-letter');on('receive',()=>go('dossier'));}
 function letter(){shell(envelopeTemplate(),'cover arrival');on('unseal',openedLetter);}
-function resultURL(){const url=new URL('index.html',location.href);url.search='?mode=mobile';url.hash='record='+encode(record);return url.href;}
+function resultURL(){const url=new URL('index.html',location.href);url.search=invitationShareSearch;url.hash='record='+encode(record);return url.href;}
 function loadQRCode(){if(globalThis.QRCode)return Promise.resolve();if(!qrLoader)qrLoader=new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=new URL('./qrcode.min.js',import.meta.url);script.onload=resolve;script.onerror=()=>{qrLoader=null;reject(Error('QR library failed to load'));};document.head.append(script);});return qrLoader;}
 async function qr(target){try{await loadQRCode();new QRCode(target,{text:resultURL(),width:180,height:180,colorDark:'#414638',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M});}catch{target.textContent='QRを表示できませんでした。画面を再読み込みしてください。';}}
 async function dossier(){const [{generateProvenance},{portraits}]=await Promise.all([loadWorld(),loadPortraits()]);if(location.hash!=='#dossier'||!record)return;const w=generateProvenance(record.provenanceSeed),p=portrait(portraits);shell(dossierTemplate(w,p,storeMode),'dossier theme-'+p.series);on('read',()=>go('portrait'));on('history',()=>go('history'));on('again',()=>go('start'));if(storeMode)void qr(document.querySelector('#qr'));on('copy',copy);on('share',async()=>{try{if(navigator.share)await navigator.share(invitationSharePayload(resultURL()));else await copy();}catch(e){if(e.name!=='AbortError')document.querySelector('#status').textContent='共有できませんでした。招待状のリンクをコピーしてお試しください。';}});}
