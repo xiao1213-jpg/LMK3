@@ -3,7 +3,7 @@ import {rarity} from '../assets/rarity.js';
 import {heritageProfiles,describeLineage} from '../assets/heritage.js';
 import {dossierTemplate,historyTemplate,letterTemplate,startTemplate} from '../assets/templates.js';
 import {stories} from '../assets/stories.js';
-import {invitationShare,invitationSharePayload,invitationCopyText,invitationShareSearch} from '../assets/sharing.js';
+import {invitationShare,invitationSharePayload,invitationCopyText,invitationShareSearch,invitationResultURL} from '../assets/sharing.js';
 
 const {generateProvenance}=await import('../assets/world.js');
 
@@ -52,6 +52,12 @@ const sharedUrl='https://example.test/index.html?mode=mobile#record=example';
 assert.equal(invitationShare.title,'私に届いた、王国からの招待状');
 assert.equal(invitationShare.text,'リトル・ミュー王国から、私宛てにこんな招待状が届きました。よかったら、そっと封を開いてみてください。');
 assert.equal(invitationShareSearch,'?mode=mobile&share=invitation-v2');
+assert.equal(invitationResultURL('https://example.test/LMK3/?mode=store#dossier','abc'),'https://example.test/LMK3/index.html?mode=mobile&share=invitation-v2#record=abc');
+const storeDossier=dossierTemplate(ordinary,portrait,true);
+assert.ok(storeDossier.includes('TAKE YOUR INVITATION HOME'));
+assert.ok(storeDossier.includes('あなた宛ての招待状をそのまま持ち帰れます'));
+assert.ok(storeDossier.includes('この店頭端末に結果は残りません'));
+assert.ok(!storeDossier.includes('招待状を共有する'));
 assert.equal(invitationSharePayload(sharedUrl).url,sharedUrl);
 assert.equal(invitationCopyText(sharedUrl),`${invitationShare.text}\n${sharedUrl}`);
 

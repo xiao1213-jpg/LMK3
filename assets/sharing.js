@@ -5,6 +5,13 @@ export const invitationShare=Object.freeze({
 
 export const invitationShareSearch='?mode=mobile&share=invitation-v2';
 
+export function invitationResultURL(base,token){
+  const url=new URL('index.html',base);
+  url.search=invitationShareSearch;
+  url.hash=`record=${token}`;
+  return url.href;
+}
+
 export function invitationSharePayload(url){
   return {...invitationShare,url};
 }
