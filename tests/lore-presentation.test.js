@@ -3,6 +3,7 @@ import {rarity} from '../assets/rarity.js';
 import {heritageProfiles,describeLineage} from '../assets/heritage.js';
 import {dossierTemplate,historyTemplate,letterTemplate,startTemplate} from '../assets/templates.js';
 import {stories} from '../assets/stories.js';
+import {invitationShare,invitationSharePayload,invitationCopyText} from '../assets/sharing.js';
 
 const {generateProvenance}=await import('../assets/world.js');
 
@@ -35,6 +36,9 @@ assert.ok(dossier.includes('provenance-seal'));
 assert.ok(!dossier.includes('record-number">Ⅱ'));
 assert.ok(dossier.includes('<span class="origin-label">毛色</span>'));
 assert.ok(!dossier.includes('回答の振り返り'));
+assert.ok(dossier.includes('届いた招待状を分かち合う'));
+assert.ok(dossier.includes('招待状を共有する'));
+assert.ok(dossier.includes('招待状のリンクをコピー'));
 const letter=letterTemplate();
 assert.ok(letter.includes('六つの答えから'));
 assert.ok(letter.includes('そして王国は、もうひとつの記録を'));
@@ -43,6 +47,11 @@ const start=startTemplate();
 assert.ok(start.includes('国王陛下から、あなた宛ての招待状'));
 assert.ok(start.includes('招待状を受け取りにゆく'));
 assert.ok(!start.includes('心象肖像を見つける'));
+
+const sharedUrl='https://example.test/index.html?mode=mobile#record=example';
+assert.equal(invitationShare.title,'私に届いた、王国からの招待状');
+assert.equal(invitationSharePayload(sharedUrl).url,sharedUrl);
+assert.equal(invitationCopyText(sharedUrl),`${invitationShare.text}\n${sharedUrl}`);
 
 const drawA=generateProvenance(41),drawB=generateProvenance(42);
 assert.notDeepEqual(drawA,drawB);

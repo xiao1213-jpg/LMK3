@@ -78,24 +78,24 @@ footer {text-align:center;font-size:11px;color:var(--muted);padding:24px 12px 34
 .registry {font:10px/1.8 Georgia,serif;color:var(--muted);text-align:center;letter-spacing:.07em;margin:9px auto 22px}
 .dossier-preface {text-align:center;font:14px/1.95 var(--serif);color:#736652;margin:23px auto 28px}
 .records-index {border-top:1px solid var(--line)}
-.record-entry {display:block;width:100%;text-align:left;padding:25px 0;border-bottom:1px solid var(--line)}
+.record-entry {--record-indent:44px;display:block;width:100%;text-align:left;padding:25px 0;border-bottom:1px solid var(--line)}
 .portrait-entry {background:linear-gradient(90deg,var(--series-light),transparent 72%);background-size:100% 1px;background-position:left bottom;background-repeat:no-repeat}
 .origin-entry {background:linear-gradient(90deg,var(--provenance-light),transparent 74%)}
-.record-heading {display:flex;align-items:center;gap:12px}
-.record-heading .series-seal {width:30px;height:30px;flex:none}
-.record-heading .series-seal .ornament {width:20px;height:20px}
-.provenance-seal {display:inline-grid;place-items:center;width:30px;height:30px;flex:none;border:1px solid var(--provenance-line);border-radius:50%;background:var(--provenance-light);color:var(--provenance-deep)}
-.provenance-ornament {display:block;width:20px;height:20px;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
-.record-name {font-size:12px;letter-spacing:.045em;color:var(--muted)}
+.record-heading {display:flex;align-items:center;gap:12px;min-height:32px}
+.record-heading .series-seal {width:32px;height:32px;flex:none}
+.record-heading .series-seal .ornament {width:19px;height:19px;stroke-width:1.35}
+.provenance-seal {display:inline-grid;place-items:center;width:32px;height:32px;flex:none;border:1px solid var(--provenance-line);border-radius:50%;background:var(--provenance-light);color:var(--provenance-deep)}
+.provenance-ornament {display:block;width:17px;height:17px;stroke:currentColor;stroke-width:1.18;stroke-linecap:round;stroke-linejoin:round}
+.record-name {font:400 12.5px/1.7 var(--serif);letter-spacing:.045em;color:var(--muted)}
 .record-arrow {margin-left:auto;font:22px Georgia,serif;color:#a39170;flex:none}
-.record-intro {display:block;font-size:12px;line-height:1.8;color:var(--muted);margin:10px 0 0 30px}
-.record-portrait-title {display:block;font:400 28px/1.75 var(--serif);letter-spacing:.035em;font-feature-settings:'palt' 1,'kern' 1;color:var(--series-deep);margin:13px 0 14px 30px;overflow-wrap:break-word}
-.record-link {display:block;font-size:11px;line-height:1.8;color:#827052;margin-left:30px}
+.record-intro {display:block;font:400 12.5px/1.9 var(--serif);color:var(--muted);margin:11px 0 0 var(--record-indent);text-wrap:pretty}
+.record-portrait-title {display:block;font:400 clamp(24px,5vw,28px)/1.65 var(--serif);letter-spacing:.025em;font-feature-settings:'palt' 1,'kern' 1;color:var(--series-deep);margin:14px 0 15px var(--record-indent);overflow-wrap:break-word;text-wrap:balance}
+.record-link {display:block;font-size:11px;line-height:1.8;color:#827052;margin-left:var(--record-indent)}
 .origin-entry .record-link {color:var(--provenance-deep)}
 .record-link:after {content:'　›'}
 .record-entry:hover .record-link {text-decoration:underline;text-underline-offset:4px}
-.origin-values {display:grid;gap:9px;margin:17px 0 15px 30px}
-.origin-row {display:grid;grid-template-columns:6em minmax(0,1fr);gap:10px;font-size:13px;line-height:1.8}
+.origin-values {display:grid;gap:9px;margin:17px 0 15px var(--record-indent)}
+.origin-row {display:grid;grid-template-columns:6em minmax(0,1fr);gap:10px;font:400 13.5px/1.8 var(--serif)}
 .origin-label {font-size:11px;color:var(--muted);padding-top:1px}
 .origin-values strong {font-weight:400;overflow-wrap:break-word}
 .takehome {border:1px solid var(--line);padding:22px 18px;margin-top:28px;text-align:center;background:#f7f3e9}
@@ -222,10 +222,10 @@ details[open]>summary:after {content:' −'}
   .dossier-preface {font-size:13px;line-height:1.95;margin:22px auto 25px}
   .document-head {font-size:7px;letter-spacing:.04em;margin-bottom:22px}
   .record-entry {padding:22px 0}
+  .record-entry {--record-indent:42px}
   .record-heading {gap:10px}
-  .record-intro,.record-portrait-title,.record-link,.origin-values {margin-left:28px}
-  .record-portrait-title {font-size:25px;line-height:1.7}
-  .record-intro {font-size:11.5px}
+  .record-portrait-title {font-size:clamp(23px,6.7vw,25px);line-height:1.68}
+  .record-intro {font-size:12px}
   .origin-row {grid-template-columns:5.5em minmax(0,1fr);gap:8px;font-size:12px}
   .origin-label {font-size:10px}
     .art {height:104px}
