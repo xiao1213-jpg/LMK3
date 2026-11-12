@@ -1,5 +1,5 @@
 import {seriesSeal} from './ornaments.js';
-import {esc,button,startTemplate,envelopeTemplate,letterTemplate,dossierTemplate,historyTemplate} from './templates.js?v=20261112-geography-v12';
+import {esc,button,startTemplate,envelopeTemplate,letterTemplate,dossierTemplate,historyTemplate} from './templates.js?v=20261112-invitation-share';
 import {questionAt} from './questions.js?v=20261112-system-polish';
 import {classify,encode,decode,presentedOrder,isLegacyRecord} from './engine.js?v=20261111-independent-draw';
 import {freshSeed} from './random.js?v=20261111-independent-draw';
