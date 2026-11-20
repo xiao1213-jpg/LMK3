@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 import {rarity} from '../assets/rarity.js';
 import {heritageProfiles,describeLineage} from '../assets/heritage.js';
 import {dossierTemplate,historyTemplate,letterTemplate,startTemplate} from '../assets/templates.js';
@@ -62,6 +63,10 @@ assert.ok(storeDossier.includes('この店頭端末に結果は残りません')
 assert.ok(!storeDossier.includes('招待状を共有する'));
 assert.equal(invitationSharePayload(sharedUrl).url,sharedUrl);
 assert.equal(invitationCopyText(sharedUrl),`${invitationShare.text}\n${sharedUrl}`);
+const appSource=fs.readFileSync(new URL('../assets/app.js',import.meta.url),'utf8');
+const sharedRoute=appSource.slice(appSource.indexOf("if(route.startsWith('record='))"),appSource.indexOf("if(['letter'"));
+assert.ok(sharedRoute.includes('letter();'),'Shared records must begin at the sealed envelope');
+assert.ok(!sharedRoute.includes('openedLetter();'),'Shared records must not skip directly to the letter body');
 
 const drawA=generateProvenance(41),drawB=generateProvenance(42);
 assert.notDeepEqual(drawA,drawB);

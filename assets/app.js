@@ -213,7 +213,9 @@ function render(){
     record=decoded;
     saveRecord();
     history.replaceState(null,'','#letter');
-    openedLetter();
+    // Preserve the most important part of a shared invitation: the recipient
+    // opens the royal seal before seeing the letter inside.
+    letter();
     return;
   }
   if(['letter','dossier','portrait','history'].includes(route)&&!record){go('start');return;}
