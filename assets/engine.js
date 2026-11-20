@@ -1,4 +1,4 @@
-import {questionAt} from './questions.js?v=20261110-editorial';
+import {questionAt} from './questions.js?v=20261120-complete';
 export const VERSION=19;
 const validSeed=s=>Number.isInteger(s)&&s>=0&&s<=0xffffffff;
 export function classify(answers,seed){

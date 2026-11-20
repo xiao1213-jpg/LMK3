@@ -1,9 +1,9 @@
-import {seriesSeal} from './ornaments.js';
-import {esc,button,startTemplate,envelopeTemplate,letterTemplate,dossierTemplate,historyTemplate} from './templates.js?v=20261120-gacha-v12';
-import {questionAt} from './questions.js?v=20261112-system-polish';
-import {classify,encode,decode,presentedOrder,isLegacyRecord} from './engine.js?v=20261111-independent-draw';
-import {freshSeed} from './random.js?v=20261111-independent-draw';
-import {invitationSharePayload,invitationCopyText,invitationResultURL} from './sharing.js?v=20261112-ultimate';
+import {seriesSeal} from './ornaments.js?v=20261120-complete';
+import {esc,button,startTemplate,envelopeTemplate,letterTemplate,dossierTemplate,historyTemplate} from './templates.js?v=20261120-complete';
+import {questionAt} from './questions.js?v=20261120-complete';
+import {classify,encode,decode,presentedOrder,isLegacyRecord} from './engine.js?v=20261120-complete';
+import {freshSeed} from './random.js?v=20261120-complete';
+import {invitationSharePayload,invitationCopyText,invitationResultURL} from './sharing.js?v=20261120-complete';
 
 const app=document.querySelector('#app');
 const params=new URLSearchParams(location.search);
@@ -15,19 +15,19 @@ document.documentElement.dataset.mode=storeMode?'store':'mobile';
 if(storeMode)document.querySelector('.brand')?.insertAdjacentHTML('beforeend','<small>ROYAL RECEPTION DESK</small>');
 
 let worldLoader,portraitLoader,diagnosisLoader,storyLoader,heritageLoader,rarityLoader,qrLoader;
-const loadWorld=()=>worldLoader??=import('./world.js?v=20261120-gacha-v12').catch(error=>{worldLoader=null;throw error;});
-const loadPortraits=()=>portraitLoader??=import('./portraits.js?v=20261110-editorial').catch(error=>{portraitLoader=null;throw error;});
-const loadDiagnoses=()=>diagnosisLoader??=import('./diagnoses.js?v=20261110-content').catch(error=>{diagnosisLoader=null;throw error;});
-const loadStories=()=>storyLoader??=import('./stories.js?v=20261110-content').catch(error=>{storyLoader=null;throw error;});
-const loadHeritage=()=>heritageLoader??=import('./heritage.js?v=20261120-gacha-v12').catch(error=>{heritageLoader=null;throw error;});
-const loadRarity=()=>rarityLoader??=import('./rarity.js?v=20261120-gacha-v12').catch(error=>{rarityLoader=null;throw error;});
+const loadWorld=()=>worldLoader??=import('./world.js?v=20261120-complete').catch(error=>{worldLoader=null;throw error;});
+const loadPortraits=()=>portraitLoader??=import('./portraits.js?v=20261120-complete').catch(error=>{portraitLoader=null;throw error;});
+const loadDiagnoses=()=>diagnosisLoader??=import('./diagnoses.js?v=20261120-complete').catch(error=>{diagnosisLoader=null;throw error;});
+const loadStories=()=>storyLoader??=import('./stories.js?v=20261120-complete').catch(error=>{storyLoader=null;throw error;});
+const loadHeritage=()=>heritageLoader??=import('./heritage.js?v=20261120-complete').catch(error=>{heritageLoader=null;throw error;});
+const loadRarity=()=>rarityLoader??=import('./rarity.js?v=20261120-complete').catch(error=>{rarityLoader=null;throw error;});
 const preloadResults=()=>Promise.all([loadWorld(),loadPortraits()]);
 
 const independentSeed=other=>{const value=freshSeed();return value===other?(value+0x9e3779b9)>>>0:value;};
 let answers=Array(6).fill(undefined);
 let seed=freshSeed();
 let provenanceSeed=independentSeed(seed);
-let cursor=0,record=null,idleTimer;
+let cursor=0,record=null,idleTimer,idleDeadline=0,renderRun=0;
 
 function storageGet(key,persistent=false){try{return (persistent?localStorage:sessionStorage).getItem(key);}catch{return null;}}
 function storageSet(key,value,persistent=false){try{(persistent?localStorage:sessionStorage).setItem(key,value);}catch{}}
@@ -36,14 +36,23 @@ function clearSession(){storageRemove(STORAGE.progress);storageRemove(STORAGE.re
 function go(route){if(location.hash===`#${route}`)render();else location.hash=route;}
 function on(id,handler){document.getElementById(id)?.addEventListener('click',handler);}
 
+function resetStore(){
+  record=null;
+  clearSession();
+  idleDeadline=0;
+  go('start');
+}
+
 function armIdleReset(){
   clearTimeout(idleTimer);
-  if(!storeMode||!location.hash||location.hash==='#start')return;
-  idleTimer=setTimeout(()=>{record=null;clearSession();go('start');},STORE_IDLE_MS);
+  if(!storeMode||!location.hash||location.hash==='#start'){idleDeadline=0;return;}
+  idleDeadline=Date.now()+STORE_IDLE_MS;
+  idleTimer=setTimeout(resetStore,STORE_IDLE_MS);
 }
 
 function shell(content,className=''){
   app.innerHTML=`<article class="sheet ${className}">${content}</article>`;
+  app.removeAttribute('aria-busy');
   window.scrollTo({top:0,behavior:'auto'});
   const heading=app.querySelector('h1');
   if(heading){
@@ -55,7 +64,10 @@ function shell(content,className=''){
   armIdleReset();
 }
 
-for(const eventName of ['pointerdown','keydown','scroll'])window.addEventListener(eventName,()=>{if(storeMode)armIdleReset();},{passive:true});
+for(const eventName of ['pointerdown','keydown','touchstart','wheel'])window.addEventListener(eventName,()=>{if(storeMode)armIdleReset();},{passive:true});
+document.addEventListener('visibilitychange',()=>{
+  if(storeMode&&document.visibilityState==='visible'&&idleDeadline&&Date.now()>=idleDeadline)resetStore();
+});
 
 function restart(){
   answers=Array(6).fill(undefined);
@@ -72,10 +84,10 @@ function rememberProgress(){
   storageSet(STORAGE.progress,JSON.stringify({answers:answers.map(value=>value===undefined?null:value),seed,provenanceSeed,cursor}));
 }
 
-function saveRecord(){
+function saveRecord(persist=!storeMode){
   const value=JSON.stringify(record);
   storageSet(STORAGE.record,value);
-  if(!storeMode)storageSet(STORAGE.record,value,true);
+  if(persist)storageSet(STORAGE.record,value,true);
 }
 
 function start(){shell(startTemplate(storeMode),'cover opening');on('begin',restart);}
@@ -150,7 +162,7 @@ async function dossier(){
   shell(dossierTemplate(provenance,selectedPortrait,storeMode),`dossier theme-${selectedPortrait.series}`);
   on('read',()=>go('portrait'));
   on('history',()=>go('history'));
-  on('again',()=>{if(storeMode){record=null;clearSession();go('start');}else restart();});
+  on('again',()=>{if(storeMode)resetStore();else restart();});
   if(storeMode)void renderQRCode(document.querySelector('#qr'));
   on('copy',copyInvitation);
   on('share',shareInvitation);
@@ -166,8 +178,22 @@ async function shareInvitation(){
 }
 
 async function copyInvitation(){
+  const text=invitationCopyText(resultURL());
   try{
-    await navigator.clipboard.writeText(invitationCopyText(resultURL()));
+    let copied=false;
+    if(navigator.clipboard?.writeText)try{await navigator.clipboard.writeText(text);copied=true;}catch{}
+    if(!copied){
+      const field=document.createElement('textarea');
+      try{
+        field.value=text;
+        field.setAttribute('readonly','');
+        field.style.cssText='position:fixed;inset:auto auto 0 -9999px';
+        document.body.append(field);
+        field.select();
+        copied=Boolean(document.execCommand?.('copy'));
+      }finally{field.remove();}
+    }
+    if(!copied)throw Error('Copy unavailable');
     setStatus('招待状の文とリンクをコピーしました。');
   }catch{
     const status=document.querySelector('#status');
@@ -204,6 +230,7 @@ function method(){
 function routeError(route){return ()=>{if(location.hash===`#${route}`&&!app.querySelector('.route-error'))shell('<h1 class="route-error">記録を開けませんでした。</h1><p class="body">通信をお確かめのうえ、もう一度お試しください。</p><a href="#start">王国の入口へ</a>');};}
 
 function render(){
+  const run=++renderRun;
   const route=location.hash.slice(1)||'start';
   if(route.startsWith('record=')){
     const token=route.slice(7);
@@ -211,7 +238,9 @@ function render(){
     const decoded=decode(token);
     if(!decoded){shell('<h1>一件簿を開けませんでした。</h1><p class="body">リンクが途中で切れていないかお確かめください。</p><a href="#start">王国の入口へ</a>');return;}
     record=decoded;
-    saveRecord();
+    // A received invitation belongs to the sender. Keep it for this tab, but
+    // never overwrite the recipient's own saved dossier on the device.
+    saveRecord(false);
     history.replaceState(null,'','#letter');
     // Preserve the most important part of a shared invitation: the recipient
     // opens the royal seal before seeing the letter inside.
@@ -221,26 +250,35 @@ function render(){
   if(['letter','dossier','portrait','history'].includes(route)&&!record){go('start');return;}
   if(route==='quiz')quiz();
   else if(route==='letter')letter();
-  else if(route==='dossier')void dossier().catch(routeError('dossier'));
-  else if(route==='portrait')void portraitPage().catch(routeError('portrait'));
-  else if(route==='history')void historyPage().catch(routeError('history'));
+  else if(route==='dossier'){app.setAttribute('aria-busy','true');void dossier().catch(routeError('dossier')).finally(()=>{if(run===renderRun)app.removeAttribute('aria-busy');});}
+  else if(route==='portrait'){app.setAttribute('aria-busy','true');void portraitPage().catch(routeError('portrait')).finally(()=>{if(run===renderRun)app.removeAttribute('aria-busy');});}
+  else if(route==='history'){app.setAttribute('aria-busy','true');void historyPage().catch(routeError('history')).finally(()=>{if(run===renderRun)app.removeAttribute('aria-busy');});}
   else if(route==='method')method();
   else start();
 }
 
 function restoreState(){
-  try{
-    const savedRecord=storageGet(STORAGE.record)||(!storeMode&&storageGet(STORAGE.record,true));
-    if(savedRecord)record=decode(encode(JSON.parse(savedRecord)));
-    const progress=JSON.parse(storageGet(STORAGE.progress));
+  const sessionRecord=storageGet(STORAGE.record);
+  const persistentRecord=!storeMode&&storageGet(STORAGE.record,true);
+  if(sessionRecord){
+    try{record=decode(encode(JSON.parse(sessionRecord)));}
+    catch{storageRemove(STORAGE.record);}
+  }
+  if(!record&&persistentRecord){
+    try{record=decode(encode(JSON.parse(persistentRecord)));}
+    catch{storageRemove(STORAGE.record,true);}
+  }
+  const rawProgress=storageGet(STORAGE.progress);
+  if(rawProgress)try{
+    const progress=JSON.parse(rawProgress);
     const valid=progress&&Array.isArray(progress.answers)&&progress.answers.length===6&&progress.answers.every(value=>value===null||value===0||value===1)&&Number.isInteger(progress.cursor)&&progress.cursor>=0&&progress.cursor<6&&Number.isInteger(progress.seed)&&progress.seed>=0&&progress.seed<=0xffffffff;
     if(valid){
       answers=progress.answers.map(value=>value===null?undefined:value);
       seed=progress.seed;
       provenanceSeed=Number.isInteger(progress.provenanceSeed)&&progress.provenanceSeed>=0&&progress.provenanceSeed<=0xffffffff?progress.provenanceSeed:progress.seed;
       cursor=progress.cursor;
-    }
-  }catch{}
+    }else storageRemove(STORAGE.progress);
+  }catch{storageRemove(STORAGE.progress);}
 }
 
 restoreState();

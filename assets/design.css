@@ -35,7 +35,8 @@ h3 {font-size:18px}
 p,dd {overflow-wrap:break-word;text-wrap:pretty}
 .brand {font:9px/1.8 Georgia,serif;text-align:center;letter-spacing:.22em;color:var(--muted);padding:24px 12px 18px}
 .brand small {display:block;margin-top:5px;font:7px/1.7 Georgia,serif;letter-spacing:.18em;color:#9a8b75}
-main {max-width:var(--page-width);margin:auto;padding:0 22px}
+main {max-width:var(--page-width);margin:auto;padding:0 max(22px,env(safe-area-inset-right)) 0 max(22px,env(safe-area-inset-left))}
+main[aria-busy="true"] {cursor:progress;pointer-events:none}
 .sheet {position:relative;isolation:isolate;padding:38px 42px;background:linear-gradient(145deg,#fffefa,var(--paper));border:1px solid var(--line);box-shadow:var(--shadow-paper)}
 .sheet:before {content:'';position:absolute;z-index:-1;inset:6px;border:1px solid color-mix(in srgb,var(--line),transparent 44%);pointer-events:none}
 footer {text-align:center;font-size:11px;color:var(--muted);padding:24px 12px calc(34px + env(safe-area-inset-bottom))}
@@ -223,7 +224,7 @@ html[data-mode="store"] .takehome-store h2 {color:var(--provenance-deep)}
 }
 @media(max-width:520px) {
   .brand {font-size:9px;padding:20px 10px 16px}
-  main {padding:0 13px}
+  main {padding:0 max(13px,env(safe-area-inset-right)) 0 max(13px,env(safe-area-inset-left))}
   .sheet {padding:27px 23px}
   .cover {padding:30px 23px 27px}
   .opening-title {font-size:28px;line-height:1.75;margin:16px auto 23px}

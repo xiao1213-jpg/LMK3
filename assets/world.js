@@ -1,7 +1,7 @@
-import {BIRTHPLACES_BY_REGION,REGION_GEOGRAPHY,SPECIAL_BIRTHPLACE} from './geography.js?v=20261112-v12';
-import {describeLineage} from './heritage.js?v=20261120-gacha-v12';
-import {HOUSEHOLD_PROFILES} from './households.js?v=20261120-gacha-v12';
-import {assessMystique,combinationNote,provenanceStanding} from './rarity.js?v=20261120-gacha-v12';
+import {BIRTHPLACES_BY_REGION,REGION_GEOGRAPHY,SPECIAL_BIRTHPLACE} from './geography.js?v=20261120-complete';
+import {describeLineage} from './heritage.js?v=20261120-complete';
+import {HOUSEHOLD_PROFILES} from './households.js?v=20261120-complete';
+import {assessMystique,combinationNote,provenanceStanding} from './rarity.js?v=20261120-complete';
 
 const coatPool=[
   ['キジトラ',16],['キジシロ',12],['チャトラ',11],['チャシロ',6],['サバトラ',9],['サバシロ',6],
@@ -87,4 +87,4 @@ function generateProvenance(seed){
 }
 
 export {generateProvenance,registryNumber,coatEpithets,coatPool,regionPool,rankPool};
-export {freshSeed} from './random.js?v=20261111-independent-draw';
+export {freshSeed} from './random.js?v=20261120-complete';
