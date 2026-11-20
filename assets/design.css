@@ -166,6 +166,8 @@ details[open]>summary:after {content:' −'}
 .standing-caption {position:relative;font:10.5px/1.8 var(--sans);letter-spacing:.08em;color:var(--muted);text-wrap:balance}
 .standing-stars {position:relative;font:25px/1.4 Georgia,serif;letter-spacing:.12em;color:#91784b;margin:10px auto 7px;white-space:nowrap}
 .standing-card h2 {position:relative;font-size:19px;line-height:1.7;text-wrap:balance}
+.standing-mystique {position:relative;display:flex;justify-content:center;gap:.75em;align-items:baseline;margin:13px auto 0;padding-top:10px;border-top:1px solid #e8dfcf;font:12px/1.8 var(--serif);color:var(--muted)}
+.standing-mystique span {font:9px/1.8 var(--sans);letter-spacing:.08em;color:#8c806e}
 .standing-note {position:relative;font-size:12px;color:var(--muted);margin:8px auto 0;max-width:27em;text-wrap:balance}
 .standing-1 {border-color:#d2cbbd;background:linear-gradient(145deg,#fffdf8,#f3f0e7)}
 .standing-1 .standing-stars {color:#7c765f}

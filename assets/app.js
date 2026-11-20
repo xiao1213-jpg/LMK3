@@ -1,5 +1,5 @@
 import {seriesSeal} from './ornaments.js';
-import {esc,button,startTemplate,envelopeTemplate,letterTemplate,dossierTemplate,historyTemplate} from './templates.js?v=20261112-ultimate';
+import {esc,button,startTemplate,envelopeTemplate,letterTemplate,dossierTemplate,historyTemplate} from './templates.js?v=20261120-gacha-v12';
 import {questionAt} from './questions.js?v=20261112-system-polish';
 import {classify,encode,decode,presentedOrder,isLegacyRecord} from './engine.js?v=20261111-independent-draw';
 import {freshSeed} from './random.js?v=20261111-independent-draw';
@@ -15,12 +15,12 @@ document.documentElement.dataset.mode=storeMode?'store':'mobile';
 if(storeMode)document.querySelector('.brand')?.insertAdjacentHTML('beforeend','<small>ROYAL RECEPTION DESK</small>');
 
 let worldLoader,portraitLoader,diagnosisLoader,storyLoader,heritageLoader,rarityLoader,qrLoader;
-const loadWorld=()=>worldLoader??=import('./world.js?v=20261112-geography-v12').catch(error=>{worldLoader=null;throw error;});
+const loadWorld=()=>worldLoader??=import('./world.js?v=20261120-gacha-v12').catch(error=>{worldLoader=null;throw error;});
 const loadPortraits=()=>portraitLoader??=import('./portraits.js?v=20261110-editorial').catch(error=>{portraitLoader=null;throw error;});
 const loadDiagnoses=()=>diagnosisLoader??=import('./diagnoses.js?v=20261110-content').catch(error=>{diagnosisLoader=null;throw error;});
 const loadStories=()=>storyLoader??=import('./stories.js?v=20261110-content').catch(error=>{storyLoader=null;throw error;});
-const loadHeritage=()=>heritageLoader??=import('./heritage.js?v=20261110-lineage-records').catch(error=>{heritageLoader=null;throw error;});
-const loadRarity=()=>rarityLoader??=import('./rarity.js?v=20261112-geography-v12').catch(error=>{rarityLoader=null;throw error;});
+const loadHeritage=()=>heritageLoader??=import('./heritage.js?v=20261120-gacha-v12').catch(error=>{heritageLoader=null;throw error;});
+const loadRarity=()=>rarityLoader??=import('./rarity.js?v=20261120-gacha-v12').catch(error=>{rarityLoader=null;throw error;});
 const preloadResults=()=>Promise.all([loadWorld(),loadPortraits()]);
 
 const independentSeed=other=>{const value=freshSeed();return value===other?(value+0x9e3779b9)>>>0:value;};
@@ -64,6 +64,7 @@ function restart(){
   cursor=0;
   record=null;
   clearSession();
+  storageRemove(STORAGE.record,true);
   go('quiz');
 }
 
@@ -149,7 +150,7 @@ async function dossier(){
   shell(dossierTemplate(provenance,selectedPortrait,storeMode),`dossier theme-${selectedPortrait.series}`);
   on('read',()=>go('portrait'));
   on('history',()=>go('history'));
-  on('again',()=>{if(storeMode){record=null;clearSession();}go('start');});
+  on('again',()=>{if(storeMode){record=null;clearSession();go('start');}else restart();});
   if(storeMode)void renderQRCode(document.querySelector('#qr'));
   on('copy',copyInvitation);
   on('share',shareInvitation);
@@ -196,7 +197,7 @@ async function historyPage(){
 }
 
 function method(){
-  shell(`<p class="eyebrow">ABOUT THE PORTRAITS</p><h1>心象肖像について</h1><p class="body">六つの小さな場面を通じて、24の心象肖像から、あなたに重なる一枚を選びます。</p><p class="body">最初の二問は「時間の物語・誰かの想い・暮らしの楽しみ」への関心を比べ、第三問では残った二つを比べます。後半の三問では、受け継いだものの楽しみ方、美しさの見つめ方、喜びの味わい方を一つずつ尋ねます。</p><p class="body">答えに応じて進む分岐式なので、すべての道筋で必ず一つの心象肖像に決まります。点数の同率を抽選で解消する方式は使っていません。</p><p class="body">質問紙設計の原則を参考にしていますが、六問で人格全体や傾向の強さを測れるわけではありません。LMK独自の質問・分類は、実際の回答者による信頼性・妥当性の検証前です。物語との出会いを楽しむ、短い好みの案内です。</p><p class="body">最初の比較と選択肢の表示順は入れ替わります。関心が場面によって変わる方は、別の回で異なる一枚に出会うこともあります。</p><p class="body">王国来歴証は、六つの答えとは別に授けられます。毛色、100の出生地、地方ごとの家、家伝品が組み合わさり、ごく稀に地図の外の特殊出生地《コホーリア》が記されます。同じ一件簿を開き直したときは、同じ来歴が残ります。</p><p class="body">星は身分の高さではなく、王国の奇譚にどれほど近い来歴かを表します。毛色の珍しさ、土地に残る伝承、家の習わし、家伝品を別々に見て、土地と家伝の主題が重なれば「縁」として加えます。四つ星になるのは、四つの要素すべてにしるしがあり、十分に深く重なった場合だけです。</p><p class="body">職業、財産、住所の格式、爵位の種類は星を増やしません。爵位家は家印や家伝品の装いで個性を表し、奇譚度とは別に楽しめます。また、全要素の組み合わせ自体が珍しい場合は、星とは分けて短い一文でお知らせします。心象肖像にある身分や職業も、実際の家柄を意味しません。</p><p class="fine">参考：<a href="https://www.pewresearch.org/writing-survey-questions/">Pew Research Center：質問紙の設計</a> ／ <a href="https://www.cdc.gov/nchs/ccqder/question-evaluation/cognitive-interviewing.html">CDC：認知インタビュー</a></p>${button('home','王国の入口へ')}`);
+  shell(`<p class="eyebrow">ABOUT THE PORTRAITS</p><h1>心象肖像について</h1><p class="body">六つの小さな場面を通じて、24の心象肖像から、あなたに重なる一枚を選びます。</p><p class="body">最初の二問は「時間の物語・誰かの想い・暮らしの楽しみ」への関心を比べ、第三問では残った二つを比べます。後半の三問では、受け継いだものの楽しみ方、美しさの見つめ方、喜びの味わい方を一つずつ尋ねます。</p><p class="body">答えに応じて進む分岐式なので、すべての道筋で必ず一つの心象肖像に決まります。点数の同率を抽選で解消する方式は使っていません。</p><p class="body">質問紙設計の原則を参考にしていますが、六問で人格全体や傾向の強さを測れるわけではありません。LMK独自の質問・分類は、実際の回答者による信頼性・妥当性の検証前です。物語との出会いを楽しむ、短い好みの案内です。</p><p class="body">最初の比較順と選択肢の表示順は毎回入れ替わります。ただし、同じ意味の選択肢を選べば同じ肖像へ着く設計です。気持ちが変わったときだけ、別の一枚に出会うことがあります。</p><p class="body">王国来歴証は、六つの答えとは別に抽選されます。18の毛色、100の出生地、105の一般家、210の家伝品、100の爵位家が組み合わさり、ごく稀に地図の外の《コホーリア》が記されます。同じ招待状を開き直したときは、同じ来歴が残ります。</p><p class="body">来歴の星は、組み合わせの珍しさと、爵位家に連なる場合の爵位を合わせた四段階です。職業、財産、住所の格式で星が増減することはありません。爵位のない家にも、組み合わせが稀なら三つ星や四つ星があります。</p><p class="body">土地や家に残る不思議は、星とは別の「奇譚のしるし」で示します。珍しさと物語の深さを混ぜないためです。心象肖像にある身分や職業も、実際の家柄を意味しません。</p><p class="fine">参考：<a href="https://www.pewresearch.org/writing-survey-questions/">Pew Research Center：質問紙の設計</a> ／ <a href="https://www.cdc.gov/nchs/ccqder/question-evaluation/cognitive-interviewing.html">CDC：認知インタビュー</a></p>${button('home','王国の入口へ')}`);
   on('home',()=>go('start'));
 }
 

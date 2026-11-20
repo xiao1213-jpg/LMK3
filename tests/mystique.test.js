@@ -1,69 +1,45 @@
 import assert from 'node:assert/strict';
-import {assessMystique,rarity} from '../assets/rarity.js';
-import {HOUSE_LEVEL_DESIGN,NON_NOBLE_MYSTIQUE} from '../assets/mystique-data.js';
+import {assessMystique,rarity,provenanceStanding} from '../assets/rarity.js';
+import {HOUSEHOLD_PROFILES} from '../assets/households.js';
 
-for(const [rank,record] of Object.entries(HOUSE_LEVEL_DESIGN)){
-  assert.equal(record.deep.length,4,`${rank}: deep household traditions`);
-  assert.equal(record.touched.length,10,`${rank}: touched household traditions`);
-  assert.equal(record.objectDeep.length,4,`${rank}: deep inherited objects`);
-  assert.equal(record.objectTouched.length,8,`${rank}: touched inherited objects`);
-  assert.equal(new Set([...record.deep,...record.touched]).size,14);
-  assert.equal(new Set([...record.objectDeep,...record.objectTouched]).size,12);
-}
-for(const [regionId,records] of Object.entries(NON_NOBLE_MYSTIQUE)){
-  assert.equal(records.length,8,regionId);
-  for(let index=1;index<8;index++){
-    assert.ok(records[index]);
-    assert.equal(records[index].items.length,2);
-    assert.ok(records[index].level>=0&&records[index].level<=2);
-  }
+assert.equal(Object.values(HOUSEHOLD_PROFILES).flat().length,105);
+assert.equal(Object.values(HOUSEHOLD_PROFILES).flat().flatMap(h=>h.items).length,210);
+assert.equal(new Set(Object.values(HOUSEHOLD_PROFILES).flat().map(h=>h.family)).size,105);
+assert.equal(new Set(Object.values(HOUSEHOLD_PROFILES).flat().flatMap(h=>h.items)).size,210);
+for(const profiles of Object.values(HOUSEHOLD_PROFILES)){
+  assert.equal(profiles.length,15);
+  assert.equal(profiles.reduce((sum,p)=>sum+p.weight,0),100);
 }
 
-const rareCoatAlone=assessMystique({coatRate:.05,place:{mystique:0,tags:[]},familyMeta:{level:0,itemLevel:0,tags:[],itemTags:[]}});
-assert.equal(rareCoatAlone.count,2,'One rare trait alone must never become a top record');
-const deepLandAlone=assessMystique({coatRate:40,place:{mystique:2,tags:['境界']},familyMeta:{level:0,itemLevel:0,tags:[],itemTags:[]}});
-assert.equal(deepLandAlone.count,2,'A P2 birthplace must not be presented as an ordinary one-star record');
-const allFour=assessMystique({coatRate:.4,place:{mystique:2,tags:['境界']},familyMeta:{level:1,itemLevel:1,tags:['境界'],itemTags:[]}});
-assert.equal(allFour.count,4);
+assert.equal(assessMystique({coatRate:40,place:{mystique:0},familyMeta:{}}).label,'穏やかな来歴');
+assert.equal(assessMystique({coatRate:.05,place:{mystique:2},familyMeta:{houseLegend:'深い伝承',itemLegend:'王国奇譚'}}).label,'王国奇譚との縁');
+assert.equal(provenanceStanding(.1,null).count,1);
+assert.equal(provenanceStanding(.1,'男爵').count,2);
+assert.equal(provenanceStanding(.1,'公爵').count,3);
 
 const {generateProvenance}=await import('../assets/world.js');
-const draws=300000,counts={1:0,2:0,3:0,4:0},starsByTier=Object.fromEntries(Object.entries(rarity).map(([tier,value])=>[tier,value.count]));
-const groups={noble:{n:0,sum:0},other:{n:0,sum:0}},ranks={},bellgrave=new Set();
-let rareButQuiet=null;
-
+const draws=300000,counts={1:0,2:0,3:0,4:0},ranks={},families=new Set(),items=new Set(),houses=new Set();
+let nobles=0,previous=null,adjacentExactRepeats=0;
 for(let seed=0;seed<draws;seed++){
-  const result=generateProvenance(seed),stars=starsByTier[result.tier];
-  counts[stars]++;
-  const group=result.familyIndex===0?groups.noble:groups.other;
-  group.n++;group.sum+=stars;
-  if(result.familyIndex===0){
-    const rank=result.family.match(/^(男爵|子爵|伯爵|侯爵|公爵)/)?.[1];
-    assert.ok(rank);
-    ranks[rank]??={n:0,sum:0};ranks[rank].n++;ranks[rank].sum+=stars;
-  }
-  if(result.birthplace==='ベルグレイヴ・ガーデンズ')bellgrave.add(stars);
-  if(stars===4){
-    assert.equal(result.mystiqueSources,4);
-    assert.ok(result.mystiqueScore>=6);
-    assert.ok(Object.values(result.mystiqueComponents).slice(0,4).every(Boolean));
-  }
-  if(result.combinationNote&&stars===1)rareButQuiet??=result;
+  const result=generateProvenance(seed),tier=rarity[result.tier];
+  counts[tier.count]++;
+  families.add(`${result.regionId}:${result.familyIndex}`);items.add(`${result.regionId}:${result.familyIndex}:${result.itemIndex}`);
+  if(result.rank){nobles++;houses.add(result.houseId);ranks[result.rank]=(ranks[result.rank]||0)+1;}
+  const signature=[result.coat,result.birthplaceNumber,result.family,result.heirloom].join('|');
+  if(signature===previous)adjacentExactRepeats++;
+  previous=signature;
   if(seed%997===0)assert.deepEqual(generateProvenance(seed),result);
 }
-
-const ratios=Object.fromEntries(Object.entries(counts).map(([stars,count])=>[stars,count/draws]));
-assert.ok(ratios[1]>.47&&ratios[1]<.52,ratios);
-assert.ok(ratios[2]>.39&&ratios[2]<.45,ratios);
-assert.ok(ratios[3]>.05&&ratios[3]<.08,ratios);
-assert.ok(ratios[4]>.015&&ratios[4]<.03,ratios);
-assert.deepEqual([...bellgrave].sort(),[1,2,3],'A prestigious address must not force or permit four stars without land mystique');
-assert.ok(rareButQuiet,'Full-combination rarity must remain separate from the stars');
-
-for(const group of Object.values(groups))group.mean=group.sum/group.n;
-for(const group of Object.values(ranks))group.mean=group.sum/group.n;
-assert.ok(Math.abs(groups.noble.mean-groups.other.mean)<.25,'Nobility must not determine the star level');
-const rankMeans=Object.values(ranks).map(group=>group.mean);
-assert.equal(rankMeans.length,5);
-assert.ok(Math.max(...rankMeans)-Math.min(...rankMeans)<.15,'Noble rank must not determine the star level');
-
-console.log(JSON.stringify({draws,counts,ratios,nobleMean:groups.noble.mean,nonNobleMean:groups.other.mean,rankMeans:Object.fromEntries(Object.entries(ranks).map(([rank,value])=>[rank,value.mean])),bellgrave:[...bellgrave].sort(),rareCombinationSeparated:true}));
+const ratios=Object.fromEntries(Object.entries(counts).map(([k,v])=>[k,v/draws]));
+assert.ok(ratios[1]>.52&&ratios[1]<.56,ratios);
+assert.ok(ratios[2]>.285&&ratios[2]<.305,ratios);
+assert.ok(ratios[3]>.12&&ratios[3]<.14,ratios);
+assert.ok(ratios[4]>.025&&ratios[4]<.042,ratios);
+assert.ok(nobles/draws>.095&&nobles/draws<.105,nobles/draws);
+assert.equal(families.size,105+7); // 105 regional common families + one titled branch per region.
+assert.equal(items.size,210+7);    // noble heirlooms are tracked separately by house id.
+assert.equal(houses.size,100);
+assert.ok(adjacentExactRepeats<20,adjacentExactRepeats);
+const expectedRanks={'男爵':.55,'子爵':.25,'伯爵':.13,'侯爵':.05,'公爵':.02};
+for(const [rank,expected] of Object.entries(expectedRanks))assert.ok(Math.abs(ranks[rank]/nobles-expected)<.01,{rank,actual:ranks[rank]/nobles});
+console.log(JSON.stringify({draws,stars:ratios,nobleRate:nobles/draws,distinctCommonFamilies:105,distinctCommonHeirlooms:210,distinctNobleHouses:houses.size,rankShares:Object.fromEntries(Object.entries(ranks).map(([k,v])=>[k,v/nobles])),adjacentExactRepeats}));
