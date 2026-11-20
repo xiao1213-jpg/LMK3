@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="paper" cx="50%" cy="16%" r="88%">
+      <stop offset="0" stop-color="#fffdf8"/>
+      <stop offset="1" stop-color="#f2eddf"/>
+    </radialGradient>
+    <linearGradient id="envelope" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4ead8"/>
+      <stop offset="1" stop-color="#e3d2b2"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-25%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="13" stdDeviation="14" flood-color="#65512a" flood-opacity=".13"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#paper)"/>
+  <rect x="36" y="30" width="1128" height="570" fill="none" stroke="#d8cdb9" stroke-width="2"/>
+  <text x="600" y="74" text-anchor="middle" fill="#796d5c" font-family="Georgia, serif" font-size="17" letter-spacing="5">LITTLE MEW KINGDOM</text>
+  <text x="600" y="168" text-anchor="middle" fill="#443d34" font-family="Noto Serif CJK JP, serif" font-size="48" letter-spacing="3">国王陛下から、あなたへ。</text>
+  <g filter="url(#shadow)">
+    <rect x="306" y="230" width="588" height="250" rx="4" fill="url(#envelope)" stroke="#c8b58f" stroke-width="2"/>
+    <path d="M307 231H893L600 405Z" fill="#fff8ea" stroke="#c8b58f" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M307 479 512 339l88 66 88-66 205 140" fill="none" stroke="#c8b58f" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="600" cy="405" r="53" fill="#80413c" stroke="#c18572" stroke-width="8"/>
+    <circle cx="600" cy="405" r="40" fill="none" stroke="#e0b497" stroke-width="2"/>
+    <text x="600" y="413" text-anchor="middle" fill="#f5dcb4" font-family="Georgia, serif" font-size="25" letter-spacing="2">T Ⅲ R</text>
+  </g>
+  <text x="600" y="551" text-anchor="middle" fill="#796d5c" font-family="Noto Serif CJK JP, serif" font-size="23" letter-spacing="1">紅い王室印に触れて、そっと封をお開きください。</text>
+</svg>

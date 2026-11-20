@@ -7,7 +7,7 @@ const pairs={
  'time,life':{scene:'長く続くお茶屋に入りました。気になるのは？',answers:{time:'昔から今までの、お店の歩み',life:'淹れたてのお茶の香り'}},
  'message,life':{scene:'小さな包みに、手紙と焼き菓子が。あとから思い出しそうなのは？',answers:{message:'手紙の言葉から伝わる気持ち',life:'焼き菓子の香りと味わい'}}
 };
-const finalOptions={time:'町が歩んできた時間の展示',message:'猫たちの想いを伝える手紙',life:'お茶の時間を彩る器と菓子'};
+const finalOptions={time:'昔と今の町並みを並べた絵図',message:'猫たちの想いが綴られた手紙',life:'お茶の時間を彩る器と菓子'};
 export const binaryQuestions=[
 {id:'pattern',axis:'relation',keys:['inherit','weave'],scene:'古い花模様から生まれた、二枚の飾り紙。窓辺に飾りたいのは？',a:'昔の配色を再現した一枚',b:'新しい配色に仕立てた一枚'},
 {id:'picture',axis:'expression',keys:['outer','inner'],scene:'小さな画廊で、一枚の絵に心が留まりました。惹かれるのは？',a:'色や線の組み合わせ',b:'描かれた場面に感じる物語'},

@@ -16,6 +16,8 @@ assert.equal(reached.size,24);assert.deepEqual([...new Set(reached.values())],[8
 // A consistent ranking of the three interests always chooses its top, regardless of entry rotation.
 const permutations=[['time','message','life'],['time','life','message'],['message','time','life'],['message','life','time'],['life','time','message'],['life','message','time']];
 for(const ranking of permutations)for(let seed=0;seed<3;seed++){const answers=[];for(let i=0;i<3;i++){const q=questionAt(i,answers,seed);answers.push(ranking.indexOf(q.keys[0])<ranking.indexOf(q.keys[1])?0:1);}answers.push(0,0,0);assert.equal(classify(answers,seed).primary,ranking[0]);}
+const finalChoices=new Set();for(let seed=0;seed<3;seed++)for(let bits=0;bits<4;bits++){const q=questionAt(2,[bits&1,(bits>>1)&1],seed);finalChoices.add(q.a);finalChoices.add(q.b);}
+assert.deepEqual([...finalChoices].sort(),['お茶の時間を彩る器と菓子','昔と今の町並みを並べた絵図','猫たちの想いが綴られた手紙'].sort());
 assert.equal(decode('bad'),null);assert.equal(decode('a'.repeat(1001)),null);assert.throws(()=>classify([0],0));assert.throws(()=>classify(Array(6).fill(null),0));
 for(const [tier,r] of Object.entries(rarity)){assert.equal([...r.stars].filter(s=>s==='★').length,r.count);assert.equal([...r.stars].length,4);assert.ok(r.label&&r.note);}
 const legacy=btoa(JSON.stringify({v:17,a:Array(9).fill(0),s:0,p:null})).replace(/=+$/,'');assert.equal(isLegacyRecord(legacy),true);assert.equal(decode(legacy),null);

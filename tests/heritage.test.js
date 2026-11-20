@@ -5,7 +5,7 @@ const found=new Set(),rankCounts={};let nobles=0;
 for(let seed=0;seed<100000;seed++){
  const p=generateProvenance(seed),before=structuredClone(p),h=describeLineage(p);
  assert.deepEqual(p,before,'Heraldry must not mutate the original draw');
- if(p.familyIndex===0){assert.ok(h);assert.ok(p.family.startsWith(h.rank+'家'));assert.equal(h.lineage,h.rank+'家の分家');assert.deepEqual(describeLineage(generateProvenance(seed)),h);assert.ok(h.regionalNote);assert.ok(h.story&&h.motto&&h.detail);found.add(h.id);rankCounts[h.rank]=(rankCounts[h.rank]||0)+1;nobles++;}else assert.equal(h,null);
+ if(p.rank){assert.ok(h);assert.ok(p.family.startsWith(h.rank+'家'));assert.equal(h.lineage,h.rank+'家の分家');assert.deepEqual(describeLineage(generateProvenance(seed)),h);assert.ok(h.regionalNote);assert.ok(h.story&&h.motto&&h.detail);found.add(h.id);rankCounts[h.rank]=(rankCounts[h.rank]||0)+1;nobles++;}else assert.equal(h,null);
 }
 assert.equal(found.size,100);assert.equal(Object.keys(rankCounts).length,5);
 assert.equal(Object.values(heritageProfiles).flat().length,100);

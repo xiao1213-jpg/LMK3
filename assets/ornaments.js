@@ -47,6 +47,7 @@ const glyphs={
 export function mark(kind='star',className='ornament'){return `<svg class="${className}" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="${glyphs[kind]||glyphs.star}"/></svg>`;}
 export const seriesThemes={rebel:{mark:'moon',name:'ささやかな反逆者'},lady:{mark:'flower',name:'優雅な令嬢たち'},salon:{mark:'key',name:'秘密のサロン'},blood:{mark:'crown',name:'気高き血統'}};
 export function seriesSeal(series){const theme=seriesThemes[series];return `<span class="series-seal">${mark(theme.mark)}</span>`;}
+export function provenanceSeal(){return `<span class="provenance-seal">${mark('book','provenance-ornament')}</span>`;}
 export function houseSeal(kind){return `<span class="house-seal"><svg viewBox="0 0 80 92" fill="none" aria-hidden="true"><path d="M9 12Q40 4 71 12v31Q71 66 40 84 9 66 9 43ZM14 16Q40 10 66 16v27Q66 64 40 78 14 64 14 43Z"/><path d="m32 6 8-4 8 4M6 33l-4 9 4 10m68-19 4 9-4 10"/></svg>${mark(kind,'house-symbol')}</span>`;}
 
 export function houseFlourish(rankClass){const motifs={baron:'',viscount:'❖',earl:'· ❖ ·',marquess:'✧ ❖ ✧',duke:'✧ · ❖ · ✧'};return motifs[rankClass]?`<span class="house-flourish" aria-hidden="true">${motifs[rankClass]}</span>`:'';}
