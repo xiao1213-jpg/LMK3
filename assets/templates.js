@@ -1,4 +1,4 @@
-import {houseSeal,seriesSeal,provenanceSeal,houseFlourish} from './ornaments.js?v=20261120-complete';
+import {houseSeal,seriesSeal,provenanceSeal,houseFlourish} from './ornaments.js?v=20261121-final';
 export const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const button=(id,text,cls='primary')=>`<button id="${id}" class="${cls}" type="button">${text}</button>`;
 const cat=`<div class="cat-mark" aria-hidden="true"><svg viewBox="0 0 124 92" fill="none"><path d="M26 42V16L44 28Q62 22 80 28L98 16V42Q103 48 100 60Q93 77 62 78Q31 77 24 60Q21 49 26 42Z"/><path d="M43 48Q48 44 53 48M71 48Q76 44 81 48M57 59l5 4 5-4m-5 4v3m0 0q-6 5-11 0m11 0q6 5 11 0M38 57l-15-4m15 10-15 2m63-8 15-4m-15 10 15 2"/></svg></div>`;

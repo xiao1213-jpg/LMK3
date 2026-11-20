@@ -1,9 +1,9 @@
-import {seriesSeal} from './ornaments.js?v=20261120-complete';
-import {esc,button,startTemplate,envelopeTemplate,letterTemplate,dossierTemplate,historyTemplate} from './templates.js?v=20261120-complete';
-import {questionAt} from './questions.js?v=20261120-complete';
-import {classify,encode,decode,presentedOrder,isLegacyRecord} from './engine.js?v=20261120-complete';
-import {freshSeed} from './random.js?v=20261120-complete';
-import {invitationSharePayload,invitationCopyText,invitationResultURL} from './sharing.js?v=20261120-complete';
+import {seriesSeal} from './ornaments.js?v=20261121-final';
+import {esc,button,startTemplate,envelopeTemplate,letterTemplate,dossierTemplate,historyTemplate} from './templates.js?v=20261121-final';
+import {questionAt} from './questions.js?v=20261121-final';
+import {classify,encode,decode,presentedOrder,isLegacyRecord} from './engine.js?v=20261121-final';
+import {freshSeed} from './random.js?v=20261121-final';
+import {invitationSharePayload,invitationCopyText,invitationResultURL} from './sharing.js?v=20261121-final';
 
 const app=document.querySelector('#app');
 const params=new URLSearchParams(location.search);
@@ -15,12 +15,12 @@ document.documentElement.dataset.mode=storeMode?'store':'mobile';
 if(storeMode)document.querySelector('.brand')?.insertAdjacentHTML('beforeend','<small>ROYAL RECEPTION DESK</small>');
 
 let worldLoader,portraitLoader,diagnosisLoader,storyLoader,heritageLoader,rarityLoader,qrLoader;
-const loadWorld=()=>worldLoader??=import('./world.js?v=20261120-complete').catch(error=>{worldLoader=null;throw error;});
-const loadPortraits=()=>portraitLoader??=import('./portraits.js?v=20261120-complete').catch(error=>{portraitLoader=null;throw error;});
-const loadDiagnoses=()=>diagnosisLoader??=import('./diagnoses.js?v=20261120-complete').catch(error=>{diagnosisLoader=null;throw error;});
-const loadStories=()=>storyLoader??=import('./stories.js?v=20261120-complete').catch(error=>{storyLoader=null;throw error;});
-const loadHeritage=()=>heritageLoader??=import('./heritage.js?v=20261120-complete').catch(error=>{heritageLoader=null;throw error;});
-const loadRarity=()=>rarityLoader??=import('./rarity.js?v=20261120-complete').catch(error=>{rarityLoader=null;throw error;});
+const loadWorld=()=>worldLoader??=import('./world.js?v=20261121-final').catch(error=>{worldLoader=null;throw error;});
+const loadPortraits=()=>portraitLoader??=import('./portraits.js?v=20261121-final').catch(error=>{portraitLoader=null;throw error;});
+const loadDiagnoses=()=>diagnosisLoader??=import('./diagnoses.js?v=20261121-final').catch(error=>{diagnosisLoader=null;throw error;});
+const loadStories=()=>storyLoader??=import('./stories.js?v=20261121-final').catch(error=>{storyLoader=null;throw error;});
+const loadHeritage=()=>heritageLoader??=import('./heritage.js?v=20261121-final').catch(error=>{heritageLoader=null;throw error;});
+const loadRarity=()=>rarityLoader??=import('./rarity.js?v=20261121-final').catch(error=>{rarityLoader=null;throw error;});
 const preloadResults=()=>Promise.all([loadWorld(),loadPortraits()]);
 
 const independentSeed=other=>{const value=freshSeed();return value===other?(value+0x9e3779b9)>>>0:value;};
@@ -76,7 +76,6 @@ function restart(){
   cursor=0;
   record=null;
   clearSession();
-  storageRemove(STORAGE.record,true);
   go('quiz');
 }
 
@@ -98,24 +97,37 @@ function quiz(){
   const cut=question.scene.lastIndexOf('。');
   const context=cut>=0?question.scene.slice(0,cut+1):'';
   const prompt=cut>=0?question.scene.slice(cut+1):question.scene;
-  const choices=order.map((value,index)=>`<button type="button" data-value="${value}" class="choice ${answers[cursor]===value?'selected':''}" aria-pressed="${answers[cursor]===value}"><span class="choice-letter">${index?'B':'A'}</span><span>${esc(value?question.b:question.a)}</span></button>`).join('');
+  const choices=order.map((value,index)=>{const selected=answers[cursor]===value;return `<button type="button" role="radio" data-value="${value}" class="choice ${selected?'selected':''}" aria-checked="${selected}" tabindex="${selected||answers[cursor]===undefined&&index===0?0:-1}"><span class="choice-letter">${index?'B':'A'}</span><span>${esc(value?question.b:question.a)}</span></button>`;}).join('');
 
-  shell(`<div class="question-top"><span>第${cursor+1}問 / 6</span>${cursor?button('back','ひとつ戻る','text-button'):''}</div><div class="progress" role="progressbar" aria-label="診断の進み具合" aria-valuemin="1" aria-valuemax="6" aria-valuenow="${cursor+1}"><span style="width:${(cursor+1)/6*100}%"></span></div><p class="eyebrow">A MOMENT IN THE KINGDOM</p>${context?`<p class="question-scene">${esc(context)}</p>`:''}<h1 class="question">${esc(prompt)}</h1><div class="choices" role="group" aria-label="二つの選択肢">${choices}</div>${button('next',cursor===5?'招待状を受け取る':'次の問いへ')}<p class="fine">どちらもよくても、今少し心が向く方を。<br>選んだ答えをたどり、あなた宛ての招待状へ。</p>`,'quiz');
+  shell(`<div class="question-top"><span>第${cursor+1}問 / 6</span>${cursor?button('back','ひとつ戻る','text-button'):''}</div><div class="progress" role="progressbar" aria-label="診断の進み具合" aria-valuemin="1" aria-valuemax="6" aria-valuenow="${cursor+1}"><span style="width:${(cursor+1)/6*100}%"></span></div><p class="eyebrow">A MOMENT IN THE KINGDOM</p>${context?`<p class="question-scene">${esc(context)}</p>`:''}<h1 class="question">${esc(prompt)}</h1><div class="choices" role="radiogroup" aria-label="二つの選択肢">${choices}</div>${button('next',cursor===5?'招待状を受け取る':'次の問いへ')}<p class="fine">どちらもよくても、今少し心が向く方を。<br>選んだ答えをたどり、あなた宛ての招待状へ。</p>`,'quiz');
 
   const nextButton=document.querySelector('#next');
   nextButton.disabled=answers[cursor]===undefined;
-  app.querySelectorAll('[data-value]').forEach(choice=>choice.addEventListener('click',()=>{
+  const choiceButtons=[...app.querySelectorAll('[data-value]')];
+  const selectChoice=choice=>{
     const value=Number(choice.dataset.value);
     if(cursor<2&&answers[cursor]!==value)for(let index=cursor+1;index<3;index++)answers[index]=undefined;
     answers[cursor]=value;
     rememberProgress();
-    app.querySelectorAll('[data-value]').forEach(element=>{
+    choiceButtons.forEach(element=>{
       const selected=Number(element.dataset.value)===value;
       element.classList.toggle('selected',selected);
-      element.setAttribute('aria-pressed',String(selected));
+      element.setAttribute('aria-checked',String(selected));
+      element.tabIndex=selected?0:-1;
     });
     nextButton.disabled=false;
-  }));
+  };
+  choiceButtons.forEach((choice,index)=>{
+    choice.addEventListener('click',()=>selectChoice(choice));
+    choice.addEventListener('keydown',event=>{
+      if(!['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(event.key))return;
+      event.preventDefault();
+      const direction=event.key==='ArrowUp'||event.key==='ArrowLeft'?-1:1;
+      const target=choiceButtons[(index+direction+choiceButtons.length)%choiceButtons.length];
+      selectChoice(target);
+      target.focus();
+    });
+  });
   on('back',()=>{cursor--;rememberProgress();quiz();});
   on('next',()=>{
     if(cursor<5){cursor++;rememberProgress();quiz();return;}

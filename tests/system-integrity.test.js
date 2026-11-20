@@ -8,7 +8,7 @@ import {HOUSEHOLD_PROFILES} from '../assets/households.js';
 import {describeLineage} from '../assets/heritage.js';
 import {dossierTemplate,historyTemplate} from '../assets/templates.js';
 
-const revision='20261120-complete';
+const revision='20261121-final';
 const activeFiles=['index.html','privacy.html','assets/app.js','assets/engine.js','assets/templates.js','assets/world.js'];
 for(const file of activeFiles){
   const source=fs.readFileSync(new URL(`../${file}`,import.meta.url),'utf8');
@@ -24,6 +24,10 @@ assert.match(css,/env\(safe-area-inset-left\)/,'safe areas must be respected');
 assert.match(app,/saveRecord\(false\)/,'received invitations must not replace a local saved result');
 assert.match(app,/visibilitychange/,'store expiry must be checked after backgrounding');
 assert.match(app,/letter\(\);\s*return;/,'shared invitations must begin at the sealed letter');
+assert.match(app,/role="radiogroup"/,'the two answers must expose single-choice semantics');
+assert.match(app,/aria-checked=/,'each answer must expose its selected state');
+const restartSource=app.slice(app.indexOf('function restart()'),app.indexOf('function rememberProgress()'));
+assert(!restartSource.includes('storageRemove(STORAGE.record,true)'),'starting again must not erase the last completed result');
 
 assert.equal(portraits.length,24);
 assert.equal(Object.keys(stories).length,24);
@@ -64,6 +68,8 @@ console.log(JSON.stringify({
   stylesheetOverrides:0,
   safeAreaSupport:true,
   sharedRecordIsolation:true,
+  accessibleSingleChoice:true,
+  previousResultKeptUntilCompletion:true,
   portraits:portraits.length,
   birthplaces:birthplaces.length,
   commonHouses:households.length,
